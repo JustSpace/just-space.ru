@@ -10,6 +10,8 @@ document.addEventListener('DOMContentLoaded',function(){
   var hamburgerLines = document.querySelectorAll('.hamburger__line');
   var sidebar = document.querySelector('.sidebar');
   var sidebarLinks = document.querySelectorAll(".sidebar__link");
+  var fileFront = document.querySelector("#file__front");
+  var fileBack = document.querySelector("#file__back");
 
 
 
@@ -20,6 +22,10 @@ document.addEventListener('DOMContentLoaded',function(){
       toggleClass(hamburgerLines[i], 'hamburger__line--open');
       toggleClass(sidebar, 'sidebar--open');
     }
+  });
+
+  fileFront.addEventListener("click", function(){
+    fileBack.click();
   });
 
   for(var i = 0; i < sidebarLinks.length; i++){
