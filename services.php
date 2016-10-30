@@ -31,7 +31,7 @@
     require_once("templates/sidebar.php");
   ?>
   <main class="main">
-    <section class="services">
+    <article class="services">
       <h1 class="services__title">Что мы делаем?</h1>
       <section class="service">
         <h2 class="service__title">Дизайн</h2>
@@ -49,7 +49,7 @@
         <h2 class="service__title">Продвижение</h2>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem nemo sint, aliquid aperiam voluptatibus id facilis accusantium vel minima quas doloribus aut tenetur, nam cum fugiat repellendus molestiae unde in!
       </section>
-    </section>
+    </article>
   </main>
   <footer class="footer">
 
