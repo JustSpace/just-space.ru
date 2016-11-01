@@ -2,17 +2,21 @@
 
 var winHeight = document.documentElement.clientHeight;
 var winWidth = document.documentElement.clientWidth;
+var XHR = ("onload" in new XMLHttpRequest()) ? XMLHttpRequest : XDomainRequest;
 
 
 document.addEventListener('DOMContentLoaded',function(){
-  var header = document.querySelector('.header');
-  var hamburger = document.querySelector('.hamburger');
-  var hamburgerLines = document.querySelectorAll('.hamburger__line');
-  var sidebar = document.querySelector('.sidebar');
-  var sidebarLinks = document.querySelectorAll(".sidebar__link");
-  var fileFront = document.querySelector("#file__front");
-  var fileBack = document.querySelector("#file__back");
-
+  var header            = document.querySelector('.header');
+  var hamburger         = document.querySelector('.hamburger');
+  var hamburgerLines    = document.querySelectorAll('.hamburger__line');
+  var sidebar           = document.querySelector('.sidebar');
+  var sidebarLinks      = document.querySelectorAll(".sidebar__link");
+  var fileFront         = document.querySelector("#file__front");
+  var fileBack          = document.querySelector("#file__back");
+  var orderSub          = document.querySelector("#order_sub");
+  var windowButtonClose = document.querySelector(".window__button-close");
+  var windowPopup       = document.querySelector(".window");
+  var ajaxAlertPopup    = document.querySelector(".ajax-alert-popup");
 
 
   header.style.height = winHeight + 'px';
@@ -45,6 +49,47 @@ document.addEventListener('DOMContentLoaded',function(){
       removeClass(this, "sidebar__link--hover");
     });
   }
+
+  orderSub.addEventListener("click", function(e){
+    var fio    = document.querySelector("#fio").value;
+    var tel     = document.querySelector("#tel").value;
+    var email = document.querySelector("#email").value;
+    var description = document.querySelector("#description").value;
+
+    if(fio != "" && tel != "" && email != "" && description != "") {
+      e.preventDefault();
+      var xhr = new XHR();
+      var parameters = "fio=" + encodeURIComponent(fio) + "&" + "tel=" + encodeURIComponent(tel) + "&" + "email=" + encodeURIComponent(email) + "&" + "description=" + encodeURIComponent(description);
+
+      xhr.open("POST", "/includes/ajax/order.php", true);
+      xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+      xhr.send(parameters);
+
+      xhr.onreadystatechange = function(){
+        if(xhr.readyState != 4) return;
+
+        if(xhr.status == 200){
+          //success
+          addClass(ajaxAlertPopup, "ajax-alert-popup--open");
+          addClass(windowPopup, "window--done");
+          document.querySelector(".window__text--done").style.display = "block";
+        }
+        else{
+          //error
+          addClass(ajaxAlertPopup, "ajax-alert-popup--open");
+          addClass(windowPopup, "window--error");
+          document.querySelector(".window__text--error").style.display = "block";
+        }
+      }
+    }
+  });
+
+  windowButtonClose.addEventListener("click", function(){
+    removeClass(ajaxAlertPopup, "ajax-alert-popup--open");
+    removeClass(windowPopup, "window--done window--error");
+    document.querySelector(".window__text--done").style.display = "none";
+    document.querySelector(".window__text--error").style.display = "none";
+  });
 
 });
 
