@@ -2,6 +2,17 @@
   require_once($_SERVER["DOCUMENT_ROOT"]."/templates/doc_head.php");
 ?>
 <body>
+  <div class="ajax-alert-popup">
+    <div class="window">
+      <div class="window__text window__text--done">
+        Ваша заявка успешно отправлена, в ближайшее время с вами свяжутся
+      </div>
+      <div class="window__text window__text--error">
+        Произошла ошибка, попробуйте отправить снова
+      </div>
+      <input class="window__button-close" type="button" value="Ок" autofocus>
+    </div>
+  </div>
   <header class="header">
     <nav class="navigation">
       <a href="javascript:void(0)" class="hamburger">
@@ -91,7 +102,7 @@
               <label class="order__label" for="fio">Ваше имя</label>
             </td>
             <td>
-              <input class="order__input" type="text" name="fio" id="fio" placeholder="Ваше имя">
+              <input class="order__input" type="text" name="fio" id="fio" placeholder="Ваше имя" required>
             </td>
           </tr>
           <tr>
@@ -99,7 +110,7 @@
               <label class="order__label" for="tel">Телефон</label>
             </td>
             <td>
-              <input class="order__input" type="text" name="tel" id="tel" placeholder="Телефон">
+              <input class="order__input" type="text" name="tel" id="tel" placeholder="Телефон" required>
             </td>
           </tr>
           <tr>
@@ -107,15 +118,15 @@
               <label class="order__label" for="email">Email</label>
             </td>
             <td>
-              <input class="order__input" type="email" name="email" id="email" placeholder="Email">
+              <input class="order__input" type="email" name="email" id="email" placeholder="Email" required>
             </td>
           </tr>
           <tr>
             <td class="order__cell">
-              <label class="order__label" for="project">Расскажите о вашем проекте</label>
+              <label class="order__label" for="description">Расскажите о вашем проекте</label>
             </td>
             <td>
-              <textarea class="order__textarea" name="project" id="project" placeholder="Расскажите о вашем проекте"></textarea>
+              <textarea class="order__textarea" name="description" id="description" placeholder="Расскажите о вашем проекте" required></textarea>
             </td>
           </tr>
           <tr>
@@ -133,7 +144,7 @@
                   </span>
                 </button>
                 <input class="order__file" id="file__back" type="file" name="file">
-                <input class="order__button order__submit" type="submit" name="order_sub" value="Заказать">
+                <input class="order__button order__submit" type="submit" name="order_sub" id="order_sub" value="Заказать">
               </div>
             </td>
           </tr>
