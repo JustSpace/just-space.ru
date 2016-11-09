@@ -1,7 +1,7 @@
 @import 'fonts';
 
 $white: #fff;
-$silver: #f0f0fa;
+$bgColor: #f0f0f0;
 $black: #000;
 $firstColor: #0097ba;
 $secondColor: #151515;
@@ -25,9 +25,10 @@ body{
   margin: 0;
   padding: 0;
   font-family: Roboto, Helvetica, sans-serif;
-  background-color: $silver;
+  background-color: $bgColor;
   font-weight: lighter;
   color: $black;
+  line-height: 2em;
 }
 
 a{
@@ -52,6 +53,10 @@ svg{
     padding: 20px 0;
     margin: 0;
   }
+}
+
+.fill-color--first{
+  color: $firstColor;
 }
 
 .ajax-alert-popup{
@@ -120,11 +125,58 @@ svg{
 }
 
 .header{
-  height: 600px;
-  background-image: linear-gradient(100deg, rgba(74,74,74,$alphaForHeader) 33.3%, rgba(221,116,138,$alphaForHeader) 33.4%, rgba(221,116,138,$alphaForHeader) 66.6%, rgba(0,151,186,$alphaForHeader) 66.7%, rgba(0,151,186,$alphaForHeader) 100%), url('/img/city.jpg');
+  height: 350px;
+  background-image: linear-gradient(100deg, rgba(74,74,74,$alphaForHeader) 33.3%, rgba(221,116,138,$alphaForHeader) 33.4%, rgba(221,116,138,$alphaForHeader) 66.6%, rgba(0,151,186,$alphaForHeader) 66.7%, rgba(0,151,186,$alphaForHeader) 100%), url('/img/index.jpg');
   background-size: cover;
-  background-position: 0 30%;
+  background-attachment: fixed;
   color: $white;
+}
+
+.header__index{
+  height: 600px;
+  background-position: 0 30%;
+}
+
+.header__services{
+  background-image: linear-gradient(100deg, rgba(74,74,74,$alphaForHeader) 33.3%, rgba(221,116,138,$alphaForHeader) 33.4%, rgba(221,116,138,$alphaForHeader) 66.6%, rgba(0,151,186,$alphaForHeader) 66.7%, rgba(0,151,186,$alphaForHeader) 100%), url('/img/service.jpg');
+  background-position: 0 180%;
+}
+
+.header__portfolio{
+  background-image: linear-gradient(100deg, rgba(74,74,74,$alphaForHeader) 33.3%, rgba(221,116,138,$alphaForHeader) 33.4%, rgba(221,116,138,$alphaForHeader) 66.6%, rgba(0,151,186,$alphaForHeader) 66.7%, rgba(0,151,186,$alphaForHeader) 100%), url('/img/box.jpg');
+  background-position: 0 150%;
+}
+
+.header__vacancies{
+  background-image: linear-gradient(100deg, rgba(74,74,74,$alphaForHeader) 33.3%, rgba(221,116,138,$alphaForHeader) 33.4%, rgba(221,116,138,$alphaForHeader) 66.6%, rgba(0,151,186,$alphaForHeader) 66.7%, rgba(0,151,186,$alphaForHeader) 100%), url('/img/bridge_girl.jpg');
+  background-position: 0 150%;
+}
+
+.header__blog{
+  background-image: linear-gradient(100deg, rgba(74,74,74,$alphaForHeader) 33.3%, rgba(221,116,138,$alphaForHeader) 33.4%, rgba(221,116,138,$alphaForHeader) 66.6%, rgba(0,151,186,$alphaForHeader) 66.7%, rgba(0,151,186,$alphaForHeader) 100%), url('/img/blog.jpg');
+  background-position: 0 50%;
+}
+
+.header__contacts{
+  background-image: linear-gradient(100deg, rgba(74,74,74,$alphaForHeader) 33.3%, rgba(221,116,138,$alphaForHeader) 33.4%, rgba(221,116,138,$alphaForHeader) 66.6%, rgba(0,151,186,$alphaForHeader) 66.7%, rgba(0,151,186,$alphaForHeader) 100%), url('/img/bell.jpg');
+  background-position: 0 75%;
+}
+
+.arrow{
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  width: 100%;
+}
+
+.arrow__icon{
+  @include transition();
+  color: currentcolor;
+  width: 100px;
+  cursor: pointer;
+  &:hover{
+    transform: scale(1.3);
+  }
 }
 
 .navigation{
@@ -166,7 +218,7 @@ svg{
     border-left: 1px solid $white;
     position: relative;
     left: -11px;
-    top: 1px;
+    top: 0;
   }
 }
 
@@ -228,7 +280,7 @@ svg{
 }
 
 .sidebar--open{
-  background-color: $silver;
+  background-color: $bgColor;
   height: 100%;
   z-index: 101;
 }
@@ -340,6 +392,61 @@ svg{
   text-align: center;
 }
 
+.main-blog{
+  width: 100%;
+  height: 600px;
+  background: url('/img/main-blog.jpg');
+  background-color: #2A282B;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: $white;
+  background-position: 0 100%;
+}
+
+.main-blog__wrapper{
+  background-color: rgba(0,0,0,.7);
+  width: 100%;
+  height: 100%;
+}
+
+.main-blog__promo{
+  height: 100%;
+  width: 50%;
+  float: right;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.main-blog__text{
+  text-align: justify;
+}
+
+.main-blog__button{
+  @include transition();
+  width: 200px;
+  text-decoration: none;
+  border: 2px solid $headerfirstColor;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-weight: normal;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: $headerfirstColor;
+  &:hover{
+    background-color: $headerfirstColor;
+    color: $white;
+  }
+}
+
+.main-blog__icon{
+  width: 20px;
+  height: 20px;
+  color: currentcolor;
+}
+
 .order{
   width: 100%;
   background-color: $firstColor;
@@ -362,7 +469,7 @@ svg{
   min-width: 300px;
   height: 50px;
   vertical-align: top;
-  padding-top: 10px;
+  padding-top: 5px;
 }
 
 .order__title{
@@ -468,7 +575,7 @@ svg{
 .client{
   width: 200px;
   height: 200px;
-  background-color: $thirdColor;
+  background-color: $white;
   display: flex;
   align-items: center;
   justify-content: center;
