@@ -15,12 +15,12 @@
   </div>
   <header class="header header__index">
     <nav class="navigation">
-      <a href="javascript:void(0)" class="hamburger">
+      <a href="javascript:void(0)" class="hamburger" alt="Гамбургер меню">
         <span class="hamburger__line"></span>
         <span class="hamburger__line"></span>
         <span class="hamburger__line"></span>
       </a>
-      <a href="index.php" class="navigation__logo">Just Space</a>
+      <a href="index.php" class="navigation__logo" alt="Digital-агентство Just Space">Just Space</a>
     </nav>
     <div class="arrow">
       <svg class="arrow__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 129 129"><path d="m121.3 34.6c-1.6-1.6-4.2-1.6-5.8 0l-51 51.1-51.1-51.1c-1.6-1.6-4.2-1.6-5.8 0-1.6 1.6-1.6 4.2 0 5.8l53.9 53.9c0.8 0.8 1.8 1.2 2.9 1.2 1 0 2.1-0.4 2.9-1.2l53.9-53.9c1.7-1.6 1.7-4.2 0.1-5.8z"/></svg>
@@ -75,7 +75,7 @@
           <div class="main-blog__text">
             Мы стараемся регулярно делиться своими успехами и неудачами, чтобы все заказчики, у которых появится желание обратиться к нам, смогли пронаблюдать нашу работу изнутри и составить свое мнение о нашей компании.
           </div>
-          <a href="blog.php" class="main-blog__button">
+          <a href="blog.php" class="main-blog__button" alt="Читать наш блог">
             Начать читать
             <svg class="main-blog__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 31.5 31.5"><path d="M21.2 5c-0.4-0.4-1.1-0.4-1.6 0 -0.4 0.4-0.4 1.1 0 1.6l8 8H1.1C0.5 14.6 0 15.1 0 15.7c0 0.6 0.5 1.1 1.1 1.1h26.6l-8 8c-0.4 0.4-0.4 1.2 0 1.6 0.4 0.4 1.2 0.4 1.6 0l10-10c0.4-0.4 0.4-1.1 0-1.6L21.2 5z"/></svg>
           </a>
@@ -85,16 +85,16 @@
     <article class="clients">
       <h2 class="clients__title">Наши клиенты</h2>
       <div class="client">
-        <img class="client__img" src="/img/цис.png" alt="">
+        <img class="client__img" src="/img/цис.png" alt="Центр инженерных систем">
       </div>
       <div class="client">
-        <img class="client__img" src="/img/sportlifting.png" alt="">
+        <img class="client__img" src="/img/sportlifting.png" alt="SportLifting">
       </div>
       <div class="client">
-        <img class="client__img" src="/img/ТЦН.png" alt="">
+        <img class="client__img" src="/img/ТЦН.png" alt="Тульский Центр Недвижимости">
       </div>
       <div class="client">
-        <img class="client__img" src="/img/Gazel-Traffic.png" alt="">
+        <img class="client__img" src="/img/Gazel-Traffic.png" alt="Gazel-Traffic">
       </div>
     </article>
     <article class="order">
