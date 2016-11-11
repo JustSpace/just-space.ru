@@ -515,7 +515,7 @@ svg{
   padding: 0;
   margin: 0;
   outline: none;
-  height: 35px;
+  height: 40px;
   background-color: $secondColor;
   color: $white;
   cursor: pointer;
@@ -696,6 +696,13 @@ svg{
   padding: 20px 0;
   text-align: center;
   font-size: 20px;
+}
+
+.contact__link{
+  text-decoration: none;
+  &:hover{
+    text-decoration: underline;
+  }
 }
 
 .contact__social-link{
