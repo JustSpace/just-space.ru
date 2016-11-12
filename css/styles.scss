@@ -29,6 +29,8 @@ body{
   font-weight: lighter;
   color: $black;
   line-height: 2em;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 a{
@@ -132,10 +134,75 @@ svg{
 
 .header{
   height: 350px;
-  background-image: linear-gradient(100deg, rgba(74,74,74,$alphaForHeader) 33.3%, rgba(221,116,138,$alphaForHeader) 33.4%, rgba(221,116,138,$alphaForHeader) 66.6%, rgba(0,151,186,$alphaForHeader) 66.7%, rgba(0,151,186,$alphaForHeader) 100%), url('/img/index.jpg');
   background-size: cover;
   background-attachment: fixed;
   color: $white;
+}
+
+.header__mask{
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(100deg, rgba(74,74,74,$alphaForHeader) 33.3%, rgba(221,116,138,$alphaForHeader) 33.4%, rgba(221,116,138,$alphaForHeader) 66.6%, rgba(0,151,186,$alphaForHeader) 66.7%, rgba(0,151,186,$alphaForHeader) 100%);
+  position: relative;
+}
+
+.header__image{
+  position: absolute;
+  top: 0;
+  z-index: -10;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.progressbar{
+  width: 100%;
+  height: 2px;
+  background-color: transparent;
+  position: absolute;
+  top: 0;
+}
+
+.progressbar__tik{
+  width: 0;
+  height: 100%;
+  background-color: $firstColor;
+  position: absolute;
+}
+
+.slider{
+  width: 100%;
+  height: 100%;
+}
+
+.slider__slide{
+  transform: translateX(100%);
+}
+
+.slider__slide--active{
+  @include transition(1s);
+  transform: translateX(0);
+}
+
+.slider__arrow{
+  position: absolute;
+  top: 50%;
+  font-size: 80px;
+  cursor: pointer;
+}
+
+.slider__arrow-icon{
+  width: 30px;
+}
+
+.slider__arrow--left{
+  left: 20px;
+  transform: rotate(90deg);
+}
+
+.slider__arrow--right{
+  right: 20px;
+  transform: rotate(-90deg);
 }
 
 .header__index{

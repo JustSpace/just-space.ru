@@ -21,6 +21,11 @@ document.addEventListener('DOMContentLoaded',function(){
   var windowPopup       = document.querySelector('.window') || document.querySelector('head');
   var ajaxAlertPopup    = document.querySelector('.ajax-alert-popup') || document.querySelector('head');
   var arrowIcon         = document.querySelector('.arrow__icon') || document.querySelector('head');
+  var slideFirst        = document.querySelector('.slider__slide--1') || document.querySelector('head');
+  var slideSecond       = document.querySelector('.slider__slide--2') || document.querySelector('head');
+  var slideThird        = document.querySelector('.slider__slide--3') || document.querySelector('head');
+  var sliderArrowLeft   = document.querySelector('.slider__arrow--left') || document.querySelector('head');
+  var sliderArrowRight  = document.querySelector('.slider__arrow--right') || document.querySelector('head');
 
   header.style.height = winHeight/1.5 + 'px';
   headerIndex.style.height = winHeight + 'px';
@@ -36,6 +41,22 @@ document.addEventListener('DOMContentLoaded',function(){
   fileFront.addEventListener('click', function(){
     fileBack.click();
   });
+
+  sliderArrowLeft.addEventListener('click', function(){
+    clearInterval(leafInterval);
+    leaf(function(i){return (i == 1) ? 3:i-1;});
+  });
+
+  sliderArrowRight.addEventListener('click', function(){
+    clearInterval(leafInterval);
+    leaf(function(i){return (i == 3) ? 1:i+1;});
+  });
+
+  initProgressBar(5000/100);
+  var leafInterval = setInterval(function(){
+    initProgressBar(5000/90);
+    leaf(function(i){return (i == 3) ? 1:i+1;});
+  },5000);
 
   arrowIcon.addEventListener('click', function(e){
     var anchor                    = this;
@@ -200,6 +221,39 @@ function hasClass(element, strClassName){
   }
 
   return false;
+}
+
+function leaf(func){
+  for(var i = 1; i <=3; i++){
+    document.querySelector('.slider__slide--' + i).style.zIndex = "-10";
+  }
+  for(var i = 1; i <= 3; i++){
+    if(hasClass(document.querySelector('.slider__slide--' + i), 'slider__slide--active')){
+      var tmp = i;
+      setTimeout(function(){
+        removeClass(document.querySelector('.slider__slide--' + tmp), 'slider__slide--active');
+      },1000);
+      i = func(i);
+      document.querySelector('.slider__slide--' + i).style.zIndex = "-9";
+      addClass(document.querySelector('.slider__slide--' + i), 'slider__slide--active');
+      break;
+    }
+  }
+}
+
+function initProgressBar(stepInterval) {
+    var progressbarElem = document.querySelector('.progressbar__tik');
+    var width = 1;
+    var idInterval = setInterval(step, stepInterval);
+    function step() {
+        if (width >= 100) {
+            clearInterval(idInterval);
+            progressbarElem.style.width = 0;
+        } else {
+            width++;
+            progressbarElem.style.width = width + '%';
+        }
+    }
 }
 
 function initMap() {
