@@ -43,20 +43,31 @@ document.addEventListener('DOMContentLoaded',function(){
   });
 
   sliderArrowLeft.addEventListener('click', function(){
-    clearInterval(leafInterval);
-    leaf(function(i){return (i == 1) ? 3:i-1;});
+    //clearInterval(leafInterval);
+    leaf(function(i){
+      removeClass(document.querySelector('.slider__slide--' + i), 'slider__slide--active');
+      i = (i == 1) ? 3:i-1;
+      addClass(document.querySelector('.slider__slide--' + i), 'slider__slide--active');
+      i = (i == 1) ? 3:i-1;
+      addClass(document.querySelector('.slider__slide--' + i), 'slider__slide--back');
+    });
   });
 
   sliderArrowRight.addEventListener('click', function(){
-    clearInterval(leafInterval);
-    leaf(function(i){return (i == 3) ? 1:i+1;});
+    //clearInterval(leafInterval);
+    leaf(function(i){
+      addClass(document.querySelector('.slider__slide--' + i), 'slider__slide--back');
+      removeClass(document.querySelector('.slider__slide--' + i), 'slider__slide--active');
+      i = (i == 3) ? 1:i+1;
+      addClass(document.querySelector('.slider__slide--' + i), 'slider__slide--active');
+    });
   });
 
-  initProgressBar(5000/100);
-  var leafInterval = setInterval(function(){
-    initProgressBar(5000/90);
-    leaf(function(i){return (i == 3) ? 1:i+1;});
-  },5000);
+  //initProgressBar(5000/100);
+  //var leafInterval = setInterval(function(){
+    //initProgressBar(5000/90);
+    //leaf(function(i){return (i == 3) ? 1:i+1;});
+  //},5000);
 
   arrowIcon.addEventListener('click', function(e){
     var anchor                    = this;
@@ -225,17 +236,11 @@ function hasClass(element, strClassName){
 
 function leaf(func){
   for(var i = 1; i <=3; i++){
-    document.querySelector('.slider__slide--' + i).style.zIndex = "-10";
+    removeClass(document.querySelector('.slider__slide--' + i), 'slider__slide--back');
   }
   for(var i = 1; i <= 3; i++){
     if(hasClass(document.querySelector('.slider__slide--' + i), 'slider__slide--active')){
-      var tmp = i;
-      setTimeout(function(){
-        removeClass(document.querySelector('.slider__slide--' + tmp), 'slider__slide--active');
-      },1000);
-      i = func(i);
-      document.querySelector('.slider__slide--' + i).style.zIndex = "-9";
-      addClass(document.querySelector('.slider__slide--' + i), 'slider__slide--active');
+      func(i);
       break;
     }
   }
