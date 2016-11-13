@@ -16,9 +16,6 @@
   <header class="header header__index">
     <div class="header__mask"></div>
     <div class="slider">
-      <div class="progressbar">
-        <span class="progressbar__tik"></span>
-      </div>
       <img class="header__image slider__slide slider__slide--1 slider__slide--active" src="/img/index.jpg" alt="">
       <img class="header__image slider__slide slider__slide--2" src="/img/mobile.jpg" alt="">
       <img class="header__image slider__slide slider__slide--3" src="/img/seo.jpg" alt="">
