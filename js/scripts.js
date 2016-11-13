@@ -54,7 +54,6 @@ document.addEventListener('DOMContentLoaded',function(){
 
   var leafInterval = setInterval(function(){
     clickSliderArrowRight();
-    //initProgressBar(5000/100);
   },5000);
 
   arrowIcon.addEventListener('click', function(e){
@@ -251,22 +250,6 @@ function clickSliderArrowLeft(){
     i = (i == 1) ? 4:i-1;
     addClass(document.querySelector('.slider__slide--' + i), 'slider__slide--back');
   });
-}
-
-function initProgressBar(stepInterval) {
-    var progressbarElem = document.querySelector('.progressbar__tik');
-    var width = 1;
-    var idInterval = setInterval(step, stepInterval);
-    function step() {
-        if (width >= 100) {
-            clearInterval(idInterval);
-            clickSliderArrowLeft();
-            progressbarElem.style.width = 0;
-        } else {
-            width++;
-            progressbarElem.style.width = width + '%';
-        }
-    }
 }
 
 function initMap() {
