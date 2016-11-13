@@ -21,9 +21,6 @@ document.addEventListener('DOMContentLoaded',function(){
   var windowPopup       = document.querySelector('.window') || document.querySelector('head');
   var ajaxAlertPopup    = document.querySelector('.ajax-alert-popup') || document.querySelector('head');
   var arrowIcon         = document.querySelector('.arrow__icon') || document.querySelector('head');
-  var slideFirst        = document.querySelector('.slider__slide--1') || document.querySelector('head');
-  var slideSecond       = document.querySelector('.slider__slide--2') || document.querySelector('head');
-  var slideThird        = document.querySelector('.slider__slide--3') || document.querySelector('head');
   var sliderArrowLeft   = document.querySelector('.slider__arrow--left') || document.querySelector('head');
   var sliderArrowRight  = document.querySelector('.slider__arrow--right') || document.querySelector('head');
 
@@ -226,10 +223,10 @@ function hasClass(element, strClassName){
 }
 
 function leaf(func){
-  for(var i = 1; i <=3; i++){
+  for(var i = 1; i <= 4; i++){
     removeClass(document.querySelector('.slider__slide--' + i), 'slider__slide--back');
   }
-  for(var i = 1; i <= 3; i++){
+  for(var i = 1; i <= 4; i++){
     if(hasClass(document.querySelector('.slider__slide--' + i), 'slider__slide--active')){
       func(i);
       break;
@@ -241,7 +238,7 @@ function clickSliderArrowRight(){
   leaf(function(i){
     addClass(document.querySelector('.slider__slide--' + i), 'slider__slide--back');
     removeClass(document.querySelector('.slider__slide--' + i), 'slider__slide--active');
-    i = (i == 3) ? 1:i+1;
+    i = (i == 4) ? 1:i+1;
     addClass(document.querySelector('.slider__slide--' + i), 'slider__slide--active');
   });
 }
@@ -249,9 +246,9 @@ function clickSliderArrowRight(){
 function clickSliderArrowLeft(){
   leaf(function(i){
     removeClass(document.querySelector('.slider__slide--' + i), 'slider__slide--active');
-    i = (i == 1) ? 3:i-1;
+    i = (i == 1) ? 4:i-1;
     addClass(document.querySelector('.slider__slide--' + i), 'slider__slide--active');
-    i = (i == 1) ? 3:i-1;
+    i = (i == 1) ? 4:i-1;
     addClass(document.querySelector('.slider__slide--' + i), 'slider__slide--back');
   });
 }
