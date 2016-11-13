@@ -193,6 +193,18 @@ svg{
   z-index: -99;
 }
 
+.slider__slide--2{
+  object-position: 0 20%;
+}
+
+.slider__slide--3{
+  object-position: 0 0;
+}
+
+.slider__slide--4{
+  object-position: 0 0;
+}
+
 .slider__arrow{
   @include transition();
   position: absolute;
