@@ -42,32 +42,23 @@ document.addEventListener('DOMContentLoaded',function(){
     fileBack.click();
   });
 
+  var limitClickSliderArrowLeft = limitExecByInterval(clickSliderArrowLeft, 1000);
+  var limitClickSliderArrowRight = limitExecByInterval(clickSliderArrowRight, 1000);
+
   sliderArrowLeft.addEventListener('click', function(){
-    //clearInterval(leafInterval);
-    leaf(function(i){
-      removeClass(document.querySelector('.slider__slide--' + i), 'slider__slide--active');
-      i = (i == 1) ? 3:i-1;
-      addClass(document.querySelector('.slider__slide--' + i), 'slider__slide--active');
-      i = (i == 1) ? 3:i-1;
-      addClass(document.querySelector('.slider__slide--' + i), 'slider__slide--back');
-    });
+    clearInterval(leafInterval);
+    limitClickSliderArrowLeft();
   });
 
   sliderArrowRight.addEventListener('click', function(){
-    //clearInterval(leafInterval);
-    leaf(function(i){
-      addClass(document.querySelector('.slider__slide--' + i), 'slider__slide--back');
-      removeClass(document.querySelector('.slider__slide--' + i), 'slider__slide--active');
-      i = (i == 3) ? 1:i+1;
-      addClass(document.querySelector('.slider__slide--' + i), 'slider__slide--active');
-    });
+    clearInterval(leafInterval);
+    limitClickSliderArrowRight();
   });
 
-  //initProgressBar(5000/100);
-  //var leafInterval = setInterval(function(){
-    //initProgressBar(5000/90);
-    //leaf(function(i){return (i == 3) ? 1:i+1;});
-  //},5000);
+  var leafInterval = setInterval(function(){
+    clickSliderArrowRight();
+    //initProgressBar(5000/100);
+  },5000);
 
   arrowIcon.addEventListener('click', function(e){
     var anchor                    = this;
@@ -246,6 +237,25 @@ function leaf(func){
   }
 }
 
+function clickSliderArrowRight(){
+  leaf(function(i){
+    addClass(document.querySelector('.slider__slide--' + i), 'slider__slide--back');
+    removeClass(document.querySelector('.slider__slide--' + i), 'slider__slide--active');
+    i = (i == 3) ? 1:i+1;
+    addClass(document.querySelector('.slider__slide--' + i), 'slider__slide--active');
+  });
+}
+
+function clickSliderArrowLeft(){
+  leaf(function(i){
+    removeClass(document.querySelector('.slider__slide--' + i), 'slider__slide--active');
+    i = (i == 1) ? 3:i-1;
+    addClass(document.querySelector('.slider__slide--' + i), 'slider__slide--active');
+    i = (i == 1) ? 3:i-1;
+    addClass(document.querySelector('.slider__slide--' + i), 'slider__slide--back');
+  });
+}
+
 function initProgressBar(stepInterval) {
     var progressbarElem = document.querySelector('.progressbar__tik');
     var width = 1;
@@ -253,6 +263,7 @@ function initProgressBar(stepInterval) {
     function step() {
         if (width >= 100) {
             clearInterval(idInterval);
+            clickSliderArrowLeft();
             progressbarElem.style.width = 0;
         } else {
             width++;
@@ -314,4 +325,23 @@ function initMap() {
 
 map.setOptions({styles: styles});
 
+}
+
+function limitExecByInterval(fn, time) {
+	var lock, execOnUnlock, args;
+	return function() {
+		args = arguments;
+		if (!lock) {
+			lock = true;
+			var scope = this;
+			setTimeout(function(){
+				lock = false;
+				if (execOnUnlock) {
+					args.callee.apply(scope, args);
+					execOnUnlock = false;
+				}
+			}, time);
+			return fn.apply(this, args);
+		} else execOnUnlock = true;
+	}
 }
