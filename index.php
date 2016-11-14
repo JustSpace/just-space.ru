@@ -16,10 +16,10 @@
   <header class="header header__index">
     <div class="header__mask"></div>
     <div class="slider">
-      <img class="header__image slider__slide slider__slide--1 slider__slide--active" src="/img/index.jpg" alt="">
-      <img class="header__image slider__slide slider__slide--2" src="/img/mobile.jpg" alt="">
-      <img class="header__image slider__slide slider__slide--3" src="/img/seo.jpg" alt="">
-      <img class="header__image slider__slide slider__slide--4 slider__slide--back" src="/img/design.jpg" alt="">
+      <img class="header__image slider__slide slider__slide--1 slider__slide--active" src="/img/index.jpg" alt="Создание сайтов">
+      <img class="header__image slider__slide slider__slide--2" src="/img/mobile.jpg" alt="Разработка мобильных приложений">
+      <img class="header__image slider__slide slider__slide--3" src="/img/seo.jpg" alt="SEO продвижение">
+      <img class="header__image slider__slide slider__slide--4 slider__slide--back" src="/img/design.jpg" alt="Создание дизайна">
       <span class="slider__arrow slider__arrow--left">
         <svg aria-hidden="true" class="slider__arrow-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 129 129"><path d="m121.3 34.6c-1.6-1.6-4.2-1.6-5.8 0l-51 51.1-51.1-51.1c-1.6-1.6-4.2-1.6-5.8 0-1.6 1.6-1.6 4.2 0 5.8l53.9 53.9c0.8 0.8 1.8 1.2 2.9 1.2 1 0 2.1-0.4 2.9-1.2l53.9-53.9c1.7-1.6 1.7-4.2 0.1-5.8z"/></svg>
       </span>
@@ -27,6 +27,10 @@
         <svg aria-hidden="true" class="slider__arrow-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 129 129"><path d="m121.3 34.6c-1.6-1.6-4.2-1.6-5.8 0l-51 51.1-51.1-51.1c-1.6-1.6-4.2-1.6-5.8 0-1.6 1.6-1.6 4.2 0 5.8l53.9 53.9c0.8 0.8 1.8 1.2 2.9 1.2 1 0 2.1-0.4 2.9-1.2l53.9-53.9c1.7-1.6 1.7-4.2 0.1-5.8z"/></svg>
       </span>
     </div>
+    <h2 class="header__title header__title--1 header__title--active">Создаем удобные сайты</h2>
+    <h2 class="header__title header__title--2">Разрабатываем мобильные приложения</h2>
+    <h2 class="header__title header__title--3">Занимаемся SEO продвижением</h2>
+    <h2 class="header__title header__title--4 header__title--back">Разрабатываем уникальный дизайн</h2>
     <nav class="navigation">
       <a href="javascript:void(0)" class="hamburger" alt="Гамбургер меню">
         <span class="hamburger__line"></span>
