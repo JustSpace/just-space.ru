@@ -762,12 +762,18 @@ svg{
   text-align: center;
 }
 
+.services__text{
+  flex-basis: 100%;
+  text-align: justify;
+  margin-bottom: 40px;
+}
+
 .service{
   @include transition();
   background-color: $white;
   width: 25%;
   min-width: 200px;
-  padding: 10px 20px;
+  padding: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -782,6 +788,7 @@ svg{
     }
     .service__svg{
       color: #fff;
+      transform: scale(1.1);
     }
   }
 }
@@ -789,8 +796,7 @@ svg{
 .service__svg{
   @include transition();
   color: #e4e4e4;
-  width: 75px;
-  margin: 10px 0 10px;
+  width: 100px;
 }
 
 .service__title{
@@ -808,7 +814,7 @@ svg{
   font-weight: normal;
   color: $white;
   text-decoration: none;
-  padding: 10px 50px;
+  padding: 5px 40px;
 }
 
 // CONTACTS.PHP
