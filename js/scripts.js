@@ -26,7 +26,9 @@ document.addEventListener('DOMContentLoaded',function(){
 
   header.style.height           = winHeight/1.5 + 'px';
   headerIndex.style.height      = winHeight + 'px';
-  mainBlog.style.height         = winHeight + 'px';
+  if(winWidth > 500){
+    mainBlog.style.height       = winHeight + 'px';
+  }
 
   hamburger.addEventListener('click',function(){
     for(var i = 0; i < hamburgerLines.length; i++){

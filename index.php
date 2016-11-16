@@ -155,10 +155,10 @@
             </td>
           </tr>
           <tr>
-            <td>
+            <td class="order__cell">
 
             </td>
-            <td>
+            <td class="center-930px">
               <div class="buttons">
                 <button class="order__button order__button--file" type="button" id="file__front" >
                   <span>

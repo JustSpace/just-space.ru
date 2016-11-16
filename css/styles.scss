@@ -57,6 +57,7 @@ svg{
     font-weight: normal;
     padding: 20px 0;
     margin: 0;
+    line-height: 2em;
   }
 }
 
@@ -68,6 +69,14 @@ svg{
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.center-930px{
+  @media(max-width: 930px){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 .ajax-alert-popup{
@@ -451,7 +460,11 @@ svg{
   width: 100%;
   display: flex;
   justify-content:space-around;
+  align-items: center;
   color: $firstColor;
+  @media(max-width: 700px){
+    flex-direction: column;
+  }
 }
 
 .categories__element{
@@ -459,6 +472,10 @@ svg{
   flex-direction: column;
   align-items: center;
   width: 33%;
+  @media(max-width: 700px){
+    margin-bottom: 40px;
+    width: 100%;
+  }
 }
 
 .categories__element--creative{
@@ -497,6 +514,9 @@ svg{
   background-repeat: no-repeat;
   color: $white;
   background-position: 0 100%;
+  @media(max-width: 500px){
+    height: 800px;
+  }
 }
 
 .main-blog__wrapper{
@@ -513,6 +533,9 @@ svg{
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  @media(max-width: 1010px){
+    width: 100%;
+  }
 }
 
 .main-blog__text{
@@ -522,6 +545,7 @@ svg{
 .main-blog__button{
   @include transition();
   width: 200px;
+  min-height: 50px;
   text-decoration: none;
   border: 2px solid $headerfirstColor;
   border-radius: 5px;
@@ -558,6 +582,9 @@ svg{
 .order__table{
   width: 100%;
   max-width: 1000px;
+  @media(max-width: 930px){
+    text-align: center;
+  }
 }
 
 .order__cell{
@@ -566,6 +593,9 @@ svg{
   height: 50px;
   vertical-align: top;
   padding-top: 5px;
+  @media(max-width: 930px){
+    display: none;
+  }
 }
 
 .order__title{
@@ -599,6 +629,9 @@ svg{
   width: 100%;
   max-width: 460px;
   padding: 10px 15px;
+  @media(max-width: 930px){
+    margin: 5px 0;
+  }
 }
 
 .order__textarea{
@@ -631,7 +664,11 @@ svg{
 .order__button--file{
   background-color: transparent;
   border: 2px solid currentcolor;
-  position: relative;
+  position: absolute;
+  left: 0;
+  @media(max-width: 550px){
+    display: none;
+  }
 }
 
 .order__file{
@@ -649,17 +686,27 @@ svg{
 
 .order__submit{
   float: right;
+  @media(max-width: 550px){
+    width: 100%;
+    max-width: 460px;
+  }
 }
 
 .buttons{
-  width: 460px;
+  position: relative;
+  width: 100%;
+  max-width: 460px;
 }
 
 .clients{
   width: 100%;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   flex-wrap: wrap;
+  @media(max-width: 700px){
+    flex-direction: column;
+  }
 }
 
 .clients__title{
@@ -675,6 +722,15 @@ svg{
   display: flex;
   align-items: center;
   justify-content: center;
+  @media(max-width: 930px){
+    width: 140px;
+    height: 140px;
+  }
+  @media(max-width: 700px){
+    width: 200px;
+    height: 200px;
+    margin-bottom: 40px;
+  }
 }
 
 .client__img{
@@ -693,6 +749,9 @@ svg{
   background-color: $headerFirstColor;
   color: $white;
   position: relative;
+  @media(max-width: 500px){
+    font-size: 80%;
+  }
 }
 
 .footer__contact{
@@ -705,7 +764,6 @@ svg{
 }
 
 .footer__link{
-  height: 50px;
   display: block;
   text-decoration: none;
   cursor: pointer;
