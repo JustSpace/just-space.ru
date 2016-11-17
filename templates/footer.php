@@ -2,10 +2,10 @@
   <table class="footer__contact">
     <tr class="footer__element">
       <td>
-        <h3>Телефон</h3>
+        <h3 class="footer__title">Телефон</h3>
       </td>
       <td>
-        <h3>Адрес</h3>
+        <h3 class="footer__title">Адрес</h3>
       </td>
     </tr>
     <tr class="footer__element">
@@ -18,7 +18,7 @@
     </tr>
     <tr class="footer__element">
       <td>
-        <h3>Email</h3>
+        <h3 class="footer__title">Email</h3>
       </td>
       <td rowspan="2">
         <a class="footer__social-link" href="https://vk.com/justspaceweb" alt="Наша группа в ВКонтакте">
