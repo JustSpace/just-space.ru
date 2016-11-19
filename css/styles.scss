@@ -1,8 +1,9 @@
 @import 'fonts';
 
 $white: #fff;
-$bgColor: #f0f0f0;
+$bgColor: #fff;
 $black: #000;
+$gray: #eee;
 $firstColor: #0097ba;
 $secondColor: #151515;
 $alphaForHeader: 0.5;
@@ -121,7 +122,7 @@ svg{
   background-color: $white;
   border-color: $secondColor;
   cursor: pointer;
-  &:hover, &:focus{
+  &:hover,&:focus{
     background-color: $secondColor;
     color: $white;
   }
@@ -241,7 +242,7 @@ svg{
 .slider__arrow--left{
   left: 20px;
   transform: rotate(90deg);
-  &:hover{
+  &:hover,&:focus{
     transform: rotate(90deg) scale(1.1);
   }
 }
@@ -249,7 +250,7 @@ svg{
 .slider__arrow--right{
   right: 20px;
   transform: rotate(-90deg);
-  &:hover{
+  &:hover,&:focus{
     transform: rotate(-90deg) scale(1.1);
   }
 }
@@ -284,6 +285,11 @@ svg{
   background-position: 0 75%;
 }
 
+.header__tools{
+  background-image: linear-gradient(100deg, rgba(74,74,74,$alphaForHeader) 33.3%, rgba(221,116,138,$alphaForHeader) 33.4%, rgba(221,116,138,$alphaForHeader) 66.6%, rgba(0,151,186,$alphaForHeader) 66.7%, rgba(0,151,186,$alphaForHeader) 100%), url('/img/tools.jpg');
+  background-position: 0 75%;
+}
+
 .arrow{
   position: absolute;
   bottom: 0;
@@ -297,7 +303,7 @@ svg{
   color: currentcolor;
   width: 100px;
   cursor: pointer;
-  &:hover{
+  &:hover,&:focus{
     transform: scale(1.1);
   }
 }
@@ -511,6 +517,7 @@ svg{
 .main-blog{
   width: 100%;
   height: 600px;
+  min-height: 600px;
   background: url('/img/main-blog.jpg');
   background-color: #2A282B;
   background-size: cover;
@@ -546,7 +553,7 @@ svg{
 }
 
 .main-blog__button{
-  @include transition();
+  @include transition(.3s);
   width: 200px;
   min-height: 50px;
   text-decoration: none;
@@ -558,7 +565,7 @@ svg{
   justify-content: space-between;
   align-items: center;
   color: $headerfirstColor;
-  &:hover{
+  &:hover,&:focus{
     background-color: $headerfirstColor;
     color: $white;
   }
@@ -721,7 +728,7 @@ svg{
 .client{
   width: 200px;
   height: 200px;
-  background-color: $white;
+  background-color: $gray;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -778,7 +785,7 @@ svg{
   text-decoration: none;
   cursor: pointer;
   margin-bottom: 5px;
-  &:hover{
+  &:hover,&:focus{
     text-decoration: underline;
   }
 }
@@ -795,7 +802,7 @@ svg{
   height: 40px;
   cursor: pointer;
   @include transition(.3s);
-  &:hover{
+  &:hover,&:focus{
     color: $firstColor;
   }
   @media(max-width: 500px){
@@ -830,7 +837,7 @@ svg{
   justify-content: space-around;
   align-content:space-around;
   flex-wrap: wrap;
-  background-color: $white;
+  background-color: $bgColor;
 }
 
 .services__title{
@@ -857,7 +864,7 @@ svg{
   justify-content: space-between;
   text-align: justify;
   position: relative;
-  &:hover{
+  &:hover,&:focus{
     background-color: #E4E4E4;
     .service__button{
       background-color: $white;
@@ -927,7 +934,7 @@ svg{
 
 .contact__link{
   text-decoration: none;
-  &:hover{
+  &:hover,&:focus{
     text-decoration: underline;
   }
 }
@@ -950,7 +957,7 @@ svg{
   width: 50px;
   height: 60px;
   cursor: pointer;
-  &:hover{
+  &:hover,&:focus{
     color: $firstColor;
   }
   @media(max-width: 500px){
@@ -961,4 +968,53 @@ svg{
 
 .contact__icon--vk{
   width: 60px;
+}
+
+
+// BLOG.PHP
+
+.article{
+  width: 100%;
+}
+
+.article__title{
+
+}
+
+.article__cut{
+  padding-bottom: 40px;
+}
+
+.article__full{
+  @include transition(.3s);
+  width: 200px;
+  min-height: 50px;
+  text-decoration: none;
+  border-bottom: 2px solid $thirdColor;
+  padding: 10px 20px;
+  font-weight: normal;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: $thirdColor;
+  &:hover,&:focus{
+    background-color: $gray;
+    color: $black;
+  }
+}
+
+.article__icon{
+  width: 20px;
+  height: 20px;
+  color: currentcolor;
+}
+
+
+// SERVICES/MOBILE_DEVELOP.PHP
+
+.folder-services-header__title{
+  display: block;
+  height: 100px;
+  background-color: $firstColor;
+  font-size: 3.8em;
 }
