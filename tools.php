@@ -2,7 +2,7 @@
   require_once($_SERVER["DOCUMENT_ROOT"]."/templates/doc_head.php");
 ?>
 <body>
-  <header class="header header__vacancies">
+  <header class="header header__tools">
     <nav class="navigation">
       <a href="javascript:void(0)" class="hamburger">
         <span class="hamburger__line"></span>
@@ -10,7 +10,7 @@
         <span class="hamburger__line"></span>
       </a>
       <a href="index.php" class="navigation__logo">Just Space</a>
-      <span class="navigation__section">Вакансии</span>
+      <span class="navigation__section">Инструменты</span>
     </nav>
   </header>
   <?php

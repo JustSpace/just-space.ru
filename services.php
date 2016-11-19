@@ -14,7 +14,7 @@
     </nav>
   </header>
   <?php
-    require_once("templates/sidebar.php");
+    require_once($_SERVER["DOCUMENT_ROOT"]."/templates/sidebar.php");
   ?>
   <main class="main">
     <article class="services">
