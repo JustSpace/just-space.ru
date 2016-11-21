@@ -45,6 +45,68 @@
         </a>
       </div>
     </article>
+    <article class="order">
+      <form class="order__form" action="index.php" method="post">
+        <table class="order__table">
+          <tr>
+            <td colspan="2">
+              <h2 class="order__title">Заказать проект</h2>
+            </td>
+          </tr>
+          <tr>
+            <td class="order__cell">
+              <label class="order__label" for="fio">Ваше имя</label>
+            </td>
+            <td>
+              <input class="order__input" type="text" name="fio" id="fio" placeholder="Ваше имя" required>
+            </td>
+          </tr>
+          <tr>
+            <td class="order__cell">
+              <label class="order__label" for="tel">Телефон</label>
+            </td>
+            <td>
+              <input class="order__input" type="text" name="tel" id="tel" placeholder="Телефон" required>
+            </td>
+          </tr>
+          <tr>
+            <td class="order__cell">
+              <label class="order__label" for="email">Email</label>
+            </td>
+            <td>
+              <input class="order__input" type="email" name="email" id="email" placeholder="Email" required>
+            </td>
+          </tr>
+          <tr>
+            <td class="order__cell">
+              <label class="order__label" for="description">Расскажите о вашем проекте</label>
+            </td>
+            <td>
+              <textarea class="order__textarea" name="description" id="description" placeholder="Расскажите о вашем проекте" required></textarea>
+            </td>
+          </tr>
+          <tr>
+            <td class="order__cell">
+
+            </td>
+            <td class="center-930px">
+              <div class="buttons">
+                <button class="order__button order__button--file" type="button" id="file__front" >
+                  <span>
+                    <svg aria-hidden="true" class="order__button-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M97.3 482.2c-23.3 0-45.2-9.1-61.7-25.6 -34-34-34-89.4 0-123.4L305.3 63.5c21.7-21.7 50.6-33.7 81.4-33.7 30.8 0 59.7 12 81.4 33.7 21.7 21.7 33.7 50.6 33.7 81.4 0 30.8-12 59.7-33.7 81.4L255.8 438.6c-6.4 6.4-16.7 6.4-23.1 0 -6.4-6.4-6.4-16.7 0-23.1l212.3-212.3c15.6-15.6 24.2-36.3 24.2-58.3 0-22-8.6-42.7-24.2-58.3 -15.6-15.6-36.3-24.2-58.3-24.2 -22 0-42.7 8.6-58.3 24.2L58.7 356.3c-21.3 21.3-21.3 55.9 0 77.2 20.6 20.6 56.6 20.6 77.2 0l181.1-181.1c4.9-4.9 7.7-11.7 7.7-18.7 0-7-2.8-13.7-7.8-18.7 -10.3-10.3-27.1-10.3-37.4 0L156 338.8c-6.4 6.4-16.7 6.4-23.1 0 -6.4-6.4-6.4-16.7 0-23.1l123.7-123.7c23-23 60.5-23 83.5 0 11.2 11.2 17.3 26 17.3 41.8 0 15.5-6.3 30.8-17.3 41.8L159 456.6C142.6 473.1 120.7 482.2 97.3 482.2z"/></svg>
+                  </span>
+                  <span>
+                    Прикрепить файл
+                  </span>
+                </button>
+                <input class="order__file" type="file" name="file__back" id="file__back">
+                <input class="order__button order__submit" type="submit" name="order_sub" id="order_sub" value="Заказать">
+              </div>
+            </td>
+          </tr>
+        </table>
+      </form>
+    </article>
     <div class="map">
       <div id="map"></div>
       <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCFE_Bixd44cRvT7dS9qk8NN92t2Cgkd1I&signed_in=true&callback=initMap">
