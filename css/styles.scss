@@ -194,6 +194,19 @@ svg{
   opacity: 1;
 }
 
+.header__title--slice{
+  transform: translateX(0);
+  opacity: 1;
+  position: absolute;
+  padding: 0;
+  margin: 0;
+  top: auto;
+  bottom: -54px;
+  z-index: 20;
+  font-size: 5em;
+  color: $white;
+}
+
 .slider{
   width: 100%;
 }
@@ -924,7 +937,7 @@ svg{
 }
 
 .portfolio__text{
-  padding-top: 0;
+
 }
 
 .portfolio__line{

@@ -3,6 +3,7 @@
 ?>
 <body>
   <header class="header header__vacancies">
+    <h1 class="header__title header__title--slice">Наши вакансии</h1>
     <nav class="navigation">
       <a href="javascript:void(0)" class="hamburger">
         <span class="hamburger__line"></span>

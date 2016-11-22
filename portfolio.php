@@ -3,6 +3,7 @@
 ?>
 <body>
   <header class="header header__portfolio">
+    <h1 class="header__title header__title--slice">Наши проекты</h1>
     <nav class="navigation">
       <a href="javascript:void(0)" class="hamburger">
         <span class="hamburger__line"></span>
@@ -18,7 +19,6 @@
   ?>
   <main class="main">
     <article class="portfolio">
-      <h1 class="portfolio__title">Наши проекты</h1>
       <article class="portfolio__text">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione deleniti, sint voluptatum eveniet corporis incidunt repellendus sit mollitia laudantium iste quas fuga nesciunt error distinctio earum doloremque, fugiat iusto odio ipsam quidem at illo recusandae. Laudantium reprehenderit libero, voluptates placeat.
       </article>
