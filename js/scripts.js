@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded',function(){
   var arrowIcon         = document.querySelector('.arrow__icon') || document.querySelector('head');
   var sliderArrowLeft   = document.querySelector('.slider__arrow--left') || document.querySelector('head');
   var sliderArrowRight  = document.querySelector('.slider__arrow--right') || document.querySelector('head');
-
+  
   header.style.height           = winHeight/1.5 + 'px';
   headerIndex.style.height      = winHeight + 'px';
   if(winWidth > 500){

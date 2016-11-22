@@ -43,6 +43,7 @@ a{
 
 article{
   padding: 40px 50px;
+  text-align: justify;
   @media(max-width: 500px){
     padding: 40px 10px;
   }
@@ -457,7 +458,6 @@ svg{
 }
 
 .about{
- text-align: justify;
  line-height: 25px;
 }
 
@@ -549,7 +549,7 @@ svg{
 }
 
 .main-blog__text{
-  text-align: justify;
+
 }
 
 .main-blog__button{
@@ -829,6 +829,7 @@ svg{
   background-color: $secondColor;
 }
 
+
 // SERVICES.PHP
 
 .services{
@@ -847,7 +848,6 @@ svg{
 
 .services__text{
   flex-basis: 100%;
-  text-align: justify;
   margin-bottom: 40px;
 }
 
@@ -862,7 +862,6 @@ svg{
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  text-align: justify;
   position: relative;
   &:hover,&:focus{
     background-color: #E4E4E4;
@@ -910,6 +909,133 @@ svg{
   padding: 5px 40px;
   margin-top: 20px;
 }
+
+
+// PORTFOLIO.PHP
+
+.portfolio{
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.portfolio__title{
+
+}
+
+.portfolio__text{
+  padding-top: 0;
+}
+
+.portfolio__line{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.portfolio__project{
+  width: 33.3333%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.portfolio__logo{
+  position: absolute;
+  top: 0;
+  z-index: 6;
+  width: 100%;
+  height: 100%;
+  padding: 0 20%;
+  object-fit: contain;
+  &:hover + .portfolio__mask{
+    opacity: 1;
+  }
+}
+
+.portfolio__mask{
+  @include transition();
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 5;
+  opacity: $alphaForHeader;
+}
+
+.portfolio__mask--hover{
+  opacity: 1;
+}
+
+.portfolio__mask--1{
+  background-color: rgb(74,74,74);
+}
+
+.portfolio__mask--2{
+  background-color: rgb(221,116,138);
+}
+
+.portfolio__mask--3{
+  background-color: rgb(0,151,186);
+}
+
+.portfolio__mask--4{
+  background-color: rgb(123,42,139);
+}
+
+.portfolio__mask--5{
+  background-color: rgb(0,235,190);
+}
+
+.portfolio__mask--6{
+  background-color: rgb(245,166,35);
+}
+
+.portfolio__image{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+// BLOG.PHP
+
+.article{
+  width: 100%;
+}
+
+.article__title{
+
+}
+
+.article__cut{
+  padding-bottom: 40px;
+}
+
+.article__full{
+  @include transition(.3s);
+  width: 200px;
+  min-height: 50px;
+  text-decoration: none;
+  border-bottom: 2px solid $thirdColor;
+  padding: 10px 20px;
+  font-weight: normal;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: $thirdColor;
+  &:hover,&:focus{
+    background-color: $gray;
+    color: $black;
+  }
+}
+
+.article__icon{
+  width: 20px;
+  height: 20px;
+  color: currentcolor;
+}
+
 
 // CONTACTS.PHP
 
@@ -968,45 +1094,6 @@ svg{
 
 .contact__icon--vk{
   width: 60px;
-}
-
-
-// BLOG.PHP
-
-.article{
-  width: 100%;
-}
-
-.article__title{
-
-}
-
-.article__cut{
-  padding-bottom: 40px;
-}
-
-.article__full{
-  @include transition(.3s);
-  width: 200px;
-  min-height: 50px;
-  text-decoration: none;
-  border-bottom: 2px solid $thirdColor;
-  padding: 10px 20px;
-  font-weight: normal;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color: $thirdColor;
-  &:hover,&:focus{
-    background-color: $gray;
-    color: $black;
-  }
-}
-
-.article__icon{
-  width: 20px;
-  height: 20px;
-  color: currentcolor;
 }
 
 
