@@ -3,7 +3,7 @@
 $white: #fff;
 $bgColor: #fff;
 $black: #000;
-$gray: #eee;
+$gray: #e4e4e4;
 $firstColor: #0097ba;
 $secondColor: #151515;
 $alphaForHeader: 0.5;
@@ -73,6 +73,46 @@ svg{
 .center{
   display: flex;
   justify-content: center;
+  align-items: center;
+}
+
+.button{
+  @include transition(.3s);
+  width: 200px;
+  min-height: 50px;
+  text-decoration: none;
+  padding: 10px 20px;
+  font-weight: normal;
+}
+
+.button--full{
+  border: 2px solid currentcolor;
+  border-radius: 5px;
+  color: currentcolor;
+}
+
+.button--underline{
+  color: $thirdColor;
+  background-color: $white;
+  border-bottom: 2px solid currentcolor;
+  &:hover,&:focus{
+    background-color: $gray;
+    color: $black;
+  }
+}
+
+.button--rosen{
+  color: $headerfirstColor;
+  &:hover,&:focus{
+    background-color: $headerfirstColor;
+    border-color: $headerfirstColor;
+    color: $white;
+  }
+}
+
+.button--arrow{
+  display: flex;
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -201,9 +241,10 @@ svg{
   padding: 0;
   margin: 0;
   top: auto;
-  bottom: -54px;
+  bottom: -34px;
   z-index: 20;
   font-size: 5em;
+  line-height: 1.5em;
   color: $white;
 }
 
@@ -276,12 +317,12 @@ svg{
 
 .header__services{
   background-image: linear-gradient(100deg, rgba(74,74,74,$alphaForHeader) 33.3%, rgba(221,116,138,$alphaForHeader) 33.4%, rgba(221,116,138,$alphaForHeader) 66.6%, rgba(0,151,186,$alphaForHeader) 66.7%, rgba(0,151,186,$alphaForHeader) 100%), url('/img/service.jpg');
-  background-position: 0 180%;
+  background-position: 0 80%;
 }
 
 .header__portfolio{
-  background-image: linear-gradient(100deg, rgba(74,74,74,$alphaForHeader) 33.3%, rgba(221,116,138,$alphaForHeader) 33.4%, rgba(221,116,138,$alphaForHeader) 66.6%, rgba(0,151,186,$alphaForHeader) 66.7%, rgba(0,151,186,$alphaForHeader) 100%), url('/img/box.jpg');
-  background-position: 0 150%;
+  background-image: linear-gradient(100deg, rgba(74,74,74,$alphaForHeader) 33.3%, rgba(221,116,138,$alphaForHeader) 33.4%, rgba(221,116,138,$alphaForHeader) 66.6%, rgba(0,151,186,$alphaForHeader) 66.7%, rgba(0,151,186,$alphaForHeader) 100%), url('/img/portfolio.jpg');
+  background-position: 0 85%;
 }
 
 .header__vacancies{
@@ -291,7 +332,7 @@ svg{
 
 .header__blog{
   background-image: linear-gradient(100deg, rgba(74,74,74,$alphaForHeader) 33.3%, rgba(221,116,138,$alphaForHeader) 33.4%, rgba(221,116,138,$alphaForHeader) 66.6%, rgba(0,151,186,$alphaForHeader) 66.7%, rgba(0,151,186,$alphaForHeader) 100%), url('/img/blog.jpg');
-  background-position: 0 50%;
+  background-position: 0 80%;
 }
 
 .header__contacts{
@@ -563,25 +604,6 @@ svg{
 
 .main-blog__text{
 
-}
-
-.main-blog__button{
-  @include transition(.3s);
-  width: 200px;
-  min-height: 50px;
-  text-decoration: none;
-  border: 2px solid $headerfirstColor;
-  border-radius: 5px;
-  padding: 10px 20px;
-  font-weight: normal;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color: $headerfirstColor;
-  &:hover,&:focus{
-    background-color: $headerfirstColor;
-    color: $white;
-  }
 }
 
 .main-blog__icon{
@@ -877,7 +899,7 @@ svg{
   justify-content: space-between;
   position: relative;
   &:hover,&:focus{
-    background-color: #E4E4E4;
+    background-color: $gray;
     .service__button{
       background-color: $white;
       color: $firstColor;
@@ -1025,24 +1047,6 @@ svg{
   padding-bottom: 40px;
 }
 
-.article__full{
-  @include transition(.3s);
-  width: 200px;
-  min-height: 50px;
-  text-decoration: none;
-  border-bottom: 2px solid $thirdColor;
-  padding: 10px 20px;
-  font-weight: normal;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color: $thirdColor;
-  &:hover,&:focus{
-    background-color: $gray;
-    color: $black;
-  }
-}
-
 .article__icon{
   width: 20px;
   height: 20px;
@@ -1107,6 +1111,33 @@ svg{
 
 .contact__icon--vk{
   width: 60px;
+}
+
+
+// TOOLS.PHP
+
+.tools{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.tool{
+  @include transition();
+  width: 30%;
+  flex-basis: 30%;
+  padding: 20px 10px;
+  border: 1px solid $gray;
+}
+
+.tool__title{
+  color: $black;
+}
+
+.tool__text{
+  padding: 40px 20px;
+  color: $black;
 }
 
 
