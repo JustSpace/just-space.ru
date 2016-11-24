@@ -8,7 +8,7 @@ var XHR = ('onload' in new XMLHttpRequest()) ? XMLHttpRequest : XDomainRequest;
 
 document.addEventListener('DOMContentLoaded',function(){
   var header            = document.querySelector('.header') || document.querySelector('head');
-  var headerIndex       = document.querySelector('.header__index') || document.querySelector('head');
+  var headerIndex       = document.querySelector('.header--index') || document.querySelector('head');
   var mainBlog          = document.querySelector('.main-blog') || document.querySelector('head');
   var hamburger         = document.querySelector('.hamburger') || document.querySelector('head');
   var hamburgerLines    = document.querySelectorAll('.hamburger__line') || document.querySelector('head');
@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded',function(){
   var arrowIcon         = document.querySelector('.arrow__icon') || document.querySelector('head');
   var sliderArrowLeft   = document.querySelector('.slider__arrow--left') || document.querySelector('head');
   var sliderArrowRight  = document.querySelector('.slider__arrow--right') || document.querySelector('head');
-  
+
   header.style.height           = winHeight/1.5 + 'px';
   headerIndex.style.height      = winHeight + 'px';
   if(winWidth > 500){

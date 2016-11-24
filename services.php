@@ -2,7 +2,8 @@
   require_once($_SERVER["DOCUMENT_ROOT"]."/templates/doc_head.php");
 ?>
 <body>
-  <header class="header header__services">
+  <header class="header header--services">
+    <div class="header__mask"></div>
     <h1 class="header__title header__title--slice">Наши услуги</h1>
     <nav class="navigation">
       <a href="javascript:void(0)" class="hamburger">

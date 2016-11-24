@@ -310,39 +310,54 @@ svg{
   }
 }
 
-.header__index{
+.header--index{
   height: 600px;
   background-position: 0 30%;
 }
 
-.header__services{
-  background-image: linear-gradient(100deg, rgba(74,74,74,$alphaForHeader) 33.3%, rgba(221,116,138,$alphaForHeader) 33.4%, rgba(221,116,138,$alphaForHeader) 66.6%, rgba(0,151,186,$alphaForHeader) 66.7%, rgba(0,151,186,$alphaForHeader) 100%), url('/img/service.jpg');
+.header--services{
+  background-image: url('/img/services.jpg');
   background-position: 0 80%;
 }
 
-.header__portfolio{
-  background-image: linear-gradient(100deg, rgba(74,74,74,$alphaForHeader) 33.3%, rgba(221,116,138,$alphaForHeader) 33.4%, rgba(221,116,138,$alphaForHeader) 66.6%, rgba(0,151,186,$alphaForHeader) 66.7%, rgba(0,151,186,$alphaForHeader) 100%), url('/img/portfolio.jpg');
+.header--portfolio{
+  background-image: url('/img/portfolio.jpg');
   background-position: 0 85%;
 }
 
-.header__vacancies{
-  background-image: linear-gradient(100deg, rgba(74,74,74,$alphaForHeader) 33.3%, rgba(221,116,138,$alphaForHeader) 33.4%, rgba(221,116,138,$alphaForHeader) 66.6%, rgba(0,151,186,$alphaForHeader) 66.7%, rgba(0,151,186,$alphaForHeader) 100%), url('/img/bridge_girl.jpg');
+.header--vacancies{
+  background-image: url('/img/vacancies.jpg');
   background-position: 0 150%;
 }
 
-.header__blog{
-  background-image: linear-gradient(100deg, rgba(74,74,74,$alphaForHeader) 33.3%, rgba(221,116,138,$alphaForHeader) 33.4%, rgba(221,116,138,$alphaForHeader) 66.6%, rgba(0,151,186,$alphaForHeader) 66.7%, rgba(0,151,186,$alphaForHeader) 100%), url('/img/blog.jpg');
+.header--blog{
+  background-image: url('/img/blog.jpg');
   background-position: 0 80%;
 }
 
-.header__contacts{
-  background-image: linear-gradient(100deg, rgba(74,74,74,$alphaForHeader) 33.3%, rgba(221,116,138,$alphaForHeader) 33.4%, rgba(221,116,138,$alphaForHeader) 66.6%, rgba(0,151,186,$alphaForHeader) 66.7%, rgba(0,151,186,$alphaForHeader) 100%), url('/img/bell.jpg');
+.header--contacts{
+  background-image: url('/img/contacts.jpg');
   background-position: 0 75%;
 }
 
-.header__tools{
-  background-image: linear-gradient(100deg, rgba(74,74,74,$alphaForHeader) 33.3%, rgba(221,116,138,$alphaForHeader) 33.4%, rgba(221,116,138,$alphaForHeader) 66.6%, rgba(0,151,186,$alphaForHeader) 66.7%, rgba(0,151,186,$alphaForHeader) 100%), url('/img/tools.jpg');
+.header--tools{
+  background-image: url('/img/tools.jpg');
   background-position: 0 75%;
+}
+
+.header--domotoplenya{
+  background-image: url('/img/clients/cis/cis_full.png');
+  background-position: 0 50%;
+}
+
+.header--gazel-traffic{
+  background-image: url('/img/clients/gazel-traffic/gazel-traffic_full.jpg');
+  background-position: 0 60%;
+}
+
+.header--sportlifting{
+  background-image: url('/img/clients/sportlifting/sportlifting_full.jpg');
+  background-position: 50% 0;
 }
 
 .arrow{

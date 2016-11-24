@@ -13,7 +13,7 @@
       <input class="window__button-close" type="button" value="Ок" autofocus>
     </div>
   </div>
-  <header class="header header__index">
+  <header class="header header--index">
     <div class="header__mask"></div>
     <div class="slider">
       <img class="header__image slider__slide slider__slide--1 slider__slide--active" src="/img/index.jpg" alt="Создание сайтов">
@@ -102,16 +102,16 @@
     <article class="clients">
       <h2 class="clients__title">Наши клиенты</h2>
       <div class="client">
-        <img class="client__img" src="/img/цис.png" alt="Центр инженерных систем">
+        <img class="client__img" src="/img/clients/cis/cis_logo_black.png" alt="Центр инженерных систем">
       </div>
       <div class="client">
-        <img class="client__img" src="/img/sportlifting.png" alt="SportLifting">
+        <img class="client__img" src="/img/clients/sportlifting/sportlifting_logo_black.png" alt="SportLifting">
       </div>
       <div class="client">
-        <img class="client__img" src="/img/ТЦН.png" alt="Тульский Центр Недвижимости">
+        <img class="client__img" src="/img/clients/tcn/tcn_logo_black.png" alt="Тульский Центр Недвижимости">
       </div>
       <div class="client">
-        <img class="client__img" src="/img/Gazel-Traffic.png" alt="Gazel-Traffic">
+        <img class="client__img" src="/img/clients/gazel-traffic/gazel-traffic_logo_black.png" alt="Gazel-Traffic">
       </div>
     </article>
     <article class="order">
