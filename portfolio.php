@@ -2,7 +2,8 @@
   require_once($_SERVER["DOCUMENT_ROOT"]."/templates/doc_head.php");
 ?>
 <body>
-  <header class="header header__portfolio">
+  <header class="header header--portfolio">
+    <div class="header__mask"></div>
     <h1 class="header__title header__title--slice">Наши проекты</h1>
     <nav class="navigation">
       <a href="javascript:void(0)" class="hamburger">
@@ -24,36 +25,26 @@
       </article>
       <section class="portfolio__line">
         <a href="/portfolio/domotoplenya.php" class="portfolio__project">
-          <img src="/img/CIS_logo_white.png" class="portfolio__logo">
+          <img src="/img/clients/cis/cis_logo_white.png" class="portfolio__logo">
           <div class="portfolio__mask portfolio__mask--1"></div>
-          <img src="/img/Portfolio_ЦИС.png" class="portfolio__image" alt="">
+          <img src="/img/clients/cis/cis_clip.png" class="portfolio__image" alt="">
         </a>
         <a href="/portfolio/gazeltraffic.php" class="portfolio__project">
-          <img src="/img/Gazel-Traffic_logo_white.png" class="portfolio__logo">
+          <img src="/img/clients/gazel-traffic/gazel-traffic_logo_white.png" class="portfolio__logo">
           <div class="portfolio__mask portfolio__mask--2"></div>
-          <img src="/img/Portfolio_Gazel-Traffic.png" class="portfolio__image" alt="">
+          <img src="/img/clients/gazel-traffic/gazel-traffic_clip.png" class="portfolio__image" alt="">
         </a>
         <a href="/portfolio/sportlifting.php" class="portfolio__project">
-          <img src="/img/SportLifting_logo_white.png" class="portfolio__logo">
+          <img src="/img/clients/sportlifting/sportlifting_logo_white.png" class="portfolio__logo">
           <div class="portfolio__mask portfolio__mask--3"></div>
-          <img src="/img/Portfolio_SportLifting.png" class="portfolio__image" alt="">
+          <img src="/img/clients/sportlifting/sportlifting_clip.png" class="portfolio__image" alt="">
         </a>
       </section>
       <section class="portfolio__line">
-        <a href="/portfolio/domotoplenya.php" class="portfolio__project">
-          <img src="/img/CIS_logo_white.png" class="portfolio__logo">
+        <a href="/portfolio/justspaceshoot.php" class="portfolio__project">
+          <img src="/img/clients/justspaceshoot/justspaceshoot_logo_white.png" class="portfolio__logo">
           <div class="portfolio__mask portfolio__mask--4"></div>
-          <img src="/img/Portfolio_ЦИС.png" class="portfolio__image" alt="">
-        </a>
-        <a href="/portfolio/gazeltraffic.php" class="portfolio__project">
-          <img src="/img/Gazel-Traffic_logo_white.png" class="portfolio__logo">
-          <div class="portfolio__mask portfolio__mask--5"></div>
-          <img src="/img/Portfolio_Gazel-Traffic.png" class="portfolio__image" alt="">
-        </a>
-        <a href="/portfolio/sportlifting.php" class="portfolio__project">
-          <img src="/img/SportLifting_logo_white.png" class="portfolio__logo">
-          <div class="portfolio__mask portfolio__mask--6"></div>
-          <img src="/img/Portfolio_SportLifting.png" class="portfolio__image" alt="">
+          <img src="/img/clients/justspaceshoot/justspaceshoot_clip.png" class="portfolio__image" alt="">
         </a>
       </section>
     </article>
