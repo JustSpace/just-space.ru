@@ -920,10 +920,7 @@ svg{
   position: relative;
   &:hover,&:focus{
     background-color: $gray;
-    .service__button{
-      background-color: $white;
-      color: $firstColor;
-    }
+    transform: scale(1.1);
     .service__svg{
       color: #fff;
       transform: scale(1.1);
@@ -1071,6 +1068,61 @@ svg{
   width: 20px;
   height: 20px;
   color: currentcolor;
+}
+
+
+// VACANCIES.PHP
+
+.vacancies{
+  width: 100%;
+}
+
+.vacancies__text{
+
+}
+
+.vacancy__title{
+}
+
+.vacancies__line{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.vacancy{
+  @include transition(.3s);
+  width: 100%;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px 25px;
+  &:hover{
+    background-color: $gray;
+    transform: scale(1.05);
+  }
+}
+
+.vacancy__description{
+
+}
+
+.vacancy__requirements{
+
+}
+
+.vacancy__list{
+  width: 100%;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  padding-left: 10px;
+  font-size: 0.9em;
+}
+
+.vacancy__list-element{
+  display: block;
 }
 
 
