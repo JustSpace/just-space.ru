@@ -20,9 +20,9 @@
   ?>
   <main class="main">
     <article class="vacancies">
-      <article class="vacancies__text">
+      <section class="vacancies__text">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione deleniti, sint voluptatum eveniet corporis incidunt repellendus sit mollitia laudantium iste quas fuga nesciunt error distinctio earum doloremque, fugiat iusto odio ipsam quidem at illo recusandae. Laudantium reprehenderit libero, voluptates placeat.
-      </article>
+      </section>
       <section class="vacancies__line">
         <a href="#" class="vacancy">
           <h2 class="vacancy__title">Front-End разработчик</h2>
