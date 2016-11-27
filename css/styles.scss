@@ -920,10 +920,10 @@ svg{
   position: relative;
   &:hover,&:focus{
     background-color: $gray;
-    transform: scale(1.1);
+    transform: scale(1.05);
     .service__svg{
       color: #fff;
-      transform: scale(1.1);
+      transform: scale(1.05);
     }
   }
   @media(max-width: 750px){
@@ -1099,9 +1099,9 @@ svg{
   flex-direction: column;
   justify-content: space-between;
   padding: 10px 25px;
-  &:hover{
+  &:hover,&:focus{
     background-color: $gray;
-    transform: scale(1.05);
+    transform: scale(1.025);
   }
 }
 
