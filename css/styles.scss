@@ -426,6 +426,10 @@ svg{
   }
 }
 
+.navigation__section--link{
+  text-decoration: none;
+}
+
 .hamburger{
   cursor: pointer;
   position: relative;
@@ -1219,6 +1223,8 @@ svg{
 .folder-services-header__title{
   display: block;
   height: 100px;
+  text-align: right;
+  padding-right: 5%; 
   background-color: $firstColor;
   font-size: 3.8em;
 }

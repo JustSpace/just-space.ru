@@ -22,6 +22,7 @@
         <span class="hamburger__line"></span>
       </a>
       <a href="/index.php" class="navigation__logo" alt="Digital-агентство Just Space">Just Space</a>
+      <a href="/services.php" class="navigation__section navigation__section--link">Услуги</a>
     </nav>
   </header>
 <?php
