@@ -21,7 +21,8 @@
   <main class="main">
     <article class="vacancies">
       <section class="vacancies__text">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione deleniti, sint voluptatum eveniet corporis incidunt repellendus sit mollitia laudantium iste quas fuga nesciunt error distinctio earum doloremque, fugiat iusto odio ipsam quidem at illo recusandae. Laudantium reprehenderit libero, voluptates placeat.
+        Для создания еще более качественных сайтов и мобильных приложений нам нужны способные сотрудники, именно поэтому мы заинтересованы в организации сильной, амбициозной и креативной команды.
+        Если вы уверенны в своих силах и желаете развивать ваши профессиональные навыки - присоединяйтесь к нам!
       </section>
       <section class="vacancies__line">
         <a href="#" class="vacancy">

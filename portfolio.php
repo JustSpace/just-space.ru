@@ -21,7 +21,10 @@
   <main class="main">
     <article class="portfolio">
       <article class="portfolio__text">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione deleniti, sint voluptatum eveniet corporis incidunt repellendus sit mollitia laudantium iste quas fuga nesciunt error distinctio earum doloremque, fugiat iusto odio ipsam quidem at illo recusandae. Laudantium reprehenderit libero, voluptates placeat.
+        Ко всем проектам мы подходим с большим вниманием и ответственностью.
+        Непосредственно перед началом работы над сайтом мы выполняем детальный аудит, выявляем все узкие места и предлагаем различные варианты решения.
+        Каждый этап работы над сайтом выполняется в строго определенной последовательности, что позволяет наиболее эффективно внедрять новые наработки.
+        На этой странице вы можете ознакомиться с решенными нами задачами, при разработке сайтов и приложений для наших клиентов.
       </article>
       <section class="portfolio__line">
         <a href="/portfolio/domotoplenya.php" class="portfolio__project">
