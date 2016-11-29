@@ -103,6 +103,7 @@ svg{
 
 .button--rosen{
   color: $headerfirstColor;
+  border-color: $headerfirstColor;
   &:hover,&:focus{
     background-color: $headerfirstColor;
     border-color: $headerfirstColor;
