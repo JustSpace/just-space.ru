@@ -49,6 +49,16 @@
           <div class="portfolio__mask portfolio__mask--4"></div>
           <img src="/img/clients/justspaceshoot/justspaceshoot_clip.png" class="portfolio__image" alt="">
         </a>
+        <a href="/portfolio/doly-tula.php" class="portfolio__project">
+          <img src="/img/clients/tcn/tcn_logo_white.png" class="portfolio__logo">
+          <div class="portfolio__mask portfolio__mask--5"></div>
+          <img src="/img/clients/tcn/tcn_clip.jpg" class="portfolio__image" alt="">
+        </a>
+        <a href="/portfolio/tulskayakvartirka.php" class="portfolio__project">
+          <img src="/img/clients/tulskayakvartirka/tulskayakvartirka_logo_white.png" class="portfolio__logo">
+          <div class="portfolio__mask portfolio__mask--6"></div>
+          <img src="/img/clients/tulskayakvartirka/tulskayakvartirka_clip.jpg" class="portfolio__image" alt="">
+        </a>
       </section>
     </article>
   </main>

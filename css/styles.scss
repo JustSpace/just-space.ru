@@ -422,6 +422,16 @@ input{
   background-position: 0 90%;
 }
 
+.header--doly-tula{
+  background-image: url('/img/clients/tcn/tcn_full.jpg');
+  background-position: 0 140%;
+}
+
+.header--tulskayakvartirka{
+  background-image: url('/img/clients/tulskayakvartirka/tulskayakvartirka_full.jpg');
+  background-position: 0 100%;
+}
+
 .arrow{
   position: absolute;
   bottom: 0;
@@ -1051,7 +1061,7 @@ input{
 .portfolio__line{
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
 
 .portfolio__project{
