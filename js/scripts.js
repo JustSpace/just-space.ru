@@ -54,9 +54,11 @@ document.addEventListener('DOMContentLoaded',function(){
     limitClickSliderArrowRight();
   });
 
-  var leafInterval = setInterval(function(){
-    clickSliderArrowRight();
-  },5000);
+  if(hasClass(header, 'header--index')){
+    var leafInterval = setInterval(function(){
+      clickSliderArrowRight();
+    },5000);
+  }
 
   arrowIcon.addEventListener('click', function(e){
     var anchor                    = this;
