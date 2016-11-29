@@ -29,7 +29,7 @@
           return "SEO-оптимизация для SportLifting" . $this->titleEnd;
         case '/portfolio/gazeltraffic.php':
           return "Создание сайта с нуля для Gazel-Traffic" . $this->titleEnd;
-        case '/portfolio/dolytula.php':
+        case '/portfolio/doly-tula.php':
           return "Создание сайта с нуля для ТЦН" . $this->titleEnd;
         default:
           return "Создаем сайты и мобильные приложения" . $this->titleEnd;
