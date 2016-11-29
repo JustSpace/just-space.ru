@@ -39,6 +39,7 @@ body{
 
 a{
   color: currentColor;
+  outline: none;
 }
 
 article{
@@ -53,6 +54,11 @@ svg{
   fill: currentcolor;
   width: 100px;
   height: 100px;
+}
+
+input{
+  border-radius: 0;
+  -webkit-appearance: none;
 }
 
 @for $i from 1 through 6{
@@ -978,6 +984,7 @@ svg{
   align-items: center;
   justify-content: space-between;
   position: relative;
+  overflow: hidden;
   &:hover,&:focus{
     background-color: $gray;
     transform: scale(1.05);
@@ -1000,7 +1007,9 @@ svg{
   position: absolute;
   top: 20px;
   color: #e4e4e4;
-  width: 100px;
+  width: 100%;
+  left: 0;
+  right: 0;
 }
 
 .service__title{
@@ -1071,6 +1080,7 @@ svg{
   width: 100%;
   height: 100%;
   position: absolute;
+  top: 0;
   z-index: 5;
   opacity: $alphaForHeader;
 }
