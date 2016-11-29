@@ -312,33 +312,87 @@ svg{
 }
 
 .header--services{
-  background-image: url('/img/services.jpg');
+  background-image: url('/img/services-M.jpg');
   background-position: 0 80%;
+  @media(min-width: 4000px){
+    background-image: url('/img/services-XL.jpg');
+  }
+  @media(min-width: 2000px){
+    background-image: url('/img/services-L.jpg');
+  }
+  @media(max-width: 1000px){
+    background-image: url('/img/services-S.jpg');
+  }
 }
 
 .header--portfolio{
-  background-image: url('/img/portfolio.jpg');
+  background-image: url('/img/portfolio-M.jpg');
   background-position: 0 85%;
+  @media(min-width: 4000px){
+    background-image: url('/img/portfolio-XL.jpg');
+  }
+  @media(min-width: 2000px){
+    background-image: url('/img/portfolio-L.jpg');
+  }
+  @media(max-width: 1000px){
+    background-image: url('/img/portfolio-S.jpg');
+  }
 }
 
 .header--vacancies{
-  background-image: url('/img/vacancies.jpg');
+  background-image: url('/img/vacancies-M.jpg');
   background-position: 0 150%;
+  @media(min-width: 4000px){
+    background-image: url('/img/vacancies-XL.jpg');
+  }
+  @media(min-width: 2000px){
+    background-image: url('/img/vacancies-L.jpg');
+  }
+  @media(max-width: 1000px){
+    background-image: url('/img/vacancies-S.jpg');
+  }
 }
 
 .header--blog{
-  background-image: url('/img/blog.jpg');
+  background-image: url('/img/blog-M.jpg');
   background-position: 0 80%;
+  @media(min-width: 4000px){
+    background-image: url('/img/blog-XL.jpg');
+  }
+  @media(min-width: 2000px){
+    background-image: url('/img/blog-L.jpg');
+  }
+  @media(max-width: 1000px){
+    background-image: url('/img/blog-S.jpg');
+  }
 }
 
 .header--contacts{
-  background-image: url('/img/contacts.jpg');
+  background-image: url('/img/contacts-M.jpg');
   background-position: 0 75%;
+  @media(min-width: 4000px){
+    background-image: url('/img/contacts-XL.jpg');
+  }
+  @media(min-width: 2000px){
+    background-image: url('/img/contacts-L.jpg');
+  }
+  @media(max-width: 1000px){
+    background-image: url('/img/contacts-S.jpg');
+  }
 }
 
 .header--tools{
-  background-image: url('/img/tools.jpg');
+  background-image: url('/img/tools-M.jpg');
   background-position: 0 75%;
+  @media(min-width: 4000px){
+    background-image: url('/img/tools-XL.jpg');
+  }
+  @media(min-width: 2000px){
+    background-image: url('/img/tools-L.jpg');
+  }
+  @media(max-width: 1000px){
+    background-image: url('/img/tools-S.jpg');
+  }
 }
 
 .header--domotoplenya{
@@ -589,12 +643,21 @@ svg{
   width: 100%;
   height: 600px;
   min-height: 600px;
-  background: url('/img/main-blog.jpg');
+  background: url('/img/main-blog-M.jpg');
   background-color: #2A282B;
   background-size: cover;
   background-repeat: no-repeat;
   color: $white;
   background-position: 0 100%;
+  @media(min-width: 4000px){
+    background-image: url('/img/main-blog-XL.jpg');
+  }
+  @media(min-width: 2000px){
+    background-image: url('/img/main-blog-L.jpg');
+  }
+  @media(max-width: 1000px){
+    background-image: url('/img/main-blog-S.jpg');
+  }
   @media(max-width: 500px){
     height: 800px;
   }

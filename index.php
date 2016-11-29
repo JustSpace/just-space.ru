@@ -16,10 +16,30 @@
   <header class="header header--index">
     <div class="header__mask"></div>
     <div class="slider">
-      <img class="header__image slider__slide slider__slide--1 slider__slide--active" src="/img/index.jpg" alt="Создание сайтов">
-      <img class="header__image slider__slide slider__slide--2" src="/img/mobile.jpg" alt="Разработка мобильных приложений">
-      <img class="header__image slider__slide slider__slide--3" src="/img/seo.jpg" alt="SEO продвижение">
-      <img class="header__image slider__slide slider__slide--4 slider__slide--back" src="/img/design.jpg" alt="Создание дизайна">
+      <picture>
+        <source srcset="/img/index-XL.jpg" media="(min-width: 4000px)">
+        <source srcset="/img/index-L.jpg" media="(min-width: 2000px)">
+        <source srcset="/img/index-S.jpg" media="(max-width: 1000px)">
+        <img class="header__image slider__slide slider__slide--1 slider__slide--active" src="/img/index-M.jpg" alt="Создание сайтов">
+      </picture>
+      <picture>
+        <source srcset="/img/mobile-XL.jpg" media="(min-width: 4000px)">
+        <source srcset="/img/mobile-L.jpg" media="(min-width: 2000px)">
+        <source srcset="/img/mobile-S.jpg" media="(max-width: 1000px)">
+        <img class="header__image slider__slide slider__slide--2" src="/img/mobile-M.jpg" alt="Разработка мобильных приложений">
+      </picture>
+      <picture>
+        <source srcset="/img/seo-XL.jpg" media="(min-width: 4000px)">
+        <source srcset="/img/seo-L.jpg" media="(min-width: 2000px)">
+        <source srcset="/img/seo-S.jpg" media="(max-width: 1000px)">
+        <img class="header__image slider__slide slider__slide--3" src="/img/seo-M.jpg" alt="SEO продвижение">
+      </picture>
+      <picture>
+        <source srcset="/img/design-XL.jpg" media="(min-width: 4000px)">
+        <source srcset="/img/design-L.jpg" media="(min-width: 2000px)">
+        <source srcset="/img/design-S.jpg" media="(max-width: 1000px)">
+        <img class="header__image slider__slide slider__slide--4 slider__slide--back" src="/img/design-M.jpg" alt="Создание дизайна">
+      </picture>
       <svg class="slider__arrow slider__arrow--left" aria-hidden="true">
         <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/img/sprites/sprites.svg#down-arrow"></use>
       </svg>
