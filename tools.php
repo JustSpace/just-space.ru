@@ -27,7 +27,9 @@
         </div>
         <a href="#" class="button button--underline button--arrow">
           Попробовать
-          <svg aria-hidden="true" class="article__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 31.5 31.5"><path d="M21.2 5c-0.4-0.4-1.1-0.4-1.6 0 -0.4 0.4-0.4 1.1 0 1.6l8 8H1.1C0.5 14.6 0 15.1 0 15.7c0 0.6 0.5 1.1 1.1 1.1h26.6l-8 8c-0.4 0.4-0.4 1.2 0 1.6 0.4 0.4 1.2 0.4 1.6 0l10-10c0.4-0.4 0.4-1.1 0-1.6L21.2 5z"/>
+          <svg class="article__icon" aria-hidden="true">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/img/sprites/sprites.svg#next-arrow"></use>
+          </svg>
         </a>
       </div>
       <div class="tool">
@@ -37,7 +39,9 @@
         </div>
         <a href="#" class="button button--underline button--arrow">
           Попробовать
-          <svg aria-hidden="true" class="article__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 31.5 31.5"><path d="M21.2 5c-0.4-0.4-1.1-0.4-1.6 0 -0.4 0.4-0.4 1.1 0 1.6l8 8H1.1C0.5 14.6 0 15.1 0 15.7c0 0.6 0.5 1.1 1.1 1.1h26.6l-8 8c-0.4 0.4-0.4 1.2 0 1.6 0.4 0.4 1.2 0.4 1.6 0l10-10c0.4-0.4 0.4-1.1 0-1.6L21.2 5z"/>
+          <svg class="article__icon" aria-hidden="true">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/img/sprites/sprites.svg#next-arrow"></use>
+          </svg>
         </a>
       </div>
       <div class="tool">
@@ -47,7 +51,9 @@
         </div>
         <a href="#" class="button button--underline button--arrow">
           Попробовать
-          <svg aria-hidden="true" class="article__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 31.5 31.5"><path d="M21.2 5c-0.4-0.4-1.1-0.4-1.6 0 -0.4 0.4-0.4 1.1 0 1.6l8 8H1.1C0.5 14.6 0 15.1 0 15.7c0 0.6 0.5 1.1 1.1 1.1h26.6l-8 8c-0.4 0.4-0.4 1.2 0 1.6 0.4 0.4 1.2 0.4 1.6 0l10-10c0.4-0.4 0.4-1.1 0-1.6L21.2 5z"/>
+          <svg class="article__icon" aria-hidden="true">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/img/sprites/sprites.svg#next-arrow"></use>
+          </svg>
         </a>
       </div>
     </article>

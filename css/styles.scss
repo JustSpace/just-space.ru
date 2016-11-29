@@ -52,8 +52,8 @@ article{
 svg{
   fill: currentcolor;
   width: 100px;
+  height: 100px;
 }
-
 
 @for $i from 1 through 6{
   #{$title}#{$i}{
@@ -284,14 +284,10 @@ svg{
   @include transition();
   position: absolute;
   top: 50%;
-  font-size: 80px;
   cursor: pointer;
   z-index: 50;
-  overflow: hidden;
-}
-
-.slider__arrow-icon{
-  width: 30px;
+  width: 35px;
+  height: 35px;
 }
 
 .slider__arrow--left{
@@ -377,6 +373,7 @@ svg{
   @include transition();
   color: currentcolor;
   width: 100px;
+  height: 100px;
   cursor: pointer;
   &:hover,&:focus{
     transform: scale(1.1);
@@ -577,10 +574,6 @@ svg{
   color: $headerThirdColor;
 }
 
-.categories__icon{
-  color: currentcolor;
-}
-
 .list{
   width: 100%;
   color: currentcolor;
@@ -750,7 +743,6 @@ svg{
   position: relative;
   top: 3px;
   left: -3px;
-  fill: currentcolor;
 }
 
 .order__submit{
@@ -1224,7 +1216,7 @@ svg{
   display: block;
   height: 100px;
   text-align: right;
-  padding-right: 5%; 
+  padding-right: 5%;
   background-color: $firstColor;
   font-size: 3.8em;
 }
