@@ -2,7 +2,7 @@
   require_once($_SERVER["DOCUMENT_ROOT"]."/templates/doc_head.php");
 ?>
 <body>
-  <header class="header header--gazel-traffic">
+  <header class="header header--2div3 header--gazel-traffic">
     <div class="header__mask"></div>
     <nav class="navigation">
       <a href="javascript:void(0)" class="hamburger">

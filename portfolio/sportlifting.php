@@ -2,7 +2,7 @@
   require_once($_SERVER["DOCUMENT_ROOT"]."/templates/doc_head.php");
 ?>
 <body>
-  <header class="header header--sportlifting">
+  <header class="header header--2div3 header--sportlifting">
     <div class="header__mask"></div>
     <nav class="navigation">
       <a href="javascript:void(0)" class="hamburger">
