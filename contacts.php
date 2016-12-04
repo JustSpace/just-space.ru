@@ -2,7 +2,7 @@
   require_once($_SERVER["DOCUMENT_ROOT"]."/templates/doc_head.php");
 ?>
 <body>
-  <header class="header header--contacts">
+  <header class="header header--2div3 header--contacts">
     <div class="header__mask"></div>
     <h1 class="header__title header__title--slice">Наши контакты</h1>
     <nav class="navigation">

@@ -6,12 +6,9 @@ $black: #000;
 $gray: #e4e4e4;
 $firstColor: #0097ba;
 $secondColor: #151515;
+$thirdColor: #4a4a4a;
+$fourthColor: #dd748a;
 $alphaForHeader: 0.5;
-$title: h;
-$thirdColor: #4f4f4f;
-$headerFirstColor: #4a4a4a;
-$headerfirstColor: #dd748a;
-$headerThirdColor: #0097ba;
 
 @mixin transition($duration: .5s, $function: linear, $properties: all){
   transition: $properties $duration $function;
@@ -72,8 +69,14 @@ li{
   padding: 0;
 }
 
+hr{
+  border-width: 0;
+  height: 1px;
+  background-color: currentcolor;
+}
+
 @for $i from 1 through 6{
-  #{$title}#{$i}{
+  h#{$i}{
     text-transform: uppercase;
     text-align: center;
     font-weight: normal;
@@ -119,11 +122,11 @@ li{
 }
 
 .button--rosen{
-  color: $headerfirstColor;
-  border-color: $headerfirstColor;
+  color: $fourthColor;
+  border-color: $fourthColor;
   &:hover,&:focus{
-    background-color: $headerfirstColor;
-    border-color: $headerfirstColor;
+    background-color: $fourthColor;
+    border-color: $fourthColor;
     color: $white;
   }
 }
@@ -208,7 +211,6 @@ li{
 }
 
 .header{
-  height: 350px;
   background-size: cover;
   background-attachment: fixed;
   color: $white;
@@ -266,67 +268,17 @@ li{
   color: $white;
 }
 
-.slider{
-  width: 100%;
-}
-
-.slider__slide{
-  @include transition(1s);
-  transform: translateX(200%);
-  z-index: -100;
-}
-
-.slider__slide--back{
-  transform: translateX(0);
-  z-index: -100;
-}
-
-.slider__slide--active{
-  transform: translateX(0);
-  z-index: -99;
-}
-
-.slider__slide--2{
-  object-position: 0 20%;
-}
-
-.slider__slide--3{
-  object-position: 0 0;
-}
-
-.slider__slide--4{
-  object-position: 0 0;
-}
-
-.slider__arrow{
-  @include transition();
-  position: absolute;
-  top: 50%;
-  cursor: pointer;
-  z-index: 50;
-  width: 35px;
-  height: 35px;
-}
-
-.slider__arrow--left{
-  left: 20px;
-  transform: rotate(90deg);
-  &:hover,&:focus{
-    transform: rotate(90deg) scale(1.1);
-  }
-}
-
-.slider__arrow--right{
-  right: 20px;
-  transform: rotate(-90deg);
-  &:hover,&:focus{
-    transform: rotate(-90deg) scale(1.1);
-  }
-}
-
 .header--index{
   height: 600px;
   background-position: 0 30%;
+}
+
+.header--2div3{
+  height: 350px;
+}
+
+.header--folder{
+
 }
 
 .header--services{
@@ -441,6 +393,64 @@ li{
 .header--tulskayakvartirka{
   background-image: url('/img/clients/tulskayakvartirka/tulskayakvartirka_full.jpg');
   background-position: 0 100%;
+}
+
+.slider{
+  width: 100%;
+}
+
+.slider__slide{
+  @include transition(1s);
+  transform: translateX(200%);
+  z-index: -100;
+}
+
+.slider__slide--back{
+  transform: translateX(0);
+  z-index: -100;
+}
+
+.slider__slide--active{
+  transform: translateX(0);
+  z-index: -99;
+}
+
+.slider__slide--2{
+  object-position: 0 20%;
+}
+
+.slider__slide--3{
+  object-position: 0 0;
+}
+
+.slider__slide--4{
+  object-position: 0 0;
+}
+
+.slider__arrow{
+  @include transition();
+  position: absolute;
+  top: 50%;
+  cursor: pointer;
+  z-index: 50;
+  width: 35px;
+  height: 35px;
+}
+
+.slider__arrow--left{
+  left: 20px;
+  transform: rotate(90deg);
+  &:hover,&:focus{
+    transform: rotate(90deg) scale(1.1);
+  }
+}
+
+.slider__arrow--right{
+  right: 20px;
+  transform: rotate(-90deg);
+  &:hover,&:focus{
+    transform: rotate(-90deg) scale(1.1);
+  }
 }
 
 .arrow{
@@ -645,15 +655,15 @@ li{
 }
 
 .categories__element--creative{
-  color: $headerFirstColor;
+  color: $thirdColor;
 }
 
 .categories__element--technology{
-  color: $headerfirstColor;
+  color: $fourthColor;
 }
 
 .categories__element--design{
-  color: $headerThirdColor;
+  color: $firstColor;
 }
 
 .list{
@@ -898,7 +908,7 @@ li{
 }
 
 .footer{
-  background-color: $headerFirstColor;
+  background-color: $thirdColor;
   color: $white;
   position: relative;
   @media(max-width: 500px){
@@ -1314,4 +1324,43 @@ li{
   padding-right: 5%;
   background-color: $firstColor;
   font-size: 3.8em;
+}
+
+.folder-services-content{
+  width: 100%;
+}
+
+.folder-services-content__block{
+  width: 100%;
+  margin-bottom: 50px;
+}
+
+.folder-services-content__block--1{
+  color: $thirdColor;
+}
+
+.folder-services-content__block--2{
+  color: $fourthColor;
+}
+
+.folder-services-content__block--3{
+  color: $firstColor;
+}
+
+.folder-services-content__title{
+  text-align: left;
+  color: currentcolor;
+}
+
+.folder-services-content__line{
+  width: 80%;
+  display: block;
+  position: relative;
+  height: 2px;
+  left: -10%;
+  top: -10px;
+}
+
+.folder-services-content__text{
+  color: $black;
 }

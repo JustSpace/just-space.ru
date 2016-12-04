@@ -2,7 +2,7 @@
   require_once($_SERVER["DOCUMENT_ROOT"]."/templates/doc_head.php");
 ?>
 <body>
-  <header class="header header--domotoplenya">
+  <header class="header header--2div3 header--domotoplenya">
     <div class="header__mask"></div>
     <nav class="navigation">
       <a href="javascript:void(0)" class="hamburger">
