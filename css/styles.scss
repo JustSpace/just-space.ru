@@ -268,17 +268,23 @@ hr{
   color: $white;
 }
 
+.header__title--right{
+  text-align: right;
+  padding-right: 5%;
+}
+
 .header--index{
   height: 600px;
   background-position: 0 30%;
 }
 
-.header--2div3{
-  height: 350px;
+.header--1div3{
+  height: 170px;
+  background-color: $firstColor;
 }
 
-.header--folder{
-
+.header--2div3{
+  height: 350px;
 }
 
 .header--services{
@@ -878,12 +884,14 @@ hr{
 }
 
 .client{
+  @include transition();
   width: 200px;
   height: 200px;
   background-color: $gray;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  background-size: 70%;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  padding: 20px;
   @media(max-width: 930px){
     width: 140px;
     height: 140px;
@@ -893,10 +901,37 @@ hr{
     height: 200px;
     margin-bottom: 40px;
   }
+  &:hover{
+    background-color: $firstColor;
+  }
 }
 
-.client__img{
-  width: 70%;
+.client--1{
+  background-image: url('/img/clients/cis/cis_logo_black.png');
+  &:hover{
+    background-image: url('/img/clients/cis/cis_logo_white.png');
+  }
+}
+
+.client--2{
+  background-image: url('/img/clients/sportlifting/sportlifting_logo_black.png');
+  &:hover{
+    background-image: url('/img/clients/sportlifting/sportlifting_logo_white.png');
+  }
+}
+
+.client--3{
+  background-image: url('/img/clients/tcn/tcn_logo_black.png');
+  &:hover{
+    background-image: url('/img/clients/tcn/tcn_logo_white.png');
+  }
+}
+
+.client--4{
+  background-image: url('/img/clients/gazel-traffic/gazel-traffic_logo_black.png');
+  &:hover{
+    background-image: url('/img/clients/gazel-traffic/gazel-traffic_logo_white.png');
+  }
 }
 
 .map{
@@ -1083,6 +1118,7 @@ hr{
   width: 100%;
   display: flex;
   justify-content: flex-start;
+  flex-wrap: wrap;
 }
 
 .portfolio__project{
@@ -1091,6 +1127,12 @@ hr{
   display: flex;
   justify-content: center;
   align-items: center;
+  @media(max-width: 800px){
+    width: 50%;
+  }
+  @media(max-width: 400px){
+    width: 100%;
+  }
 }
 
 .portfolio__logo{
@@ -1188,13 +1230,15 @@ hr{
 .vacancies__line{
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
   padding-top: 40px;
 }
 
 .vacancy{
   @include transition(.3s);
-  width: 100%;
+  width: 33.333333%;
   text-decoration: none;
   display: flex;
   flex-direction: column;
@@ -1203,6 +1247,13 @@ hr{
   &:hover,&:focus{
     background-color: $gray;
     transform: scale(1.025);
+  }
+  @media(max-width: 900px){
+    width: 100%;
+    max-width: 400px;
+    &:not(:last-child){
+      margin-bottom: 80px;
+    }
   }
 }
 
@@ -1300,9 +1351,11 @@ hr{
 .tool{
   @include transition();
   width: 30%;
-  flex-basis: 30%;
   padding: 20px 10px;
   border: 1px solid $gray;
+  @media(max-width: 1100px){
+    width: 100%;
+  }
 }
 
 .tool__title{
@@ -1316,15 +1369,6 @@ hr{
 
 
 // SERVICES/MOBILE_DEVELOP.PHP
-
-.folder-services-header__title{
-  display: block;
-  height: 100px;
-  text-align: right;
-  padding-right: 5%;
-  background-color: $firstColor;
-  font-size: 3.8em;
-}
 
 .folder-services-content{
   width: 100%;
