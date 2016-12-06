@@ -132,17 +132,13 @@
     </div>
     <article class="clients">
       <h2 class="clients__title">Наши клиенты</h2>
-      <div class="client">
-        <img class="client__img" src="/img/clients/cis/cis_logo_black.png" alt="Центр инженерных систем">
+      <div class="client client--1">
       </div>
-      <div class="client">
-        <img class="client__img" src="/img/clients/sportlifting/sportlifting_logo_black.png" alt="SportLifting">
+      <div class="client client--2">
       </div>
-      <div class="client">
-        <img class="client__img" src="/img/clients/tcn/tcn_logo_black.png" alt="Тульский Центр Недвижимости">
+      <div class="client client--3">
       </div>
-      <div class="client">
-        <img class="client__img" src="/img/clients/gazel-traffic/gazel-traffic_logo_black.png" alt="Gazel-Traffic">
+      <div class="client client--4">
       </div>
     </article>
     <article class="order">

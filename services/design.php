@@ -2,8 +2,8 @@
   require_once($_SERVER["DOCUMENT_ROOT"]."/templates/doc_head.php");
 ?>
 <body>
-  <header class="header header__index">
-    <h1 class="folder-services-header__title">Дизайн</h1>
+  <header class="header header--1div3">
+    <h1 class="header__title header__title--slice header__title--right">Дизайн</h1>
     <nav class="navigation">
       <a href="javascript:void(0)" class="hamburger" alt="Гамбургер меню">
         <span class="hamburger__line"></span>
