@@ -21,20 +21,22 @@
     <article class="folder-services-content">
       <section class="folder-services-content__block folder-services-content__block--1">
         <h2 class="folder-services-content__title">
-          Lorem ipsum dolor sit amet.
+          Контекстная реклама в Яндекс.Директ и Google AdWords
         </h2>
         <hr class="folder-services-content__line">
         <div class="folder-services-content__text">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed tempora delectus ducimus incidunt quis hic dignissimos, natus ex quo, velit facilis fuga dolor voluptates nostrum culpa officiis, excepturi sit id, neque. Incidunt deleniti, pariatur aspernatur repellendus, expedita dolores, temporibus enim nobis quae, dolorem architecto. Quidem eos cupiditate culpa neque minus!
+          Создаем рекламные кампании, что включает в себя подбор ключевых слов, настройка таргетинга, копирайтинг и настройка объявлений. Производим дальнейшее сопровождение с повышением качества аккаунта, снижением цены клика и повышением конверсии. А также выводим ранее созданные кампании из пике.
         </div>
       </section>
       <section class="folder-services-content__block folder-services-content__block--2">
         <h2 class="folder-services-content__title">
-          Lorem ipsum dolor sit.
+          Продвижение и таргетинговая реклама в социальных сетях (SMM)
         </h2>
         <hr class="folder-services-content__line">
         <div class="folder-services-content__text">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore dicta, numquam magnam odio atque fuga aliquam in natus! Similique voluptatum, facilis impedit soluta, blanditiis minus cumque deserunt dolorem nostrum quae veniam id earum saepe. Quisquam voluptates, repellendus voluptate perferendis ipsum consequatur, facilis magnam libero neque delectus? Earum odio, sequi amet perspiciatis quam facilis, recusandae excepturi hic suscipit debitis, nesciunt quaerat.
+          Работаем с группами и рекламными аккаунтами в Вконтакте, FaceBook, Instagram и Twitter.
+          Оформляем группы в корпоративном стиле, занимаемся созданием контента.
+          Настраиваем таргетинговую рекламу в социльных сетях.
         </div>
       </section>
       <section class="folder-services-content__block folder-services-content__block--3">
