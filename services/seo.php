@@ -21,16 +21,16 @@
     <article class="folder-services-content">
       <section class="folder-services-content__block folder-services-content__block--1">
         <h2 class="folder-services-content__title">
-          Lorem ipsum dolor sit amet.
+          SEO-оптимизация
         </h2>
         <hr class="folder-services-content__line">
         <div class="folder-services-content__text">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed tempora delectus ducimus incidunt quis hic dignissimos, natus ex quo, velit facilis fuga dolor voluptates nostrum culpa officiis, excepturi sit id, neque. Incidunt deleniti, pariatur aspernatur repellendus, expedita dolores, temporibus enim nobis quae, dolorem architecto. Quidem eos cupiditate culpa neque minus!
+          Создание семантического ядра (подбор ключевых фраз) и т.д.
         </div>
       </section>
       <section class="folder-services-content__block folder-services-content__block--2">
         <h2 class="folder-services-content__title">
-          Lorem ipsum dolor sit.
+          Копирайт и рерайт текстов
         </h2>
         <hr class="folder-services-content__line">
         <div class="folder-services-content__text">
@@ -39,7 +39,7 @@
       </section>
       <section class="folder-services-content__block folder-services-content__block--3">
         <h2 class="folder-services-content__title">
-          Lorem ipsum dolor sit amet.
+          Увеличение ссылочной массы
         </h2>
         <hr class="folder-services-content__line">
         <div class="folder-services-content__text">

@@ -21,7 +21,7 @@
     <article class="folder-services-content">
       <section class="folder-services-content__block folder-services-content__block--1">
         <h2 class="folder-services-content__title">
-          Lorem ipsum dolor sit amet.
+          Создание дизайна для сайтов и мобильных приложений
         </h2>
         <hr class="folder-services-content__line">
         <div class="folder-services-content__text">
@@ -30,7 +30,7 @@
       </section>
       <section class="folder-services-content__block folder-services-content__block--2">
         <h2 class="folder-services-content__title">
-          Lorem ipsum dolor sit.
+          Полиграфический дизайн
         </h2>
         <hr class="folder-services-content__line">
         <div class="folder-services-content__text">
@@ -39,11 +39,11 @@
       </section>
       <section class="folder-services-content__block folder-services-content__block--3">
         <h2 class="folder-services-content__title">
-          Lorem ipsum dolor sit amet.
+          Другие услуги
         </h2>
         <hr class="folder-services-content__line">
         <div class="folder-services-content__text">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate porro, cumque adipisci nostrum libero possimus. Quasi aut, facilis aliquid quo impedit commodi. Sint incidunt dolorem, odit commodi quasi, alias cum quam deserunt ratione error nam non optio explicabo illum cumque.
+          Обработка фотографий, создание иных вещей необходимых для фирмы и корпоративного стиля.
         </div>
       </section>
     </article>
