@@ -54,7 +54,7 @@
           <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/img/sprites/sprites-services.svg#design"></use>
         </svg>
         <h3 class="service__title">Дизайн</h3>
-        Придумываем уникальный дизайн или качественно подстраиваем под вас готовые шаблонные решения.
+          Проектируем интерфейсы (UI/UX), создаем уникальный дизайн, индивидуально кастомизируем типовые решения.
         <a href="/services/design.php" class="service__button">Подробнее</a>
       </section>
       <section class="service">

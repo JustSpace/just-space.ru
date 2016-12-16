@@ -30,22 +30,22 @@
       </section>
       <section class="folder-services-content__block folder-services-content__block--2">
         <h2 class="folder-services-content__title">
-          Продвижение и таргетинговая реклама в социальных сетях (SMM)
+          Продвижение и таргетинговая реклама в социальных сетях
         </h2>
         <hr class="folder-services-content__line">
         <div class="folder-services-content__text">
-          Работаем с группами и рекламными аккаунтами в Вконтакте, FaceBook, Instagram и Twitter.
-          Оформляем группы в корпоративном стиле, занимаемся созданием контента.
+          Работаем с группами и рекламными аккаунтами в Вконтакте, FaceBook, Instagram и Twitter - оптимизируем и продвигаем (SMO и SMM).
+          Оформляем сообщества в корпоративном стиле, занимаемся созданием контента.
           Настраиваем таргетинговую рекламу в социльных сетях.
         </div>
       </section>
       <section class="folder-services-content__block folder-services-content__block--3">
         <h2 class="folder-services-content__title">
-          Lorem ipsum dolor sit amet.
+          Другие услуги
         </h2>
         <hr class="folder-services-content__line">
         <div class="folder-services-content__text">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate porro, cumque adipisci nostrum libero possimus. Quasi aut, facilis aliquid quo impedit commodi. Sint incidunt dolorem, odit commodi quasi, alias cum quam deserunt ratione error nam non optio explicabo illum cumque.
+          Занимаемся множеством иных видов рекламы. Поддерживаем спонсорские соглашения.
         </div>
       </section>
     </article>
