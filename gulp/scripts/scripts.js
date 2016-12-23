@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded',function(){
   var sliderArrowLeft   = document.querySelector('.slider__arrow--left') || document.querySelector('head');
   var sliderArrowRight  = document.querySelector('.slider__arrow--right') || document.querySelector('head');
 
-  header2div3.style.height           = winHeight/1.5 + 'px';
+  header2div3.style.height      = winHeight/1.5 + 'px';
   headerIndex.style.height      = winHeight + 'px';
   if(winWidth > 500){
     mainBlog.style.height       = winHeight + 'px';

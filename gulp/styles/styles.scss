@@ -1,4 +1,4 @@
-@import 'fonts';
+@import 'fonts.scss';
 
 $white: #fff;
 $bgColor: #fff;
@@ -94,6 +94,10 @@ hr{
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.clear{
+  clear: both;
 }
 
 .button{
@@ -399,6 +403,11 @@ hr{
 .header--tulskayakvartirka{
   background-image: url('/img/clients/tulskayakvartirka/tulskayakvartirka_full.jpg');
   background-position: 0 100%;
+}
+
+.header--jqueryformobile{
+  background-image: url('/img/articles/jqueryformobile2.jpg');
+  background-position: 0 180%;
 }
 
 .slider{
@@ -1205,6 +1214,26 @@ hr{
 
 .article__cut{
   padding-bottom: 40px;
+}
+
+.article__paragraph{
+  &:not(:last-child){
+    padding-bottom: 20px;
+  }
+}
+
+.article__footer{
+  font-size: 0.9em;
+  font-style: italic;
+  width: 100%;
+}
+
+.article__date{
+  float: left;
+}
+
+.article__author{
+  float: right;
 }
 
 .article__icon{

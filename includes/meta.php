@@ -4,44 +4,65 @@
 
     public function GetTitle($UrlPhpSelf){
       switch($UrlPhpSelf){
+
+        // /
         case '/index.php':
-          return "Создаем сайты и мобильные приложения" . $this->titleEnd; // 69 chars
-        case '/design.php':
-          return "Дизайн веб страниц и мобильных приложений" . $this->titleEnd; // 71 chars
-        case '/develop.php':
-          return "Разработка сайтов и мобильных приложений" . $this->titleEnd; // 70 chars
-        case '/seo.php':
-          return "SEO продвижение сайтов и мобильных приложений" . $this->titleEnd; // 75 chars
+          return "Разрабатываем сайты и мобильные приложения" . $this->titleEnd; // 69 chars
         case '/services.php':
           return "Создание и продвижение сайтов и мобильных приложений" . $this->titleEnd; // 82 chars
         case '/portfolio.php':
           return "Наше портфолио в создание сайтов и приложений" . $this->titleEnd; // 76 chars
         case '/blog.php':
-          return "Узнайте о Just Space больше на страницах нашего блога" . $this->titleEnd; // 83 chars
+          return "Блог о разработке и не только" . $this->titleEnd;
         case '/vacancies.php':
           return "Присоединяйтесь к нашей команде" . $this->titleEnd; // 60 chars
         case '/contacts.php':
-          return "Свяжитесь с нами для дальнейшего сотрудничества" . $this->titleEnd; // 76 chars
+          return "Закажите создания сайта или приложения" . $this->titleEnd; // 76 chars
+        case '/tools.php':
+          return "Инструментарий" . $this->titleEnd; // 76 chars
 
+        // /SERVICES/
+        case '/services/advertising.php':
+          return "Контекстная реклама и Social media marketing" . $this->titleEnd;
+        case '/services/design.php':
+          return "Разрабатываем дизайн сайтов и приложений" . $this->titleEnd;
+        case '/services/mobile_develop.php':
+          return "Разработка мобильных приложений на iOS и Android" . $this->titleEnd;
+        case '/services/seo.php':
+          return "SEO продвижение сайтов и мобильных приложений" . $this->titleEnd; // 75 chars
+        case '/services/web_develop.php':
+          return "Разработка отзывчивых и адаптивных сайтов" . $this->titleEnd;
+
+        // /PORTFOLIO/
         case '/portfolio/domotoplenya.php':
-          return "Контекстная-реклама для ДомОтопления" . $this->titleEnd;
+          return "Контекстная реклама для лендинга" . $this->titleEnd;
         case '/portfolio/sportlifting.php':
-          return "SEO-оптимизация для SportLifting" . $this->titleEnd;
+          return "Техническая поддержка и SEO оптимизация интернет-магазина" . $this->titleEnd;
         case '/portfolio/gazeltraffic.php':
-          return "Создание сайта с нуля для Gazel-Traffic" . $this->titleEnd;
+          return "Создание сайта лендинга под ключ" . $this->titleEnd;
         case '/portfolio/doly-tula.php':
-          return "Создание сайта с нуля для ТЦН" . $this->titleEnd;
+          return "Создание сайта визитки под ключ" . $this->titleEnd;
+        case '/portfolio/justspaceshoot.php':
+          return "Создание 8-ми битной мобильной игры" . $this->titleEnd;
+        case '/portfolio/tulskayakvartirka.php':
+          return "Создание типового корпоративного сайта" . $this->titleEnd;
+
+        // /BLOG/
+        case '/blog/jqueryformobile.php':
+          return "Стоит ли в 2017 году использовать jQuery?" . $this->titleEnd;
+
+        // UNDEFINED
         default:
-          return "Создаем сайты и мобильные приложения" . $this->titleEnd;
+          return "Digital-агентство Just Space" . $this->titleEnd;
       }
     }
 
     public function GetDesc($UrlPhpSelf){
       switch($UrlPhpSelf){
         case '/index.php':
-           return "Разрабатываем и продвигаем сайты и мобильные приложения, обеспечиваем высокий уровень качества, имеем своих представителей в Москве и Туле";
+          return "Разрабатываем и продвигаем сайты и мобильные приложения, обеспечиваем высокий уровень качества, имеем своих представителей в Москве и Туле";
         case '/design.php':
-          return "Разрабатываем уникальный дизайн для сайтов, мобильных приложений, а также для любой полиграфической продукции";
+        return "Разрабатываем уникальный дизайн для сайтов, мобильных приложений, а также для любой полиграфической продукции";
         case '/develop.php':
           return "Мы занимаемся созданием сайтов, а также обеспечиваем техническую поддержку готовых решений";
         case '/seo.php':
@@ -51,7 +72,6 @@
         case '/portfolio/sportlifting.php':
           return "SportLifting";
         default:
-          # code...
           return "Мы создаем сайты | Just Space";
       }
     }
@@ -59,7 +79,7 @@
     public function GetKey($UrlPhpSelf){
       switch($UrlPhpSelf){
         case '/index.php':
-           return "веб студия, создание сайтов, сайт визитка, разработка сайтов, создать интернет магазин, создание сайта визитки, продвижение сайтов, дизайн сайта, веб сайт, создать визитку, создание сайта цена, создать сайт быстро, раскрутка сайта, оптимизация сайта, seo продвижение, поисковое продвижение, поисковая оптимизация, продвинуть сайт, контекстная реклама, seo сайта, сео продвижение, seo продвижение сайта, продвижение сайта цена, продвижение веб сайтов, заказать продвижение сайта, стоимость продвижения сайта, качественное продвижение сайтов";
+          return "веб студия, создание сайтов, сайт визитка, разработка сайтов, создать интернет магазин, создание сайта визитки, продвижение сайтов, дизайн сайта, веб сайт, создать визитку, создание сайта цена, создать сайт быстро, раскрутка сайта, оптимизация сайта, seo продвижение, поисковое продвижение, поисковая оптимизация, продвинуть сайт, контекстная реклама, seo сайта, сео продвижение, seo продвижение сайта, продвижение сайта цена, продвижение веб сайтов, заказать продвижение сайта, стоимость продвижения сайта, качественное продвижение сайтов";
         case '/design.php':
           return "веб студия, веб дизайн, шаблоны сайтов, разработка сайтов, создание сайтов, дизайн студия, сайт дизайнера, разработать дизайн, создать макет, web дизайн, красивый дизайн сайта, дизайн сайта цена, хороший дизайн, создать визитку, дизайн сайта, заказать дизайн сайта, веб дизайн сайтов, дизайн сайта Тула, создание дизайна сайта, дизайн интернет сайта";
         case '/develop.php':
@@ -71,7 +91,6 @@
         case '/portfolio/sportlifting.php':
           return "SportLifting";
         default:
-          # code...
           return "Мы создаем сайты | Just Space";
       }
     }
