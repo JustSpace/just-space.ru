@@ -4,10 +4,12 @@ var uglifyjs = require('gulp-uglifyjs');
 var concat = require('gulp-concat');
 var cssnano = require('gulp-cssnano');
 var rename = require('gulp-rename');
+var autoprefixer = require('gulp-autoprefixer');
 
 gulp.task('sass', function(){
 	return gulp.src('gulp/styles/**/*.scss')
 	.pipe(sass())
+	.pipe(autoprefixer(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
 	.pipe(gulp.dest('gulp/styles'))
 });
 
@@ -29,3 +31,5 @@ gulp.task('watch', ['styles', 'scripts'], function(){
 	gulp.watch('gulp/styles/**/*.scss', ['styles']);
 	gulp.watch('gulp/scripts/**/*.js', ['scripts']);
 });
+
+gulp.task('default', ['watch']);
