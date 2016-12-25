@@ -259,6 +259,7 @@ hr{
 }
 
 .header__title--slice{
+  transition: none;
   transform: translateX(0);
   opacity: 1;
   position: absolute;

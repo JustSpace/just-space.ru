@@ -373,6 +373,8 @@ h6 {
   opacity: 1; }
 
 .header__title--slice {
+  -webkit-transition: none;
+  transition: none;
   -webkit-transform: translateX(0);
       -ms-transform: translateX(0);
           transform: translateX(0);
