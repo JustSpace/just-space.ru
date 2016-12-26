@@ -1,3 +1,6 @@
+<?php
+  require_once($_SERVER["DOCUMENT_ROOT"]."/templates/app_menu.php");
+?>
 <aside class="sidebar">
     <nav class="sidebar__navigation">
       <a href="/index.php" class="sidebar__link">Главная</a>

@@ -261,7 +261,7 @@ h6 {
   right: 0;
   z-index: 111;
   display: none;
-  background-color: rgba(0, 0, 0, 0.5); }
+  background-color: rgba(0, 0, 0, 0.8); }
 
 .ajax-alert-popup--open {
   display: -webkit-box;
@@ -856,6 +856,91 @@ h6 {
   width: 20px;
   height: 20px;
   color: currentcolor; }
+
+.app-menu {
+  -webkit-transition: all 0.5s linear;
+  transition: all 0.5s linear;
+  width: 500px;
+  background-color: #0097ba;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  -webkit-transform: translate3d(-500px, 0, 0);
+          transform: translate3d(-500px, 0, 0);
+  z-index: 101;
+  color: #fff;
+  height: 100%; }
+  @media (max-width: 550px) {
+    .app-menu {
+      width: 100%;
+      -webkit-transform: translate3d(-100%, 0, 0);
+              transform: translate3d(-100%, 0, 0); } }
+
+.app-menu__order {
+  margin-top: 50px; }
+  .app-menu__order .order__input {
+    margin: 5px 0; }
+  .app-menu__order .order__submit {
+    width: 100%;
+    max-width: 460px; }
+
+.app-menu--open {
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0); }
+
+.blind {
+  -webkit-transition: all 0.5s linear;
+  transition: all 0.5s linear;
+  width: 30px;
+  height: 50px;
+  cursor: pointer;
+  background-color: #0097ba;
+  -webkit-transform: translate3d(30px, 0, 0);
+          transform: translate3d(30px, 0, 0);
+  position: absolute;
+  bottom: 50px;
+  right: 0; }
+
+.blind__line1,
+.blind__line2 {
+  background-color: #fff;
+  height: 2px;
+  width: 20px;
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  margin: auto; }
+
+.blind__line1 {
+  -webkit-transform: translate3d(3px, -5px, 0) rotate(30deg);
+          transform: translate3d(3px, -5px, 0) rotate(30deg); }
+
+.blind__line2 {
+  -webkit-transform: translate3d(3px, 5px, 0) rotate(-30deg);
+          transform: translate3d(3px, 5px, 0) rotate(-30deg); }
+
+.blind--open {
+  -webkit-transition: all 0.5s linear;
+  transition: all 0.5s linear;
+  background-color: #fff;
+  -webkit-border-radius: 0;
+          border-radius: 0;
+  -webkit-transform: translate3d(-30px, 0, 0);
+          transform: translate3d(-30px, 0, 0);
+  width: 50px; }
+
+.blind__line1--open,
+.blind__line2--open {
+  background-color: #0097ba;
+  width: 30px; }
+
+.blind__line1--open {
+  -webkit-transform: translate3d(10px, 0, 0) rotate(45deg);
+          transform: translate3d(10px, 0, 0) rotate(45deg); }
+
+.blind__line2--open {
+  -webkit-transform: translate3d(10px, 0, 0) rotate(-45deg);
+          transform: translate3d(10px, 0, 0) rotate(-45deg); }
 
 .order {
   width: 100%;

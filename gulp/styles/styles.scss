@@ -157,7 +157,7 @@ hr{
   right: 0;
   z-index: 111;
   display: none;
-  background-color: rgba(0,0,0,0.5);
+  background-color: rgba(0,0,0,0.8);
 }
 
 .ajax-alert-popup--open{
@@ -744,6 +744,91 @@ hr{
   width: 20px;
   height: 20px;
   color: currentcolor;
+}
+
+.app-menu{
+  @include transition();
+  width: 500px;
+  background-color: $firstColor;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  transform: translate3d(-500px,0,0);
+  z-index: 101;
+  color: $white;
+  height: 100%;
+  @media(max-width: 550px){
+    width: 100%;
+    transform: translate3d(-100%,0,0);
+  }
+}
+
+.app-menu__order{
+  margin-top: 50px;
+  .order__input{
+    margin: 5px 0;
+  }
+  .order__submit{
+    width: 100%;
+    max-width: 460px;
+  }
+}
+
+.app-menu--open{
+  transform: translate3d(0,0,0);
+}
+
+.blind{
+  @include transition();
+  width: 30px;
+  height: 50px;
+  cursor: pointer;
+  background-color: $firstColor;
+  transform: translate3d(30px,0,0);
+  position: absolute;
+  bottom: 50px;
+  right: 0;
+}
+
+.blind__line1,
+.blind__line2{
+  background-color: $white;
+  height: 2px;
+  width: 20px;
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  margin: auto;
+}
+
+.blind__line1{
+  transform: translate3d(3px,-5px,0) rotate(30deg);
+}
+
+.blind__line2{
+  transform: translate3d(3px,5px,0) rotate(-30deg);
+}
+
+.blind--open{
+  @include transition();
+  background-color: $white;
+  border-radius: 0;
+  transform: translate3d(-30px,0,0);
+  width: 50px;
+}
+
+.blind__line1--open,
+.blind__line2--open{
+  background-color: $firstColor;
+  width: 30px;
+}
+
+.blind__line1--open{
+  transform: translate3d(10px,0,0) rotate(45deg);
+}
+
+.blind__line2--open{
+  transform: translate3d(10px,0,0) rotate(-45deg);
 }
 
 .order{
