@@ -406,17 +406,17 @@ hr{
   background-position: 0 100%;
 }
 
-.header--jqueryformobile{
-  background-image: url('/img/articles/jqueryformobile-M.jpg');
+.header--jqueryin2017{
+  background-image: url('/img/articles/jqueryin2017-M.jpg');
   background-position: 0 180%;
   @media(min-width: 4000px){
-    background-image: url('/img/jqueryformobile-XL.jpg');
+    background-image: url('/img/articles/jqueryin2017-XL.jpg');
   }
   @media(min-width: 2000px){
-    background-image: url('/img/jqueryformobile-L.jpg');
+    background-image: url('/img/articles/jqueryin2017-L.jpg');
   }
   @media(max-width: 1000px){
-    background-image: url('/img/jqueryformobile-S.jpg');
+    background-image: url('/img/articles/jqueryin2017-S.jpg');
   }
 }
 

@@ -48,7 +48,7 @@
           return "Создание типового корпоративного сайта" . $this->titleEnd;
 
         // /BLOG/
-        case '/blog/jqueryformobile.php':
+        case '/blog/jqueryin2017.php':
           return "Стоит ли в 2017 году использовать jQuery?" . $this->titleEnd;
 
         // UNDEFINED

@@ -506,18 +506,18 @@ h6 {
   background-image: url("/img/clients/tulskayakvartirka/tulskayakvartirka_full.jpg");
   background-position: 0 100%; }
 
-.header--jqueryformobile {
-  background-image: url("/img/articles/jqueryformobile-M.jpg");
+.header--jqueryin2017 {
+  background-image: url("/img/articles/jqueryin2017-M.jpg");
   background-position: 0 180%; }
   @media (min-width: 4000px) {
-    .header--jqueryformobile {
-      background-image: url("/img/jqueryformobile-XL.jpg"); } }
+    .header--jqueryin2017 {
+      background-image: url("/img/jqueryin2017-XL.jpg"); } }
   @media (min-width: 2000px) {
-    .header--jqueryformobile {
-      background-image: url("/img/jqueryformobile-L.jpg"); } }
+    .header--jqueryin2017 {
+      background-image: url("/img/jqueryin2017-L.jpg"); } }
   @media (max-width: 1000px) {
-    .header--jqueryformobile {
-      background-image: url("/img/jqueryformobile-S.jpg"); } }
+    .header--jqueryin2017 {
+      background-image: url("/img/jqueryin2017-S.jpg"); } }
 
 .slider {
   width: 100%; }
