@@ -36,7 +36,7 @@
         <div class="folder-services-content__text">
           Работаем с группами и рекламными аккаунтами в Вконтакте, FaceBook, Instagram и Twitter - оптимизируем и продвигаем (SMO и SMM).
           Оформляем сообщества в корпоративном стиле, занимаемся созданием контента.
-          Настраиваем таргетинговую рекламу в социльных сетях.
+          Настраиваем таргетинговую рекламу в социальных сетях.
         </div>
       </section>
       <section class="folder-services-content__block folder-services-content__block--3">
