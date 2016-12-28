@@ -26,7 +26,7 @@
       </div>
       <div class="contact">
         <h2>Email</h2>
-        <a class="contact__link" href="email:info@just-space.ru" alt="Почта приема заявок: info@just-space.ru">info@just-space.ru</a>
+        <a class="contact__link" href="mailto:info@just-space.ru" alt="Почта приема заявок: info@just-space.ru">info@just-space.ru</a>
       </div>
       <div class="contact">
         <h2>Адрес</h2>

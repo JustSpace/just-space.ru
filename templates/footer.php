@@ -45,7 +45,7 @@
     </tr>
     <tr class="footer__element">
       <td>
-        <a class="footer__link" href="email:info@just-space.ru" alt="Почта приема заявок: info@just-space.ru">info@just-space.ru</a>
+        <a class="footer__link" href="mailto:info@just-space.ru" alt="Почта приема заявок: info@just-space.ru">info@just-space.ru</a>
       </td>
     </tr>
   </table>
