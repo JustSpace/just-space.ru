@@ -407,8 +407,17 @@ hr{
 }
 
 .header--jqueryformobile{
-  background-image: url('/img/articles/jqueryformobile2.jpg');
+  background-image: url('/img/articles/jqueryformobile-M.jpg');
   background-position: 0 180%;
+  @media(min-width: 4000px){
+    background-image: url('/img/jqueryformobile-XL.jpg');
+  }
+  @media(min-width: 2000px){
+    background-image: url('/img/jqueryformobile-L.jpg');
+  }
+  @media(max-width: 1000px){
+    background-image: url('/img/jqueryformobile-S.jpg');
+  }
 }
 
 .slider{
@@ -1306,6 +1315,13 @@ hr{
   &:not(:last-child){
     padding-bottom: 20px;
   }
+}
+
+.article__code{
+  display: block;
+  font-family: monospace;
+  background-color: $gray;
+  padding-left: 20px;
 }
 
 .article__footer{

@@ -507,8 +507,17 @@ h6 {
   background-position: 0 100%; }
 
 .header--jqueryformobile {
-  background-image: url("/img/articles/jqueryformobile2.jpg");
+  background-image: url("/img/articles/jqueryformobile-M.jpg");
   background-position: 0 180%; }
+  @media (min-width: 4000px) {
+    .header--jqueryformobile {
+      background-image: url("/img/jqueryformobile-XL.jpg"); } }
+  @media (min-width: 2000px) {
+    .header--jqueryformobile {
+      background-image: url("/img/jqueryformobile-L.jpg"); } }
+  @media (max-width: 1000px) {
+    .header--jqueryformobile {
+      background-image: url("/img/jqueryformobile-S.jpg"); } }
 
 .slider {
   width: 100%; }
@@ -1413,6 +1422,12 @@ h6 {
 
 .article__paragraph:not(:last-child) {
   padding-bottom: 20px; }
+
+.article__code {
+  display: block;
+  font-family: monospace;
+  background-color: #e4e4e4;
+  padding-left: 20px; }
 
 .article__footer {
   font-size: 0.9em;
