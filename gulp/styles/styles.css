@@ -410,7 +410,7 @@ h6 {
 
 .header--index {
   height: 600px;
-  background-position: 0 30%;
+  background-position: 50% 30%;
   overflow-x: hidden; }
 
 .header--1div3 {
@@ -422,7 +422,7 @@ h6 {
 
 .header--services {
   background-image: url("/img/services-M.jpg");
-  background-position: 0 80%; }
+  background-position: 50% 80%; }
   @media (min-width: 4000px) {
     .header--services {
       background-image: url("/img/services-XL.jpg"); } }
@@ -435,7 +435,7 @@ h6 {
 
 .header--portfolio {
   background-image: url("/img/portfolio-M.jpg");
-  background-position: 0 85%; }
+  background-position: 50% 85%; }
   @media (min-width: 4000px) {
     .header--portfolio {
       background-image: url("/img/portfolio-XL.jpg"); } }
@@ -448,7 +448,7 @@ h6 {
 
 .header--vacancies {
   background-image: url("/img/vacancies-M.jpg");
-  background-position: 0 150%; }
+  background-position: 50% 150%; }
   @media (min-width: 4000px) {
     .header--vacancies {
       background-image: url("/img/vacancies-XL.jpg"); } }
@@ -461,7 +461,7 @@ h6 {
 
 .header--blog {
   background-image: url("/img/blog-M.jpg");
-  background-position: 0 80%; }
+  background-position: 50% 80%; }
   @media (min-width: 4000px) {
     .header--blog {
       background-image: url("/img/blog-XL.jpg"); } }
@@ -474,7 +474,7 @@ h6 {
 
 .header--contacts {
   background-image: url("/img/contacts-M.jpg");
-  background-position: 0 75%; }
+  background-position: 50% 75%; }
   @media (min-width: 4000px) {
     .header--contacts {
       background-image: url("/img/contacts-XL.jpg"); } }
@@ -487,7 +487,7 @@ h6 {
 
 .header--tools {
   background-image: url("/img/tools-M.jpg");
-  background-position: 0 75%; }
+  background-position: 50% 75%; }
   @media (min-width: 4000px) {
     .header--tools {
       background-image: url("/img/tools-XL.jpg"); } }
@@ -500,31 +500,31 @@ h6 {
 
 .header--domotoplenya {
   background-image: url("/img/clients/cis/cis_full.png");
-  background-position: 0 50%; }
+  background-position: 50% 50%; }
 
 .header--gazel-traffic {
   background-image: url("/img/clients/gazel-traffic/gazel-traffic_full.jpg");
-  background-position: 0 60%; }
+  background-position: 50% 60%; }
 
 .header--sportlifting {
   background-image: url("/img/clients/sportlifting/sportlifting_full.jpg");
-  background-position: 50% 0; }
+  background-position: 50% 50%; }
 
 .header--justspaceshoot {
   background-image: url("/img/clients/justspaceshoot/justspaceshoot_full.png");
-  background-position: 0 90%; }
+  background-position: 50% 90%; }
 
 .header--doly-tula {
   background-image: url("/img/clients/tcn/tcn_full.jpg");
-  background-position: 0 140%; }
+  background-position: 50% 140%; }
 
 .header--tulskayakvartirka {
   background-image: url("/img/clients/tulskayakvartirka/tulskayakvartirka_full.jpg");
-  background-position: 0 100%; }
+  background-position: 50% 100%; }
 
 .header--jqueryin2017 {
   background-image: url("/img/articles/jqueryin2017-M.jpg");
-  background-position: 0 180%; }
+  background-position: 50% 180%; }
   @media (min-width: 4000px) {
     .header--jqueryin2017 {
       background-image: url("/img/articles/jqueryin2017-XL.jpg"); } }
@@ -559,16 +559,16 @@ h6 {
   z-index: -99; }
 
 .slider__slide--2 {
-  -o-object-position: 0 20%;
-     object-position: 0 20%; }
+  -o-object-position: 50% 20%;
+     object-position: 50% 20%; }
 
 .slider__slide--3 {
-  -o-object-position: 0 0;
-     object-position: 0 0; }
+  -o-object-position: 50% 50%;
+     object-position: 50% 50%; }
 
 .slider__slide--4 {
-  -o-object-position: 0 0;
-     object-position: 0 0; }
+  -o-object-position: 50% 50%;
+     object-position: 50% 50%; }
 
 .slider__arrow {
   -webkit-transition: all 0.5s linear;
