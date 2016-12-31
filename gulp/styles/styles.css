@@ -102,12 +102,15 @@ article {
     article {
       padding: 40px 10px; } }
 
+img {
+  pointer-events: none; }
+
 svg {
   fill: currentcolor;
   width: 100px;
   height: 100px; }
 
-input {
+input, textarea {
   -webkit-border-radius: 0;
           border-radius: 0;
   -webkit-appearance: none; }
@@ -715,7 +718,8 @@ h6 {
   height: 0;
   overflow-x: hidden;
   background-color: transparent;
-  color: #0097ba; }
+  color: #0097ba;
+  z-index: 101; }
 
 .sidebar--open {
   background-color: #fff;
@@ -1389,6 +1393,7 @@ h6 {
 
 .portfolio__logo {
   position: absolute;
+  pointer-events: auto;
   top: 0;
   z-index: 6;
   width: 100%;

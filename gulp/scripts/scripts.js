@@ -26,6 +26,7 @@ document.addEventListener('DOMContentLoaded',function(){
   var sliderArrowRight  = document.querySelector('.slider__arrow--right') || document.querySelector('head');
   var appMenu           = document.querySelector(".app-menu") || document.querySelector('head');
   var blind             = document.querySelector(".blind") || document.querySelector('head');
+  var allElem           = document.querySelectorAll('*') || document.querySelector('head');
 
 
   header2div3.style.height      = winHeight/1.5 + 'px';
@@ -42,7 +43,13 @@ document.addEventListener('DOMContentLoaded',function(){
     }
   });
 
-  blind.addEventListener("click", openCloseAppMenu);
+  for(var i = 0; i < allElem.length; i++){
+    allElem[i].addEventListener('touchstart', function(e){
+      e.target.mouseenter();
+    });
+  }
+
+  blind.addEventListener('click', openCloseAppMenu);
 
   fileFront.addEventListener('click', function(){
     fileBack.click();

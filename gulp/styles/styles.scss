@@ -48,13 +48,17 @@ article{
   }
 }
 
+img{
+  pointer-events: none;
+}
+
 svg{
   fill: currentcolor;
   width: 100px;
   height: 100px;
 }
 
-input{
+input, textarea{
   border-radius: 0;
   -webkit-appearance: none;
 }
@@ -615,6 +619,7 @@ hr{
   overflow-x: hidden;
   background-color: transparent;
   color: $firstColor;
+  z-index: 101;
 }
 
 .sidebar--open{
@@ -1263,6 +1268,7 @@ hr{
 
 .portfolio__logo{
   position: absolute;
+  pointer-events: auto;
   top: 0;
   z-index: 6;
   width: 100%;
