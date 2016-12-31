@@ -1,4 +1,6 @@
 <?php
+  require_once($_SERVER["DOCUMENT_ROOT"]."/includes/init.php");
+
   class Meta{
     const TITLE_END = ' | Just Space';
     const MAX_TITLE_LENGTH = 75;
@@ -44,7 +46,7 @@
 
     private function WriteLog($warning){
       $file = fopen($_SERVER["DOCUMENT_ROOT"] . "/logs/logs.txt", "a+");
-      fwrite($file, debug_backtrace()[1]["function"] . " is warning about '". $warning ."' in the " . $_SERVER["PHP_SELF"] . "\n");
+      fwrite($file, debug_backtrace()[1]["function"] . " is warning about '". $warning ."' in the " . $_SERVER["PHP_SELF"] . " " . date("[d.m.Y H:i:s]") . "\n");
       fclose($file);
     }
 
