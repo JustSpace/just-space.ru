@@ -43,7 +43,7 @@
     }
 
     private function WriteLog($warning){
-      $file = fopen("logs/logs.txt", "a+");
+      $file = fopen($_SERVER["DOCUMENT_ROOT"] . "/logs/logs.txt", "a+");
       fwrite($file, debug_backtrace()[1]["function"] . " is warning about '". $warning ."' in the " . $_SERVER["PHP_SELF"] . "\n");
     }
 
