@@ -33,7 +33,7 @@
         <tr>
           <td class="center-930px">
             <div class="buttons">
-              <input class="order__button order__submit" type="submit" name="order_sub" id="order_sub" value="Заказать">
+              <input class="order__button order__submit" type="submit" name="order_sub" id="order_sub" value="Заказать проект">
             </div>
           </td>
         </tr>

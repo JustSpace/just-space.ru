@@ -794,13 +794,23 @@ hr{
 }
 
 .app-menu__order{
-  margin-top: 50px;
+  margin-top: 55px;
   .order__input{
     margin: 5px 0;
   }
   .order__submit{
     width: 100%;
     max-width: 460px;
+  }
+  .order__title{
+    @media(max-width: 550px){
+      display: none;
+    }
+  }
+  .order__textarea{
+    @media(max-width: 550px){
+      height: 100px;
+    }
   }
 }
 
