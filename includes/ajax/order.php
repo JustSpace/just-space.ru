@@ -4,7 +4,7 @@
     $email = "Контактный email: " . $_POST["email"] . "\n";
     $description = "Описание задачи: " . $_POST["description"] . "\n";
     $separator = "------------------------------------------------------------------\n";
-    $file = fopen("../../logs/orders.txt", "a+");
+    $file = fopen($_SERVER["DOCUMENT_ROOT"] . "/logs/orders.txt", "a+");
     fputs($file, $name);
     fputs($file, $telephone);
     fputs($file, $email);
