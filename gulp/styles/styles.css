@@ -88,7 +88,8 @@ body {
   color: #000;
   line-height: 2em;
   width: 100%;
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  word-wrap: break-word; }
 
 a {
   color: currentColor;
@@ -327,9 +328,12 @@ h6 {
 
 .header {
   background-size: cover;
-  background-attachment: fixed;
   color: #fff;
-  position: relative; }
+  position: relative;
+  width: 100%; }
+  @media (min-width: 900px) {
+    .header {
+      background-attachment: fixed; } }
 
 .header__mask {
   width: 100%;
@@ -359,6 +363,10 @@ h6 {
   width: 100%;
   z-index: 20;
   opacity: 0; }
+  @media (max-width: 500px) {
+    .header__title {
+      font-size: 25px;
+      top: 30%; } }
 
 .header__title--back {
   -webkit-transform: translateX(-200%);
@@ -388,6 +396,10 @@ h6 {
   font-size: 5em;
   line-height: 1.5em;
   color: #fff; }
+  @media (max-width: 500px) {
+    .header__title--slice {
+      font-size: 2em;
+      bottom: -14px; } }
 
 .header__title--right {
   text-align: right;
@@ -395,7 +407,8 @@ h6 {
 
 .header--index {
   height: 600px;
-  background-position: 0 30%; }
+  background-position: 0 30%;
+  overflow-x: hidden; }
 
 .header--1div3 {
   height: 170px;
@@ -511,13 +524,13 @@ h6 {
   background-position: 0 180%; }
   @media (min-width: 4000px) {
     .header--jqueryin2017 {
-      background-image: url("/img/jqueryin2017-XL.jpg"); } }
+      background-image: url("/img/articles/jqueryin2017-XL.jpg"); } }
   @media (min-width: 2000px) {
     .header--jqueryin2017 {
-      background-image: url("/img/jqueryin2017-L.jpg"); } }
+      background-image: url("/img/articles/jqueryin2017-L.jpg"); } }
   @media (max-width: 1000px) {
     .header--jqueryin2017 {
-      background-image: url("/img/jqueryin2017-S.jpg"); } }
+      background-image: url("/img/articles/jqueryin2017-S.jpg"); } }
 
 .slider {
   width: 100%; }
@@ -590,6 +603,9 @@ h6 {
   text-align: center;
   width: 100%;
   z-index: 50; }
+  @media (max-width: 500px) {
+    .arrow {
+      display: none; } }
 
 .arrow__icon {
   -webkit-transition: all 0.5s linear;
@@ -1157,6 +1173,9 @@ h6 {
 
 #map {
   height: 500px; }
+  @media (max-width: 500px) {
+    #map {
+      height: 300px; } }
 
 .footer {
   background-color: #4a4a4a;
@@ -1165,6 +1184,9 @@ h6 {
   @media (max-width: 500px) {
     .footer {
       font-size: 12px; } }
+  @media (max-width: 320px) {
+    .footer {
+      font-size: 10px; } }
 
 .footer__contact {
   width: 100%;
@@ -1427,7 +1449,9 @@ h6 {
   display: block;
   font-family: monospace;
   background-color: #e4e4e4;
-  padding-left: 20px; }
+  padding-left: 10px;
+  text-align: left;
+  font-size: 0.9em; }
 
 .article__footer {
   font-size: 0.9em;

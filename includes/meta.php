@@ -1,97 +1,213 @@
 <?php
   class Meta{
-    public $titleEnd = " | Digital-агентство Just Space"; //31 chars
+    const TITLE_END = ' | Just Space';
+    const MAX_TITLE_LENGTH = 75;
+    const MAX_DESCRIPTION_LENGTH = 150;
+    const MAX_KEYWORDS_LENGTH = 200;
+    const STRING_MAX_WARNING = "Exceeded the maximum length of the string";
+    private $UrlPhpSelf;
 
-    public function GetTitle($UrlPhpSelf){
-      switch($UrlPhpSelf){
+    public function __construct($UrlPhpSelf){
+      $this->UrlPhpSelf = $UrlPhpSelf;
+    }
+
+    public function GetTitle(){
+      $str = $this->ChooseTitle();
+      if($this->LengthWarning($str, $this::MAX_TITLE_LENGTH)){
+        $this->WriteLog($this::STRING_MAX_WARNING . " (" . (mb_strlen($str,'UTF-8')  - $this::MAX_TITLE_LENGTH) . " chars)");
+      }
+      return $str;
+    }
+
+    public function GetDescription(){
+      $str = $this->ChooseDescription();
+      if($this->LengthWarning($str, $this::MAX_DESCRIPTION_LENGTH)){
+        $this->WriteLog($this::STRING_MAX_WARNING . " (" . (mb_strlen($str,'UTF-8')  - $this::MAX_DESCRIPTION_LENGTH) . " chars)");
+      }
+      return $str;
+    }
+
+    public function GetKeywords(){
+      $str = $this->ChooseKeywords();
+      if($this->LengthWarning($str, $this::MAX_KEYWORDS_LENGTH)){
+        $this->WriteLog($this::STRING_MAX_WARNING . " (" . (mb_strlen($str,'UTF-8')  - $this::MAX_KEYWORDS_LENGTH) . " chars)");
+      }
+      return $str;
+    }
+
+    private function LengthWarning($str, $len){
+      if(mb_strlen($str,'UTF-8') > $len){
+        return true;
+      }
+      return false;
+    }
+
+    private function WriteLog($warning){
+      $file = fopen("logs/logs.txt", "a+");
+      fwrite($file, debug_backtrace()[1]["function"] . " is warning about '". $warning ."' in the " . $_SERVER["PHP_SELF"] . "\n");
+    }
+
+    private function ChooseTitle(){
+      switch($this->UrlPhpSelf){
 
         // /
         case '/index.php':
-          return "Разрабатываем сайты и мобильные приложения" . $this->titleEnd; // 69 chars
+          return "Разрабатываем сайты и мобильные приложения" . $this::TITLE_END;
         case '/services.php':
-          return "Создание и продвижение сайтов и мобильных приложений" . $this->titleEnd; // 82 chars
+          return "Создание и продвижение сайтов и мобильных приложений" . $this::TITLE_END;
         case '/portfolio.php':
-          return "Наше портфолио в создание сайтов и приложений" . $this->titleEnd; // 76 chars
+          return "Наше портфолио в создание сайтов и приложений" . $this::TITLE_END;
         case '/blog.php':
-          return "Блог о разработке и не только" . $this->titleEnd;
+          return "Блог о разработке и не только" . $this::TITLE_END;
         case '/vacancies.php':
-          return "Присоединяйтесь к нашей команде" . $this->titleEnd; // 60 chars
+          return "Присоединяйтесь к нашей команде" . $this::TITLE_END;
         case '/contacts.php':
-          return "Закажите создания сайта или приложения" . $this->titleEnd; // 76 chars
+          return "Закажите создания сайта или приложения" . $this::TITLE_END;
         case '/tools.php':
-          return "Инструментарий" . $this->titleEnd; // 76 chars
+          return "Инструментарий" . $this::TITLE_END;
 
         // /SERVICES/
         case '/services/advertising.php':
-          return "Контекстная реклама и Social media marketing" . $this->titleEnd;
+          return "Контекстная реклама и Social media marketing" . $this::TITLE_END;
         case '/services/design.php':
-          return "Разрабатываем дизайн сайтов и приложений" . $this->titleEnd;
+          return "Разрабатываем дизайн сайтов и приложений" . $this::TITLE_END;
         case '/services/mobile_develop.php':
-          return "Разработка мобильных приложений на iOS и Android" . $this->titleEnd;
+          return "Разработка мобильных приложений на iOS и Android" . $this::TITLE_END;
         case '/services/seo.php':
-          return "SEO продвижение сайтов и мобильных приложений" . $this->titleEnd; // 75 chars
+          return "SEO продвижение сайтов и мобильных приложений" . $this::TITLE_END;
         case '/services/web_develop.php':
-          return "Разработка отзывчивых и адаптивных сайтов" . $this->titleEnd;
+          return "Разработка отзывчивых и адаптивных сайтов" . $this::TITLE_END;
 
         // /PORTFOLIO/
         case '/portfolio/domotoplenya.php':
-          return "Контекстная реклама для лендинга" . $this->titleEnd;
+          return "Контекстная реклама для лендинга" . $this::TITLE_END;
         case '/portfolio/sportlifting.php':
-          return "Техническая поддержка и SEO оптимизация интернет-магазина" . $this->titleEnd;
+          return "Техническая поддержка и SEO оптимизация интернет-магазина" . $this::TITLE_END;
         case '/portfolio/gazeltraffic.php':
-          return "Создание сайта лендинга под ключ" . $this->titleEnd;
+          return "Создание сайта лендинга под ключ" . $this::TITLE_END;
         case '/portfolio/doly-tula.php':
-          return "Создание сайта визитки под ключ" . $this->titleEnd;
+          return "Создание сайта визитки под ключ" . $this::TITLE_END;
         case '/portfolio/justspaceshoot.php':
-          return "Создание 8-ми битной мобильной игры" . $this->titleEnd;
+          return "Создание 8-ми битной мобильной игры" . $this::TITLE_END;
         case '/portfolio/tulskayakvartirka.php':
-          return "Создание типового корпоративного сайта" . $this->titleEnd;
+          return "Создание типового корпоративного сайта" . $this::TITLE_END;
 
         // /BLOG/
         case '/blog/jqueryin2017.php':
-          return "Стоит ли в 2017 году использовать jQuery?" . $this->titleEnd;
+          return "Стоит ли в 2017 году использовать jQuery?" . $this::TITLE_END;
 
         // UNDEFINED
         default:
-          return "Digital-агентство Just Space" . $this->titleEnd;
+          return "Digital-агентство Just Space" . $this::TITLE_END;
       }
     }
 
-    public function GetDesc($UrlPhpSelf){
-      switch($UrlPhpSelf){
+    public function ChooseDescription(){
+      switch($this->UrlPhpSelf){
+
+        // /
         case '/index.php':
-          return "Разрабатываем и продвигаем сайты и мобильные приложения, обеспечиваем высокий уровень качества, имеем своих представителей в Москве и Туле";
-        case '/design.php':
-        return "Разрабатываем уникальный дизайн для сайтов, мобильных приложений, а также для любой полиграфической продукции";
-        case '/develop.php':
-          return "Мы занимаемся созданием сайтов, а также обеспечиваем техническую поддержку готовых решений";
-        case '/seo.php':
-          return "Предоставляем SEO продвижение и оптимизацию сайтов для посиковых систем, контекстную рекламу и все виды продвижения сайтов в сети";
+          return "Мы создаем, поддерживаем и дорабатываем высокотехнологичные проекты (от небольших сайтов до масштабных клиент-серверных приложений)";
+        case '/services.php':
+          return "Занимается созданием, оптимизацией и SEO продвижением сайтов и мобильных приложений, разрабатываем дизайн и создаем рекламные кампании";
+        case '/portfolio.php':
+          return "Наше портфолио в создание сайтов и приложений";
+        case '/blog.php':
+          return "";
+        case '/vacancies.php':
+          return "Присоединяйтесь к нашей команде";
+        case '/contacts.php':
+          return "Закажите создания сайта или приложения";
+        case '/tools.php':
+          return "Инструментарий";
+
+        // /SERVICES/
+        case '/services/advertising.php':
+          return "Контекстная реклама и Social media marketing";
+        case '/services/design.php':
+          return "Разрабатываем дизайн сайтов и приложений";
+        case '/services/mobile_develop.php':
+          return "Разработка мобильных приложений на iOS и Android";
+        case '/services/seo.php':
+          return "SEO продвижение сайтов и мобильных приложений";
+        case '/services/web_develop.php':
+          return "Разработка отзывчивых и адаптивных сайтов";
+
+        // /PORTFOLIO/
         case '/portfolio/domotoplenya.php':
-          return "Domotople";
+          return "Контекстная реклама для лендинга";
         case '/portfolio/sportlifting.php':
-          return "SportLifting";
+          return "Техническая поддержка и SEO оптимизация интернет-магазина";
+        case '/portfolio/gazeltraffic.php':
+          return "Создание сайта лендинга под ключ";
+        case '/portfolio/doly-tula.php':
+          return "Создание сайта визитки под ключ";
+        case '/portfolio/justspaceshoot.php':
+          return "Создание 8-ми битной мобильной игры";
+        case '/portfolio/tulskayakvartirka.php':
+          return "Создание типового корпоративного сайта";
+
+        // /BLOG/
+        case '/blog/jqueryin2017.php':
+          return "Стоит ли в 2017 году использовать jQuery?";
+
+        // UNDEFINED
         default:
-          return "Мы создаем сайты | Just Space";
+          return "Digital-агентство Just Space";
       }
     }
 
-    public function GetKey($UrlPhpSelf){
-      switch($UrlPhpSelf){
+    public function ChooseKeywords(){
+      switch($this->UrlPhpSelf){
+        // /
         case '/index.php':
-          return "веб студия, создание сайтов, сайт визитка, разработка сайтов, создать интернет магазин, создание сайта визитки, продвижение сайтов, дизайн сайта, веб сайт, создать визитку, создание сайта цена, создать сайт быстро, раскрутка сайта, оптимизация сайта, seo продвижение, поисковое продвижение, поисковая оптимизация, продвинуть сайт, контекстная реклама, seo сайта, сео продвижение, seo продвижение сайта, продвижение сайта цена, продвижение веб сайтов, заказать продвижение сайта, стоимость продвижения сайта, качественное продвижение сайтов";
-        case '/design.php':
-          return "веб студия, веб дизайн, шаблоны сайтов, разработка сайтов, создание сайтов, дизайн студия, сайт дизайнера, разработать дизайн, создать макет, web дизайн, красивый дизайн сайта, дизайн сайта цена, хороший дизайн, создать визитку, дизайн сайта, заказать дизайн сайта, веб дизайн сайтов, дизайн сайта Тула, создание дизайна сайта, дизайн интернет сайта";
-        case '/develop.php':
-          return "веб студия, создание сайтов, сайт визитка, разработка сайтов, создать интернет магазин, создание сайта визитки, веб сайт, создание сайта цена, создать сайт быстро, оптимизация сайта";
-        case '/seo.php':
-          return "веб студия, продвижение сайтов, раскрутка сайта, оптимизация сайта, разработка сайтов, seo продвижение, поисковое продвижение, поисковая оптимизация, продвинуть сайт, контекстная реклама, seo сайта, сео продвижение, seo продвижение сайта, продвижение сайта цена, продвижение веб сайтов, заказать продвижение сайта, стоимость продвижения сайта, качественное продвижение сайтов";
+          return "just space, веб студия, digital агентство, создание сайта, создание мобильного приложения, продвижение сайта, продвижение мобильного приложения, дизайн сайта, дизайн мобильного приложения, реклама";
+        case '/services.php':
+          return "создание сайта, создание мобильного приложения, продвижение сайта, продвижение мобильного приложения, дизайн сайта, дизайн мобильного приложения, реклама";
+        case '/portfolio.php':
+          return "разработка лендинга, создание интернет-магазина, разработка мобильного приложения, продвижение сайта, разработка дизайна, контекстная реклама";
+        case '/blog.php':
+          return "just space, веб студия, digital агентство, блог компании, веб технологии";
+        case '/vacancies.php':
+          return "just space, веб студия, digital агентство, работа в компании, вакансия, стажировка";
+        case '/contacts.php':
+          return "just space, веб студия, digital агентство, телефон, адрес, почта, социальная сеть";
+        case '/tools.php':
+          return "just space, веб студия, digital агентство, инструменты компании, framework, разработка";
+
+        // /SERVICES/
+        case '/services/advertising.php':
+          return "контекстная реклама, social media marketing, реклама, smm, smo";
+        case '/services/design.php':
+          return "дизайн сайта, дизайн мобильного приложения, веб-дизайн, полиграфический дизайн, брендинг, корпоративный дизайн";
+        case '/services/mobile_develop.php':
+          return "создание мобильного приложения, разработка мобильного приложения, разработка под ios, разработка под android";
+        case '/services/seo.php':
+          return "seo, продвижение, продвижние сайта, продвижение мобильного приложения, ключевые слова, сео, оптимизация";
+        case '/services/web_develop.php':
+          return "создание сайта, разработка сайта, адаптивный сайт, отзывчивый сайт, доступный сайт, cms";
+
+        // /PORTFOLIO/
         case '/portfolio/domotoplenya.php':
-          return "Domotople";
+          return "лендинг, контекстная реклама, яндекс директ";
         case '/portfolio/sportlifting.php':
-          return "SportLifting";
+          return "техническая поддержка, seo, продвижение, оптимизация";
+        case '/portfolio/gazeltraffic.php':
+          return "создание лендинга, seo, продвижение, оптимизация, копирайт";
+        case '/portfolio/doly-tula.php':
+          return "создание сайта визитки, seo, продвижение, оптимизация, копирайт";
+        case '/portfolio/justspaceshoot.php':
+          return "создание мобильного приложения, продвижение, оптимизация";
+        case '/portfolio/tulskayakvartirka.php':
+          return "создание корпоративного сайта, типовое решение";
+
+        // /BLOG/
+        case '/blog/jqueryin2017.php':
+          return "just space, блог компании, jquery, framework";
+
+        // UNDEFINED
         default:
-          return "Мы создаем сайты | Just Space";
+          return "Digital-агентство Just Space";
       }
     }
 
