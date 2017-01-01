@@ -117,19 +117,23 @@ document.addEventListener('DOMContentLoaded',function(){
 
   for(var i = 0; i < sidebarLinks.length; i++){
     sidebarLinks[i].addEventListener('mouseenter', function(){
-      addClass(this, 'sidebar__link--hover');
+      removeOldClass(sidebarLinks, 'sidebar__link--hover')
+      toggleClass(this, 'sidebar__link--hover');
     });
 
     sidebarLinks[i].addEventListener('focus', function(){
-      addClass(this, 'sidebar__link--hover');
+      removeOldClass(sidebarLinks, 'sidebar__link--hover')
+      toggleClass(this, 'sidebar__link--hover');
     });
 
     sidebarLinks[i].addEventListener('mouseleave', function(){
-      removeClass(this, 'sidebar__link--hover');
+      removeOldClass(sidebarLinks, 'sidebar__link--hover')
+      toggleClass(this, 'sidebar__link--hover');
     });
 
     sidebarLinks[i].addEventListener('blur', function(){
-      removeClass(this, 'sidebar__link--hover');
+      removeOldClass(sidebarLinks, 'sidebar__link--hover')
+      toggleClass(this, 'sidebar__link--hover');
     });
   }
 
@@ -237,6 +241,12 @@ function hasClass(element, strClassName){
   }
 
   return false;
+}
+
+function removeOldClass(element, strClassesName){
+  for(var i = 0; i < element.length; i++){
+    removeClass(element[i], strClassesName);
+  }
 }
 
 function leaf(func){
