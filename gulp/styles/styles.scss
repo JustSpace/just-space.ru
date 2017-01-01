@@ -224,7 +224,7 @@ hr{
   color: $white;
   position: relative;
   width: 100%;
-  @media(min-width: 900px){
+  @media all and (not handheld){
     background-attachment: fixed;
   }
 }

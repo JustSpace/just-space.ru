@@ -334,7 +334,7 @@ h6 {
   color: #fff;
   position: relative;
   width: 100%; }
-  @media (min-width: 900px) {
+  @media all and (false) {
     .header {
       background-attachment: fixed; } }
 
