@@ -41,6 +41,7 @@
               <li class="vacancy__list-element">- HTML/CSS/JavaScript</li>
               <li class="vacancy__list-element">- Less/Sass</li>
               <li class="vacancy__list-element">- Grunt/Gulp</li>
+              <li class="vacancy__list-element">- Angular/React</li>
             </ul>
           </div>
         </div>
