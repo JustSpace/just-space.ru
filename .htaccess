@@ -1,0 +1,18 @@
+ErrorDocument 405 http://www.just-space.ru/405.html
+ErrorDocument 401 http://www.just-space.ru/401.html
+ErrorDocument 500 http://www.just-space.ru/500.html
+ErrorDocument 403 http://www.just-space.ru/403.html
+ErrorDocument 404 http://www.just-space.ru/404.html
+
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^just-space.ru
+RewriteRule (.*) http://www.just-space.ru/$1 [R=301,L]
+
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresDefault "access plus 1 month"
+</IfModule>
+
+<ifModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/plain text/xml application/xml application/xhtml+xml text/css text/javascript application/javascript application/x-javascript image/svg+xml application/x-font-ttf application/x-font-opentype application/font-woff application/font-woff2
+</ifModule>
