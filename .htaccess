@@ -1,8 +1,8 @@
-ErrorDocument 405 http://www.just-space.ru/405.html
-ErrorDocument 401 http://www.just-space.ru/401.html
-ErrorDocument 500 http://www.just-space.ru/500.html
-ErrorDocument 403 http://www.just-space.ru/403.html
-ErrorDocument 404 http://www.just-space.ru/404.html
+ErrorDocument 405 http://www.just-space.ru/405.php
+ErrorDocument 401 http://www.just-space.ru/401.php
+ErrorDocument 500 http://www.just-space.ru/500.php
+ErrorDocument 403 http://www.just-space.ru/403.php
+ErrorDocument 404 http://www.just-space.ru/404.php
 
 RewriteEngine On
 RewriteCond %{HTTP_HOST} ^just-space.ru
