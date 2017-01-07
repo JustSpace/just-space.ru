@@ -192,10 +192,9 @@
         </table>
       </form>
     </article>
-    <div class="map">
-      <div id="map"></div>
-      </script>
-    </div>
+    <?php
+      require_once($_SERVER["DOCUMENT_ROOT"]."/templates/google_map.php");
+    ?>
   </main>
 <?php
   require_once($_SERVER["DOCUMENT_ROOT"]."/templates/footer.php");
