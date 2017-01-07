@@ -194,7 +194,6 @@
     </article>
     <div class="map">
       <div id="map"></div>
-      <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCFE_Bixd44cRvT7dS9qk8NN92t2Cgkd1I&signed_in=true&callback=initMap">
       </script>
     </div>
   </main>

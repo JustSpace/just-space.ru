@@ -53,6 +53,11 @@
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/img/sprites/sprites.svg#twitter"></use>
           </svg>
         </a>
+        <a class="contact__social-link" href="https://telegram.me/justspaceweb" alt="Наш аккаунт в Telegram">
+          <svg class="contact__icon contact__icon--telegram" aria-hidden="true">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/img/sprites/sprites.svg#telegram"></use>
+          </svg>
+        </a>
       </div>
     </article>
     <article class="order">
@@ -119,7 +124,6 @@
     </article>
     <div class="map">
       <div id="map"></div>
-      <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCFE_Bixd44cRvT7dS9qk8NN92t2Cgkd1I&signed_in=true&callback=initMap">
       </script>
     </div>
   </main>
