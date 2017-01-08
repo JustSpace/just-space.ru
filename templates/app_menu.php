@@ -12,28 +12,28 @@
         </tr>
         <tr>
           <td>
-            <input class="order__input" type="text" name="fio" id="fio" placeholder="Ваше имя" required>
+            <input class="order__input" type="text" name="app-fio" id="app-fio" placeholder="Ваше имя" required>
           </td>
         </tr>
         <tr>
           <td>
-            <input class="order__input" type="text" name="tel" id="tel" placeholder="Телефон" required>
+            <input class="order__input" type="text" name="app-tel" id="app-tel" placeholder="Телефон" required>
           </td>
         </tr>
         <tr>
           <td>
-            <input class="order__input" type="email" name="email" id="email" placeholder="Email" required>
+            <input class="order__input" type="email" name="app-email" id="app-email" placeholder="Email" required>
           </td>
         </tr>
         <tr>
           <td>
-            <textarea class="order__textarea" name="description" id="description" placeholder="Расскажите о вашем проекте" required></textarea>
+            <textarea class="order__textarea" name="app-description" id="app-description" placeholder="Расскажите о вашем проекте" required></textarea>
           </td>
         </tr>
         <tr>
           <td class="center-930px">
             <div class="buttons">
-              <input class="order__button order__submit" type="submit" name="order_sub" id="order_sub" value="Заказать проект">
+              <input class="order__button order__submit" type="submit" name="app-order_sub" id="app-order_sub" value="Заказать проект">
             </div>
           </td>
         </tr>

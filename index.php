@@ -131,7 +131,7 @@
       </div>
     </article>
     <article class="order">
-      <form class="order__form" action="index.php" method="post">
+      <form class="order__form" method="post">
         <table class="order__table">
           <tr>
             <td colspan="2">

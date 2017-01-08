@@ -1,18 +1,6 @@
 @import 'fonts.scss';
-
-$white: #fff;
-$bgColor: #fff;
-$black: #000;
-$gray: #e4e4e4;
-$firstColor: #0097ba;
-$secondColor: #151515;
-$thirdColor: #4a4a4a;
-$fourthColor: #dd748a;
-$alphaForHeader: 0.5;
-
-@mixin transition($duration: .5s, $function: linear, $properties: all){
-  transition: $properties $duration $function;
-}
+@import 'mixins.scss';
+@import 'variables.scss';
 
 *{
   box-sizing: border-box;

@@ -1,6 +1,6 @@
 var gulp = require('gulp');
 var sass = require('gulp-sass');
-var uglifyjs = require('gulp-uglifyjs');
+var uglify = require('gulp-uglify');
 var cssnano = require('gulp-cssnano');
 var rename = require('gulp-rename');
 var autoprefixer = require('gulp-autoprefixer');
@@ -14,7 +14,7 @@ gulp.task('sass', function(){
 
 gulp.task('scripts', function(){
 	return gulp.src('gulp/scripts/**/*.js')
-		.pipe(uglifyjs())
+		.pipe(uglify())
 		.pipe(rename({suffix: '.min'}))
 		.pipe(gulp.dest('js'));
 });

@@ -61,7 +61,7 @@
       </div>
     </article>
     <article class="order">
-      <form class="order__form" action="index.php" method="post">
+      <form class="order__form" method="post">
         <table class="order__table">
           <tr>
             <td colspan="2">
@@ -131,6 +131,8 @@
       Copyright &copy; 2013-2016 Just Space
     </div>
   </footer>
+  <script src="/js/functions.min.js" defer></script>
+  <script src="/js/ajax.min.js" defer></script>
   <script src="/js/scripts.min.js" defer></script>
   <!-- Yandex.Metrika counter --> <script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter41958054 = new Ya.Metrika({ id:41958054, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/41958054" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
 </body>
