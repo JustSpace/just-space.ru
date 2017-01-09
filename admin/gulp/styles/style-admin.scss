@@ -1,0 +1,113 @@
+@import 'mixins.scss';
+@import 'variables.scss';
+
+body{
+  margin: 0  0 0 220px;
+}
+
+form {
+  input {
+    background-color: $white;
+    border: 2px solid $black;
+    display: block;
+    margin-bottom: 10px;
+    height: 30px;
+    width: 250px;
+    box-sizing: border-box;
+  }
+  input[type="submit"]{
+    transition: all 0.3s ease-in-out;
+    &:hover{
+      background-color: $black;
+      color: $white;
+    }
+  }
+}
+
+nav{
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  margin: 0;
+  width: 15%;
+  box-sizing: border-box;
+  border-right: 2px solid $black;
+  li{
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0 20px;
+    a{
+      text-decoration: none;
+      color: $black;
+      &:hover{
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.authorization{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.table{
+  display: inline-block;
+  width: 100%;
+  tr{
+    &:first-child{
+      font-weight: 800;
+    }
+    td{
+      padding: 5px 10px;
+    }
+  }
+}
+
+.popup{
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 98;
+  display: none;
+  background-color: rgba(0,0,0,0.5);
+  .done{
+    display: none;
+  }
+  .error{
+    display: none;
+  }
+  .window{
+    background-color: $white;
+    position: absolute;
+    border-radius: 2px;
+    padding: 15px 25px;
+    top: 40%;
+    left: 33%;
+    width: 400px;
+    height: 200px;
+    text-align: center;
+    p{
+      font-size: 28px;
+    }
+    input[type="button"]{
+      width: 30%;
+      max-width: 300px;
+      height: 50px;
+      font-size: 18px;
+      background-color: $white;
+      border-color: $black;
+      color: $black;
+      transition: all .3s ease-in-out;
+      &:hover{
+        background-color: $black;
+        color: $white;
+      }
+    }
+  }
+}

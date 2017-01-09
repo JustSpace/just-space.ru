@@ -22,10 +22,10 @@
     /*
     * Путь к директории хранящей backup'ы
     */
-    const DB_BACKUP = "/backup/";
+    const DB_BACKUP = "/backups/";
 
     /*
     * Путь к mysql
     */
-    const DB_MYSQL = "C:/Server/mysql/";
+    const DB_MYSQL = "mysql";
 ?>
