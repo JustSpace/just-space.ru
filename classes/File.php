@@ -8,35 +8,35 @@ class File extends Base
         parent::__construct();
     }
 
-    public function GetFile($filename){
-        $arAllFiles = scandir($_SERVER['DOCUMENT_ROOT'] . DB_BACKUP);
+    public function GetFile($filename, $path){
+        $arAllFiles = scandir($path);
         foreach($arAllFiles as $file) {
-            if ($file == "." || $file == "..") {
+            if ($file == "." || $file == ".." || is_dir($path.$file) || $file[0] == ".") {
                 continue;
             }
             if($file == $filename) {
                 $arFile = array(
                     "NAME" => $file,
-                    "SIZE" => round(filesize($_SERVER['DOCUMENT_ROOT'] . DB_BACKUP . $file) / 1024, 1),
-                    "TIME" => date("d.m.Y H:i:s", filemtime($_SERVER['DOCUMENT_ROOT'] . DB_BACKUP . $file)),
-                    "TYPE" => filetype($_SERVER['DOCUMENT_ROOT'] . DB_BACKUP . $file),
+                    "SIZE" => round(filesize($path . $file) / 1024, 1),
+                    "TIME" => date("d.m.Y H:i:s", filemtime($path . $file)),
+                    "TYPE" => filetype($path . $file),
                 );
             }
         }
         return $arFile;
     }
 
-    public function GetList($arOrder = array(), $arFilter = array(), $arSelect = array()){
-        $arAllFiles = scandir($_SERVER['DOCUMENT_ROOT'] . DB_BACKUP);
+    public function GetList($path, $arOrder = array(), $arFilter = array(), $arSelect = array()){
+        $arAllFiles = scandir($path);
         foreach($arAllFiles as $file) {
-            if ($file == "." || $file == "..") {
+            if ($file == "." || $file == ".." || is_dir($path.$file) || $file[0] == ".") {
                 continue;
             }
             $arFiles[] = array(
                 "NAME" => $file,
-                "SIZE" => round(filesize($_SERVER['DOCUMENT_ROOT'] . DB_BACKUP . $file)/1024,1),
-                "TIME" => date("d.m.Y H:i:s",filemtime($_SERVER['DOCUMENT_ROOT'] . DB_BACKUP . $file)),
-                "TYPE" => filetype($_SERVER['DOCUMENT_ROOT'] . DB_BACKUP . $file),
+                "SIZE" => round(filesize($path . $file)/1024,1),
+                "TIME" => date("d.m.Y H:i:s",filemtime($path. $file)),
+                "TYPE" => filetype($path . $file),
                 );
         }
         return $arFiles;

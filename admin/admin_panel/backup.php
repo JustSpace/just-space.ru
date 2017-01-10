@@ -46,6 +46,7 @@
         <?php
 
         $arFile = $CFile->GetList(
+            $_SERVER['DOCUMENT_ROOT'] . DB_BACKUPS_DIR,
             array("id" => "ASC"),
             array(),
             array()
@@ -54,7 +55,7 @@
             ?>
             <tr>
                 <td><?=$id+1?></td>
-                <td><a href="<?=DB_BACKUP.$file["NAME"]?>" download><?=$file["NAME"]?></a></td>
+                <td><a href="<?=DB_BACKUPS_DIR.$file["NAME"]?>" download><?=$file["NAME"]?></a></td>
                 <td><?=$file["SIZE"]?> Кб</td>
                 <td><?=$file["TIME"]?></td>
             </tr>

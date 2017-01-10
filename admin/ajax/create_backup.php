@@ -13,6 +13,6 @@
     else{
         $filename = $_POST["filename"] . ".sql";
     }
-    $command = DB_MYSQL . "/bin/mysqldump.exe -u $username -p$password --databases $database > " . $_SERVER["DOCUMENT_ROOT"]. DB_BACKUP . $filename;
+    $command = DB_MYSQL . "/bin/mysqldump.exe -u $username -p$password --databases $database > " . $_SERVER["DOCUMENT_ROOT"]. DB_BACKUPS_DIR . $filename;
     exec($command);
 ?>

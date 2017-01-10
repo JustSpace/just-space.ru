@@ -10,6 +10,7 @@
     }
 
     $CEmail = new Email();
+    $CFile  = new File();
 ?>
 <!doctype html>
 <html lang="ru">
@@ -33,12 +34,23 @@
         array(),
         array()
     );
+
+    $arFile = $CFile->GetList(
+        $_SERVER['DOCUMENT_ROOT'] . DB_EMAILS_DIR,
+        array("id" => "ASC"),
+        array("!NAME" => "unsubscribe.php"),
+        array()
+    );
+
 ?>
     <h3>Отправить email</h3>
     <?php
     	set_time_limit (1200);
 
       $from = "info@just-space.ru";
+
+
+
       $mail_content1 = $_SERVER["DOCUMENT_ROOT"] . "/emails/seo.html";
 
     	$tfrom = htmlspecialchars($from);
@@ -123,7 +135,13 @@
           }
         ?></textarea>
       <select name="emailer_yourmail">
-    	  <option value="$mail_content1"><?php echo $tmail_content1 ?></option>
+        <?php
+        foreach($arFile as $i => $file){
+            ?>
+            <option value="$mail_content<?php echo $i;?>"><?php echo $file["NAME"] ?></option>
+            <?php
+        }
+        ?>
     	</select>
     	<select name="emailer_yourmail">
     	  <option value="$from"><?php echo $tfrom ?></option>

@@ -22,10 +22,15 @@
     /*
     * Путь к директории хранящей backup'ы
     */
-    const DB_BACKUP = "/backups/";
+    const DB_BACKUPS_DIR = "/backups/";
 
     /*
     * Путь к mysql
     */
     const DB_MYSQL = "mysql";
+
+    /*
+    * Путь к директории хранящей email шаблоны
+    */
+    const DB_EMAILS_DIR = "/emails/";
 ?>
