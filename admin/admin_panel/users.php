@@ -19,7 +19,7 @@
 </head>
 <body ng-app="userApp">
 <?
-    require_once($_SERVER['DOCUMENT_ROOT'] . "/includes/admin.menu.php");
+    require_once($_SERVER['DOCUMENT_ROOT'] . "/templates/admin/admin.menu.php");
 ?>
     <h3>Добавить нового</h3>
     <form action="index.php" method="POST">

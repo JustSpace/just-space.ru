@@ -18,7 +18,7 @@
   </head>
   <body>
     <?
-        require_once($_SERVER['DOCUMENT_ROOT'] . "/includes/admin.menu.php");
+        require_once($_SERVER['DOCUMENT_ROOT'] . "/templates/admin/admin.menu.php");
     ?>
     <script src="/libs/jquery.js"></script>
     <script src="/admin/js/script.min.js"></script>

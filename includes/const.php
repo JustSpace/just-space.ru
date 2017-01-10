@@ -20,17 +20,22 @@
     const DB_PASSWORD = "222271";
 
     /*
-    * Путь к директории хранящей backup'ы
-    */
-    const DB_BACKUPS_DIR = "/backups/";
-
-    /*
     * Путь к mysql
     */
     const DB_MYSQL = "mysql";
 
     /*
+    * Путь к корневой директории
+    */
+    const DIR_ROOT = "/";
+
+    /*
+    * Путь к директории хранящей backup'ы
+    */
+    const DIR_BACKUPS = "/backups/";
+
+    /*
     * Путь к директории хранящей email шаблоны
     */
-    const DB_EMAILS_DIR = "/emails/";
+    const DIR_EMAILS = "/emails/";
 ?>

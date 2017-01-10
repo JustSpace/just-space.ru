@@ -18,9 +18,9 @@
     <title>Панель администратора</title>
     <link rel="stylesheet" href="/admin/css/style-admin.min.css">
 </head>
-<body>
+<body ng-app="backupApp">
 <?
-    require_once($_SERVER['DOCUMENT_ROOT'] . "/includes/admin.menu.php");
+    require_once($_SERVER['DOCUMENT_ROOT'] . "/templates/admin/admin.menu.php");
 ?>
 
     <h3>Создать резервную копию</h3>
@@ -35,35 +35,37 @@
         <input type="submit" id="load_backup_sub" name="load_backup_sub" value="Востановить">
     </form>
 
-    <h3>Список резервных копий</h3>
-    <table class="table" id="backup_list">
-        <tr>
-            <td>№</td>
-            <td>Файл</td>
-            <td>Размер</td>
-            <td>Создан</td>
+    <div ng-controller="backupCtrl">
+      <h3>Список резервных копий</h3>
+      <p>
+        <input type="text" ng-model="searchMatches">
+        <select ng-model="searchCatalog">
+          <option value="id" selected>#</option>
+          <option value="login">Файл</option>
+          <option value="name">Размер</option>
+          <option value="email">Создан</option>
+        </select>
+        <label>Строгий <input type="checkbox" ng-model="strict"></label>
+      </p>
+      <table class="table">
+        <tr class="table__header">
+          <td ng-click="orderBy('id')">#</</td>
+          <td ng-click="orderBy('name')">Файл</td>
+          <td ng-click="orderBy('size')">Размер (Кб)</td>
+          <td ng-click="orderBy('time')">Создан</td>
         </tr>
-        <?php
-
-        $arFile = $CFile->GetList(
-            $_SERVER['DOCUMENT_ROOT'] . DB_BACKUPS_DIR,
-            array("id" => "ASC"),
-            array(),
-            array()
-        );
-        foreach($arFile as $id => $file){
-            ?>
-            <tr>
-                <td><?=$id+1?></td>
-                <td><a href="<?=DB_BACKUPS_DIR.$file["NAME"]?>" download><?=$file["NAME"]?></a></td>
-                <td><?=$file["SIZE"]?> Кб</td>
-                <td><?=$file["TIME"]?></td>
-            </tr>
-            <?
-        }
-        ?>
-    </table>
+        <tr ng-repeat="x in files | orderBy:orderByProp | filter:{name:searchMatches}:strict">
+          <td>{{x.id}}</td>
+          <td><a href="<?php echo DIR_BACKUPS; ?>{{x.name}}" download>{{x.name}}</a></td>
+          <td>{{x.size}}</td>
+          <td>{{x.time}}</td>
+        </tr>
+      </table>
+    </div>
     <script src="/libs/jquery.js"></script>
+    <script src="/node_modules/angular/angular.min.js"></script>
+    <script src="/libs/angular/applications/backupApp.js"></script>
+    <script src="/libs/angular/controllers/backupCtrl.js"></script>
     <script src="/admin/js/script.min.js"></script>
 </body>
 </html>

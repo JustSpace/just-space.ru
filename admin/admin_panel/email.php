@@ -20,7 +20,7 @@
 </head>
 <body>
 <?
-    require_once($_SERVER['DOCUMENT_ROOT'] . "/includes/admin.menu.php");
+    require_once($_SERVER['DOCUMENT_ROOT'] . "/templates/admin/admin.menu.php");
 ?>
     <h3>Добавить email</h3>
     <form method="POST">
@@ -36,9 +36,9 @@
     );
 
     $arFile = $CFile->GetList(
-        $_SERVER['DOCUMENT_ROOT'] . DB_EMAILS_DIR,
-        array("id" => "ASC"),
-        array("!NAME" => "unsubscribe.php"),
+        $_SERVER['DOCUMENT_ROOT'] . DIR_EMAILS,
+        "ASC",
+        array("SHOW_DIR" => "N", "SHOW_HIDDEN" => "N"),
         array()
     );
 
