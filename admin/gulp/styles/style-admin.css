@@ -1,15 +1,18 @@
 body {
   margin: 0  0 0 220px; }
 
-form input {
+form input, form textarea, form select {
   background-color: #fff;
   border: 2px solid #000;
   display: block;
   margin-bottom: 10px;
   height: 30px;
-  width: 250px;
+  width: 300px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box; }
+
+form textarea {
+  height: 100px; }
 
 form input[type="submit"] {
   -webkit-transition: all 0.3s ease-in-out;
@@ -19,7 +22,7 @@ form input[type="submit"] {
     color: #fff; }
 
 nav {
-  position: absolute;
+  position: fixed;
   left: 0;
   top: 0;
   bottom: 0;

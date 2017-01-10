@@ -27,7 +27,16 @@
         <input type="password" id="password" name="password" placeholder="Пароль" required>
         <input type="text" id="name" name="name" placeholder="Имя">
         <input type="email" id="email" name="email" placeholder="Email">
-        <input type="number" id="rights" name="rights" min="0" max="7" placeholder="Права">
+        <select name="rights" id="rights">
+          <option value="0">Гость - 0</option>
+          <option value="1">Пользователь - 1</option>
+          <option value="2">Клиент - 2</option>
+          <option value="3">Сотрудник - 3</option>
+          <option value="4">Редактов - 4</option>
+          <option value="5">Модератор - 5</option>
+          <option value="6">Админ - 6</option>
+      	  <option value="7">Создатель - 7</option>
+      	</select>
         <input type="submit" id="add_user_sub" name="add_user_sub" value="Добавить">
     </form>
 
