@@ -1,6 +1,11 @@
 @import 'mixins.scss';
 @import 'variables.scss';
 
+*{
+  box-sizing: border-box;
+  border-collapse: collapse;
+}
+
 body{
   margin: 0  0 0 220px;
 }
@@ -14,6 +19,8 @@ form{
     height: 30px;
     width: 300px;
     box-sizing: border-box;
+    border-radius: 0;
+    -webkit-appearance: none;
   }
   textarea{
     height: 100px;
@@ -66,8 +73,14 @@ nav{
     }
     td{
       padding: 5px 10px;
+      border: 1px solid $black;
     }
   }
+}
+
+.table__header{
+  text-align: left;
+  cursor: pointer;
 }
 
 .popup{

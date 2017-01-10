@@ -17,7 +17,7 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="/admin/css/style-admin.min.css">
 </head>
-<body>
+<body ng-app="userApp">
 <?
     require_once($_SERVER['DOCUMENT_ROOT'] . "/includes/admin.menu.php");
 ?>
@@ -40,36 +40,40 @@
         <input type="submit" id="add_user_sub" name="add_user_sub" value="Добавить">
     </form>
 
-    <h3>Список пользователей</h3>
-    <table class="table">
-        <tr>
-            <td>Id</td>
-            <td>Логин</td>
-            <td>Имя</td>
-            <td>Email</td>
-            <td>Права</td>
-        </tr>
-        <?php
-
-        $dbRes = $CUser->GetList(
-            array("id" => "ASC"),
-            array(),
-            array()
-        );
-        while($arUser = $dbRes->Fetch()){
-            ?>
-            <tr>
-                <td><?=$arUser["id"]?></td>
-                <td><?=$arUser["login"]?></td>
-                <td><?=$arUser["name"]?></td>
-                <td><?=$arUser["email"]?></td>
-                <td><?=$arUser["rights"]?></td>
-            </tr>
-            <?
-        }
-        ?>
-    </table>
+    <div ng-controller="userCtrl">
+      <h3>Список пользователей</h3>
+      <p>
+        <input type="text" ng-model="searchMatches">
+        <select ng-model="searchCatalog">
+          <option value="id" selected>id</option>
+          <option value="login">Логин</option>
+          <option value="name">Имя</option>
+          <option value="email">Email</option>
+          <option value="rights">Права</option>
+        </select>
+        <label>Строгий <input type="checkbox" ng-model="strict"></label>
+      </p>
+      <table class="table">
+          <tr class="table__header">
+              <td ng-click="orderBy('id')">Id</td>
+              <td ng-click="orderBy('login')">Логин</td>
+              <td ng-click="orderBy('name')">Имя</td>
+              <td ng-click="orderBy('email')">Email</td>
+              <td ng-click="orderBy('rights')">Права</td>
+          </tr>
+          <tr ng-repeat="x in names | orderBy:orderByProp | filter:{login:searchMatches}:strict">
+            <td>{{x.id}}</td>
+            <td>{{x.login}}</td>
+            <td>{{x.name}}</td>
+            <td>{{x.email}}</td>
+            <td>{{x.rights}}</td>
+          </tr>
+      </table>
+    </div>
     <script src="/libs/jquery.js"></script>
+    <script src="/node_modules/angular/angular.min.js"></script>
+    <script src="/libs/angular/applications/userApp.js"></script>
+    <script src="/libs/angular/controllers/userCtrl.js"></script>
     <script src="/admin/js/script.min.js"></script>
 </body>
 </html>

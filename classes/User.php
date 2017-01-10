@@ -79,6 +79,28 @@
             $query->execute();
             return $query;
         }
+
+        public function GetListJson($arOrder = array(), $arFilter = array(), $arSelect = array()){
+          $dbRes = $this->GetList($arOrder, $arFilter, $arSelect);
+
+          $resultString = '{"records":[';
+          $arJson = [];
+
+          while($arUser = $dbRes->Fetch()){
+            $arJson[] = '{"id":' . $arUser["id"] . ',"login":"' . $arUser["login"] . '","name":"' . $arUser["name"] . '","email":"' . $arUser["email"] . '","rights":"' . $arUser["rights"] .'"}';
+          }
+
+          for($i = 0; $i < count($arJson); $i++){
+            $resultString .= $arJson[$i];
+            if($i < count($arJson)-1){
+              $resultString .= ",";
+            }
+          }
+
+          $resultString .= "]}";
+
+          return $resultString;
+        }
     }
 
 ?>
