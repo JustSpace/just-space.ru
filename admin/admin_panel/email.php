@@ -24,7 +24,7 @@
 ?>
     <h3>Добавить email</h3>
     <form method="POST">
-        <input type="email" id="email" name="email" placeholder="Email">
+        <textarea name="email" id="email" cols="30" rows="10" placeholder="Emails"></textarea>
         <input type="submit" id="add_email_sub" name="add_email_sub" value="Добавить">
     </form>
     <?php

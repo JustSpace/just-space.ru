@@ -9,9 +9,11 @@
         }
 
         public function AddEmail($email){
-            $query = $this->pdo->prepare('INSERT INTO ls_emails (email) VALUES (:email);');
-            $query->execute(array('email' => $email));
-            return $query;
+            if(!$this->GetEmail($email)->Fetch()){
+              $query = $this->pdo->prepare('INSERT INTO ls_emails (email) VALUES (:email);');
+              $query->execute(array('email' => $email));
+              return $query;
+            }
         }
 
         public function GetEmail($email){
