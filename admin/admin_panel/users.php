@@ -55,11 +55,31 @@
       </p>
       <table class="table">
           <tr class="table__header">
-              <td ng-click="orderBy('id')">Id</td>
-              <td ng-click="orderBy('login')">Логин</td>
-              <td ng-click="orderBy('name')">Имя</td>
-              <td ng-click="orderBy('email')">Email</td>
-              <td ng-click="orderBy('rights')">Права</td>
+              <td ng-click="orderBy('id')">
+                Id
+                <span ng-show="currentColumn == 'id'" class="sort-arrow sort-arrow--top"></span>
+                <span ng-show="currentColumn == '-id'" class="sort-arrow sort-arrow--bottom"></span>
+              </td>
+              <td ng-click="orderBy('login')">
+                Логин
+                <span ng-show="currentColumn == 'login'" class="sort-arrow sort-arrow--top"></span>
+                <span ng-show="currentColumn == '-login'" class="sort-arrow sort-arrow--bottom"></span>
+              </td>
+              <td ng-click="orderBy('name')">
+                Имя
+                <span ng-show="currentColumn == 'name'" class="sort-arrow sort-arrow--top"></span>
+                <span ng-show="currentColumn == '-name'" class="sort-arrow sort-arrow--bottom"></span>
+              </td>
+              <td ng-click="orderBy('email')">
+                Email
+                <span ng-show="currentColumn == 'email'" class="sort-arrow sort-arrow--top"></span>
+                <span ng-show="currentColumn == '-email'" class="sort-arrow sort-arrow--bottom"></span>
+              </td>
+              <td ng-click="orderBy('rights')">
+                Права
+                <span ng-show="currentColumn == 'rights'" class="sort-arrow sort-arrow--top"></span>
+                <span ng-show="currentColumn == '-rights'" class="sort-arrow sort-arrow--bottom"></span>
+              </td>
           </tr>
           <tr ng-repeat="x in names | orderBy:orderByProp | filter:{login:searchMatches}:strict">
             <td>{{x.id}}</td>

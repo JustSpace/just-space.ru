@@ -49,10 +49,26 @@
       </p>
       <table class="table">
         <tr class="table__header">
-          <td ng-click="orderBy('id')">#</</td>
-          <td ng-click="orderBy('name')">Файл</td>
-          <td ng-click="orderBy('size')">Размер (Кб)</td>
-          <td ng-click="orderBy('time')">Создан</td>
+          <td ng-click="orderBy('id')">
+            #
+            <span ng-show="currentColumn == 'id'" class="sort-arrow sort-arrow--top"></span>
+            <span ng-show="currentColumn == '-id'" class="sort-arrow sort-arrow--bottom"></span>
+          </td>
+          <td ng-click="orderBy('name')">
+            Файл
+            <span ng-show="currentColumn == 'name'" class="sort-arrow sort-arrow--top"></span>
+            <span ng-show="currentColumn == '-name'" class="sort-arrow sort-arrow--bottom"></span>
+          </td>
+          <td ng-click="orderBy('size')">
+            Размер (Кб)
+            <span ng-show="currentColumn == 'size'" class="sort-arrow sort-arrow--top"></span>
+            <span ng-show="currentColumn == '-size'" class="sort-arrow sort-arrow--bottom"></span>
+          </td>
+          <td ng-click="orderBy('time')">
+            Создан
+            <span ng-show="currentColumn == 'time'" class="sort-arrow sort-arrow--top"></span>
+            <span ng-show="currentColumn == '-time'" class="sort-arrow sort-arrow--bottom"></span>
+          </td>
         </tr>
         <tr ng-repeat="x in files | orderBy:orderByProp | filter:{name:searchMatches}:strict">
           <td>{{x.id}}</td>

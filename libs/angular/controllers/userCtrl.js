@@ -4,14 +4,18 @@ userApp.controller('userCtrl', function($scope, $http) {
       $scope.names = response.data.records;
   });
 
-  $scope.searchCatalog = "id";
+  $scope.currentColumn = "id";
+  $scope.orderByProp = "id";
 
   $scope.orderBy = function(x) {
     if($scope.orderByProp == x){
       $scope.orderByProp = "-" + x;
+      $scope.currentColumn = "-" + x;
     }
     else{
       $scope.orderByProp = x;
+      $scope.currentColumn = x;
     }
   }
+
 });
