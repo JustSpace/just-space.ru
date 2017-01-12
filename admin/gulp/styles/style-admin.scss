@@ -85,49 +85,70 @@ nav{
   cursor: pointer;
 }
 
-.popup{
+.ajax-alert-popup{
   position: fixed;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
-  z-index: 98;
+  z-index: 111;
   display: none;
-  background-color: rgba(0,0,0,0.5);
-  .done{
-    display: none;
+  background-color: rgba(0,0,0,0.8);
+}
+
+.ajax-alert-popup--open{
+  display: flex;
+}
+
+.window{
+  contain: paint;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background-color: $white;
+  border-radius: 2px;
+  padding: 15px 25px;
+  width: 400px;
+  height: 200px;
+  margin: auto;
+  text-align: center;
+  color: $white;
+}
+
+.window__button-close{
+  @include transition(.3s, ease-in-out);
+  width: 30%;
+  max-width: 300px;
+  height: 50px;
+  font-size: 16px;
+  background-color: $white;
+  border-color: $black;
+  cursor: pointer;
+  &:hover,&:focus{
+    background-color: $black;
+    color: $white;
   }
-  .error{
-    display: none;
-  }
-  .window{
-    background-color: $white;
-    position: absolute;
-    border-radius: 2px;
-    padding: 15px 25px;
-    top: 40%;
-    left: 33%;
-    width: 400px;
-    height: 200px;
-    text-align: center;
-    p{
-      font-size: 28px;
-    }
-    input[type="button"]{
-      width: 30%;
-      max-width: 300px;
-      height: 50px;
-      font-size: 18px;
-      background-color: $white;
-      border-color: $black;
-      color: $black;
-      transition: all .3s ease-in-out;
-      &:hover{
-        background-color: $black;
-        color: $white;
-      }
-    }
-  }
+}
+
+.window--done{
+  background-color: $black;
+}
+
+.window--error{
+  background-color: $black;
+}
+
+.window__text{
+  font-size: 18px;
+}
+
+.window__text--done{
+  display: none;
+}
+
+.window__text--error{
+  display: none;
 }
 
 .sort-arrow{
@@ -152,4 +173,10 @@ nav{
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
   border-top: 5px solid $black;
+}
+
+.forms{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }

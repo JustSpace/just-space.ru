@@ -4,11 +4,11 @@
 
     $CEmail = new Email();
 
-    $arEmail = array_diff(array_unique(preg_split("#[\s,]+#", $_POST["email"])), array(''));
+    $arUrl = array_diff(array_unique(preg_split("#[\s,]+#", $_POST["site_email"])), array(''));
 
-    foreach($arEmail as $email){
-      $CEmail->AddEmail($email);
+    foreach($arUrl as $url){
+      $CEmail->AddSiteEmail($url);
     }
 
-    var_dump($arEmail);
+    var_dump($arUrl);
 ?>

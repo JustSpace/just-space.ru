@@ -56,6 +56,33 @@
       return password_hash($password, PASSWORD_DEFAULT);
   }
 
+  /**
+   * @param $needle
+   * @param $array
+   * @param $array
+   * Удаление необходимого значения из массива
+   */
+  function rm_from_array($needle, &$array){
+    foreach(array_keys($array,$needle) as $key){
+      unset($array[$key]);
+    }
+  }
+
+  /**
+   * @param $url
+   * @return $url
+   * Обрабатывает исходный url и выводит корректный url
+   */
+  function make_correct_url($url){
+    if($url){
+      $url = trim($url);
+      if(!preg_match('#^http[s]*://#', $url)){
+        $url = "http://" . $url;
+      }
+    }
+    return $url;
+  }
+
   /*
   function (){
       //find

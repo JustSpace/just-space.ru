@@ -1,6 +1,8 @@
 <?php
     require_once($_SERVER['DOCUMENT_ROOT'] . "/includes/const.php");
     require_once($_SERVER['DOCUMENT_ROOT'] . "/includes/init.php");
+    require_once($_SERVER['DOCUMENT_ROOT'] . "/templates/admin/admin.header.php");
+    require_once($_SERVER['DOCUMENT_ROOT'] . "/templates/admin/admin.menu.php");
 
     if(access_to_admin_panel($_SESSION["user"])){
         write_to_log("/logs/actions.txt", $_SESSION["user"]." посетил страницу ".$_SERVER["SCRIPT_FILENAME"]."\n");
@@ -11,18 +13,7 @@
 
     $CFile = new File();
 ?>
-<!doctype html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <title>Панель администратора</title>
-    <link rel="stylesheet" href="/admin/css/style-admin.min.css">
-</head>
-<body ng-app="projectsFileApp">
-  <?
-    require_once($_SERVER['DOCUMENT_ROOT'] . "/templates/admin/admin.menu.php");
-  ?>
-  <div ng-controller="projectsFileCtrl">
+  <div ng-app="projectsFileApp" ng-controller="projectsFileCtrl">
     <h3>Список резервных копий</h3>
     <p>
       <input type="text" ng-model="searchMatches">
@@ -65,10 +56,9 @@
       </tr>
     </table>
   </div>
-  <script src="/libs/jquery.js"></script>
-  <script src="/node_modules/angular/angular.min.js"></script>
-  <script src="/libs/angular/applications/projectsFileApp.js"></script>
-  <script src="/libs/angular/controllers/projectsFileCtrl.js"></script>
-  <script src="/admin/js/script.min.js"></script>
-</body>
-</html>
+  <script src="/node_modules/angular/angular.min.js" defer></script>
+  <script src="/libs/angular/applications/projectsFileApp.js" defer></script>
+  <script src="/libs/angular/controllers/projectsFileCtrl.js" defer></script>
+<?php
+  require_once($_SERVER['DOCUMENT_ROOT'] . "/templates/admin/admin.footer.php");
+?>
