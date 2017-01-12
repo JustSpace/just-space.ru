@@ -14,12 +14,15 @@ body{
   margin: 0;
   padding: 0;
   font-family: Roboto, Helvetica, sans-serif;
-  font-weight: lighter;
+  font-weight: 300;
   color: $white;
   line-height: 2em;
   width: 100%;
   overflow-x: hidden;
   word-wrap: break-word;
+  @media (-webkit-min-device-pixel-ratio: 2) {
+    font-weight: 200;
+  }
 }
 
 input, textarea{
