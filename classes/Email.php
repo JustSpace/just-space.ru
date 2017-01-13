@@ -11,7 +11,7 @@
             parent::__construct();
         }
 
-        public function AddEmail($email, $site = null, $date = null){
+        public function AddEmail($email, $site = null, $availability_date = null){
             $email = trim($email);
 
             $site = make_correct_url($site);
@@ -125,17 +125,30 @@
             else{
                 $order = " ORDER BY id ASC";
             }
+
             /* Set filter */
             if(!empty($arFilter)){
                 $arStorage = [];
+                $logic = "AND";
+
                 foreach($arFilter as $key => $value){
-                    $arStorage[] = $key . " = '" . $value . "'";
+                  if($key == "LOGIC"){
+                    $logic = $value;
+                    continue;
+                  }
+                  $key = explode(".",$key);
+                  if($value != "NULL"){
+                    $value = "'" . $value . "'";
+                  }
+                  $arStorage[] = $key[0] . " " . $key[1] . " " . $value;
                 }
-                $filter = " WHERE " . implode(" AND ", $arStorage);
+                
+                $filter = " WHERE " . implode(" " . $logic . " ", $arStorage);
             }
             else{
                 $filter = "";
             }
+
             /* Set select */
             if(!empty($arSelect)){
                 $select = " " . implode(", ", $arSelect) . " ";
@@ -146,6 +159,14 @@
             $query = $this->pdo->prepare("SELECT{$select}FROM ls_emails{$filter}{$order};");
             $query->execute();
             return $query;
+        }
+
+        public function UpdateEmailDate($email, $availability_date){
+          if(!$this->AddEmail($email, null, $availability_date)){
+            $query = $this->pdo->prepare('UPDATE ls_emails SET availability_date=:availability_date WHERE email=:email;');
+            $query->execute(array('email' => $email, 'availability_date' => $availability_date));
+            return $query;
+          }
         }
     }
 

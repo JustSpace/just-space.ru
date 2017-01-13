@@ -1,4 +1,4 @@
-<nav class="menu">
+<nav class="admin-menu">
     <li><a href="/admin/admin_panel/projects_file.php">Файлы проекта</a></li>
     <li><a href="/admin/admin_panel/email.php">Email рассылка</a></li>
     <li><a href="/admin/admin_panel/users.php">Пользователи</a></li>

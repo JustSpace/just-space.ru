@@ -1,17 +1,18 @@
 <?php
-    require_once($_SERVER['DOCUMENT_ROOT'] . "/includes/const.php");
-    require_once($_SERVER['DOCUMENT_ROOT'] . "/includes/init.php");
-    require_once($_SERVER['DOCUMENT_ROOT'] . "/templates/admin/admin.header.php");
-    require_once($_SERVER['DOCUMENT_ROOT'] . "/templates/admin/admin.menu.php");
+  require_once($_SERVER['DOCUMENT_ROOT'] . "/includes/const.php");
+  require_once($_SERVER['DOCUMENT_ROOT'] . "/includes/init.php");
 
-    if(access_to_admin_panel($_SESSION["user"])){
-        write_to_log("/logs/actions.txt", $_SESSION["user"]." посетил страницу ".$_SERVER["SCRIPT_FILENAME"]."\n");
-    }
-    else{
-        redirect_to("/admin/admin_panel/index.php");
-    }
+  if(access_to_admin_panel($_SESSION["user"])){
+    write_to_log("/logs/actions.txt", $_SESSION["user"]." посетил страницу ".$_SERVER["SCRIPT_FILENAME"]."\n");
+  }
+  else{
+    redirect_to("/admin/admin_panel/index.php");
+  }
 
-    $CUser = new User();
+  require_once($_SERVER['DOCUMENT_ROOT'] . "/templates/admin/admin.header.php");
+  require_once($_SERVER['DOCUMENT_ROOT'] . "/templates/admin/admin.menu.php");
+
+  $CUser = new User();
 ?>
   <div ng-app="userApp" ng-controller="userCtrl">
     <h3>Добавить нового</h3>

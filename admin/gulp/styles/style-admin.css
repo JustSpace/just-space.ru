@@ -4,7 +4,18 @@
   border-collapse: collapse; }
 
 body {
-  margin: 0  0 0 220px; }
+  margin: 0;
+  margin-left: 220px;
+  padding: 0;
+  font-family: Roboto, Helvetica, sans-serif;
+  background-color: #fff;
+  font-weight: 300;
+  color: #000;
+  overflow-x: hidden;
+  word-wrap: break-word; }
+  @media (-webkit-min-device-pixel-ratio: 2) {
+    body {
+      font-weight: 200; } }
 
 form input, form textarea, form select {
   background-color: #fff;
@@ -29,7 +40,7 @@ form input[type="submit"] {
     background-color: #000;
     color: #fff; }
 
-nav {
+.admin-menu {
   position: fixed;
   left: 0;
   top: 0;
@@ -39,18 +50,20 @@ nav {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border-right: 2px solid #000; }
-  nav li {
+  .admin-menu li {
     list-style: none;
     padding: 0;
     margin: 10px 0 0 20px; }
-    nav li a {
+    .admin-menu li a {
       text-decoration: none;
       color: #000; }
-      nav li a:hover {
+      .admin-menu li a:hover {
         text-decoration: underline; }
 
 .authorization {
-  width: 100%;
+  width: -webkit-calc(100% - 220px);
+  width: calc(100% - 220px);
+  height: 600px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;

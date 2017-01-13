@@ -1,19 +1,19 @@
 <?php
-    require_once($_SERVER['DOCUMENT_ROOT'] . "/includes/const.php");
-    require_once($_SERVER['DOCUMENT_ROOT'] . "/includes/init.php");
-    require_once($_SERVER['DOCUMENT_ROOT'] . "/templates/admin/admin.header.php");
-    require_once($_SERVER['DOCUMENT_ROOT'] . "/templates/admin/admin.menu.php");
+  require_once($_SERVER['DOCUMENT_ROOT'] . "/includes/const.php");
+  require_once($_SERVER['DOCUMENT_ROOT'] . "/includes/init.php");
 
-    if(access_to_admin_panel($_SESSION["user"])){
-        write_to_log("/logs/actions.txt", $_SESSION["user"]." посетил страницу ".$_SERVER["SCRIPT_FILENAME"]."\n");
-    }
-    else{
-        redirect_to("/admin/admin_panel/index.php");
-    }
+  if(access_to_admin_panel($_SESSION["user"])){
+    write_to_log("/logs/actions.txt", $_SESSION["user"]." посетил страницу ".$_SERVER["SCRIPT_FILENAME"]."\n");
+  }
+  else{
+    redirect_to("/admin/admin_panel/index.php");
+  }
 
-    $CEmail = new Email();
-    $CFile  = new File();
+  require_once($_SERVER['DOCUMENT_ROOT'] . "/templates/admin/admin.header.php");
+  require_once($_SERVER['DOCUMENT_ROOT'] . "/templates/admin/admin.menu.php");
 
+  $CEmail = new Email();
+  $CFile  = new File();
 ?>
   <div class="forms">
     <div class="forms__element">
@@ -34,7 +34,7 @@
 
     $dbRes = $CEmail->GetList(
         array("id" => "ASC"),
-        array(),
+        array("availability_date.<" => date("Y-m-d H:i:s"), "availability_date.IS" => "NULL", "LOGIC" => "OR"),
         array()
     );
 
@@ -53,15 +53,13 @@
 
         $from = "info@just-space.ru";
 
-
-
         $mail_content1 = $_SERVER["DOCUMENT_ROOT"] . "/emails/seo.html";
 
       	$tfrom = htmlspecialchars($from);
         $tmail_content1 = htmlspecialchars($mail_content1);
 
         // Если массив POST не пустой, отправка состоялась
-      	if (!empty($_POST)) {
+      	if (!empty($_POST)){
 
           // Определяем переменные
         	$emailer_subj = $_POST['emailer_subj'];
@@ -71,13 +69,13 @@
           // Теперь проверяем заполнение всех полей
         	if (empty($emailer_subj) || $emailer_subj=="Тема письма") {
             // Если тема пустая...
-            $mail_msg='<b>Вы не ввели тему письма</b>';
+            $mail_msg = '<b>Вы не ввели тему письма</b>';
           } elseif (empty($emailer_mails) || $emailer_mails=="Почтовые адреса") {
             // Если адресов нет...
-            $mail_msg='<b>Не указано адреса получателей</b>';
+            $mail_msg = '<b>Не указано адреса получателей</b>';
           } else { // Если все поля заполнены верно...
-          // Готовим сообщение об успешной отправке... Вдруг у вас какой-то необычный браузер
-          $mail_msg='Ваше сообщение отправлено';
+
+          $mail_msg = 'Ваше сообщение отправлено';
           // Готовим заголовки письма... Будем отправлять письма в формате HTML и кодировке UTF-8
           $headers = "MIME-Version: 1.0\r\n";
           $headers .= "Content-type: text/html; charset=utf-8\r\n";
@@ -85,37 +83,33 @@
 
           $emailer_text = file_get_contents($mail_content1);
 
-        	// Получаем массив адресов. В качестве разделителя у нас используется запятая.
-        	$emails=explode(",", $emailer_mails);
-        	$count_emails = count($emails); // Подсчёт количества адресов
+        	$emails = explode(",", $emailer_mails);
+        	$count_emails = count($emails);
         	// Запускаем цикл отправки сообщений
-          for ($i=0; $i<=$count_emails-1; $i++) // Отчёт начинается в массиве с нуля, поэтому уменьшаем сумму на единицу
+          for ($i = 0; $i <= $count_emails - 1; $i++)
           {
-            // Подставляем адреса получаетелей и обрезаем пробелы с обоих сторон, если таковые имеются
-            $email=trim($emails[$i]);
-            // Отправляем письмо и готовим отчёт по отправке
-          	if($emails[$i]!="") { // Проверка на случай попадения в массив пустого значения
-              if(mail($email,$emailer_subj,$emailer_text,$headers)){
-                $report.="Отправлено: ".$emails[$i]."\n";
+            $email = trim($emails[$i]);
+
+          	if($emails[$i] != ""){
+              if(mail($email, $emailer_subj, $emailer_text, $headers)){
+                $report .= "Отправлено: " . $emails[$i] . "\n";
+                $CEmail->UpdateEmailDate($email, date("Y-m-d H:i:s", time()+60*60*24*7));
               }
               else{
-                $report.="Не отправлено: ".$emails[$i]."\n";
+                $report .= "Не отправлено: " . $emails[$i] . "\n";
               }
           	  sleep(5); // Делаем тайм-аут в 5 секунд
           	}
           }
 
-        	// Запись отчёта в файл. Файл будет сгенерирован в той же папке, под названием log.txt. Проверьте настройку прав папки.
         	$log = fopen($_SERVER["DOCUMENT_ROOT"] . "/logs/emails.txt", "a+");
         	fwrite($log, $report);
         	fclose($log);
         }
       }
       else{ // Если в массиве POST пусто, форма еще не передавалась
-        // Готовим приглашение
-        $mail_msg='Все поля обязательны для заполнения.';
         // Поля темы, адресов получаетелей и получателей, и текста в этом случае должны быть пустыми
-        $emailer_text=$emailer_subj=$emailer_mails=$from='';
+        $emailer_text = $emailer_subj = $emailer_mails = $from= '';
       }
     ?>
 
@@ -132,7 +126,7 @@
       	<p class="red">
           <?php  echo $mail_msg ?>
         </p>
-      	<input type="text" name="emailer_subj" id="emailer_subj" title="По какому поводу пишем?" placeholder="Тема письма">
+      	<input type="text" name="emailer_subj" id="emailer_subj" title="По какому поводу пишем?" placeholder="Тема письма" required>
       	<textarea name="emailer_mails" id="emailer_mails" title="Кто получатели?"><?php
           while($arEmail = $dbRes->Fetch()){
               echo $arEmail["email"] . ",";
