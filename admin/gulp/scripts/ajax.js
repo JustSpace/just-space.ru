@@ -117,31 +117,29 @@ document.addEventListener('DOMContentLoaded',function(){
   createBackupSub.addEventListener('click', function(e){
     var create_backup_filename = document.querySelector('#create_backup_filename').value;
 
-    if(create_backup_filename != '') {
-      e.preventDefault();
-      var xhr = new XHR();
-      var parameters = 'create_backup_filename=' + encodeURIComponent(create_backup_filename);
+    e.preventDefault();
+    var xhr = new XHR();
+    var parameters = 'create_backup_filename=' + encodeURIComponent(create_backup_filename);
 
-      xhr.open('POST', '/admin/ajax/create_backup.php', true);
-      xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-      xhr.send(parameters);
+    xhr.open('POST', '/admin/ajax/create_backup.php', true);
+    xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+    xhr.send(parameters);
 
-      xhr.onreadystatechange = function(){
-        if(xhr.readyState != 4) return;
+    xhr.onreadystatechange = function(){
+      if(xhr.readyState != 4) return;
 
-        if(xhr.status == 200){
-          //success
-          addClass(ajaxAlertPopup, 'ajax-alert-popup--open');
-          addClass(windowPopup, 'window--done');
-          document.querySelector('.window__text--done').style.display = 'block';
-        }
-        else{
+      if(xhr.status == 200){
+        //success
+        addClass(ajaxAlertPopup, 'ajax-alert-popup--open');
+        addClass(windowPopup, 'window--done');
+        document.querySelector('.window__text--done').style.display = 'block';
+      }
+      else{
 
-          //error
-          addClass(ajaxAlertPopup, 'ajax-alert-popup--open');
-          addClass(windowPopup, 'window--error');
-          document.querySelector('.window__text--error').style.display = 'block';
-        }
+        //error
+        addClass(ajaxAlertPopup, 'ajax-alert-popup--open');
+        addClass(windowPopup, 'window--error');
+        document.querySelector('.window__text--error').style.display = 'block';
       }
     }
   });

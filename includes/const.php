@@ -25,6 +25,11 @@
     const DB_MYSQL = "mysql";
 
     /*
+    * Путь к mysqldump
+    */
+    const DB_MYSQLDUMP = "mysqldump";
+
+    /*
     * Путь к корневой директории
     */
     const DIR_ROOT = "/";
