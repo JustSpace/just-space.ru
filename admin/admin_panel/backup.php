@@ -24,7 +24,8 @@
 
     <h3>Востановить из резервной копии</h3>
     <form action="index.php" method="POST">
-        <input type="text" id="load_backup_filename" name="load_backup_filename" placeholder="Название backup'а">
+        <input type="text" id="load_backup_filename" name="load_backup_filename" placeholder="Название backup'а" required>
+        <input type="text" id="load_backup_dbname" name="load_backup_dbname" placeholder="Название базы данных">
         <input type="submit" id="load_backup_sub" name="load_backup_sub" value="Востановить">
     </form>
 

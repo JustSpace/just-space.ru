@@ -146,11 +146,12 @@ document.addEventListener('DOMContentLoaded',function(){
 
   loadBackupSub.addEventListener('click', function(e){
     var load_backup_filename = document.querySelector('#load_backup_filename').value;
+    var load_backup_dbname = document.querySelector('#load_backup_dbname').value;
 
     if(load_backup_filename != '') {
       e.preventDefault();
       var xhr = new XHR();
-      var parameters = 'load_backup_filename=' + encodeURIComponent(load_backup_filename);
+      var parameters = 'load_backup_filename=' + encodeURIComponent(load_backup_filename) + '&' + 'load_backup_dbname=' + encodeURIComponent(load_backup_dbname);
 
       xhr.open('POST', '/admin/ajax/load_backup.php', true);
       xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');

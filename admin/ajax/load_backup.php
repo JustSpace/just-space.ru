@@ -5,8 +5,13 @@
     $username = DB_USER;
     $password = DB_PASSWORD;
     $hostname = DB_HOST;
-    $database = DB_NAME;
-    $filename = $_POST["filename"] . ".sql";
-    $command = DB_MYSQL . "/bin/mysql.exe -u $username -p$password --databases $database < " . $_SERVER["DOCUMENT_ROOT"]. DIR_BACKUPS . $filename;
+    $filename = $_POST["load_backup_filename"] . ".sql";
+    if(empty($_POST["load_backup_dbname"])) {
+      $dbname = DB_NAME;
+    }
+    else{
+      $dbname = $_POST["load_backup_dbname"];
+    }
+    $command = DB_MYSQL . " -u $username -p$password -D$dbname < '" . $_SERVER["DOCUMENT_ROOT"]. DIR_BACKUPS . $filename . "'";
     exec($command);
 ?>
