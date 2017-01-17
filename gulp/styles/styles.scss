@@ -425,6 +425,20 @@ hr{
   }
 }
 
+.header--spritekit{
+  background-image: url('/img/articles/spritekit-M.jpg');
+  background-position: 50% 60%;
+  @media(min-width: 4000px){
+    background-image: url('/img/articles/spritekit-XL.jpg');
+  }
+  @media(min-width: 2000px){
+    background-image: url('/img/articles/spritekit-L.jpg');
+  }
+  @media(max-width: 1000px){
+    background-image: url('/img/articles/spritekit-S.jpg');
+  }
+}
+
 .slider{
   width: 100%;
 }

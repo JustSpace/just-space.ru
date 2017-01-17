@@ -21,6 +21,22 @@
   <main class="main">
     <article class="article">
       <h2 class="article__title">
+        Обзор решений в разработке игры на движке Sprite Kit
+      </h2>
+      <div class="article__cut">
+        С появлением iOS 7 мир узрел новый игровой движок от Apple — SpriteKit. В свете того, что появился он недавно об этом движке мало что написано и по этому мы решили написать небольшой обзор наших решений.
+        <br>
+        Мы не будем описывать процесс создания и настройки игровой сцены или объектов, а постараемся остановиться на более интересных моментах.
+      </div>
+      <a href="/blog/spritekit.php" class="button button--underline button--arrow">
+        Читать далее
+        <svg class="article__icon" aria-hidden="true">
+          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/img/sprites/sprites.svg#next-arrow"></use>
+        </svg>
+      </a>
+    </article>
+    <article class="article">
+      <h2 class="article__title">
         Стоит ли в 2017 году использовать jQuery?
       </h2>
       <div class="article__cut">
