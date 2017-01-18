@@ -98,6 +98,8 @@
         // /BLOG/
         case "/blog/jqueryin2017.php":
           return "Стоит ли в 2017 году использовать jQuery?" . $this::TITLE_END;
+        case "/blog/spritekit.php":
+          return "Обзор решений в разработке игры на движке Sprite Kit" . $this::TITLE_END;
 
         // UNDEFINED
         default:
@@ -153,6 +155,8 @@
         // /BLOG/
         case "/blog/jqueryin2017.php":
           return "В статье пытаюсь ответить на вопрос, о том насколько актуальны в современном Интернете технологии с бэкграундом в 10 лет";
+        case "/blog/spritekit.php":
+          return "Разбираем разработанное нами мобильное приложение и объясняем тонкости работы с движком Sprite Kit";
 
         // UNDEFINED
         default:
@@ -207,6 +211,8 @@
         // /BLOG/
         case "/blog/jqueryin2017.php":
           return "just space, блог компании, jquery, framework";
+        case "/blog/spritekit.php":
+          return "just space, блог компании, ios, sprite kit";
 
         // UNDEFINED
         default:
