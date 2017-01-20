@@ -78,6 +78,11 @@
         <div class="article__date">
           28 декабря, 2016
         </div>
+        <div class="article__share">
+          <?php
+            require_once($_SERVER["DOCUMENT_ROOT"]."/templates/yandex.social_icon.php");
+          ?>
+        </div>
         <div class="clear"></div>
       </div>
     </article>

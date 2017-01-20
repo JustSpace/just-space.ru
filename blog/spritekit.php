@@ -141,6 +141,11 @@ func processUserMotion(forUpdate currentTime: CFTimeInterval) {
         <div class="article__date">
           16 января, 2017
         </div>
+        <div class="article__share">
+          <?php
+            require_once($_SERVER["DOCUMENT_ROOT"]."/templates/yandex.social_icon.php");
+          ?>
+        </div>
         <div class="clear"></div>
       </div>
     </article>

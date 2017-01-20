@@ -1486,7 +1486,13 @@ h6 {
 .article__date {
   float: left; }
 
-.article__author {
+.article__marker--important {
+  text-transform: uppercase; }
+
+.article__date--right {
+  float: right; }
+
+.article__share {
   float: right; }
 
 .article__icon {
