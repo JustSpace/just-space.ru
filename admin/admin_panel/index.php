@@ -6,7 +6,7 @@
     write_to_log("/logs/actions.txt", $_SESSION["user"]." посетил страницу ".$_SERVER["SCRIPT_FILENAME"]."\n");
   }
   else{
-    redirect_to("/admin/admin_panel/index.php");
+    redirect_to("/admin/index.php");
   }
 
   require_once($_SERVER['DOCUMENT_ROOT'] . "/templates/admin/admin.header.php");

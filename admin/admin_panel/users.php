@@ -6,7 +6,7 @@
     write_to_log("/logs/actions.txt", $_SESSION["user"]." посетил страницу ".$_SERVER["SCRIPT_FILENAME"]."\n");
   }
   else{
-    redirect_to("/admin/admin_panel/index.php");
+    redirect_to("/admin/index.php");
   }
 
   require_once($_SERVER['DOCUMENT_ROOT'] . "/templates/admin/admin.header.php");
@@ -95,7 +95,7 @@
         </tr>
     </table>
   </div>
-  <script src="/node_modules/angular/angular.min.js" defer></script>
+  <script src="/libs/angular/angular.min.js" defer></script>
   <script src="/libs/angular/applications/userApp.js" defer></script>
   <script src="/libs/angular/controllers/userCtrl.js" defer></script>
 <?php
