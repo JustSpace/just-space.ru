@@ -48,38 +48,50 @@
     </p>
     <table class="table">
         <tr class="table__header">
-            <td ng-click="orderBy('id')">
-              Id
-              <span ng-show="currentColumn == 'id'" class="sort-arrow sort-arrow--top"></span>
-              <span ng-show="currentColumn == '-id'" class="sort-arrow sort-arrow--bottom"></span>
-            </td>
-            <td ng-click="orderBy('login')">
-              Логин
-              <span ng-show="currentColumn == 'login'" class="sort-arrow sort-arrow--top"></span>
-              <span ng-show="currentColumn == '-login'" class="sort-arrow sort-arrow--bottom"></span>
-            </td>
-            <td ng-click="orderBy('name')">
-              Имя
-              <span ng-show="currentColumn == 'name'" class="sort-arrow sort-arrow--top"></span>
-              <span ng-show="currentColumn == '-name'" class="sort-arrow sort-arrow--bottom"></span>
-            </td>
-            <td ng-click="orderBy('email')">
-              Email
-              <span ng-show="currentColumn == 'email'" class="sort-arrow sort-arrow--top"></span>
-              <span ng-show="currentColumn == '-email'" class="sort-arrow sort-arrow--bottom"></span>
-            </td>
-            <td ng-click="orderBy('rights')">
-              Права
-              <span ng-show="currentColumn == 'rights'" class="sort-arrow sort-arrow--top"></span>
-              <span ng-show="currentColumn == '-rights'" class="sort-arrow sort-arrow--bottom"></span>
-            </td>
+          <td>
+
+          </td>
+          <td ng-click="orderBy('id')">
+            Id
+            <span ng-show="currentColumn == 'id'" class="sort-arrow sort-arrow--top"></span>
+            <span ng-show="currentColumn == '-id'" class="sort-arrow sort-arrow--bottom"></span>
+          </td>
+          <td ng-click="orderBy('login')">
+            Логин
+            <span ng-show="currentColumn == 'login'" class="sort-arrow sort-arrow--top"></span>
+            <span ng-show="currentColumn == '-login'" class="sort-arrow sort-arrow--bottom"></span>
+          </td>
+          <td ng-click="orderBy('name')">
+            Имя
+            <span ng-show="currentColumn == 'name'" class="sort-arrow sort-arrow--top"></span>
+            <span ng-show="currentColumn == '-name'" class="sort-arrow sort-arrow--bottom"></span>
+          </td>
+          <td ng-click="orderBy('email')">
+            Email
+            <span ng-show="currentColumn == 'email'" class="sort-arrow sort-arrow--top"></span>
+            <span ng-show="currentColumn == '-email'" class="sort-arrow sort-arrow--bottom"></span>
+          </td>
+          <td ng-click="orderBy('rights')">
+            Права
+            <span ng-show="currentColumn == 'rights'" class="sort-arrow sort-arrow--top"></span>
+            <span ng-show="currentColumn == '-rights'" class="sort-arrow sort-arrow--bottom"></span>
+          </td>
         </tr>
         <tr ng-repeat="x in names | orderBy:orderByProp | filter:{login:searchMatches}:strict">
+          <td>
+            <input type="checkbox" name="user-{{x.id}}" id="user-{{x.id}}" value="user-{{x.id}}">
+          </td>
           <td>{{x.id}}</td>
           <td>{{x.login}}</td>
           <td>{{x.name}}</td>
           <td>{{x.email}}</td>
           <td>{{x.rights}}</td>
+        </tr>
+        <tr>
+          <td colspan="6">
+            Действие:
+            <input type="submit" class="button button--delete" value="Удалить" name="users_delete_sub" id="users_delete_sub">
+          </td>
         </tr>
     </table>
   </div>

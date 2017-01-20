@@ -42,6 +42,9 @@
     </p>
     <table class="table">
       <tr class="table__header">
+        <td>
+
+        </td>
         <td ng-click="orderBy('id')">
           #
           <span ng-show="currentColumn == 'id'" class="sort-arrow sort-arrow--top"></span>
@@ -64,10 +67,19 @@
         </td>
       </tr>
       <tr ng-repeat="x in files | orderBy:orderByProp | filter:{name:searchMatches}:strict">
+        <td>
+          <input type="checkbox" name="{{x.id}}" id="{{x.id}}" value="{{x.id}}">
+        </td>
         <td>{{x.id}}</td>
         <td><a href="<?php echo DIR_BACKUPS; ?>{{x.name}}" download>{{x.name}}</a></td>
         <td>{{x.size}}</td>
         <td>{{x.time}}</td>
+      </tr>
+      <tr>
+        <td colspan="5">
+          Действие:
+          <input type="submit" class="button button--delete" value="Удалить" name="backup_delete_sub" id="backup_delete_sub">
+        </td>
       </tr>
     </table>
   </div>
