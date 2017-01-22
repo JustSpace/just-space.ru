@@ -109,4 +109,9 @@
   <changefreq>weekly</changefreq>
   <priority>0.64</priority>
 </url>
+<url>
+  <loc>http://www.just-space.ru/blog/vnutrennyaya-optimizaciya.php</loc>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
+</url>
 </urlset>

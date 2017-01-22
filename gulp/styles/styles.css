@@ -200,6 +200,9 @@ h6 {
 .clear {
   clear: both; }
 
+.no-underline {
+  text-decoration: none; }
+
 .button {
   -webkit-transition: all 0.3s linear;
   transition: all 0.3s linear;
@@ -420,6 +423,19 @@ h6 {
 .header--2div3 {
   height: 350px; }
 
+.header--about {
+  background-image: url("/img/about-M.jpg");
+  background-position: 50% 75%; }
+  @media (min-width: 4000px) {
+    .header--about {
+      background-image: url("/img/about-XL.jpg"); } }
+  @media (min-width: 2000px) {
+    .header--about {
+      background-image: url("/img/about-L.jpg"); } }
+  @media (max-width: 1000px) {
+    .header--about {
+      background-image: url("/img/about-S.jpg"); } }
+
 .header--services {
   background-image: url("/img/services-M.jpg");
   background-position: 50% 75%; }
@@ -547,6 +563,19 @@ h6 {
   @media (max-width: 1000px) {
     .header--spritekit {
       background-image: url("/img/articles/spritekit-S.jpg"); } }
+
+.header--vnutrennyaya-optimizaciya {
+  background-image: url("/img/articles/vnutrennyaya_optimizaciya-M.jpg");
+  background-position: 50% 60%; }
+  @media (min-width: 4000px) {
+    .header--vnutrennyaya-optimizaciya {
+      background-image: url("/img/articles/vnutrennyaya_optimizaciya-XL.jpg"); } }
+  @media (min-width: 2000px) {
+    .header--vnutrennyaya-optimizaciya {
+      background-image: url("/img/articles/vnutrennyaya_optimizaciya-L.jpg"); } }
+  @media (max-width: 1000px) {
+    .header--vnutrennyaya-optimizaciya {
+      background-image: url("/img/articles/vnutrennyaya_optimizaciya-S.jpg"); } }
 
 .slider {
   width: 100%; }

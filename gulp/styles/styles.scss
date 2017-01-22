@@ -96,6 +96,10 @@ hr{
   clear: both;
 }
 
+.no-underline{
+  text-decoration: none;
+}
+
 .button{
   @include transition(.3s);
   width: 200px;
@@ -297,6 +301,20 @@ hr{
   height: 350px;
 }
 
+.header--about{
+  background-image: url('/img/about-M.jpg');
+  background-position: 50% 75%;
+  @media(min-width: 4000px){
+    background-image: url('/img/about-XL.jpg');
+  }
+  @media(min-width: 2000px){
+    background-image: url('/img/about-L.jpg');
+  }
+  @media(max-width: 1000px){
+    background-image: url('/img/about-S.jpg');
+  }
+}
+
 .header--services{
   background-image: url('/img/services-M.jpg');
   background-position: 50% 75%;
@@ -436,6 +454,20 @@ hr{
   }
   @media(max-width: 1000px){
     background-image: url('/img/articles/spritekit-S.jpg');
+  }
+}
+
+.header--vnutrennyaya-optimizaciya{
+  background-image: url('/img/articles/vnutrennyaya_optimizaciya-M.jpg');
+  background-position: 50% 60%;
+  @media(min-width: 4000px){
+    background-image: url('/img/articles/vnutrennyaya_optimizaciya-XL.jpg');
+  }
+  @media(min-width: 2000px){
+    background-image: url('/img/articles/vnutrennyaya_optimizaciya-L.jpg');
+  }
+  @media(max-width: 1000px){
+    background-image: url('/img/articles/vnutrennyaya_optimizaciya-S.jpg');
   }
 }
 

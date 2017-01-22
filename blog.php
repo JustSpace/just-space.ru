@@ -21,7 +21,21 @@
   <main class="main">
     <article class="article">
       <h2 class="article__title">
-        Обзор решений в разработке игры на движке Sprite Kit
+        <a href="/blog/vnutrennyaya-optimizaciya.php" class="no-underline">Советы по SEO продвижению сайта</a>
+      </h2>
+      <div class="article__cut">
+        Давно ловил себя на мысли, что было бы здорово иметь определенный чек-лист в который можно заглянуть и понять что еще нужно сделать. Поэтому решил собственноручно перечислить основные моменты в одном месте, собственно этим чек-листом и является эта статья.
+      </div>
+      <a href="/blog/vnutrennyaya-optimizaciya.php" class="button button--underline button--arrow">
+        Читать далее
+        <svg class="article__icon" aria-hidden="true">
+          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/img/sprites/sprites.svg#next-arrow"></use>
+        </svg>
+      </a>
+    </article>
+    <article class="article">
+      <h2 class="article__title">
+        <a href="/blog/spritekit.php" class="no-underline">Обзор решений в разработке игры на движке Sprite Kit</a>
       </h2>
       <div class="article__cut">
         С появлением iOS 7 мир узрел новый игровой движок от Apple — SpriteKit. В свете того, что появился он недавно об этом движке мало что написано и по этому мы решили написать небольшой обзор наших решений.
@@ -37,7 +51,7 @@
     </article>
     <article class="article">
       <h2 class="article__title">
-        Стоит ли в 2017 году использовать jQuery?
+        <a href="/blog/jqueryin2017.php" class="no-underline">Стоит ли в 2017 году использовать jQuery?</a>
       </h2>
       <div class="article__cut">
         Более двух лет назад я уже обращал внимание на эту проблему в <a href="https://habrahabr.ru/post/247029/">переводе статьи "Is jQuery Too Big For Mobile?"</a> за авторством VanToll'а.
