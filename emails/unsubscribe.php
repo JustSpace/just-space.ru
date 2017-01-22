@@ -1,3 +1,11 @@
+<?php
+  if(filter_var($_GET["email"], FILTER_VALIDATE_EMAIL)){
+    $unsibscribe_email = htmlspecialchars($_GET["email"]);
+  }
+  else{
+    $unsibscribe_email = "";
+  }
+?>
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -19,7 +27,7 @@
         Введите email
       </h1>
       <form class="unsubscribe__form">
-        <input type="email" class="unsubscribe__email" placeholder="your@mail.ru" id="email" required>
+        <input type="email" class="unsubscribe__email" placeholder="your@mail.ru" id="email" value="<?php echo $unsibscribe_email;?>" required>
         <input type="submit" value="Отписаться" class="unsubscribe__submit" id="unsubscribe_sub">
       </form>
     </div>

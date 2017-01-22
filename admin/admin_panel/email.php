@@ -33,16 +33,16 @@
     <?php
 
     $dbRes = $CEmail->GetList(
-        array("id" => "ASC"),
-        array("availability_date.<" => date("Y-m-d H:i:s"), "availability_date.IS" => "NULL", "LOGIC" => "OR"),
-        array()
+      array("id" => "ASC"),
+      array("available.=" => 1, "AND", "(", "departure_date.>" => date("Y-m-d H:i:s", time()+60*60*24*7), "OR", "departure_date.IS" => "NULL", ")"),
+      array()
     );
 
     $arFile = $CFile->GetList(
-        $_SERVER['DOCUMENT_ROOT'] . DIR_EMAILS,
-        "ASC",
-        array("SHOW_DIR" => "N", "SHOW_HIDDEN" => "N"),
-        array()
+      $_SERVER['DOCUMENT_ROOT'] . DIR_EMAILS,
+      "ASC",
+      array("SHOW_DIR" => "N", "SHOW_HIDDEN" => "N"),
+      array()
     );
 
 ?>
@@ -83,6 +83,10 @@
 
           $emailer_text = file_get_contents($mail_content1);
 
+          $ar_email_test = explode('FROM_NAME_EMAIL', $emailer_text);
+
+          $emailer_text = $ar_email_test[0] . $from . $ar_email_test[1];
+
         	$emails = explode(",", $emailer_mails);
         	$count_emails = count($emails);
         	// Запускаем цикл отправки сообщений
@@ -93,7 +97,7 @@
           	if($emails[$i] != ""){
               if(mail($email, $emailer_subj, $emailer_text, $headers)){
                 $report .= "Отправлено: " . $emails[$i] . "\n";
-                $CEmail->UpdateEmailDate($email, date("Y-m-d H:i:s", time()+60*60*24*7));
+                $CEmail->UpdateEmailDate($email, date("Y-m-d H:i:s"));
               }
               else{
                 $report .= "Не отправлено: " . $emails[$i] . "\n";
@@ -127,7 +131,7 @@
           <?php  echo $mail_msg ?>
         </p>
       	<input type="text" name="emailer_subj" id="emailer_subj" title="По какому поводу пишем?" placeholder="Тема письма" required>
-      	<textarea name="emailer_mails" id="emailer_mails" title="Кто получатели?"><?php
+      	<textarea name="emailer_mails" id="emailer_mails" title="Кто получатели?" placeholder="Получатели"><?php
           while($arEmail = $dbRes->Fetch()){
               echo $arEmail["email"] . ",";
             }
@@ -135,9 +139,9 @@
         <select name="emailer_yourmail">
           <?php
           foreach($arFile as $i => $file){
-              ?>
-              <option value="$mail_content<?php echo $i;?>"><?php echo $file["NAME"] ?></option>
-              <?php
+            ?>
+            <option value="$mail_content<?php echo $i;?>"><?php echo $file["NAME"] ?></option>
+            <?php
           }
           ?>
       	</select>
