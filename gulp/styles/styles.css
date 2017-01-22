@@ -808,9 +808,6 @@ h6 {
 .about {
   line-height: 25px; }
 
-.about__text {
-  padding: 10px 0 40px; }
-
 .categories {
   width: 100%;
   display: -webkit-box;
@@ -824,7 +821,8 @@ h6 {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
-  color: #0097ba; }
+  color: #0097ba;
+  padding-top: 40px; }
   @media (max-width: 700px) {
     .categories {
       -webkit-box-orient: vertical;
@@ -871,35 +869,55 @@ h6 {
   display: block;
   text-align: center; }
 
-.main-blog {
+.page-image {
   width: 100%;
   height: 600px;
   min-height: 600px;
-  background: url("/img/main-blog-M.jpg");
   background-color: #2A282B;
-  background-size: cover;
   background-repeat: no-repeat;
   color: #fff;
-  background-position: 0 100%; }
+  position: relative; }
+
+.page-image--blog {
+  background: url("/img/main-blog-M.jpg");
+  background-position: 0 100%;
+  background-size: cover; }
   @media (min-width: 4000px) {
-    .main-blog {
+    .page-image--blog {
       background-image: url("/img/main-blog-XL.jpg"); } }
   @media (min-width: 2000px) {
-    .main-blog {
+    .page-image--blog {
       background-image: url("/img/main-blog-L.jpg"); } }
   @media (max-width: 1000px) {
-    .main-blog {
+    .page-image--blog {
       background-image: url("/img/main-blog-S.jpg"); } }
   @media (max-width: 500px) {
-    .main-blog {
+    .page-image--blog {
       height: 800px; } }
 
-.main-blog__wrapper {
+.page-image--about {
+  background: url("/img/about_city-M.jpg");
+  background-position: 0 100%;
+  background-size: cover; }
+  @media (min-width: 4000px) {
+    .page-image--about {
+      background-image: url("/img/about_city-XL.jpg"); } }
+  @media (min-width: 2000px) {
+    .page-image--about {
+      background-image: url("/img/about_city-L.jpg"); } }
+  @media (max-width: 1000px) {
+    .page-image--about {
+      background-image: url("/img/about_city-S.jpg"); } }
+  @media (max-width: 500px) {
+    .page-image--about {
+      height: 800px; } }
+
+.page-image__wrapper {
   background-color: rgba(0, 0, 0, 0.7);
   width: 100%;
   height: 100%; }
 
-.main-blog__promo {
+.page-image__promo {
   height: 100%;
   width: 50%;
   float: right;
@@ -920,13 +938,73 @@ h6 {
       -ms-flex-align: center;
           align-items: center; }
   @media (max-width: 1010px) {
-    .main-blog__promo {
+    .page-image__promo {
       width: 100%; } }
 
-.main-blog__icon {
+.page-image__title {
+  display: block;
+  font-size: 1.5em;
+  font-weight: normal;
+  vertical-align: middle;
+  line-height: 50px;
+  color: currentcolor; }
+
+.page-image__title--top {
+  -webkit-transition: all 0.5s linear;
+  transition: all 0.5s linear;
+  margin: 25px 0;
+  padding: 15px;
+  -webkit-border-top-left-radius: 50px;
+          border-top-left-radius: 50px;
+  -webkit-border-bottom-left-radius: 50px;
+          border-bottom-left-radius: 50px;
+  color: #fff; }
+  .page-image__title--top:hover, .page-image__title--top:focus {
+    -webkit-transform: translateX(-75px);
+        -ms-transform: translateX(-75px);
+            transform: translateX(-75px); }
+    .page-image__title--top:hover .page-image__icon, .page-image__title--top:focus .page-image__icon {
+      -webkit-transform: rotate(25deg) scale(1.25);
+          -ms-transform: rotate(25deg) scale(1.25);
+              transform: rotate(25deg) scale(1.25); }
+
+.page-image__title--mask-1 {
+  background-color: rgba(74, 74, 74, 0.5); }
+
+.page-image__title--mask-2 {
+  background-color: rgba(221, 116, 138, 0.5); }
+
+.page-image__title--mask-3 {
+  background-color: rgba(0, 151, 186, 0.5); }
+
+.page-image__text--about {
+  color: #000;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start; }
+
+.page-image__icon {
+  -webkit-transition: all 0.5s linear;
+  transition: all 0.5s linear;
   width: 20px;
   height: 20px;
   color: currentcolor; }
+
+.page-image__icon--top {
+  width: 50px;
+  height: 50px;
+  float: left;
+  margin-right: 10px; }
+
+.page-image__icon--mask-1 {
+  color: rgba(74, 74, 74, 0.5); }
+
+.page-image__icon--mask-2 {
+  color: rgba(221, 116, 138, 0.5); }
+
+.page-image__icon--mask-3 {
+  color: rgba(0, 151, 186, 0.5); }
 
 .app-menu {
   -webkit-transition: all 0.5s linear;

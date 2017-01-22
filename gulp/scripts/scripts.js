@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded',function(){
   var header            = document.querySelector('.header') || document.querySelector('head');
   var header2div3       = document.querySelector('.header--2div3') || document.querySelector('head');
   var headerIndex       = document.querySelector('.header--index') || document.querySelector('head');
-  var mainBlog          = document.querySelector('.main-blog') || document.querySelector('head');
+  var mainBlog          = document.querySelector('.page-image') || document.querySelector('head');
   var hamburger         = document.querySelector('.hamburger') || document.querySelector('head');
   var hamburgerLines    = document.querySelectorAll('.hamburger__line') || document.querySelector('head');
   var sidebar           = document.querySelector('.sidebar') || document.querySelector('head');

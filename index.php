@@ -100,19 +100,19 @@
         </div>
       </div>
     </article>
-    <div class="main-blog">
-      <div class="main-blog__wrapper">
-        <article class="main-blog__promo">
+    <div class="page-image page-image--blog">
+      <div class="page-image__wrapper">
+        <article class="page-image__promo">
           <h2>Узнайте нас лучше (<span class="fill-color--first">Just Space</span> изнутри)</h2>
-          <div class="main-blog__text">
+          <div class="page-image__text">
             Вы также можете познакомиться с нашей работой более детально, это можно сделать на страницах нашего блога, в котором мы пишем обо всех аспектах нашей деятельности: разработке сайтов и мобильных приложений, создание дизайна, продвижение (SEO), рекламе и организации бизнеса в целом.
           </div>
-          <div class="main-blog__text">
+          <div class="page-image__text">
             Мы стараемся регулярно делиться своими успехами и неудачами, чтобы все заказчики, у которых появится желание обратиться к нам, смогли пронаблюдать нашу работу изнутри и составить свое мнение о нашей компании.
           </div>
           <a href="blog.php" class="button button--full button--rosen button--arrow" alt="Читать наш блог">
             Начать читать
-            <svg class="main-blog__icon" aria-hidden="true">
+            <svg class="page-image__icon" aria-hidden="true">
               <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/img/sprites/sprites.svg#next-arrow"></use>
             </svg>
           </a>
