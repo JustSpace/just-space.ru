@@ -709,7 +709,7 @@ hr{
 }
 
 .about__text{
-  
+
 }
 
 .categories{
@@ -769,17 +769,17 @@ hr{
 }
 
 .page-image--blog{
-  background: url('/img/main-blog-M.jpg');
+  background: url('/img/main_blog-M.jpg');
   background-position: 0 100%;
   background-size: cover;
   @media(min-width: 4000px){
-    background-image: url('/img/main-blog-XL.jpg');
+    background-image: url('/img/main_blog-XL.jpg');
   }
   @media(min-width: 2000px){
-    background-image: url('/img/main-blog-L.jpg');
+    background-image: url('/img/main_blog-L.jpg');
   }
   @media(max-width: 1000px){
-    background-image: url('/img/main-blog-S.jpg');
+    background-image: url('/img/main_blog-S.jpg');
   }
   @media(max-width: 500px){
     height: 800px;

@@ -879,18 +879,18 @@ h6 {
   position: relative; }
 
 .page-image--blog {
-  background: url("/img/main-blog-M.jpg");
+  background: url("/img/main_blog-M.jpg");
   background-position: 0 100%;
   background-size: cover; }
   @media (min-width: 4000px) {
     .page-image--blog {
-      background-image: url("/img/main-blog-XL.jpg"); } }
+      background-image: url("/img/main_blog-XL.jpg"); } }
   @media (min-width: 2000px) {
     .page-image--blog {
-      background-image: url("/img/main-blog-L.jpg"); } }
+      background-image: url("/img/main_blog-L.jpg"); } }
   @media (max-width: 1000px) {
     .page-image--blog {
-      background-image: url("/img/main-blog-S.jpg"); } }
+      background-image: url("/img/main_blog-S.jpg"); } }
   @media (max-width: 500px) {
     .page-image--blog {
       height: 800px; } }
