@@ -1,6 +1,6 @@
 <?php
-    require_once($_SERVER['DOCUMENT_ROOT'] . "/includes/const.php");
-    require_once ($_SERVER['DOCUMENT_ROOT'] . "/libs/simplehtmldom_1_5/simple_html_dom.php");
+    require_once("/home/users/g/gazeltrafic/domains/just-space.ru/includes/const.php");
+    require_once ("/home/users/g/gazeltrafic/domains/just-space.ru/libs/simplehtmldom_1_5/simple_html_dom.php");
 
     class Email extends Base
     {

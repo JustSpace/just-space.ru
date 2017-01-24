@@ -1,5 +1,4 @@
 <?php
-  require_once($_SERVER['DOCUMENT_ROOT'] . "/includes/const.php");
   require_once($_SERVER['DOCUMENT_ROOT'] . "/includes/init.php");
 
   if(access_to_admin_panel($_SESSION["user"])){
@@ -81,11 +80,10 @@
           $headers .= "Content-type: text/html; charset=utf-8\r\n";
           $headers .= "From: $from";
 
-          $emailer_text = file_get_contents($mail_content1);
+          $template_emailer_text = file_get_contents($mail_content1);
 
-          $ar_email_test = explode('FROM_NAME_EMAIL', $emailer_text);
+          $ar_email_test = explode('FROM_NAME_EMAIL', $template_emailer_text);
 
-          $emailer_text = $ar_email_test[0] . $from . $ar_email_test[1];
 
         	$emails = explode(",", $emailer_mails);
         	$count_emails = count($emails);
@@ -93,6 +91,7 @@
           for ($i = 0; $i <= $count_emails - 1; $i++)
           {
             $email = trim($emails[$i]);
+            $emailer_text = $ar_email_test[0] . $email . $ar_email_test[1];
 
           	if($emails[$i] != ""){
               if(mail($email, $emailer_subj, $emailer_text, $headers)){
