@@ -1,5 +1,4 @@
-<?
-  require_once($_SERVER['DOCUMENT_ROOT']."/includes/const.php");
+<?php
   require_once($_SERVER['DOCUMENT_ROOT']."/includes/init.php");
 
   $dbRes = new User();

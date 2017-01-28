@@ -52,10 +52,7 @@
 
         $from = "info@just-space.ru";
 
-        $mail_content1 = $_SERVER["DOCUMENT_ROOT"] . "/emails/seo.html";
-
       	$tfrom = htmlspecialchars($from);
-        $tmail_content1 = htmlspecialchars($mail_content1);
 
         // Если массив POST не пустой, отправка состоялась
       	if (!empty($_POST)){
@@ -64,6 +61,7 @@
         	$emailer_subj = $_POST['emailer_subj'];
         	$emailer_mails = $_POST['emailer_mails'];
         	$emailer_text = $_POST['emailer_text'];
+          $emailer_file = $_SERVER["DOCUMENT_ROOT"] . "/emails/" . $_POST['emailer_file'];
 
           // Теперь проверяем заполнение всех полей
         	if (empty($emailer_subj) || $emailer_subj=="Тема письма") {
@@ -80,23 +78,29 @@
           $headers .= "Content-type: text/html; charset=utf-8\r\n";
           $headers .= "From: $from";
 
-          $template_emailer_text = file_get_contents($mail_content1);
+          $template_emailer_text = file_get_contents($emailer_file);
 
-          $ar_email_test = explode('FROM_NAME_EMAIL', $template_emailer_text);
-
+          $ar_email_text = explode('FROM_NAME_EMAIL', $template_emailer_text);
 
         	$emails = explode(",", $emailer_mails);
         	$count_emails = count($emails);
         	// Запускаем цикл отправки сообщений
           for ($i = 0; $i <= $count_emails - 1; $i++)
           {
-            $email = trim($emails[$i]);
-            $emailer_text = $ar_email_test[0] . $email . $ar_email_test[1];
+            $email_to = trim($emails[$i]);
+            $emailer_text = "";
+
+            for($j = 0; $j < count($ar_email_text) ; $j++){
+              $emailer_text .= $ar_email_text[$j];
+              if($j != count($ar_email_text) - 1){
+                $emailer_text .= $email_to;
+              }
+            }
 
           	if($emails[$i] != ""){
-              if(mail($email, $emailer_subj, $emailer_text, $headers)){
+              if(mail($email_to, $emailer_subj, $emailer_text, $headers)){
                 $report .= "Отправлено: " . $emails[$i] . "\n";
-                $CEmail->UpdateEmailDate($email, date("Y-m-d H:i:s"));
+                $CEmail->UpdateEmailDate($email_to, date("Y-m-d H:i:s"));
               }
               else{
                 $report .= "Не отправлено: " . $emails[$i] . "\n";
@@ -135,11 +139,11 @@
               echo $arEmail["email"] . ",";
             }
           ?></textarea>
-        <select name="emailer_yourmail">
+        <select name="emailer_file">
           <?php
           foreach($arFile as $i => $file){
             ?>
-            <option value="$mail_content<?php echo $i;?>"><?php echo $file["NAME"] ?></option>
+            <option value="<?php echo $file["NAME"];?>"><?php echo $file["NAME"] ?></option>
             <?php
           }
           ?>

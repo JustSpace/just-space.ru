@@ -1,16 +1,15 @@
 <?php
   require_once($_SERVER['DOCUMENT_ROOT'] . "/includes/init.php");
 
-  $CEmail = new Email();
-
-  $email_text = "Отсписавшийся email: " . $_POST["email"] . "\n";
-  $file = fopen($_SERVER["DOCUMENT_ROOT"] . "/logs/unsubscribe.txt", "a+");
+  $site_text = "Сайт на бесплатный аудит: " . $_POST["site"] . "\n";
+  $email_text = "Пришел с email: " . $_POST["email"] . "\n\n";
+  $file = fopen($_SERVER["DOCUMENT_ROOT"] . "/logs/audit.txt", "a+");
+  fputs($file, $site_text);
   fputs($file, $email_text);
   fclose($file);
 
-  if(mail("info@just-space.ru","Just Space - Отписка от рассылки", $email_text)){
+  if(mail("info@just-space.ru","Just Space - Сайт на бесплатный аудит", $site_text . $email_text)){
       //mail($_POST["email"],"Just Space", "Благодарим вас за оформиление заказа на нашем сайте, по указанному телефону с вами свяжется наш менеджер.");
-      $CEmail->UpdateEmailAvailable($_POST["email"], 0);
       echo json_encode("OK");
   }
 ?>
