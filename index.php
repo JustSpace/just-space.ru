@@ -29,10 +29,10 @@
         <source srcset="/img/design-S.jpg" media="(max-width: 1000px)">
         <img class="header__image slider__slide slider__slide--4 slider__slide--back" src="/img/design-M.jpg" alt="Создание дизайна">
       </picture>
-      <svg class="slider__arrow slider__arrow--left" aria-hidden="true">
+      <svg class="slider__arrow slider__arrow--left slider__arrow--left-index" aria-hidden="true">
         <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/img/sprites/sprites.svg#down-arrow"></use>
       </svg>
-      <svg class="slider__arrow slider__arrow--right" aria-hidden="true">
+      <svg class="slider__arrow slider__arrow--right slider__arrow--right-index" aria-hidden="true">
         <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/img/sprites/sprites.svg#down-arrow"></use>
       </svg>
     </div>

@@ -47,10 +47,37 @@
           </a>
         </div>
       </article>
-
       <article class="page-image__promo">
         <img src="/img/cmsmagazine.png" alt="cmsmagazine аналитический портал веб-разработок">
       </article>
+    </div>
+    <div class="carusel">
+      <div class="slider slider--line">
+        <a href="/img/cert/cert_bitrix-compoz.jpg" target="_black" class="slider__slide slider__slide--line slider__slide--1 slider__slide--first">
+          <img src="/img/cert/cert_bitrix-compoz.jpg" class="slide__image" alt="">
+        </a><!--
+        --><a href="/img/cert/cert_bitrix-content.jpg" target="_black" class="slider__slide slider__slide--line slider__slide--2">
+          <img src="/img/cert/cert_bitrix-content.jpg" class="slide__image" alt="">
+        </a><!--
+        --><a href="/img/cert/cert_bitrix-dev.jpg" target="_black" class="slider__slide slider__slide--line slider__slide--3">
+          <img src="/img/cert/cert_bitrix-dev.jpg" class="slide__image" alt="">
+        </a><!--
+        --><a href="/img/cert/cert_bitrix-compoz.jpg" target="_black" class="slider__slide slider__slide--line slider__slide--4 slider__slide--last">
+          <img src="/img/cert/cert_bitrix-compoz.jpg" class="slide__image" alt="">
+        </a><!--
+        --><a href="/img/cert/cert_bitrix-compoz.jpg" target="_black" class="slider__slide slider__slide--line slider__slide--5">
+          <img src="/img/cert/cert_bitrix-compoz.jpg" class="slide__image" alt="">
+        </a><!--
+        --><a href="/img/cert/cert_bitrix-compoz.jpg" target="_black" class="slider__slide slider__slide--line slider__slide--6">
+          <img src="/img/cert/cert_bitrix-compoz.jpg" class="slide__image" alt="">
+        </a>
+      </div>
+      <svg class="slider__arrow slider__arrow--left slider__arrow--left-about" aria-hidden="true">
+        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/img/sprites/sprites.svg#down-arrow"></use>
+      </svg>
+      <svg class="slider__arrow slider__arrow--right slider__arrow--right-about" aria-hidden="true">
+        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/img/sprites/sprites.svg#down-arrow"></use>
+      </svg>
     </div>
   </main>
 <?php
