@@ -270,7 +270,7 @@ hr{
   padding: 0;
   margin: 0;
   top: auto;
-  bottom: -34px;
+  bottom: -33px;
   z-index: 20;
   font-size: 5em;
   line-height: 1.5em;
@@ -471,14 +471,42 @@ hr{
   }
 }
 
+.carusel{
+  width: 100%;
+  position: relative;
+  color: $white;
+  background-color: #d8d8d8;
+}
+
 .slider{
   width: 100%;
+}
+
+.slider--line{
+  @include transition(.5s);
+  width: 100%;
+  white-space: nowrap;
+  position: relative;
+  background-color: transparent;
+  color: $white;
 }
 
 .slider__slide{
   @include transition(1s);
   transform: translateX(200%);
   z-index: -100;
+}
+
+.slider__slide--line{
+  transform: translateX(0);
+  z-index: 0;
+  display: inline-block;
+  padding: 25px;
+  background-clip: content-box;
+  margin: 0;
+  width: 25%;
+  height: 250px;
+  background-color: #d8d8d8;
 }
 
 .slider__slide--back{
@@ -489,6 +517,14 @@ hr{
 .slider__slide--active{
   transform: translateX(0);
   z-index: -99;
+}
+
+.slider__slide--first{
+
+}
+
+.slider__slide--last{
+
 }
 
 .slider__slide--2{
@@ -503,10 +539,16 @@ hr{
   object-position: 50% 50%;
 }
 
+.slide__image{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
 .slider__arrow{
   @include transition();
   position: absolute;
-  top: 50%;
+  top: calc(50% - 17.5px);
   cursor: pointer;
   z-index: 50;
   width: 35px;
@@ -892,6 +934,34 @@ hr{
 
 .page-image__icon--mask-3{
   color: rgba(0,151,186,$alphaForHeader);
+}
+
+.test--1{
+  background: #FF0000;
+}
+
+.test--2{
+  background: #FF7F00;
+}
+
+.test--3{
+  background: #FFFF00;
+}
+
+.test--4{
+  background: #00FF00;
+}
+
+.test--5{
+  background: #0000FF;
+}
+
+.test--6{
+  background: #4B0082;
+}
+
+.test--7{
+  background: #8B00FF;
 }
 
 .app-menu{

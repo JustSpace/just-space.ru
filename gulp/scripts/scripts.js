@@ -16,8 +16,10 @@ document.addEventListener('DOMContentLoaded',function(){
   var fileFront         = document.querySelector('#file__front') || document.querySelector('head');
   var fileBack          = document.querySelector('#file__back') || document.querySelector('head');
   var arrowIcon         = document.querySelector('.arrow__icon') || document.querySelector('head');
-  var sliderArrowLeft   = document.querySelector('.slider__arrow--left') || document.querySelector('head');
-  var sliderArrowRight  = document.querySelector('.slider__arrow--right') || document.querySelector('head');
+  var sliderArrowLeftIndex = document.querySelector('.slider__arrow--left-index') || document.querySelector('head');
+  var sliderArrowRightIndex = document.querySelector('.slider__arrow--right-index') || document.querySelector('head');
+  var sliderArrowLeftAbout = document.querySelector('.slider__arrow--left-about') || document.querySelector('head');
+  var sliderArrowRightAbout = document.querySelector('.slider__arrow--right-about') || document.querySelector('head');
   var appMenu           = document.querySelector(".app-menu") || document.querySelector('head');
   var blind             = document.querySelector(".blind") || document.querySelector('head');
   var allElem           = document.querySelectorAll('*') || document.querySelector('head');
@@ -49,22 +51,30 @@ document.addEventListener('DOMContentLoaded',function(){
     fileBack.click();
   });
 
-  var limitClickSliderArrowLeft = limitExecByInterval(clickSliderArrowLeft, 1000);
-  var limitClickSliderArrowRight = limitExecByInterval(clickSliderArrowRight, 1000);
+  var limitClickSliderArrowLeftIndex = limitExecByInterval(clickSliderArrowLeftIndex, 1000);
+  var limitClickSliderArrowRightIndex = limitExecByInterval(clickSliderArrowRightIndex, 1000);
 
-  sliderArrowLeft.addEventListener('click', function(){
+  sliderArrowLeftIndex.addEventListener('click', function(){
     clearInterval(leafInterval);
-    limitClickSliderArrowLeft();
+    limitClickSliderArrowLeftIndex();
   });
 
-  sliderArrowRight.addEventListener('click', function(){
+  sliderArrowRightIndex.addEventListener('click', function(){
     clearInterval(leafInterval);
-    limitClickSliderArrowRight();
+    limitClickSliderArrowRightIndex();
+  });
+
+  sliderArrowLeftAbout.addEventListener('click', function(){
+    clickSliderArrowLeftAbout();
+  });
+
+  sliderArrowRightAbout.addEventListener('click', function(){
+    clickSliderArrowRightAbout();
   });
 
   if(hasClass(header, 'header--index')){
     var leafInterval = setInterval(function(){
-      clickSliderArrowRight();
+      clickSliderArrowRightIndex();
     },5000);
   }
 

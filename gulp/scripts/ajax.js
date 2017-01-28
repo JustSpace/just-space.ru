@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded',function(){
   var orderSub = document.querySelector('#order_sub') || document.querySelector('head');
   var orderAppSub = document.querySelector('#app-order_sub') || document.querySelector('head');
   var unsubscribeSub = document.querySelector('#unsubscribe_sub') || document.querySelector('head');
+  var freeAuditSub = document.querySelector('#free-audit_sub') || document.querySelector('head');
 
   var windowButtonClose = document.querySelector('.window__button-close') || document.querySelector('head');
   var windowPopup       = document.querySelector('.window') || document.querySelector('head');
@@ -114,6 +115,38 @@ document.addEventListener('DOMContentLoaded',function(){
     }
   });
 
+  freeAuditSub.addEventListener('click', function(e){
+    var email = document.querySelector('#email').value;
+    var site  = document.querySelector('#site').value;
+
+    if(site != '') {
+      e.preventDefault();
+      var xhr = new XHR();
+      var parameters = 'site=' + encodeURIComponent(site) + '&' + 'email=' + encodeURIComponent(email);
+
+      xhr.open('POST', '/includes/ajax/audit.php', true);
+      xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+      xhr.send(parameters);
+
+      xhr.onreadystatechange = function(){
+        if(xhr.readyState != 4) return;
+
+        if(xhr.status == 200){
+          //success
+          addClass(ajaxAlertPopup, 'ajax-alert-popup--open');
+          addClass(windowPopup, 'window--done');
+          document.querySelector('.window__text--done').style.display = 'block';
+        }
+        else{
+
+          //error
+          addClass(ajaxAlertPopup, 'ajax-alert-popup--open');
+          addClass(windowPopup, 'window--error');
+          document.querySelector('.window__text--error').style.display = 'block';
+        }
+      }
+    }
+  });
 
   windowButtonClose.addEventListener('click', function(){
     removeClass(ajaxAlertPopup, 'ajax-alert-popup--open');

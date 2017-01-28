@@ -80,7 +80,7 @@ function leaf(func){
   }
 }
 
-function clickSliderArrowRight(){
+function clickSliderArrowRightIndex(){
   leaf(function(i){
     addClass(document.querySelector('.slider__slide--' + i), 'slider__slide--back');
     addClass(document.querySelector('.header__title--' + i), 'header__title--back');
@@ -92,7 +92,7 @@ function clickSliderArrowRight(){
   });
 }
 
-function clickSliderArrowLeft(){
+function clickSliderArrowLeftIndex(){
   leaf(function(i){
     removeClass(document.querySelector('.slider__slide--' + i), 'slider__slide--active');
     removeClass(document.querySelector('.header__title--' + i), 'header__title--active');
@@ -103,6 +103,38 @@ function clickSliderArrowLeft(){
     addClass(document.querySelector('.slider__slide--' + i), 'slider__slide--back');
     addClass(document.querySelector('.header__title--' + i), 'header__title--back');
   });
+}
+
+function clickSliderArrowLeftAbout(){
+  for(var i = 1; i <= 6; i++){
+    if(hasClass(document.querySelector('.slider__slide--' + i), 'slider__slide--first')){
+      if(i == 1){
+        break;
+      }
+      removeClass(document.querySelector('.slider__slide--' + i), 'slider__slide--first');
+      addClass(document.querySelector('.slider__slide--' + (i-1)), 'slider__slide--first');
+      removeClass(document.querySelector('.slider__slide--' + (i+3)), 'slider__slide--last');
+      addClass(document.querySelector('.slider__slide--' + (i+2)), 'slider__slide--last');
+      document.querySelector(".slider--line").style.transform = "translateX(" + -25*(i-2)  + "%)";
+      break;
+    }
+  }
+}
+
+function clickSliderArrowRightAbout(){
+  for(var i = 1; i <= 6; i++){
+    if(hasClass(document.querySelector('.slider__slide--' + i), 'slider__slide--last')){
+      if(i == 6){
+        break;
+      }
+      removeClass(document.querySelector('.slider__slide--' + (i-3)), 'slider__slide--first');
+      addClass(document.querySelector('.slider__slide--' + (i-2)), 'slider__slide--first');
+      removeClass(document.querySelector('.slider__slide--' + i), 'slider__slide--last');
+      addClass(document.querySelector('.slider__slide--' + (i+1)), 'slider__slide--last');
+      document.querySelector(".slider--line").style.transform = "translateX(" + -25*(i-3)  + "%)";
+      break;
+    }
+  }
 }
 
 function limitExecByInterval(fn, time) {
