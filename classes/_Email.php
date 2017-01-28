@@ -5,7 +5,7 @@
     class Email extends Base
     {
       public $pdo;
-      public $emailPattern = "/[\w\d-_]{2,15}@[\w\d-_]{2,20}\.[\w]{2,5}/i";
+      public $emailPattern = "/[\w\d-_\.]+@[\w\d-_\.]+\.[\w]+/i";
 
       public function __construct(){
         parent::__construct();
@@ -54,13 +54,13 @@
             throw new Exception("Невозможно извлечь данные с " . $url);
           }
 
-          foreach($data->find('script,link,comment') as $tmp){
+          foreach($data->find('script,link,comment,head') as $tmp){
             $tmp->outertext = '';
           }
 
           if($findpages && count($data->find('a'))){
             foreach($data->find('a') as $a){
-              if(preg_match('#(javascript:void\(0\))#', $a->href)
+              if(preg_match('#javascript:#', $a->href)
                 || preg_match('#tel:[+].[0-9]*#', $a->href)
                 || preg_match('#mailto:#', $a->href)
                 || preg_match('#^https://#', $a->href)
