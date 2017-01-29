@@ -11,14 +11,14 @@
         parent::__construct();
       }
 
-      public function AddEmail($email, $site = null, $available = 1, $departure_date = null){
+      public function AddEmail($email, $site = null, $available = 1, $departure_date = null, $count_of_send = 0){
         $email = trim($email);
 
         $site = make_correct_url($site);
 
         if(!$this->GetEmail($email)->Fetch() && filter_var($email, FILTER_VALIDATE_EMAIL)){
-          $query = $this->pdo->prepare('INSERT INTO ls_emails (email, site, available, departure_date) VALUES (:email, :site, :available, :departure_date);');
-          $query->execute(array('email' => $email, 'site' => $site, 'available' => $available, 'departure_date' => $departure_date));
+          $query = $this->pdo->prepare('INSERT INTO ls_emails (email, site, available, departure_date, count_of_send) VALUES (:email, :site, :available, :departure_date, :count_of_send);');
+          $query->execute(array('email' => $email, 'site' => $site, 'available' => $available, 'departure_date' => $departure_date, 'count_of_send' => $count_of_send));
           return $query;
         }
       }
@@ -159,10 +159,10 @@
         return $query;
       }
 
-      public function UpdateEmailDate($email, $departure_date){
-        if(!$this->AddEmail($email, null, 1, $departure_date)){
-          $query = $this->pdo->prepare('UPDATE ls_emails SET departure_date=:departure_date WHERE email=:email;');
-          $query->execute(array('email' => $email, 'departure_date' => $departure_date));
+      public function UpdateEmailSend($email, $departure_date, $count_of_send = 0){
+        if(!$this->AddEmail($email, null, 1, $departure_date, $count_of_send)){
+          $query = $this->pdo->prepare('UPDATE ls_emails SET departure_date=:departure_date, count_of_send=:count_of_send WHERE email=:email;');
+          $query->execute(array('email' => $email, 'departure_date' => $departure_date, 'count_of_send' => $count_of_send));
           return $query;
         }
       }

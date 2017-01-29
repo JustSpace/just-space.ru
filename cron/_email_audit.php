@@ -13,17 +13,20 @@
 
   $from = "info@just-space.ru";
 
-  $mail_content1 = "/home/users/g/gazeltrafic/domains/just-space.ru/emails/seo.html";
+  $mail_content1 = "/home/users/g/gazeltrafic/domains/just-space.ru/emails/audit.html";
 
   $tfrom = htmlspecialchars($from);
   $tmail_content1 = htmlspecialchars($mail_content1);
 
   // Определяем переменные
-  $emailer_subj = "Продвижение сайта | Digital-агентство Just Space";
+  $emailer_subj = "Аудит сайта | Digital-агентство Just Space";
 
   while($arRes = $dbRes->Fetch()){
-    $emails[] = $arRes["email"];
+    //$emails[] = $arRes["email"];
   }
+
+  $emails[0] = "info@just-space.ru";
+  $emails[1] = "delfin.parkour@ya.ru";
 
   // Готовим заголовки письма... Будем отправлять письма в формате HTML и кодировке UTF-8
   $headers = "MIME-Version: 1.0\r\n";

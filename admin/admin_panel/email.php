@@ -85,7 +85,7 @@
         	$emails = explode(",", $emailer_mails);
         	$count_emails = count($emails);
         	// Запускаем цикл отправки сообщений
-          for ($i = 0; $i <= $count_emails - 1; $i++)
+          for ($i = 0; $i <= $count_emails - 1 && $i < 500; $i++)
           {
             $email_to = trim($emails[$i]);
             $emailer_text = "";
@@ -100,7 +100,9 @@
           	if($emails[$i] != ""){
               if(mail($email_to, $emailer_subj, $emailer_text, $headers)){
                 $report .= "Отправлено: " . $emails[$i] . "\n";
-                $CEmail->UpdateEmailDate($email_to, date("Y-m-d H:i:s"));
+                $dbFieldsOfEmail = $CEmail->GetEmail($email_to);
+                $arFieldsOfEmail = $dbFieldsOfEmail->Fetch();
+                $CEmail->UpdateEmailSend($email_to, date("Y-m-d H:i:s"), $arFieldsOfEmail["count_of_send"]+1);
               }
               else{
                 $report .= "Не отправлено: " . $emails[$i] . "\n";
@@ -136,8 +138,8 @@
       	<input type="text" name="emailer_subj" id="emailer_subj" title="По какому поводу пишем?" placeholder="Тема письма" required>
       	<textarea name="emailer_mails" id="emailer_mails" title="Кто получатели?" placeholder="Получатели"><?php
           while($arEmail = $dbRes->Fetch()){
-              echo $arEmail["email"] . ",";
-            }
+            echo $arEmail["email"] . ",";
+          }
           ?></textarea>
         <select name="emailer_file">
           <?php

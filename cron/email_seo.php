@@ -37,7 +37,7 @@
 	$emailer_subj = "Продвижение сайта | Digital-агентство Just Space";
 
   while($arRes = $dbRes->Fetch()){
-    $arEmail[] = $arRes["email"];
+    $emails[] = $arRes["email"];
   }
 
   // Готовим заголовки письма... Будем отправлять письма в формате HTML и кодировке UTF-8
@@ -47,26 +47,35 @@
 
   $template_emailer_text = file_get_contents($mail_content1);
 
-  $ar_email_test = explode('FROM_NAME_EMAIL', $template_emailer_text);
+  $ar_email_text = explode('FROM_NAME_EMAIL', $template_emailer_text);
 
 
-	$count_emails = count($arEmail);
-	// Запускаем цикл отправки сообщений
-  for ($i = 0; $i <= $count_emails - 1; $i++)
+	$count_emails = count($emails);
+  // Запускаем цикл отправки сообщений
+  for ($i = 0; $i <= $count_emails - 1 && $i < 500; $i++)
   {
-    $email = trim($arEmail[$i]);
-    $emailer_text = $ar_email_test[0] . $email . $ar_email_test[1];
+    $email_to = trim($emails[$i]);
+    $emailer_text = "";
 
-  	if($arEmail[$i] != ""){
-      if(mail($email, $emailer_subj, $emailer_text, $headers)){
-        $report .= "Отправлено: " . $arEmail[$i] . "\n";
-        $CEmail->UpdateEmailDate($email, date("Y-m-d H:i:s"));
+    for($j = 0; $j < count($ar_email_text) ; $j++){
+      $emailer_text .= $ar_email_text[$j];
+      if($j != count($ar_email_text) - 1){
+        $emailer_text .= $email_to;
+      }
+    }
+
+    if($emails[$i] != ""){
+      if(mail($email_to, $emailer_subj, $emailer_text, $headers)){
+        $report .= "Отправлено: " . $emails[$i] . "\n";
+        $dbFieldsOfEmail = $CEmail->GetEmail($email_to);
+        $arFieldsOfEmail = $dbFieldsOfEmail->Fetch();
+        $CEmail->UpdateEmailSend($email_to, date("Y-m-d H:i:s"), $arFieldsOfEmail["count_of_send"]+1);
       }
       else{
-        $report .= "Не отправлено: " . $arEmail[$i] . "\n";
+        $report .= "Не отправлено: " . $emails[$i] . "\n";
       }
-  	  sleep(5); // Делаем тайм-аут в 5 секунд
-  	}
+      sleep(5); // Делаем тайм-аут в 5 секунд
+    }
   }
 
 	$log = fopen($_SERVER["DOCUMENT_ROOT"] . "/logs/emails.txt", "a+");

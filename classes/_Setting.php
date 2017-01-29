@@ -73,7 +73,7 @@
         return $query;
       }
 
-      public function UpdateEmailDate($email, $departure_date){
+      public function UpdateEmailSend($email, $departure_date){
         if(!$this->AddEmail($email, null, 1, $departure_date)){
           $query = $this->pdo->prepare('UPDATE ls_emails SET departure_date=:departure_date WHERE email=:email;');
           $query->execute(array('email' => $email, 'departure_date' => $departure_date));
