@@ -27,7 +27,7 @@
         Введите email
       </h1>
       <form class="promo__form">
-        <input type="email" class="promo__email" placeholder="your@mail.ru" id="email" value="<?php echo $unsibscribe_email;?>" required>
+        <input type="email" class="promo__input" placeholder="your@mail.ru" id="email" value="<?php echo $unsibscribe_email;?>" required>
         <input type="submit" value="Отписаться" class="promo__submit" id="unsubscribe_sub">
       </form>
     </div>

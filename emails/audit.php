@@ -24,11 +24,11 @@
   <main class="wrapper">
     <div class="promo">
       <h1 class="promo__title">
-        Введите сайт
+        Введите email и сайт
       </h1>
       <form class="promo__form">
-        <input type="hidden" class="promo__email" id="email" value="<?php echo $email;?>">
-        <input type="text" class="promo__email" placeholder="www.site.ru" id="site" required>
+        <input type="email" class="promo__input" placeholder="your@mail.ru" id="email" value="<?php echo $email;?>" required>
+        <input type="text" class="promo__input" placeholder="www.site.ru" id="site" required>
         <input type="submit" value="Заказать беплатный аудит" class="promo__submit" id="free-audit_sub">
       </form>
     </div>
