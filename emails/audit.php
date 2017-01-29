@@ -29,7 +29,7 @@
       <form class="promo__form">
         <input type="email" class="promo__input" placeholder="your@mail.ru" id="email" value="<?php echo $email;?>" required>
         <input type="text" class="promo__input" placeholder="www.site.ru" id="site" required>
-        <input type="submit" value="Заказать беплатный аудит" class="promo__submit" id="free-audit_sub">
+        <input type="submit" value="Заказать бесплатный аудит" class="promo__submit" id="free-audit_sub">
       </form>
     </div>
   </main>
