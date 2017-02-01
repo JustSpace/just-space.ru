@@ -16,13 +16,19 @@ document.addEventListener('DOMContentLoaded',function(){
   var fileFront         = document.querySelector('#file__front') || document.querySelector('head');
   var fileBack          = document.querySelector('#file__back') || document.querySelector('head');
   var arrowIcon         = document.querySelector('.arrow__icon') || document.querySelector('head');
+  var sliderArrowWrapperLeftIndex = document.querySelector('.arrow__wrapper--left-index') || document.querySelector('head');
+  var sliderArrowWrapperRightIndex = document.querySelector('.arrow__wrapper--right-index') || document.querySelector('head');
   var sliderArrowLeftIndex = document.querySelector('.slider__arrow--left-index') || document.querySelector('head');
   var sliderArrowRightIndex = document.querySelector('.slider__arrow--right-index') || document.querySelector('head');
-  var sliderArrowLeftAbout = document.querySelector('.slider__arrow--left-about') || document.querySelector('head');
-  var sliderArrowRightAbout = document.querySelector('.slider__arrow--right-about') || document.querySelector('head');
   var appMenu           = document.querySelector(".app-menu") || document.querySelector('head');
   var blind             = document.querySelector(".blind") || document.querySelector('head');
   var allElem           = document.querySelectorAll('*') || document.querySelector('head');
+  var arrowLeft         = document.querySelectorAll('.slider__arrow--left') || document.querySelector('head');
+  var arrowWrapperLeft  = document.querySelectorAll('.arrow__wrapper--left') || document.querySelector('head');
+  var arrowRight        = document.querySelectorAll('.slider__arrow--right') || document.querySelector('head');
+  var arrowWrapperRight = document.querySelectorAll('.arrow__wrapper--right') || document.querySelector('head');
+
+  var click             = new Event("click");
 
 
   header2div3.style.height      = winHeight/1.5 + 'px';
@@ -64,13 +70,33 @@ document.addEventListener('DOMContentLoaded',function(){
     limitClickSliderArrowRightIndex();
   });
 
-  sliderArrowLeftAbout.addEventListener('click', function(){
-    clickSliderArrowLeftAbout();
+  sliderArrowWrapperLeftIndex.addEventListener('click', function(){
+    sliderArrowLeftIndex.dispatchEvent(click);
   });
 
-  sliderArrowRightAbout.addEventListener('click', function(){
-    clickSliderArrowRightAbout();
+  sliderArrowWrapperRightIndex.addEventListener('click', function(){
+    sliderArrowRightIndex.dispatchEvent(click);
   });
+
+  for(var i = 0; i < arrowLeft.length; i++){
+    arrowLeft[i].addEventListener('click', function(e){
+      event.stopPropagation();
+      clickArrowLeft(getClosest(this, ".carusel--line"));
+    });
+    arrowWrapperLeft[i].addEventListener('click', function(e){
+      clickArrowLeft(getClosest(this, ".carusel--line"));
+    });
+  }
+
+  for(var i = 0; i < arrowRight.length; i++){
+    arrowRight[i].addEventListener('click', function(e){
+      event.stopPropagation();
+      clickArrowRight(getClosest(this, ".carusel--line"));
+    });
+    arrowWrapperRight[i].addEventListener('click', function(e){
+      clickArrowRight(getClosest(this, ".carusel--line"));
+    });
+  }
 
   if(hasClass(header, 'header--index')){
     var leafInterval = setInterval(function(){

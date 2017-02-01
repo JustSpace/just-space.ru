@@ -6,7 +6,7 @@
   box-sizing: border-box;
   border-collapse: collapse;
   &::selection{
-    background-color: $firstColor;
+    background-color: rgba(0,151,186,$alphaForHeader);
   }
 }
 
@@ -75,7 +75,7 @@ hr{
   h#{$i}{
     text-transform: uppercase;
     text-align: center;
-    font-weight: normal;
+    font-weight: 300;
     padding: 20px 0;
     margin: 0;
     line-height: 2em;
@@ -106,7 +106,7 @@ hr{
   min-height: 50px;
   text-decoration: none;
   padding: 10px 20px;
-  font-weight: normal;
+  font-weight: 300;
 }
 
 .button--full{
@@ -240,7 +240,7 @@ hr{
 .header__title{
   @include transition(1s);
   position: absolute;
-  top: 35%;
+  top: 40%;
   transform: translateX(200%);
   font-size: 40px;
   width: 100%;
@@ -260,6 +260,15 @@ hr{
   transform: translateX(0);
   z-index: 20;
   opacity: 1;
+}
+
+.header__title--const{
+  position: absolute;
+  top: 38%;
+  text-align: center;
+  z-index: 20;
+  opacity: 1;
+  transform: translateX(0);
 }
 
 .header__title--slice{
@@ -471,11 +480,11 @@ hr{
   }
 }
 
-.carusel{
+.certificates{
   width: 100%;
   position: relative;
-  color: $white;
-  background-color: #d8d8d8;
+  color: $black;
+  background-color: $white;
 }
 
 .slider{
@@ -506,7 +515,11 @@ hr{
   margin: 0;
   width: 25%;
   height: 250px;
-  background-color: #d8d8d8;
+  background-color: $white;
+}
+
+.slider__slide--last{
+  margin-right: 50px;
 }
 
 .slider__slide--back{
@@ -545,6 +558,33 @@ hr{
   object-fit: contain;
 }
 
+.arrow__wrapper{
+  width: 100px;
+  height: 100%;
+  position: absolute;
+  z-index: 50;
+  top: 0;
+  cursor: pointer;
+}
+
+.arrow__wrapper--left{
+  left: 0;
+  &:hover,&:focus{
+    .slider__arrow--left{
+      transform: rotate(90deg) scale(1.1);
+    }
+  }
+}
+
+.arrow__wrapper--right{
+  right: 0;
+  &:hover,&:focus{
+    .slider__arrow--right{
+      transform: rotate(-90deg) scale(1.1);
+    }
+  }
+}
+
 .slider__arrow{
   @include transition();
   position: absolute;
@@ -576,7 +616,7 @@ hr{
   bottom: 0;
   text-align: center;
   width: 100%;
-  z-index: 50;
+  z-index: 49;
   @media(max-width: 500px){
     display: none;
   }
@@ -868,7 +908,7 @@ hr{
 .page-image__title{
   display: block;
   font-size: 1.5em;
-  font-weight: normal;
+  font-weight: 300;
   vertical-align: middle;
   line-height: 50px;
   color: currentcolor;
@@ -1191,6 +1231,9 @@ hr{
 
 .clients{
   width: 100%;
+  position: relative;
+  color: $black;
+  background-color: $white;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1203,15 +1246,12 @@ hr{
 .clients__title{
   flex-basis: 100%;
   text-align: center;
-  margin-bottom: 40px;
 }
 
 .client{
   @include transition();
-  width: 200px;
-  height: 200px;
   background-color: $gray;
-  background-size: 70%;
+  background-size: 50%;
   background-position: 50% 50%;
   background-repeat: no-repeat;
   padding: 20px;
@@ -1224,37 +1264,14 @@ hr{
     height: 200px;
     margin-bottom: 40px;
   }
-  &:hover{
-    background-color: $firstColor;
-  }
 }
 
-.client--1{
-  background-image: url('/img/clients/cis/cis_logo_black.png');
-  &:hover{
-    background-image: url('/img/clients/cis/cis_logo_white.png');
-  }
-}
-
-.client--2{
-  background-image: url('/img/clients/sportlifting/sportlifting_logo_black.png');
-  &:hover{
-    background-image: url('/img/clients/sportlifting/sportlifting_logo_white.png');
-  }
-}
-
-.client--3{
-  background-image: url('/img/clients/tcn/tcn_logo_black.png');
-  &:hover{
-    background-image: url('/img/clients/tcn/tcn_logo_white.png');
-  }
-}
-
-.client--4{
-  background-image: url('/img/clients/gazel-traffic/gazel-traffic_logo_black.png');
-  &:hover{
-    background-image: url('/img/clients/gazel-traffic/gazel-traffic_logo_white.png');
-  }
+.client__logo{
+  object-fit: contain;
+  object-position: center;
+  width: 100%;
+  height: 100%;
+  padding: 25px;
 }
 
 .map{
@@ -1419,7 +1436,7 @@ hr{
   @include transition();
   border: 1px solid $firstColor;
   background-color: $firstColor;
-  font-weight: normal;
+  font-weight: 300;
   color: $white;
   text-decoration: none;
   padding: 5px 40px;

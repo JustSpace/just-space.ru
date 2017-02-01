@@ -105,33 +105,35 @@ function clickSliderArrowLeftIndex(){
   });
 }
 
-function clickSliderArrowLeftAbout(){
-  for(var i = 1; i <= 6; i++){
-    if(hasClass(document.querySelector('.slider__slide--' + i), 'slider__slide--first')){
-      if(i == 1){
+function clickArrowLeft(carusel){
+  var sliders = carusel.querySelectorAll(".slider__slide");
+  for(var i = 0; i < sliders.length; i++){
+    if(hasClass(sliders[i], 'slider__slide--first')){
+      if(i == 0){
         break;
       }
-      removeClass(document.querySelector('.slider__slide--' + i), 'slider__slide--first');
-      addClass(document.querySelector('.slider__slide--' + (i-1)), 'slider__slide--first');
-      removeClass(document.querySelector('.slider__slide--' + (i+3)), 'slider__slide--last');
-      addClass(document.querySelector('.slider__slide--' + (i+2)), 'slider__slide--last');
-      document.querySelector(".slider--line").style.transform = "translateX(" + -25*(i-2)  + "%)";
+      removeClass(sliders[i], 'slider__slide--first');
+      addClass(sliders[i-1], 'slider__slide--first');
+      removeClass(sliders[i+3], 'slider__slide--last');
+      addClass(sliders[i+2], 'slider__slide--last');
+      carusel.querySelector(".slider--line").style.transform = "translateX(" + -25*(i-1)  + "%)";
       break;
     }
   }
 }
 
-function clickSliderArrowRightAbout(){
-  for(var i = 1; i <= 6; i++){
-    if(hasClass(document.querySelector('.slider__slide--' + i), 'slider__slide--last')){
-      if(i == 6){
-        break;
-      }
-      removeClass(document.querySelector('.slider__slide--' + (i-3)), 'slider__slide--first');
-      addClass(document.querySelector('.slider__slide--' + (i-2)), 'slider__slide--first');
-      removeClass(document.querySelector('.slider__slide--' + i), 'slider__slide--last');
-      addClass(document.querySelector('.slider__slide--' + (i+1)), 'slider__slide--last');
-      document.querySelector(".slider--line").style.transform = "translateX(" + -25*(i-3)  + "%)";
+function clickArrowRight(carusel){
+  var sliders = carusel.querySelectorAll(".slider__slide");
+  for(var i = 0; i < sliders.length; i++){
+    if(i == sliders.length-1){
+      break;
+    }
+    if(hasClass(sliders[i], 'slider__slide--last')){
+      removeClass(sliders[i-3], 'slider__slide--first');
+      addClass(sliders[i-2], 'slider__slide--first');
+      removeClass(sliders[i], 'slider__slide--last');
+      addClass(sliders[i+1], 'slider__slide--last');
+      carusel.querySelector(".slider--line").style.transform = "translateX(" + -25*(i-2)  + "%)";
       break;
     }
   }
@@ -170,3 +172,69 @@ function openCloseAppMenu(){
     addClass(document.querySelector(".blind__line2"),"blind__line2--open");
   }
 }
+
+function getClosest(elem, selector){
+
+    // Element.matches() polyfill
+    if (!Element.prototype.matches) {
+        Element.prototype.matches =
+            Element.prototype.matchesSelector ||
+            Element.prototype.mozMatchesSelector ||
+            Element.prototype.msMatchesSelector ||
+            Element.prototype.oMatchesSelector ||
+            Element.prototype.webkitMatchesSelector ||
+            function(s) {
+                var matches = (this.document || this.ownerDocument).querySelectorAll(s),
+                    i = matches.length;
+                while (--i >= 0 && matches.item(i) !== this) {}
+                return i > -1;
+            };
+    }
+
+    // Get closest match
+    for ( ; elem && elem !== document; elem = elem.parentNode ) {
+        if ( elem.matches( selector ) ) return elem;
+    }
+
+    return null;
+
+};
+
+function getParent( elem, selector ){
+
+    // Element.matches() polyfill
+    if (!Element.prototype.matches) {
+        Element.prototype.matches =
+            Element.prototype.matchesSelector ||
+            Element.prototype.mozMatchesSelector ||
+            Element.prototype.msMatchesSelector ||
+            Element.prototype.oMatchesSelector ||
+            Element.prototype.webkitMatchesSelector ||
+            function(s) {
+                var matches = (this.document || this.ownerDocument).querySelectorAll(s),
+                    i = matches.length;
+                while (--i >= 0 && matches.item(i) !== this) {}
+                return i > -1;
+            };
+    }
+
+    // Setup parents array
+    var parents = [];
+
+    // Get matching parent elements
+    for ( ; elem && elem !== document; elem = elem.parentNode ) {
+
+        // Add matching parents to array
+        if ( selector ) {
+            if ( elem.matches( selector ) ) {
+                parents.push( elem );
+            }
+        } else {
+            parents.push( elem );
+        }
+
+    }
+
+    return parents;
+
+};

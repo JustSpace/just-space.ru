@@ -75,9 +75,9 @@
           box-sizing: border-box;
   border-collapse: collapse; }
   *::-moz-selection {
-    background-color: #0097ba; }
+    background-color: rgba(0, 151, 186, 0.5); }
   *::selection {
-    background-color: #0097ba; }
+    background-color: rgba(0, 151, 186, 0.5); }
 
 body {
   margin: 0;
@@ -135,7 +135,7 @@ hr {
 h1 {
   text-transform: uppercase;
   text-align: center;
-  font-weight: normal;
+  font-weight: 300;
   padding: 20px 0;
   margin: 0;
   line-height: 2em; }
@@ -143,7 +143,7 @@ h1 {
 h2 {
   text-transform: uppercase;
   text-align: center;
-  font-weight: normal;
+  font-weight: 300;
   padding: 20px 0;
   margin: 0;
   line-height: 2em; }
@@ -151,7 +151,7 @@ h2 {
 h3 {
   text-transform: uppercase;
   text-align: center;
-  font-weight: normal;
+  font-weight: 300;
   padding: 20px 0;
   margin: 0;
   line-height: 2em; }
@@ -159,7 +159,7 @@ h3 {
 h4 {
   text-transform: uppercase;
   text-align: center;
-  font-weight: normal;
+  font-weight: 300;
   padding: 20px 0;
   margin: 0;
   line-height: 2em; }
@@ -167,7 +167,7 @@ h4 {
 h5 {
   text-transform: uppercase;
   text-align: center;
-  font-weight: normal;
+  font-weight: 300;
   padding: 20px 0;
   margin: 0;
   line-height: 2em; }
@@ -175,7 +175,7 @@ h5 {
 h6 {
   text-transform: uppercase;
   text-align: center;
-  font-weight: normal;
+  font-weight: 300;
   padding: 20px 0;
   margin: 0;
   line-height: 2em; }
@@ -210,7 +210,7 @@ h6 {
   min-height: 50px;
   text-decoration: none;
   padding: 10px 20px;
-  font-weight: normal; }
+  font-weight: 300; }
 
 .button--full {
   border: 2px solid currentcolor;
@@ -361,7 +361,7 @@ h6 {
   -webkit-transition: all 1s linear;
   transition: all 1s linear;
   position: absolute;
-  top: 35%;
+  top: 40%;
   -webkit-transform: translateX(200%);
       -ms-transform: translateX(200%);
           transform: translateX(200%);
@@ -385,6 +385,16 @@ h6 {
           transform: translateX(0);
   z-index: 20;
   opacity: 1; }
+
+.header__title--const {
+  position: absolute;
+  top: 38%;
+  text-align: center;
+  z-index: 20;
+  opacity: 1;
+  -webkit-transform: translateX(0);
+      -ms-transform: translateX(0);
+          transform: translateX(0); }
 
 .header__title--slice {
   -webkit-transition: none;
@@ -577,11 +587,11 @@ h6 {
     .header--vnutrennyaya-optimizaciya {
       background-image: url("/img/articles/vnutrennyaya_optimizaciya-S.jpg"); } }
 
-.carusel {
+.certificates {
   width: 100%;
   position: relative;
-  color: #fff;
-  background-color: #d8d8d8; }
+  color: #000;
+  background-color: #fff; }
 
 .slider {
   width: 100%; }
@@ -614,7 +624,10 @@ h6 {
   margin: 0;
   width: 25%;
   height: 250px;
-  background-color: #d8d8d8; }
+  background-color: #fff; }
+
+.slider__slide--last {
+  margin-right: 50px; }
 
 .slider__slide--back {
   -webkit-transform: translateX(0);
@@ -645,6 +658,28 @@ h6 {
   height: 100%;
   -o-object-fit: contain;
      object-fit: contain; }
+
+.arrow__wrapper {
+  width: 100px;
+  height: 100%;
+  position: absolute;
+  z-index: 50;
+  top: 0;
+  cursor: pointer; }
+
+.arrow__wrapper--left {
+  left: 0; }
+  .arrow__wrapper--left:hover .slider__arrow--left, .arrow__wrapper--left:focus .slider__arrow--left {
+    -webkit-transform: rotate(90deg) scale(1.1);
+        -ms-transform: rotate(90deg) scale(1.1);
+            transform: rotate(90deg) scale(1.1); }
+
+.arrow__wrapper--right {
+  right: 0; }
+  .arrow__wrapper--right:hover .slider__arrow--right, .arrow__wrapper--right:focus .slider__arrow--right {
+    -webkit-transform: rotate(-90deg) scale(1.1);
+        -ms-transform: rotate(-90deg) scale(1.1);
+            transform: rotate(-90deg) scale(1.1); }
 
 .slider__arrow {
   -webkit-transition: all 0.5s linear;
@@ -682,7 +717,7 @@ h6 {
   bottom: 0;
   text-align: center;
   width: 100%;
-  z-index: 50; }
+  z-index: 49; }
   @media (max-width: 500px) {
     .arrow {
       display: none; } }
@@ -979,7 +1014,7 @@ h6 {
 .page-image__title {
   display: block;
   font-size: 1.5em;
-  font-weight: normal;
+  font-weight: 300;
   vertical-align: middle;
   line-height: 50px;
   color: currentcolor; }
@@ -1282,6 +1317,9 @@ h6 {
 
 .clients {
   width: 100%;
+  position: relative;
+  color: #000;
+  background-color: #fff;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1309,16 +1347,13 @@ h6 {
   -webkit-flex-basis: 100%;
       -ms-flex-preferred-size: 100%;
           flex-basis: 100%;
-  text-align: center;
-  margin-bottom: 40px; }
+  text-align: center; }
 
 .client {
   -webkit-transition: all 0.5s linear;
   transition: all 0.5s linear;
-  width: 200px;
-  height: 200px;
   background-color: #e4e4e4;
-  background-size: 70%;
+  background-size: 50%;
   background-position: 50% 50%;
   background-repeat: no-repeat;
   padding: 20px; }
@@ -1331,28 +1366,15 @@ h6 {
       width: 200px;
       height: 200px;
       margin-bottom: 40px; } }
-  .client:hover {
-    background-color: #0097ba; }
 
-.client--1 {
-  background-image: url("/img/clients/cis/cis_logo_black.png"); }
-  .client--1:hover {
-    background-image: url("/img/clients/cis/cis_logo_white.png"); }
-
-.client--2 {
-  background-image: url("/img/clients/sportlifting/sportlifting_logo_black.png"); }
-  .client--2:hover {
-    background-image: url("/img/clients/sportlifting/sportlifting_logo_white.png"); }
-
-.client--3 {
-  background-image: url("/img/clients/tcn/tcn_logo_black.png"); }
-  .client--3:hover {
-    background-image: url("/img/clients/tcn/tcn_logo_white.png"); }
-
-.client--4 {
-  background-image: url("/img/clients/gazel-traffic/gazel-traffic_logo_black.png"); }
-  .client--4:hover {
-    background-image: url("/img/clients/gazel-traffic/gazel-traffic_logo_white.png"); }
+.client__logo {
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: center;
+     object-position: center;
+  width: 100%;
+  height: 100%;
+  padding: 25px; }
 
 .map {
   width: 100%; }
@@ -1526,7 +1548,7 @@ h6 {
   transition: all 0.5s linear;
   border: 1px solid #0097ba;
   background-color: #0097ba;
-  font-weight: normal;
+  font-weight: 300;
   color: #fff;
   text-decoration: none;
   padding: 5px 40px;

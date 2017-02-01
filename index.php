@@ -4,7 +4,7 @@
 <body>
   <header class="header header--index">
     <div class="header__mask"></div>
-    <div class="slider">
+    <div class="slider slider--header">
       <picture>
         <source srcset="/img/index-XL.jpg" media="(min-width: 4000px)">
         <source srcset="/img/index-L.jpg" media="(min-width: 2000px)">
@@ -29,17 +29,32 @@
         <source srcset="/img/design-S.jpg" media="(max-width: 1000px)">
         <img class="header__image slider__slide slider__slide--4 slider__slide--back" src="/img/design-M.jpg" alt="Создание дизайна">
       </picture>
-      <svg class="slider__arrow slider__arrow--left slider__arrow--left-index" aria-hidden="true">
-        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/img/sprites/sprites.svg#down-arrow"></use>
-      </svg>
-      <svg class="slider__arrow slider__arrow--right slider__arrow--right-index" aria-hidden="true">
-        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/img/sprites/sprites.svg#down-arrow"></use>
-      </svg>
+      <div class="arrow__wrapper arrow__wrapper--left arrow__wrapper--left-index">
+        <svg class="slider__arrow slider__arrow--left slider__arrow--left-index" aria-hidden="true">
+          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/img/sprites/sprites.svg#down-arrow"></use>
+        </svg>
+      </div>
+      <div class="arrow__wrapper arrow__wrapper--right arrow__wrapper--right-index">
+        <svg class="slider__arrow slider__arrow--right slider__arrow--right-index" aria-hidden="true">
+          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/img/sprites/sprites.svg#down-arrow"></use>
+        </svg>
+      </div>
     </div>
-    <h2 class="header__title header__title--1 header__title--active">Создаем удобные сайты</h2>
-    <h2 class="header__title header__title--2">Разрабатываем мобильные приложения</h2>
-    <h2 class="header__title header__title--3">Занимаемся SEO продвижением</h2>
-    <h2 class="header__title header__title--4 header__title--back">Разрабатываем уникальный дизайн</h2>
+    <div class="header__title header__title--const">
+      Мы можем
+    </div>
+    <h2 class="header__title header__title--1 header__title--active">
+      Создать сайт
+    </h2>
+    <h2 class="header__title header__title--2">
+      Разработать мобильное приложение
+    </h2>
+    <h2 class="header__title header__title--3">
+      Провести SEO продвижение
+    </h2>
+    <h2 class="header__title header__title--4 header__title--back">
+      Разработать дизайн
+    </h2>
     <nav class="navigation">
       <a href="javascript:void(0)" class="hamburger" alt="Гамбургер меню">
         <span class="hamburger__line"></span>
@@ -61,8 +76,7 @@
     <article class="about">
       <h1>Digital-агентство Just Space</h1>
       <div class="about__text">
-        Мы помогаем вашем бизнесу используя современные технологии.
-        Наше агентство предоставляет множество услуг: создание сайтов (лендинги, сайты-визитки, корпоративные порталы, интернет-магазины и др.); аудит, SEO оптимизация и продвижение сайтов; разработка и ведение контекстных рекламных кампаний; SMM продвижение в социальных сетях; разработка уникальных дизайнерских решений; создание мобильных приложений под IOS и Android.
+          Специализируемся на применение современных технологий в бизнес сфере и предоставляем следующие цифровых услуг: создаем сайты (лендинги, сайты-визитки, корпоративные порталы, интернет-магазины и др.); аудит, SEO оптимизация и продвижение сайтов; настраиваем и ведение контекстные рекламные кампании; SMM продвижение в социальных сетях; разрабатываем дизайнерские решения; создаем мобильных приложений под IOS и Android.
       </div>
       <div class="categories">
         <div class="categories__element categories__element--creative">
@@ -82,52 +96,131 @@
           </svg>
           <h2>Технологии</h2>
           <section class="list">
-            <span class="list__element">Адаптивная верстка</span>
-            <span class="list__element">Работа с основными CMS</span>
-            <span class="list__element">iOS приложения</span>
+            <span class="list__element">Адаптивная и доступная верстка</span>
+            <span class="list__element">Специализируемся на 1C-Bitrix</span>
+            <span class="list__element">Разрабатываем iOS приложения</span>
           </section>
         </div>
         <div class="categories__element categories__element--design">
           <svg aria-hidden="true">
-            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/img/sprites/sprites-index.svg#layers"></use>
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/img/sprites/sprites-index.svg#professional"></use>
           </svg>
-          <h2>Дизайн</h2>
+          <h2>Профессионализм</h2>
           <section class="list">
-            <span class="list__element">Интерфейсы</span>
-            <span class="list__element">Веб-дизайн</span>
-            <span class="list__element">Полиграфия</span>
+            <span class="list__element">Детальный анализ</span>
+            <span class="list__element">Уникальный подход</span>
+            <span class="list__element">Искусное планирование</span>
           </section>
         </div>
+      </div>
+    </article>
+    <div class="page-image page-image--about">
+      <article class="page-image__promo">
+        <div class="page-image__text page-image__text--about">
+          <a href="http://www.cmsmagazine.ru/creators/tula/" class="page-image__title page-image__title--top page-image__title--mask-1 no-underline" target="_blank">
+            <svg class="page-image__icon page-image__icon--top page-image__icon--mask-1" aria-hidden="true">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/img/sprites/sprites-services.svg#mobile"></use>
+            </svg>
+            Топ-3 по мобильной разработке
+          </a>
+          <a href="http://www.cmsmagazine.ru/seo/tula/" class="page-image__title page-image__title--top page-image__title--mask-2 no-underline" target="_blank">
+            <svg class="page-image__icon page-image__icon--top page-image__icon--mask-2" aria-hidden="true">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/img/sprites/sprites-services.svg#web"></use>
+            </svg>
+            Топ-30 среди веб-студий
+          </a>
+          <a href="http://www.cmsmagazine.ru/mobile/?sk=_apps&so=desc&mp=&c=&cc=56&cpp=40" class="page-image__title page-image__title--top page-image__title--mask-3 no-underline" target="_blank">
+            <svg class="page-image__icon page-image__icon--top page-image__icon--mask-3" aria-hidden="true">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/img/sprites/sprites-services.svg#seo"></use>
+            </svg>
+            Топ-15 по SEO продвижению
+          </a>
+        </div>
+      </article>
+      <article class="page-image__promo">
+        <img src="/img/cmsmagazine.png" alt="cmsmagazine аналитический портал веб-разработок">
+      </article>
+    </div>
+    <article class="certificates carusel carusel--line">
+      <h2 class="carusel__title">Сертификаты</h2>
+      <div class="slider slider--line">
+        <a href="/img/cert/cert_bitrix-compoz.jpg" target="_black" class="slider__slide slider__slide--line slider__slide--1 slider__slide--first">
+          <img src="/img/cert/cert_bitrix-compoz.min.jpg" class="slide__image" alt="">
+        </a><!--
+        --><a href="/img/cert/cert_bitrix-content.jpg" target="_black" class="slider__slide slider__slide--line slider__slide--2">
+          <img src="/img/cert/cert_bitrix-content.min.jpg" class="slide__image" alt="">
+        </a><!--
+        --><a href="/img/cert/cert_bitrix-dev.jpg" target="_black" class="slider__slide slider__slide--line slider__slide--3">
+          <img src="/img/cert/cert_bitrix-dev.min.jpg" class="slide__image" alt="">
+        </a><!--
+        --><a href="/img/cert/cert_yandex-metrika.jpg" target="_black" class="slider__slide slider__slide--line slider__slide--4 slider__slide--last">
+          <img src="/img/cert/cert_yandex-metrika.min.jpg" class="slide__image" alt="">
+        </a><!--
+        --><a href="/img/cert/cert_bitrix-admin.base.jpg" target="_black" class="slider__slide slider__slide--line slider__slide--5">
+          <img src="/img/cert/cert_bitrix-admin.base.min.jpg" class="slide__image" alt="">
+        </a>
+      </div>
+      <div class="arrow__wrapper arrow__wrapper--left">
+        <svg class="slider__arrow slider__arrow--left" aria-hidden="true">
+          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/img/sprites/sprites.svg#down-arrow"></use>
+        </svg>
+      </div>
+      <div class="arrow__wrapper arrow__wrapper--right">
+        <svg class="slider__arrow slider__arrow--right" aria-hidden="true">
+          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/img/sprites/sprites.svg#down-arrow"></use>
+        </svg>
       </div>
     </article>
     <div class="page-image page-image--blog">
       <div class="page-image__wrapper">
         <article class="page-image__promo">
-          <h2>Узнайте нас лучше (<span class="fill-color--first">Just Space</span> изнутри)</h2>
+          <h2>Блог <span class="fill-color--first">Just Space</span></h2>
           <div class="page-image__text">
-            Вы также можете познакомиться с нашей работой более детально, это можно сделать на страницах нашего блога, в котором мы пишем обо всех аспектах нашей деятельности: разработке сайтов и мобильных приложений, создание дизайна, продвижение (SEO), рекламе и организации бизнеса в целом.
+            На страницах нашего блога мы выкладываем интересные на наш взгляд кейсы, стараясь рассказать о том, как создать сайт и разработать мобильное приложение. Раскрываем методики и секреты применяемые в SEO продвижение сайтов.
           </div>
           <div class="page-image__text">
-            Мы стараемся регулярно делиться своими успехами и неудачами, чтобы все заказчики, у которых появится желание обратиться к нам, смогли пронаблюдать нашу работу изнутри и составить свое мнение о нашей компании.
+            В наших планы входит, регулярно описывать корпоративные успехи и неудачи, рассказывать о предпринимаемых экспериментах и всецело делиться опытом с нашими читателями.
           </div>
           <a href="blog.php" class="button button--full button--rosen button--arrow" alt="Читать наш блог">
             Начать читать
-            <svg class="page-image__icon" aria-hidden="true">
+            <svg class="article__icon" aria-hidden="true">
               <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/img/sprites/sprites.svg#next-arrow"></use>
             </svg>
           </a>
         </article>
       </div>
     </div>
-    <article class="clients">
-      <h2 class="clients__title">Наши клиенты</h2>
-      <div class="client client--1">
+    <article class="clients carusel carusel--line">
+      <h2 class="clients__title">Кейсы</h2>
+      <div class="slider slider--line">
+        <a href="/portfolio/domotoplenya.php" class="client slider__slide slider__slide--line slider__slide--first">
+          <img src="/img/clients/cis/cis_logo_black.png" class="client__logo" alt="">
+        </a>
+        <a href="/portfolio/sportlifting.php" class="client slider__slide slider__slide--line">
+          <img src="/img/clients/sportlifting/sportlifting_logo_black.png" class="client__logo" alt="">
+        </a>
+        <a href="/portfolio/tulskayakvartirka.php" class="client slider__slide slider__slide--line">
+          <img src="/img/clients/tulskayakvartirka/tulskayakvartirka_logo_black.png" class="client__logo" alt="">
+        </a>
+        <a href="/portfolio/gazeltraffic.php" class="client slider__slide slider__slide--line slider__slide--last">
+          <img src="/img/clients/gazel-traffic/gazel-traffic_logo_black.png" class="client__logo" alt="">
+        </a>
+        <a href="/portfolio/doly-tula.php" class="client slider__slide slider__slide--line">
+          <img src="/img/clients/tcn/tcn_logo_black.png" class="client__logo" alt="">
+        </a>
+        <a href="/portfolio/justspaceshoot.php" class="client slider__slide slider__slide--line">
+          <img src="/img/clients/justspaceshoot/justspaceshoot_logo_black.png" class="client__logo" alt="">
+        </a>
       </div>
-      <div class="client client--2">
+      <div class="arrow__wrapper arrow__wrapper--left">
+        <svg class="slider__arrow slider__arrow--left" aria-hidden="true">
+          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/img/sprites/sprites.svg#down-arrow"></use>
+        </svg>
       </div>
-      <div class="client client--3">
-      </div>
-      <div class="client client--4">
+      <div class="arrow__wrapper arrow__wrapper--right">
+        <svg class="slider__arrow slider__arrow--right" aria-hidden="true">
+          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/img/sprites/sprites.svg#down-arrow"></use>
+        </svg>
       </div>
     </article>
     <article class="order">
