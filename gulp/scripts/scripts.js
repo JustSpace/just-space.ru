@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded',function(){
   var header            = document.querySelector('.header') || document.querySelector('head');
   var header2div3       = document.querySelector('.header--2div3') || document.querySelector('head');
   var headerIndex       = document.querySelector('.header--index') || document.querySelector('head');
-  var mainBlog          = document.querySelector('.page-image') || document.querySelector('head');
+  var pageImage          = document.querySelectorAll('.page-image') || document.querySelector('head');
   var hamburger         = document.querySelector('.hamburger') || document.querySelector('head');
   var hamburgerLines    = document.querySelectorAll('.hamburger__line') || document.querySelector('head');
   var sidebar           = document.querySelector('.sidebar') || document.querySelector('head');
@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded',function(){
   var arrowWrapperLeft  = document.querySelectorAll('.arrow__wrapper--left') || document.querySelector('head');
   var arrowRight        = document.querySelectorAll('.slider__arrow--right') || document.querySelector('head');
   var arrowWrapperRight = document.querySelectorAll('.arrow__wrapper--right') || document.querySelector('head');
-
+  var slidersDisplay    = 4;
   var click             = new Event("click");
 
 
@@ -35,7 +35,22 @@ document.addEventListener('DOMContentLoaded',function(){
   headerIndex.style.height      = winHeight + 'px';
   appMenu.style.height          = "100%";
   if(winWidth > 500){
-    mainBlog.style.height       = winHeight + 'px';
+    for(var i = 0; i < pageImage.length; i++){
+      pageImage[i].style.height = winHeight + 'px';
+    }
+  }
+
+  if(winWidth > 800){
+    sliderLineInitial(4);
+    slidersDisplay = 4;
+  }
+  if(winWidth <= 800){
+    sliderLineInitial(2);
+    slidersDisplay = 2;
+  }
+  if(winWidth <= 500){
+    sliderLineInitial(1);
+    slidersDisplay = 1;
   }
 
   hamburger.addEventListener('click',function(){
@@ -81,20 +96,20 @@ document.addEventListener('DOMContentLoaded',function(){
   for(var i = 0; i < arrowLeft.length; i++){
     arrowLeft[i].addEventListener('click', function(e){
       event.stopPropagation();
-      clickArrowLeft(getClosest(this, ".carusel--line"));
+      clickArrowLeft(getClosest(this, ".carusel--line"), slidersDisplay);
     });
     arrowWrapperLeft[i].addEventListener('click', function(e){
-      clickArrowLeft(getClosest(this, ".carusel--line"));
+      clickArrowLeft(getClosest(this, ".carusel--line"), slidersDisplay);
     });
   }
 
   for(var i = 0; i < arrowRight.length; i++){
     arrowRight[i].addEventListener('click', function(e){
       event.stopPropagation();
-      clickArrowRight(getClosest(this, ".carusel--line"));
+      clickArrowRight(getClosest(this, ".carusel--line"), slidersDisplay);
     });
     arrowWrapperRight[i].addEventListener('click', function(e){
-      clickArrowRight(getClosest(this, ".carusel--line"));
+      clickArrowRight(getClosest(this, ".carusel--line"), slidersDisplay);
     });
   }
 

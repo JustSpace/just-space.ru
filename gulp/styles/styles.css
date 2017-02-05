@@ -372,7 +372,7 @@ h6 {
   @media (max-width: 500px) {
     .header__title {
       font-size: 25px;
-      top: 30%; } }
+      top: 35%; } }
 
 .header__title--back {
   -webkit-transform: translateX(-200%);
@@ -395,6 +395,10 @@ h6 {
   -webkit-transform: translateX(0);
       -ms-transform: translateX(0);
           transform: translateX(0); }
+  @media (max-width: 500px) {
+    .header__title--const {
+      font-size: 2em;
+      top: 30%; } }
 
 .header__title--slice {
   -webkit-transition: none;
@@ -593,6 +597,11 @@ h6 {
   color: #000;
   background-color: #fff; }
 
+.carusel {
+  position: relative;
+  overflow-x: hidden;
+  height: 400px; }
+
 .slider {
   width: 100%; }
 
@@ -601,9 +610,9 @@ h6 {
   transition: all 0.5s linear;
   width: 100%;
   white-space: nowrap;
-  position: relative;
   background-color: transparent;
-  color: #fff; }
+  color: #fff;
+  position: absolute; }
 
 .slider__slide {
   -webkit-transition: all 1s linear;
@@ -619,15 +628,19 @@ h6 {
           transform: translateX(0);
   z-index: 0;
   display: inline-block;
-  padding: 25px;
+  padding: 0;
   background-clip: content-box;
   margin: 0;
   width: 25%;
   height: 250px;
   background-color: #fff; }
-
-.slider__slide--last {
-  margin-right: 50px; }
+  @media (max-width: 800px) {
+    .slider__slide--line {
+      width: 50%; } }
+  @media (max-width: 500px) {
+    .slider__slide--line {
+      width: 100%;
+      padding: 25px 50px; } }
 
 .slider__slide--back {
   -webkit-transform: translateX(0);
@@ -685,8 +698,7 @@ h6 {
   -webkit-transition: all 0.5s linear;
   transition: all 0.5s linear;
   position: absolute;
-  top: -webkit-calc(50% - 17.5px);
-  top: calc(50% - 17.5px);
+  top: 50%;
   cursor: pointer;
   z-index: 50;
   width: 35px;
@@ -942,11 +954,11 @@ h6 {
 .page-image {
   width: 100%;
   height: 600px;
-  min-height: 600px;
   background-color: #2A282B;
   background-repeat: no-repeat;
   color: #fff;
-  position: relative; }
+  position: relative;
+  overflow-x: hidden; }
 
 .page-image--blog {
   background: url("/img/main_blog-M.jpg");
@@ -967,20 +979,36 @@ h6 {
 
 .page-image--about {
   background: url("/img/about_city-M.jpg");
-  background-position: 0 100%;
+  background-position: 50% 50%;
   background-size: cover; }
+  @media (max-width: 1010px) {
+    .page-image--about .page-image__promo {
+      width: 100%; } }
   @media (min-width: 4000px) {
     .page-image--about {
       background-image: url("/img/about_city-XL.jpg"); } }
   @media (min-width: 2000px) {
     .page-image--about {
       background-image: url("/img/about_city-L.jpg"); } }
-  @media (max-width: 1000px) {
+  @media (max-width: 1010px) {
     .page-image--about {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: reverse;
+      -webkit-flex-direction: column-reverse;
+          -ms-flex-direction: column-reverse;
+              flex-direction: column-reverse;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+          -ms-flex-align: center;
+              align-items: center;
       background-image: url("/img/about_city-S.jpg"); } }
   @media (max-width: 500px) {
     .page-image--about {
-      height: 800px; } }
+      height: 400px; } }
 
 .page-image__wrapper {
   background-color: rgba(0, 0, 0, 0.7);
@@ -1011,12 +1039,20 @@ h6 {
     .page-image__promo {
       width: 100%; } }
 
+.page-image__promo--image {
+  height: 150px; }
+  @media (min-width: 1010px) {
+    .page-image__promo--image {
+      height: 100%; } }
+
 .page-image__title {
   display: block;
+  white-space: nowrap;
   font-size: 1.5em;
   font-weight: 300;
   vertical-align: middle;
   line-height: 50px;
+  width: 200%;
   color: currentcolor; }
 
 .page-image__title--top {
@@ -1029,14 +1065,23 @@ h6 {
   -webkit-border-bottom-left-radius: 50px;
           border-bottom-left-radius: 50px;
   color: #fff; }
-  .page-image__title--top:hover, .page-image__title--top:focus {
-    -webkit-transform: translateX(-75px);
-        -ms-transform: translateX(-75px);
-            transform: translateX(-75px); }
-    .page-image__title--top:hover .page-image__icon, .page-image__title--top:focus .page-image__icon {
-      -webkit-transform: rotate(25deg) scale(1.25);
-          -ms-transform: rotate(25deg) scale(1.25);
-              transform: rotate(25deg) scale(1.25); }
+  @media (min-width: 550px) {
+    .page-image__title--top:hover, .page-image__title--top:focus {
+      -webkit-transform: translateX(-75px);
+          -ms-transform: translateX(-75px);
+              transform: translateX(-75px); }
+      .page-image__title--top:hover .page-image__icon, .page-image__title--top:focus .page-image__icon {
+        -webkit-transform: rotate(25deg) scale(1.25);
+            -ms-transform: rotate(25deg) scale(1.25);
+                transform: rotate(25deg) scale(1.25); } }
+  @media (max-width: 450px) {
+    .page-image__title--top {
+      padding: 7px;
+      font-size: 1em; } }
+  @media (max-width: 360px) {
+    .page-image__title--top {
+      padding: 5px;
+      font-size: 0.9em; } }
 
 .page-image__title--mask-1 {
   background-color: rgba(74, 74, 74, 0.5); }
@@ -1054,6 +1099,10 @@ h6 {
       -ms-flex-align: start;
           align-items: flex-start; }
 
+.page-image__image {
+  width: 80%;
+  max-width: 400px; }
+
 .page-image__icon {
   -webkit-transition: all 0.5s linear;
   transition: all 0.5s linear;
@@ -1066,6 +1115,10 @@ h6 {
   height: 50px;
   float: left;
   margin-right: 10px; }
+  @media (max-width: 360px) {
+    .page-image__icon--top {
+      width: 50px;
+      height: 50px; } }
 
 .page-image__icon--mask-1 {
   color: rgba(74, 74, 74, 0.5); }
@@ -1319,29 +1372,7 @@ h6 {
   width: 100%;
   position: relative;
   color: #000;
-  background-color: #fff;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-flex-wrap: wrap;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap; }
-  @media (max-width: 700px) {
-    .clients {
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-      -webkit-flex-direction: column;
-          -ms-flex-direction: column;
-              flex-direction: column; } }
+  background-color: #fff; }
 
 .clients__title {
   -webkit-flex-basis: 100%;
@@ -1355,17 +1386,39 @@ h6 {
   background-color: #e4e4e4;
   background-size: 50%;
   background-position: 50% 50%;
-  background-repeat: no-repeat;
-  padding: 20px; }
-  @media (max-width: 930px) {
-    .client {
-      width: 140px;
-      height: 140px; } }
-  @media (max-width: 700px) {
-    .client {
-      width: 200px;
-      height: 200px;
-      margin-bottom: 40px; } }
+  background-repeat: no-repeat; }
+  .client:hover {
+    background-color: #0097ba; }
+
+.client--1 {
+  background-image: url("/img/clients/cis/cis_logo_black.png"); }
+  .client--1:hover {
+    background-image: url("/img/clients/cis/cis_logo_white.png"); }
+
+.client--2 {
+  background-image: url("/img/clients/sportlifting/sportlifting_logo_black.png"); }
+  .client--2:hover {
+    background-image: url("/img/clients/sportlifting/sportlifting_logo_white.png"); }
+
+.client--3 {
+  background-image: url("/img/clients/tulskayakvartirka/tulskayakvartirka_logo_black.png"); }
+  .client--3:hover {
+    background-image: url("/img/clients/tulskayakvartirka/tulskayakvartirka_logo_white.png"); }
+
+.client--4 {
+  background-image: url("/img/clients/gazel-traffic/gazel-traffic_logo_black.png"); }
+  .client--4:hover {
+    background-image: url("/img/clients/gazel-traffic/gazel-traffic_logo_white.png"); }
+
+.client--5 {
+  background-image: url("/img/clients/tcn/tcn_logo_black.png"); }
+  .client--5:hover {
+    background-image: url("/img/clients/tcn/tcn_logo_white.png"); }
+
+.client--6 {
+  background-image: url("/img/clients/justspaceshoot/justspaceshoot_logo_black.png"); }
+  .client--6:hover {
+    background-image: url("/img/clients/justspaceshoot/justspaceshoot_logo_white.png"); }
 
 .client__logo {
   -o-object-fit: contain;

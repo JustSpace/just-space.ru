@@ -76,7 +76,7 @@
     <article class="about">
       <h1>Digital-агентство Just Space</h1>
       <div class="about__text">
-          Специализируемся на применение современных технологий в бизнес сфере и предоставляем следующие цифровых услуг: создаем сайты (лендинги, сайты-визитки, корпоративные порталы, интернет-магазины и др.); аудит, SEO оптимизация и продвижение сайтов; настраиваем и ведение контекстные рекламные кампании; SMM продвижение в социальных сетях; разрабатываем дизайнерские решения; создаем мобильных приложений под IOS и Android.
+          Специализируемся на применении современных технологий в бизнес сфере и предоставляем следующие цифровые услуги: создание сайтов (лендинги, сайты-визитки, корпоративные порталы, интернет-магазины и др.); аудит, SEO оптимизация и продвижение сайтов; настройка и ведение контекстных рекламных кампаний; SMM продвижение в социальных сетях; разработка дизайнерских решений; создание мобильных приложений под IOS и Android.
       </div>
       <div class="categories">
         <div class="categories__element categories__element--creative">
@@ -115,36 +115,36 @@
       </div>
     </article>
     <div class="page-image page-image--about">
-      <article class="page-image__promo">
+      <div class="page-image__promo">
         <div class="page-image__text page-image__text--about">
-          <a href="http://www.cmsmagazine.ru/creators/tula/" class="page-image__title page-image__title--top page-image__title--mask-1 no-underline" target="_blank">
+          <a href="http://www.cmsmagazine.ru/mobile/?sk=_apps&so=desc&mp=&c=&cc=56&cpp=40" class="page-image__title page-image__title--top page-image__title--mask-1 no-underline" target="_blank">
             <svg class="page-image__icon page-image__icon--top page-image__icon--mask-1" aria-hidden="true">
               <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/img/sprites/sprites-services.svg#mobile"></use>
             </svg>
             Топ-3 по мобильной разработке
           </a>
-          <a href="http://www.cmsmagazine.ru/seo/tula/" class="page-image__title page-image__title--top page-image__title--mask-2 no-underline" target="_blank">
+          <a href="http://www.cmsmagazine.ru/creators/tula/" class="page-image__title page-image__title--top page-image__title--mask-2 no-underline" target="_blank">
             <svg class="page-image__icon page-image__icon--top page-image__icon--mask-2" aria-hidden="true">
               <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/img/sprites/sprites-services.svg#web"></use>
             </svg>
             Топ-30 среди веб-студий
           </a>
-          <a href="http://www.cmsmagazine.ru/mobile/?sk=_apps&so=desc&mp=&c=&cc=56&cpp=40" class="page-image__title page-image__title--top page-image__title--mask-3 no-underline" target="_blank">
+          <a href="http://www.cmsmagazine.ru/seo/tula/" class="page-image__title page-image__title--top page-image__title--mask-3 no-underline" target="_blank">
             <svg class="page-image__icon page-image__icon--top page-image__icon--mask-3" aria-hidden="true">
               <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/img/sprites/sprites-services.svg#seo"></use>
             </svg>
             Топ-15 по SEO продвижению
           </a>
         </div>
-      </article>
-      <article class="page-image__promo">
-        <img src="/img/cmsmagazine.png" alt="cmsmagazine аналитический портал веб-разработок">
-      </article>
+      </div>
+      <div class="page-image__promo page-image__promo--image">
+        <img src="/img/cmsmagazine.png" class="page-image__image" alt="cmsmagazine аналитический портал веб-разработок">
+      </div>
     </div>
-    <article class="certificates carusel carusel--line">
+    <div class="certificates carusel carusel--line">
       <h2 class="carusel__title">Сертификаты</h2>
       <div class="slider slider--line">
-        <a href="/img/cert/cert_bitrix-compoz.jpg" target="_black" class="slider__slide slider__slide--line slider__slide--1 slider__slide--first">
+        <a href="/img/cert/cert_bitrix-compoz.jpg" target="_black" class="slider__slide slider__slide--line slider__slide--1">
           <img src="/img/cert/cert_bitrix-compoz.min.jpg" class="slide__image" alt="">
         </a><!--
         --><a href="/img/cert/cert_bitrix-content.jpg" target="_black" class="slider__slide slider__slide--line slider__slide--2">
@@ -153,11 +153,11 @@
         --><a href="/img/cert/cert_bitrix-dev.jpg" target="_black" class="slider__slide slider__slide--line slider__slide--3">
           <img src="/img/cert/cert_bitrix-dev.min.jpg" class="slide__image" alt="">
         </a><!--
-        --><a href="/img/cert/cert_yandex-metrika.jpg" target="_black" class="slider__slide slider__slide--line slider__slide--4 slider__slide--last">
-          <img src="/img/cert/cert_yandex-metrika.min.jpg" class="slide__image" alt="">
-        </a><!--
         --><a href="/img/cert/cert_bitrix-admin.base.jpg" target="_black" class="slider__slide slider__slide--line slider__slide--5">
           <img src="/img/cert/cert_bitrix-admin.base.min.jpg" class="slide__image" alt="">
+        </a><!--
+        --><a href="/img/cert/cert_yandex-metrika.jpg" target="_black" class="slider__slide slider__slide--line slider__slide--4">
+          <img src="/img/cert/cert_yandex-metrika.min.jpg" class="slide__image" alt="">
         </a>
       </div>
       <div class="arrow__wrapper arrow__wrapper--left">
@@ -170,7 +170,7 @@
           <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/img/sprites/sprites.svg#down-arrow"></use>
         </svg>
       </div>
-    </article>
+    </div>
     <div class="page-image page-image--blog">
       <div class="page-image__wrapper">
         <article class="page-image__promo">
@@ -190,28 +190,22 @@
         </article>
       </div>
     </div>
-    <article class="clients carusel carusel--line">
+    <div class="clients carusel carusel--line">
       <h2 class="clients__title">Кейсы</h2>
       <div class="slider slider--line">
-        <a href="/portfolio/domotoplenya.php" class="client slider__slide slider__slide--line slider__slide--first">
-          <img src="/img/clients/cis/cis_logo_black.png" class="client__logo" alt="">
-        </a>
-        <a href="/portfolio/sportlifting.php" class="client slider__slide slider__slide--line">
-          <img src="/img/clients/sportlifting/sportlifting_logo_black.png" class="client__logo" alt="">
-        </a>
-        <a href="/portfolio/tulskayakvartirka.php" class="client slider__slide slider__slide--line">
-          <img src="/img/clients/tulskayakvartirka/tulskayakvartirka_logo_black.png" class="client__logo" alt="">
-        </a>
-        <a href="/portfolio/gazeltraffic.php" class="client slider__slide slider__slide--line slider__slide--last">
-          <img src="/img/clients/gazel-traffic/gazel-traffic_logo_black.png" class="client__logo" alt="">
-        </a>
-        <a href="/portfolio/doly-tula.php" class="client slider__slide slider__slide--line">
-          <img src="/img/clients/tcn/tcn_logo_black.png" class="client__logo" alt="">
-        </a>
-        <a href="/portfolio/justspaceshoot.php" class="client slider__slide slider__slide--line">
-          <img src="/img/clients/justspaceshoot/justspaceshoot_logo_black.png" class="client__logo" alt="">
-        </a>
-      </div>
+        <a href="/portfolio/domotoplenya.php" class="client client--1 slider__slide slider__slide--line">
+        </a><!--
+        --><a href="/portfolio/sportlifting.php" class="client client--2 slider__slide slider__slide--line">
+        </a><!--
+        --><a href="/portfolio/tulskayakvartirka.php" class="client client--3 slider__slide slider__slide--line">
+        </a><!--
+        --><a href="/portfolio/gazeltraffic.php" class="client client--4 slider__slide slider__slide--line">
+        </a><!--
+        --><a href="/portfolio/doly-tula.php" class="client client--5 slider__slide slider__slide--line">
+        </a><!--
+        --><a href="/portfolio/justspaceshoot.php" class="client client--6 slider__slide slider__slide--line">
+        </a><!--
+      --></div>
       <div class="arrow__wrapper arrow__wrapper--left">
         <svg class="slider__arrow slider__arrow--left" aria-hidden="true">
           <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/img/sprites/sprites.svg#down-arrow"></use>
@@ -222,7 +216,7 @@
           <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/img/sprites/sprites.svg#down-arrow"></use>
         </svg>
       </div>
-    </article>
+    </div>
     <article class="order">
       <form class="order__form" method="post">
         <table class="order__table">
