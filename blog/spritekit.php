@@ -90,7 +90,7 @@ func method(){
         Непосредственно в самом методе требуется менять позицию нашего объекта присваивая её равной положению пальца в данный момент.
       </div>
 <pre class="article__code">
-override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+override func touchesMoved(_ touches: Set&lt;UITouch&gt;, with event: UIEvent?) {
   for touch: AnyObject in touches {
     let location = touch.location(in: self)
     if gameinaction == true {

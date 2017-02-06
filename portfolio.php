@@ -28,34 +28,34 @@
       </article>
       <section class="portfolio__line">
         <a href="/portfolio/domotoplenya.php" class="portfolio__project">
-          <img src="/img/clients/cis/cis_logo_white.png" class="portfolio__logo">
+          <img src="/img/clients/cis/cis_logo_white.png" class="portfolio__logo" alt="Логотип - Центр Инженерных Систем">
           <div class="portfolio__mask portfolio__mask--1"></div>
-          <img src="/img/clients/cis/cis_clip.png" class="portfolio__image" alt="">
+          <img src="/img/clients/cis/cis_clip.png" class="portfolio__image" alt="Сайт - Центр Инженерных Систем">
         </a>
         <a href="/portfolio/gazeltraffic.php" class="portfolio__project">
-          <img src="/img/clients/gazel-traffic/gazel-traffic_logo_white.png" class="portfolio__logo">
+          <img src="/img/clients/gazel-traffic/gazel-traffic_logo_white.png" class="portfolio__logo" alt="Логотип - Gazel-Traffic">
           <div class="portfolio__mask portfolio__mask--2"></div>
-          <img src="/img/clients/gazel-traffic/gazel-traffic_clip.png" class="portfolio__image" alt="">
+          <img src="/img/clients/gazel-traffic/gazel-traffic_clip.png" class="portfolio__image" alt="Сайт - Gazel-Traffic">
         </a>
         <a href="/portfolio/sportlifting.php" class="portfolio__project">
-          <img src="/img/clients/sportlifting/sportlifting_logo_white.png" class="portfolio__logo">
+          <img src="/img/clients/sportlifting/sportlifting_logo_white.png" class="portfolio__logo" alt="Логотип - SportLifting">
           <div class="portfolio__mask portfolio__mask--3"></div>
-          <img src="/img/clients/sportlifting/sportlifting_clip.png" class="portfolio__image" alt="">
+          <img src="/img/clients/sportlifting/sportlifting_clip.png" class="portfolio__image" alt="Сайт - SportLifting">
         </a>
         <a href="/portfolio/justspaceshoot.php" class="portfolio__project">
-          <img src="/img/clients/justspaceshoot/justspaceshoot_logo_white.png" class="portfolio__logo">
+          <img src="/img/clients/justspaceshoot/justspaceshoot_logo_white.png" class="portfolio__logo" alt="Логотип - Just Space Shoot">
           <div class="portfolio__mask portfolio__mask--4"></div>
-          <img src="/img/clients/justspaceshoot/justspaceshoot_clip.png" class="portfolio__image" alt="">
+          <img src="/img/clients/justspaceshoot/justspaceshoot_clip.png" class="portfolio__image" alt="Мобильное приложение - Just Space Shoot">
         </a>
         <a href="/portfolio/doly-tula.php" class="portfolio__project">
-          <img src="/img/clients/tcn/tcn_logo_white.png" class="portfolio__logo">
+          <img src="/img/clients/tcn/tcn_logo_white.png" class="portfolio__logo" alt="Логотип - Тульский Центр Недвижимости">
           <div class="portfolio__mask portfolio__mask--5"></div>
-          <img src="/img/clients/tcn/tcn_clip.jpg" class="portfolio__image" alt="">
+          <img src="/img/clients/tcn/tcn_clip.jpg" class="portfolio__image" alt="Сайт - Тульский Центр Недвижимости">
         </a>
         <a href="/portfolio/tulskayakvartirka.php" class="portfolio__project">
-          <img src="/img/clients/tulskayakvartirka/tulskayakvartirka_logo_white.png" class="portfolio__logo">
+          <img src="/img/clients/tulskayakvartirka/tulskayakvartirka_logo_white.png" class="portfolio__logo" alt="Логотип - Тульская квартирка">
           <div class="portfolio__mask portfolio__mask--6"></div>
-          <img src="/img/clients/tulskayakvartirka/tulskayakvartirka_clip.jpg" class="portfolio__image" alt="">
+          <img src="/img/clients/tulskayakvartirka/tulskayakvartirka_clip.jpg" class="portfolio__image" alt="Сайт - Тульская квартирка">
         </a>
       </section>
     </article>

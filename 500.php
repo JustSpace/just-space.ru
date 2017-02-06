@@ -20,7 +20,7 @@
         <br>
         Сбой на сервере
       </h1>
-      <a href="/" class="content__link" alt="Обратно на главную страницу сайта">Вернуться на сайт</a>
+      <a href="/" class="content__link">Вернуться на сайт</a>
     </div>
   </main>
 </body>

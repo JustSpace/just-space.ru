@@ -5,12 +5,12 @@
   <header class="header header--1div3">
     <h1 class="header__title header__title--slice header__title--right">Мобильная разработка</h1>
     <nav class="navigation">
-      <a href="javascript:void(0)" class="hamburger" alt="Гамбургер меню">
+      <a href="javascript:void(0)" class="hamburger">
         <span class="hamburger__line"></span>
         <span class="hamburger__line"></span>
         <span class="hamburger__line"></span>
       </a>
-      <a href="/index.php" class="navigation__logo" alt="Digital-агентство Just Space">Just Space</a>
+      <a href="/index.php" class="navigation__logo">Just Space</a>
       <a href="/services.php" class="navigation__section navigation__section--link">Услуги</a>
     </nav>
   </header>

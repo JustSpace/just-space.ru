@@ -9,25 +9,25 @@
         <source srcset="/img/index-XL.jpg" media="(min-width: 4000px)">
         <source srcset="/img/index-L.jpg" media="(min-width: 2000px)">
         <source srcset="/img/index-S.jpg" media="(max-width: 1000px)">
-        <img class="header__image slider__slide slider__slide--1 slider__slide--active" src="/img/index-M.jpg" alt="Создание сайтов">
+        <img class="header__image slider__slide slider__slide--1 slider__slide--active" src="/img/index-M.jpg" alt="Разработка сайта">
       </picture>
       <picture>
         <source srcset="/img/mobile-XL.jpg" media="(min-width: 4000px)">
         <source srcset="/img/mobile-L.jpg" media="(min-width: 2000px)">
         <source srcset="/img/mobile-S.jpg" media="(max-width: 1000px)">
-        <img class="header__image slider__slide slider__slide--2" src="/img/mobile-M.jpg" alt="Разработка мобильных приложений">
+        <img class="header__image slider__slide slider__slide--2" src="/img/mobile-M.jpg" alt="Мобильные технологии">
       </picture>
       <picture>
         <source srcset="/img/seo-XL.jpg" media="(min-width: 4000px)">
         <source srcset="/img/seo-L.jpg" media="(min-width: 2000px)">
         <source srcset="/img/seo-S.jpg" media="(max-width: 1000px)">
-        <img class="header__image slider__slide slider__slide--3" src="/img/seo-M.jpg" alt="SEO продвижение">
+        <img class="header__image slider__slide slider__slide--3" src="/img/seo-M.jpg" alt="Профессиональное продвижение">
       </picture>
       <picture>
         <source srcset="/img/design-XL.jpg" media="(min-width: 4000px)">
         <source srcset="/img/design-L.jpg" media="(min-width: 2000px)">
         <source srcset="/img/design-S.jpg" media="(max-width: 1000px)">
-        <img class="header__image slider__slide slider__slide--4 slider__slide--back" src="/img/design-M.jpg" alt="Создание дизайна">
+        <img class="header__image slider__slide slider__slide--4 slider__slide--back" src="/img/design-M.jpg" alt="Интересный дизайн">
       </picture>
       <div class="arrow__wrapper arrow__wrapper--left arrow__wrapper--left-index">
         <svg class="slider__arrow slider__arrow--left slider__arrow--left-index" aria-hidden="true">
@@ -56,12 +56,12 @@
       Разработать дизайн
     </h2>
     <nav class="navigation">
-      <a href="javascript:void(0)" class="hamburger" alt="Гамбургер меню">
+      <a href="javascript:void(0)" class="hamburger">
         <span class="hamburger__line"></span>
         <span class="hamburger__line"></span>
         <span class="hamburger__line"></span>
       </a>
-      <a href="/index.php" class="navigation__logo" alt="Digital-агентство Just Space">Just Space</a>
+      <a href="/index.php" class="navigation__logo">Just Space</a>
     </nav>
     <div class="arrow">
       <svg class="arrow__icon" aria-hidden="true">
@@ -97,7 +97,7 @@
           <h2>Технологии</h2>
           <section class="list">
             <span class="list__element">Адаптивная и доступная верстка</span>
-            <span class="list__element">Специализируемся на 1C-Bitrix</span>
+            <span class="list__element">Специализируемся на 1С Битрикс</span>
             <span class="list__element">Разрабатываем iOS приложения</span>
           </section>
         </div>
@@ -144,20 +144,20 @@
     <div class="certificates carusel carusel--line">
       <h2 class="carusel__title">Сертификаты</h2>
       <div class="slider slider--line">
-        <a href="/img/cert/cert_bitrix-compoz.jpg" target="_black" class="slider__slide slider__slide--line slider__slide--1">
-          <img src="/img/cert/cert_bitrix-compoz.min.jpg" class="slide__image" alt="">
+        <a href="/img/cert/cert_bitrix-compoz.jpg" target="_blank" class="slider__slide slider__slide--line slider__slide--1">
+          <img src="/img/cert/cert_bitrix-compoz.min.jpg" class="slide__image" alt="Сертификат 1С Битрикс - Технология композитный сайт (Анисимов Кирилл)">
         </a><!--
-        --><a href="/img/cert/cert_bitrix-content.jpg" target="_black" class="slider__slide slider__slide--line slider__slide--2">
-          <img src="/img/cert/cert_bitrix-content.min.jpg" class="slide__image" alt="">
+        --><a href="/img/cert/cert_bitrix-content.jpg" target="_blank" class="slider__slide slider__slide--line slider__slide--2">
+          <img src="/img/cert/cert_bitrix-content.min.jpg" class="slide__image" alt="Сертификат 1С Битрикс - Контент-менеджер (Анисимов Кирилл)">
         </a><!--
-        --><a href="/img/cert/cert_bitrix-dev.jpg" target="_black" class="slider__slide slider__slide--line slider__slide--3">
-          <img src="/img/cert/cert_bitrix-dev.min.jpg" class="slide__image" alt="">
+        --><a href="/img/cert/cert_bitrix-dev.jpg" target="_blank" class="slider__slide slider__slide--line slider__slide--3">
+          <img src="/img/cert/cert_bitrix-dev.min.jpg" class="slide__image" alt="Сертификат 1С Битрикс - Разработчик Bitrix Framework (Анисимов Кирилл)">
         </a><!--
-        --><a href="/img/cert/cert_bitrix-admin.base.jpg" target="_black" class="slider__slide slider__slide--line slider__slide--5">
-          <img src="/img/cert/cert_bitrix-admin.base.min.jpg" class="slide__image" alt="">
+        --><a href="/img/cert/cert_bitrix-admin.base.jpg" target="_blank" class="slider__slide slider__slide--line slider__slide--5">
+          <img src="/img/cert/cert_bitrix-admin.base.min.jpg" class="slide__image" alt="Сертификат 1С Битрикс - Администратор Базовый (Анисимов Кирилл)">
         </a><!--
-        --><a href="/img/cert/cert_yandex-metrika.jpg" target="_black" class="slider__slide slider__slide--line slider__slide--4">
-          <img src="/img/cert/cert_yandex-metrika.min.jpg" class="slide__image" alt="">
+        --><a href="/img/cert/cert_yandex-metrika.jpg" target="_blank" class="slider__slide slider__slide--line slider__slide--4">
+          <img src="/img/cert/cert_yandex-metrika.min.jpg" class="slide__image" alt="Сертивикат Яндекс Метрика - Сертифицированный специалист (Анисимов Кирилл)">
         </a>
       </div>
       <div class="arrow__wrapper arrow__wrapper--left">
@@ -181,7 +181,7 @@
           <div class="page-image__text">
             В наших планы входит, регулярно описывать корпоративные успехи и неудачи, рассказывать о предпринимаемых экспериментах и всецело делиться опытом с нашими читателями.
           </div>
-          <a href="blog.php" class="button button--full button--rosen button--arrow" alt="Читать наш блог">
+          <a href="blog.php" class="button button--full button--rosen button--arrow">
             Начать читать
             <svg class="article__icon" aria-hidden="true">
               <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/img/sprites/sprites.svg#next-arrow"></use>

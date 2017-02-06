@@ -29,10 +29,10 @@
         Первое с чем мы сталкиваемся это индексация сайта, если ничего не предпринять самому, то сайт может индексироваться много месяцев пока не обрастет в достаточной мере внешними ссылками. Нам же надо ускорить индексацию настолько насколько возможно, и для этого мы должны сделать следующее:
         <ul>
           <li>
-            - Напрямую написать в <a href="https://webmaster.yandex.ru/addurl.xml" target="_black">Яндекс</a> и <a href="https://www.google.com/webmasters/tools/submit-url" target="_black">Google</a>, так называемый addURL;
+            - Напрямую написать в <a href="https://webmaster.yandex.ru/addurl.xml" target="_blank">Яндекс</a> и <a href="https://www.google.com/webmasters/tools/submit-url" target="_blank">Google</a>, так называемый addURL;
           </li>
           <li>
-            - Разместить свой сайт на как можно большем количестве сторонник площадках: справочниках, каталогах, блогах и т.д. (<a href="https://yandex.ru/yaca/" target="_black">Яндекс.Каталог</a>, <a href="https://sprav.yandex.ru/" target="_black">Яндекс.Справочник</a>, <a href="https://www.dmoz.org" target="_black">DMOZ</a>)
+            - Разместить свой сайт на как можно большем количестве сторонник площадках: справочниках, каталогах, блогах и т.д. (<a href="https://yandex.ru/yaca/" target="_blank">Яндекс.Каталог</a>, <a href="https://sprav.yandex.ru/" target="_blank">Яндекс.Справочник</a>, <a href="https://www.dmoz.org" target="_blank">DMOZ</a>)
           </li>
         </ul>
       </div>
@@ -80,7 +80,7 @@
             - Задаем атрибуты alt и по возможности title. Тег alt отображает информацию при выключенном отображение картинок и позволяет поисковым системам эффективней проводить поиск по изображениям;
           </li>
           <li>
-            - Оптимизируем изображение, удобный <a href="https://tinypng.com" target="_black">сайт</a> для этого;
+            - Оптимизируем изображение, удобный <a href="https://tinypng.com" target="_blank">сайт</a> для этого;
           </li>
           <li>
             - По возможности используем уникальные картинки, так поисковые системы будут лучше ранжировать изображения с вашего сайта, а следовательно и ваш сайт.
@@ -91,7 +91,7 @@
         <strong>Оптимизация кода</strong>
         <ul>
           <li>
-            - Проверяем валидность разметки по стандарту <a href="https://validator.w3.org/" target="_black">W3C</a>;
+            - Проверяем валидность разметки по стандарту <a href="https://validator.w3.org/" target="_blank">W3C</a>;
           </li>
           <li>
             - Стараемся подключать как можно меньше сторонних файлов и библиотек, т.к. они увеличивают время загрузки;
@@ -173,7 +173,7 @@
             - На сайте обязательно должны присутствовать валидные robots и sitemap;
           </li>
           <li>
-            - По возможности выполнить все пункты в <a href="https://developers.google.com/speed/pagespeed/insights/?hl=ru" target="_black">PageSpeed Insights</a>.
+            - По возможности выполнить все пункты в <a href="https://developers.google.com/speed/pagespeed/insights/?hl=ru" target="_blank">PageSpeed Insights</a>.
           </li>
         </ul>
       </div>
