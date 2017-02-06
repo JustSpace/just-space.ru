@@ -1,4 +1,4 @@
-<footer class="footer">
+<footer class="footer" itemscope itemtype="http://schema.org/Organization">
   <table class="footer__contact">
     <tr class="footer__element">
       <td>
@@ -10,10 +10,13 @@
     </tr>
     <tr class="footer__element">
       <td>
-        <a class="footer__link" href="tel:+79202762950" alt="Телефон приема заявок: +7 (920) 276-29-50">+7 (920) 276-29-50</a>
+        <a class="footer__link" href="tel:+79202762950" alt="Телефон приема заявок: +7 (920) 276-29-50" itemprop="telephone">+7 (920) 276-29-50</a>
       </td>
       <td>
-        <span>Россия, г. Тула, пр. Ленина, д. 77, оф 404</span>
+        <span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+          <span itemprop="addressLocality">Россия, г. Тула</span>,
+          <span itemprop="streetAddress">пр. Ленина, д. 77, оф 404</span>
+        </span>
       </td>
     </tr>
     <tr class="footer__element">
@@ -50,12 +53,12 @@
     </tr>
     <tr class="footer__element">
       <td>
-        <a class="footer__link" href="mailto:info@just-space.ru" alt="Почта приема заявок: info@just-space.ru">info@just-space.ru</a>
+        <a class="footer__link" href="mailto:info@just-space.ru" alt="Почта приема заявок: info@just-space.ru" itemprop="email">info@just-space.ru</a>
       </td>
     </tr>
   </table>
   <div class="footer__copyright">
-    Copyright &copy; 2013-2016 Just Space
+    Copyright &copy; 2013-2016 <span itemprop="name">Just Space</span>
   </div>
 </footer>
 <script src="/js/functions.min.js" defer></script>

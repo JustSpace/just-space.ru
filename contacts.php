@@ -19,18 +19,22 @@
     require_once($_SERVER["DOCUMENT_ROOT"]."/templates/sidebar.php");
   ?>
   <main class="main">
-    <article class="contacts">
+    <article class="contacts" itemscope itemtype="http://schema.org/Organization">
+      <h1 class="contacts__title">Digital-agency <span itemprop="name">Just Space</span></h1>
       <div class="contact">
         <h2>Телефон</h2>
-        <a class="contact__link" href="tel:+79202762950" alt="Телефон приема заявок: +7 (920) 276-29-50">+7 (920) 276-29-50</a>
+        <a class="contact__link" href="tel:+79202762950" alt="Телефон приема заявок: +7 (920) 276-29-50" itemprop="telephone">+7 (920) 276-29-50</a>
       </div>
       <div class="contact">
         <h2>Email</h2>
-        <a class="contact__link" href="mailto:info@just-space.ru" alt="Почта приема заявок: info@just-space.ru">info@just-space.ru</a>
+        <a class="contact__link" href="mailto:info@just-space.ru" alt="Почта приема заявок: info@just-space.ru" itemprop="email">info@just-space.ru</a>
       </div>
-      <div class="contact">
+      <div class="contact" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
         <h2>Адрес</h2>
-        <span>Россия, г. Тула, пр. Ленина, д. 77, оф 404</span>
+        <span>
+          <span itemprop="addressLocality">Россия, г. Тула</span>,
+          <span itemprop="streetAddress">пр. Ленина, д. 77, оф 404</span>
+        </span>
       </div>
       <div class="contact center">
         <a class="contact__social-link" href="https://vk.com/justspaceweb" alt="Наша группа в ВКонтакте">

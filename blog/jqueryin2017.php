@@ -76,7 +76,7 @@
       </div>
       <div class="article__footer">
         <div class="article__date">
-          28 декабря, 2016
+          <time datetime="2016-12-28">28 декабря, 2016</time>
         </div>
         <div class="article__share">
           <?php

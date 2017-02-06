@@ -139,7 +139,7 @@ func processUserMotion(forUpdate currentTime: CFTimeInterval) {
       </div>
       <div class="article__footer">
         <div class="article__date">
-          16 января, 2017
+          <time datetime="2017-01-16">16 января, 2017</time>
         </div>
         <div class="article__share">
           <?php
