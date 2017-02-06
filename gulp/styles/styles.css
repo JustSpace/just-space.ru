@@ -633,7 +633,8 @@ h6 {
   margin: 0;
   width: 25%;
   height: 250px;
-  background-color: #fff; }
+  background-color: #fff;
+  outline: 1px solid currentcolor; }
   @media (max-width: 800px) {
     .slider__slide--line {
       width: 50%; } }

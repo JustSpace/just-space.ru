@@ -106,40 +106,43 @@ function clickSliderArrowLeftIndex(){
 }
 
 function clickArrowLeft(carusel, count){
-  var sliders = carusel.querySelectorAll(".slider__slide");
-  var step = 100/count;
+  if(carusel && count){
+    var sliders = carusel.querySelectorAll(".slider__slide");
+    var step = 100/count;
 
-  for(var i = 0; i < sliders.length; i++){
-    if(hasClass(sliders[i], 'slider__slide--first')){
-      if(i == 0){
+    for(var i = 0; i < sliders.length; i++){
+      if(hasClass(sliders[i], 'slider__slide--first')){
+        if(i == 0){
+          break;
+        }
+        removeClass(sliders[i], 'slider__slide--first');
+        addClass(sliders[i-1], 'slider__slide--first');
+        removeClass(sliders[i+count-1], 'slider__slide--last');
+        addClass(sliders[i+(count-1)-1], 'slider__slide--last');
+        carusel.querySelector(".slider--line").style.transform = "translateX(" + -step*(i-1)  + "%)";
         break;
       }
-      removeClass(sliders[i], 'slider__slide--first');
-      addClass(sliders[i-1], 'slider__slide--first');
-      removeClass(sliders[i+count-1], 'slider__slide--last');
-      addClass(sliders[i+(count-1)-1], 'slider__slide--last');
-      carusel.querySelector(".slider--line").style.transform = "translateX(" + -step*(i-1)  + "%)";
-      break;
     }
   }
 }
 
 function clickArrowRight(carusel, count){
-  var sliders = carusel.querySelectorAll(".slider__slide");
-  var step = 100/count;
+  if(carusel && count){
+    var sliders = carusel.querySelectorAll(".slider__slide");
+    var step = 100/count;
 
-  for(var i = 0; i < sliders.length; i++){
-    if(i == sliders.length-1){
-      break;
-    }
-    if(hasClass(sliders[i], 'slider__slide--last')){
-      removeClass(sliders[i-(count-1)], 'slider__slide--first');
-      addClass(sliders[i-(count-1)+1], 'slider__slide--first');
-      console.log(sliders[i-(count-1)+1]);
-      removeClass(sliders[i], 'slider__slide--last');
-      addClass(sliders[i+1], 'slider__slide--last');
-      carusel.querySelector(".slider--line").style.transform = "translateX(" + -step*(i-(count-1)+1)  + "%)";
-      break;
+    for(var i = 0; i < sliders.length; i++){
+      if(i == sliders.length-1){
+        break;
+      }
+      if(hasClass(sliders[i], 'slider__slide--last')){
+        removeClass(sliders[i-(count-1)], 'slider__slide--first');
+        addClass(sliders[i-(count-1)+1], 'slider__slide--first');
+        removeClass(sliders[i], 'slider__slide--last');
+        addClass(sliders[i+1], 'slider__slide--last');
+        carusel.querySelector(".slider--line").style.transform = "translateX(" + -step*(i-(count-1)+1)  + "%)";
+        break;
+      }
     }
   }
 }
