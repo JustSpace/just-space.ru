@@ -85,11 +85,12 @@ document.addEventListener('DOMContentLoaded',function(){
 
   unsubscribeSub.addEventListener('click', function(e){
     var email = document.querySelector('#email').value;
+    var comment = document.querySelector('#comment').value;
 
     if(email != '') {
       e.preventDefault();
       var xhr = new XHR();
-      var parameters = 'email=' + encodeURIComponent(email);
+      var parameters = 'email=' + encodeURIComponent(email) + '&' + 'comment=' + encodeURIComponent(comment);
 
       xhr.open('POST', '/includes/ajax/unsubscribe.php', true);
       xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');

@@ -28,6 +28,7 @@
       </h1>
       <form class="promo__form">
         <input type="email" class="promo__input" placeholder="your@mail.ru" id="email" value="<?php echo $unsibscribe_email;?>" required>
+        <textarea name="comment" id="comment" rows="8" cols="38" class="promo__input promo__input--textarea" placeholder="Почему вы решили отписаться?"></textarea>
         <input type="submit" value="Отписаться" class="promo__submit" id="unsubscribe_sub">
       </form>
     </div>
