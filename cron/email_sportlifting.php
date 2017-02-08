@@ -1,7 +1,15 @@
 <?php
-  require_once("/home/users/g/gazeltrafic/domains/just-space.ru/includes/init.php");
+  require_once($_SERVER['DOCUMENT_ROOT'] . "/includes/init.php");
+
+  if(access_to_admin_panel($_SESSION["user"])){
+    write_to_log("/logs/actions.txt", $_SESSION["user"]." посетил страницу ".$_SERVER["SCRIPT_FILENAME"]."\n");
+  }
+  else{
+    redirect_to("/admin/index.php");
+  }
 
   $CEmail = new Email();
+  $CFile  = new File();
 
   $dbRes = $CEmail->GetList(
     array("id" => "ASC"),
@@ -9,17 +17,24 @@
     array()
   );
 
-	set_time_limit(1200);
+  $arFile = $CFile->GetList(
+    $_SERVER['DOCUMENT_ROOT'] . DIR_EMAILS,
+    "ASC",
+    array("SHOW_DIR" => "N", "SHOW_HIDDEN" => "N"),
+    array()
+  );
 
-  $from = "info@just-space.ru";
+	set_time_limit (1200);
 
-  $mail_content1 = "/home/users/g/gazeltrafic/domains/just-space.ru/emails/audit.html";
+  $from = "info@sportlifting.ru";
 
-  $tfrom = htmlspecialchars($from);
+  $mail_content1 = $_SERVER["DOCUMENT_ROOT"] . "/emails/email_sportlifting_2.html";
+
+	$tfrom = htmlspecialchars($from);
   $tmail_content1 = htmlspecialchars($mail_content1);
 
   // Определяем переменные
-  $emailer_subj = "Аудит сайта | Digital-агентство Just Space";
+	$emailer_subj = "Аудит сайта | Digital-агентство Just Space";
 
   while($arRes = $dbRes->Fetch()){
     $emails[] = $arRes["email"];
@@ -35,7 +50,7 @@
   $ar_email_text = explode('FROM_NAME_EMAIL', $template_emailer_text);
 
 
-  $count_emails = count($emails);
+	$count_emails = count($emails);
   // Запускаем цикл отправки сообщений
   for ($i = 0; $i <= $count_emails - 1 && $i < 500; $i++)
   {
@@ -62,4 +77,8 @@
       sleep(5); // Делаем тайм-аут в 5 секунд
     }
   }
+
+	$log = fopen($_SERVER["DOCUMENT_ROOT"] . "/logs/emails.txt", "a+");
+	fwrite($log, $report);
+	fclose($log);
 ?>
