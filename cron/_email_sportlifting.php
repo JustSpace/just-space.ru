@@ -1,16 +1,8 @@
 <?php
-  require_once($_SERVER['DOCUMENT_ROOT'] . "/includes/init.php");
-  require_once($_SERVER['DOCUMENT_ROOT'] . "/vendor/phpmailer/phpmailer/PHPMailerAutoload.php");
-
-  if(access_to_admin_panel($_SESSION["user"])){
-    write_to_log("/logs/actions.txt", $_SESSION["user"]." посетил страницу ".$_SERVER["SCRIPT_FILENAME"]."\n");
-  }
-  else{
-    redirect_to("/admin/index.php");
-  }
+  require_once("/home/users/g/gazeltrafic/domains/just-space.ru/includes/init.php");
+  require_once("/home/users/g/gazeltrafic/domains/just-space.ru/vendor/phpmailer/phpmailer/PHPMailerAutoload.php");
 
   $CEmail = new Email();
-  $CFile  = new File();
   $PHPMailer = new PHPMailer();
 
   $dbRes = $CEmail->GetList(
@@ -19,39 +11,32 @@
     array()
   );
 
-  $arFile = $CFile->GetList(
-    $_SERVER['DOCUMENT_ROOT'] . DIR_EMAILS,
-    "ASC",
-    array("SHOW_DIR" => "N", "SHOW_HIDDEN" => "N"),
-    array()
-  );
-
 	set_time_limit (1200);
 
   //будем отравлять письмо через СМТП сервер
   $PHPMailer->isSMTP();
   //хост
-  $PHPMailer->Host = 'smtp.yandex.ru';
+  $PHPMailer->Host = "smtp.yandex.ru";
   //требует ли СМТП сервер авторизацию/идентификацию
   $PHPMailer->SMTPAuth = true;
   // логин от вашей почты
-  $PHPMailer->Username = "sportlifting.offer@yandex.ru";
+  $PHPMailer->Username = "info@just-space.ru";
   // пароль от почтового ящика
-  $PHPMailer->Password = "sportlifting";
+  $PHPMailer->Password = "Just222271";
   //указываем способ шифромания сервера
-  $PHPMailer->SMTPSecure = 'ssl';
+  $PHPMailer->SMTPSecure = "ssl";
   //указываем порт СМТП сервера
-  $PHPMailer->Port = '465';
+  $PHPMailer->Port = "465";
 
   //указываем кодировку для письма
-  $PHPMailer->CharSet = 'UTF-8';
+  $PHPMailer->CharSet = "UTF-8";
   //информация от кого отправлено письмо
-  $PHPMailer->From = "sportlifting.offer@yandex.ru";
-  $PHPMailer->FromName = "Sportlifting";
+  $PHPMailer->From = "info@just-space.ru";
+  $PHPMailer->FromName = "Just Space";
 
   $PHPMailer->isHTML(true);
 
-  $mail_content1 = $_SERVER["DOCUMENT_ROOT"] . "/emails/email_sportlifting_2.html";
+  $mail_content1 = "/home/users/g/gazeltrafic/domains/just-space.ru/emails/email_sportlifting_2.html";
 
   // Определяем переменные
 	$PHPMailer->Subject = "Производство и поставка профессиональных тренажеров для фитнес клуба и дома";
@@ -60,7 +45,7 @@
     $emails[] = $arRes["email"];
   }
 
-  $PHPMailer->Body = file_get_contents($mail_content1);
+  $template_emailer_text = file_get_contents($mail_content1);
 
   $ar_email_text = explode('FROM_NAME_EMAIL', $template_emailer_text);
 
@@ -81,6 +66,7 @@
       }
     }
 
+
     if($emails[$i] != ""){
       if($PHPMailer->send()){
         $report .= "Отправлено: " . $emails[$i] . "\n";
@@ -97,7 +83,7 @@
     }
   }
 
-	$log = fopen($_SERVER["DOCUMENT_ROOT"] . "/logs/emails.txt", "a+");
+	$log = fopen("/home/users/g/gazeltrafic/domains/just-space.ru/logs/emails.txt", "a+");
 	fwrite($log, $report);
 	fclose($log);
 ?>

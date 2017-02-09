@@ -1,0 +1,12 @@
+{
+    "name": "akpoflash/just-space.v5",
+    "authors": [
+        {
+            "name": "Anisimov Kirill",
+            "email": "akpoflash@gmail.com"
+        }
+    ],
+    "require": {
+        "phpmailer/phpmailer": "^5.2"
+    }
+}

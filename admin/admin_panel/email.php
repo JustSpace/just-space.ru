@@ -1,5 +1,6 @@
 <?php
   require_once($_SERVER['DOCUMENT_ROOT'] . "/includes/init.php");
+  require_once($_SERVER['DOCUMENT_ROOT'] . "/vendor/phpmailer/phpmailer/PHPMailerAutoload.php");
 
   if(access_to_admin_panel($_SESSION["user"])){
     write_to_log("/logs/actions.txt", $_SESSION["user"]." посетил страницу ".$_SERVER["SCRIPT_FILENAME"]."\n");
@@ -13,6 +14,7 @@
 
   $CEmail = new Email();
   $CFile  = new File();
+  $PHPMailer = new PHPMailer();
 ?>
   <div class="forms">
     <div class="forms__element">
@@ -50,33 +52,50 @@
       <?php
       	set_time_limit (1200);
 
-        $from = "info@just-space.ru";
+        //будем отравлять письмо через СМТП сервер
+        $PHPMailer->isSMTP();
+        //хост
+        $PHPMailer->Host = 'smtp.yandex.ru';
+        //требует ли СМТП сервер авторизацию/идентификацию
+        $PHPMailer->SMTPAuth = true;
+        // логин от вашей почты
+        $PHPMailer->Username = $_POST['emailer_login'];
+        // пароль от почтового ящика
+        $PHPMailer->Password = $_POST['emailer_password'];
+        //указываем способ шифромания сервера
+        $PHPMailer->SMTPSecure = 'ssl';
+        //указываем порт СМТП сервера
+        $PHPMailer->Port = '465';
 
-      	$tfrom = htmlspecialchars($from);
+        //указываем кодировку для письма
+        $PHPMailer->CharSet = 'UTF-8';
+        //информация от кого отправлено письмо
+        $PHPMailer->From = $_POST['emailer_from'];
+        $PHPMailer->FromName = $_POST['emailer_name'];
+
+        // $PHPMailer->DKIM_domain = "gazel-traffic.ru";
+        // $PHPMailer->DKIM_selector = "1486636268.traffic";
+        // $PHPMailer->DKIM_private = $_SERVER["DOCUMENT_ROOT"] . "/dkim_private.key";
+        // $PHPMailer->DKIM_passphrase = '';
+        // $PHPMailer->DKIM_identity = $PHPMailer->From;
+
+        $PHPMailer->isHTML(true);
 
         // Если массив POST не пустой, отправка состоялась
       	if (!empty($_POST)){
 
           // Определяем переменные
-        	$emailer_subj = $_POST['emailer_subj'];
+        	$PHPMailer->Subject = $_POST['emailer_subj'];
         	$emailer_mails = $_POST['emailer_mails'];
-        	$emailer_text = $_POST['emailer_text'];
+        	$PHPMailer->Body = $_POST['emailer_text'];
           $emailer_file = $_SERVER["DOCUMENT_ROOT"] . "/emails/" . $_POST['emailer_file'];
 
           // Теперь проверяем заполнение всех полей
-        	if (empty($emailer_subj) || $emailer_subj=="Тема письма") {
+        	if (empty($PHPMailer->Subject) || $PHPMailer->Subject == "Тема письма") {
             // Если тема пустая...
-            $mail_msg = '<b>Вы не ввели тему письма</b>';
-          } elseif (empty($emailer_mails) || $emailer_mails=="Почтовые адреса") {
+          } elseif (empty($emailer_mails) || $emailer_mails == "Почтовые адреса") {
             // Если адресов нет...
-            $mail_msg = '<b>Не указано адреса получателей</b>';
           } else { // Если все поля заполнены верно...
-
-          $mail_msg = 'Ваше сообщение отправлено';
-          // Готовим заголовки письма... Будем отправлять письма в формате HTML и кодировке UTF-8
-          $headers = "MIME-Version: 1.0\r\n";
-          $headers .= "Content-type: text/html; charset=utf-8\r\n";
-          $headers .= "From: $from";
 
           $template_emailer_text = file_get_contents($emailer_file);
 
@@ -88,24 +107,28 @@
           for ($i = 0; $i <= $count_emails - 1 && $i < 500; $i++)
           {
             $email_to = trim($emails[$i]);
-            $emailer_text = "";
+            $PHPMailer->ClearAllRecipients();
+            $PHPMailer->addAddress($email_to);
+            $PHPMailer->Body = "";
 
             for($j = 0; $j < count($ar_email_text) ; $j++){
-              $emailer_text .= $ar_email_text[$j];
+              $PHPMailer->Body .= $ar_email_text[$j];
               if($j != count($ar_email_text) - 1){
-                $emailer_text .= $email_to;
+                $PHPMailer->Body .= $email_to;
               }
             }
 
           	if($emails[$i] != ""){
-              if(mail($email_to, $emailer_subj, $emailer_text, $headers)){
+              if($PHPMailer->send()){
                 $report .= "Отправлено: " . $emails[$i] . "\n";
+                echo "Отправлено ($emails[$i])<br>\n";
                 $dbFieldsOfEmail = $CEmail->GetEmail($email_to);
                 $arFieldsOfEmail = $dbFieldsOfEmail->Fetch();
                 $CEmail->UpdateEmailSend($email_to, date("Y-m-d H:i:s"), $arFieldsOfEmail["count_of_send"]+1);
               }
               else{
-                $report .= "Не отправлено: " . $emails[$i] . "\n";
+                $report .= "Не отправлено: " . $emails[$i] . "Ошибка: " . $PHPMailer->ErrorInfo . "<br>\n";
+                echo "Не отправлено. Ошибка: " . $PHPMailer->ErrorInfo . "<br>\n";
               }
           	  sleep(5); // Делаем тайм-аут в 5 секунд
           	}
@@ -118,7 +141,7 @@
       }
       else{ // Если в массиве POST пусто, форма еще не передавалась
         // Поля темы, адресов получаетелей и получателей, и текста в этом случае должны быть пустыми
-        $emailer_text = $emailer_subj = $emailer_mails = $from= '';
+        $PHPMailer->Body = $PHPMailer->Subject = $emailer_mails = $from = '';
       }
     ?>
 
@@ -132,10 +155,7 @@
       </script>
 
       <form method="post" onsubmit="return form_validator(this);">
-      	<p class="red">
-          <?php  echo $mail_msg ?>
-        </p>
-      	<input type="text" name="emailer_subj" id="emailer_subj" title="По какому поводу пишем?" placeholder="Тема письма" required>
+      	<input type="text" name="emailer_subj" id="emailer_subj" title="По какому поводу пишем?" placeholder="Тема письма" value="<?php echo $_POST['emailer_subj']?>" required>
       	<textarea name="emailer_mails" id="emailer_mails" title="Кто получатели?" placeholder="Получатели"><?php
           while($arEmail = $dbRes->Fetch()){
             echo $arEmail["email"] . ",";
@@ -150,10 +170,11 @@
           }
           ?>
       	</select>
-      	<select name="emailer_yourmail">
-      	  <option value="$from"><?php echo $tfrom ?></option>
-      	</select>
-      	<input type="submit" value="Отправить" title="Отправить мыл">
+        <input type="text" name="emailer_login" id="emailer_login" placeholder="Логин" value="<?php echo $_POST['emailer_login']?>" required>
+        <input type="text" name="emailer_password" id="emailer_password" placeholder="Пароль" value="<?php echo $_POST['emailer_password']?>" required>
+        <input type="text" name="emailer_from" id="emailer_from" placeholder="Отправитель" value="<?php echo $_POST['emailer_from']?>" required>
+        <input type="text" name="emailer_name" id="emailer_name" placeholder="Имя отправителя" value="<?php echo $_POST['emailer_name']?>" required>
+      	<input type="submit" value="Отправить" title="Отправить письмо">
       </form>
     </div>
   </div>
