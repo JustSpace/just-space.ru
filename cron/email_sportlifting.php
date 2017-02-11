@@ -51,7 +51,7 @@
 
   $PHPMailer->isHTML(true);
 
-  $mail_content1 = $_SERVER["DOCUMENT_ROOT"] . "/emails/email_sportlifting_2.html";
+  $emailer_file = $_SERVER["DOCUMENT_ROOT"] . "/emails/email_sportlifting_2.html";
 
   // Определяем переменные
 	$PHPMailer->Subject = "Производство и поставка профессиональных тренажеров для фитнес клуба и дома";
@@ -60,10 +60,7 @@
     $emails[] = $arRes["email"];
   }
 
-  $PHPMailer->Body = file_get_contents($mail_content1);
-
-  $ar_email_text = explode('FROM_NAME_EMAIL', $template_emailer_text);
-
+  $template_emailer_text = file_get_contents($emailer_file);
 
 	$count_emails = count($emails);
   // Запускаем цикл отправки сообщений
@@ -72,14 +69,10 @@
     $email_to = trim($emails[$i]);
     $PHPMailer->ClearAllRecipients();
     $PHPMailer->addAddress($email_to);
-    $PHPMailer->Body = "";
-
-    for($j = 0; $j < count($ar_email_text) ; $j++){
-      $PHPMailer->Body .= $ar_email_text[$j];
-      if($j != count($ar_email_text) - 1){
-        $PHPMailer->Body .= $email_to;
-      }
-    }
+    $emailer_text = $template_emailer_text;
+    $emailer_text = preg_replace("/(FROM_NAME_EMAIL)/",$email_to,$emailer_text);
+    $emailer_text = preg_replace("/(DATE_DISPATCH)/",date("Y-m-d"),$emailer_text);
+    $PHPMailer->Body = $emailer_text;
 
     if($emails[$i] != ""){
       if($PHPMailer->send()){
