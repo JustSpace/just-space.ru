@@ -2,7 +2,7 @@
     require_once($_SERVER['DOCUMENT_ROOT'] . "/includes/const.php");
     require_once ($_SERVER['DOCUMENT_ROOT'] . "/libs/simplehtmldom_1_5/simple_html_dom.php");
 
-    define ('DEBUG_OK', true);
+    define ('DEBUG_OK', false);
 
     class Email extends Base
     {
@@ -183,18 +183,14 @@
         }
       }
 
-      public function _is_valid_email ($email = ""){
-        return preg_match('/^[.\w-]+@([\w-]+\.)+[a-zA-Z]{2,6}$/', $email);
-      }
-
       public function _check_domain_rules ($domain = ""){
         return in_array(strtolower($domain), $this->domain_rules);
       }
 
       public function CheckEmailExecute($email = ""){
-            if(!$this->_is_valid_email ($email)) return false;
+            if(!filter_var($email, FILTER_VALIDATE_EMAIL)) return false;
 
-            $host = substr (strstr ($email, '@'), 1);
+            $host = substr(strstr($email, '@'), 1);
 
             if($this->_check_domain_rules($host)) return false;
 
@@ -207,8 +203,8 @@
             if (DEBUG_OK) print_r($mxhosts);
 
             $port = 25;
-            $localhost = $_SERVER['HTTP_HOST'];
-            $sender = 'info@' . $localhost;
+            $localhost = "www.just-space.ru";
+            $sender = 'info@just-space.ru';
 
             $result = false;
             $id = 0;
@@ -220,25 +216,41 @@
                       fputs ($connection,"HELO $localhost\r\n"); // 250
                       $data = fgets ($connection,1024);
                       $response = substr ($data,0,1);
-                      if (DEBUG_OK) print_r ($data);
+                      if (DEBUG_OK){
+                        print_r ("1:");
+                        print_r ($data);
+                        print_r ("<br>\n");
+                      }
                       if ($response == '2') // 200, 250 etc.
                      {
                         fputs ($connection,"MAIL FROM:<$sender>\r\n");
                         $data = fgets($connection,1024);
                         $response = substr ($data,0,1);
-                        if (DEBUG_OK) print_r ($data);
+                        if (DEBUG_OK){
+                          print_r ("2:");
+                          print_r ($data);
+                          print_r ("<br>\n");
+                        }
                         if ($response == '2') // 200, 250 etc.
                        {
                           fputs ($connection,"RCPT TO:<$email>\r\n");
                           $data = fgets($connection,1024);
                           $response = substr ($data,0,1);
-                          if (DEBUG_OK) print_r ($data);
+                          if (DEBUG_OK){
+                            print_r ("3:");
+                            print_r ($data);
+                            print_r ("<br>\n");
+                          }
                       if ($response == '2') // 200, 250 etc.
                          {
                             fputs ($connection,"data\r\n");
                             $data = fgets($connection,1024);
                             $response = substr ($data,0,1);
-                            if (DEBUG_OK) print_r ($data);
+                            if (DEBUG_OK){
+                              print_r ("4:");
+                              print_r ($data);
+                              print_r ("<br>\n");
+                            }
                             if ($response == '2') // 200, 250 etc.
                            { $result = true; }
                              }

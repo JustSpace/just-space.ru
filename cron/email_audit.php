@@ -74,7 +74,7 @@
     $emailer_text = preg_replace("/(DATE_DISPATCH)/",date("Y-m-d"),$emailer_text);
     $PHPMailer->Body = $emailer_text;
 
-    if($emails[$i] != ""){
+    if($email_to != ""){
       if($PHPMailer->send()){
         $report .= "Отправлено: " . $emails[$i] . "\n";
         echo "Отправлено: " . $emails[$i] . "\n";

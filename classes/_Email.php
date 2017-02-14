@@ -2,7 +2,7 @@
     require_once("/home/users/g/gazeltrafic/domains/just-space.ru/includes/const.php");
     require_once ("/home/users/g/gazeltrafic/domains/just-space.ru/libs/simplehtmldom_1_5/simple_html_dom.php");
 
-    define ('DEBUG_OK', true);
+    define ('DEBUG_OK', false);
 
     class Email extends Base
     {
@@ -23,9 +23,11 @@
         $site = make_correct_url($site);
 
         if(!$this->GetEmail($email)->Fetch() && filter_var($email, FILTER_VALIDATE_EMAIL)){
-          $query = $this->pdo->prepare('INSERT INTO ls_emails (email, site, available, departure_date, count_of_send) VALUES (:email, :site, :available, :departure_date, :count_of_send);');
-          $query->execute(array('email' => $email, 'site' => $site, 'available' => $available, 'departure_date' => $departure_date, 'count_of_send' => $count_of_send));
-          return $query;
+          if($this->CheckEmailExecute($email)){
+            $query = $this->pdo->prepare('INSERT INTO ls_emails (email, site, available, departure_date, count_of_send) VALUES (:email, :site, :available, :departure_date, :count_of_send);');
+            $query->execute(array('email' => $email, 'site' => $site, 'available' => $available, 'departure_date' => $departure_date, 'count_of_send' => $count_of_send));
+            return $query;
+          }
         }
       }
 
@@ -167,11 +169,9 @@
 
       public function UpdateEmailSend($email, $departure_date, $count_of_send = 0){
         if(!$this->AddEmail($email, null, 1, $departure_date, $count_of_send)){
-          if($this->CheckEmailExecute($email)){
-            $query = $this->pdo->prepare('UPDATE ls_emails SET departure_date=:departure_date, count_of_send=:count_of_send WHERE email=:email;');
-            $query->execute(array('email' => $email, 'departure_date' => $departure_date, 'count_of_send' => $count_of_send));
-            return $query;
-          }
+          $query = $this->pdo->prepare('UPDATE ls_emails SET departure_date=:departure_date, count_of_send=:count_of_send WHERE email=:email;');
+          $query->execute(array('email' => $email, 'departure_date' => $departure_date, 'count_of_send' => $count_of_send));
+          return $query;
         }
       }
 
@@ -183,30 +183,28 @@
         }
       }
 
-      public function _is_valid_email ($email = ""){
-        return preg_match('/^[.\w-]+@([\w-]+\.)+[a-zA-Z]{2,6}$/', $email);
-      }
-
       public function _check_domain_rules ($domain = ""){
         return in_array (strtolower ($domain), $this->domain_rules);
       }
 
       public function CheckEmailExecute($email = ""){
-            if (!$this->_is_valid_email ($email)) return false;
+            if(!filter_var($email, FILTER_VALIDATE_EMAIL)) return false;
+
             $host = substr (strstr ($email, '@'), 1);
 
-            if ($this->_check_domain_rules ($host)) return false;
+            if($this->_check_domain_rules($host)) return false;
+
             $host .= ".";
 
-            if (getmxrr ($host, $mxhosts[0], $mxhosts[1]) == true)  array_multisort ($mxhosts[1], $mxhosts[0]);
+            if(getmxrr($host, $mxhosts[0], $mxhosts[1]) == true)  array_multisort($mxhosts[1], $mxhosts[0]);
             else { $mxhosts[0] = $host;
                $mxhosts[1] = 10;
              }
-            if (DEBUG_OK) print_r ($mxhosts);
+            if (DEBUG_OK) print_r($mxhosts);
 
             $port = 25;
-            $localhost = $_SERVER['HTTP_HOST'];
-            $sender = 'info@' . $localhost;
+            $localhost = "www.just-space.ru";
+            $sender = 'info@just-space.ru';
 
             $result = false;
             $id = 0;
@@ -218,25 +216,41 @@
                       fputs ($connection,"HELO $localhost\r\n"); // 250
                       $data = fgets ($connection,1024);
                       $response = substr ($data,0,1);
-                      if (DEBUG_OK) print_r ($data);
+                      if (DEBUG_OK){
+                        print_r ("1:");
+                        print_r ($data);
+                        print_r ("<br>\n");
+                      }
                       if ($response == '2') // 200, 250 etc.
                      {
                         fputs ($connection,"MAIL FROM:<$sender>\r\n");
                         $data = fgets($connection,1024);
                         $response = substr ($data,0,1);
-                        if (DEBUG_OK) print_r ($data);
+                        if (DEBUG_OK){
+                          print_r ("2:");
+                          print_r ($data);
+                          print_r ("<br>\n");
+                        }
                         if ($response == '2') // 200, 250 etc.
                        {
                           fputs ($connection,"RCPT TO:<$email>\r\n");
                           $data = fgets($connection,1024);
                           $response = substr ($data,0,1);
-                          if (DEBUG_OK) print_r ($data);
+                          if (DEBUG_OK){
+                            print_r ("3:");
+                            print_r ($data);
+                            print_r ("<br>\n");
+                          }
                       if ($response == '2') // 200, 250 etc.
                          {
                             fputs ($connection,"data\r\n");
                             $data = fgets($connection,1024);
                             $response = substr ($data,0,1);
-                            if (DEBUG_OK) print_r ($data);
+                            if (DEBUG_OK){
+                              print_r ("4:");
+                              print_r ($data);
+                              print_r ("<br>\n");
+                            }
                             if ($response == '2') // 200, 250 etc.
                            { $result = true; }
                              }

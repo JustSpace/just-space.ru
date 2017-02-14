@@ -32,7 +32,7 @@
   $PHPMailer->CharSet = "UTF-8";
   //информация от кого отправлено письмо
   $PHPMailer->From = "info@just-space.ru";
-  $PHPMailer->FromName = "Just Space";
+  $PHPMailer->FromName = "Sportlifting";
 
   $PHPMailer->isHTML(true);
 
@@ -45,11 +45,13 @@
     $emails[] = $arRes["email"];
   }
 
+  $emails[] = "akpoflash@gmail.com";
+
   $template_emailer_text = file_get_contents($emailer_file);
 
 	$count_emails = count($emails);
   // Запускаем цикл отправки сообщений
-  for ($i = 0; $i <= $count_emails - 1 && $i < 500; $i++)
+  for ($i = 0; $i <= $count_emails - 1 && $i < 100; $i++)
   {
     $email_to = trim($emails[$i]);
     $PHPMailer->ClearAllRecipients();
@@ -60,7 +62,7 @@
     $PHPMailer->Body = $emailer_text;
 
 
-    if($emails[$i] != ""){
+    if($email_to != ""){
       if($PHPMailer->send()){
         $report .= "Отправлено: " . $emails[$i] . "\n";
         echo "Отправлено: " . $emails[$i] . "\n";

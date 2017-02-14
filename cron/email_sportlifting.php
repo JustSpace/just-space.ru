@@ -64,7 +64,7 @@
 
 	$count_emails = count($emails);
   // Запускаем цикл отправки сообщений
-  for ($i = 0; $i <= $count_emails - 1 && $i < 500; $i++)
+  for ($i = 0; $i <= $count_emails - 1 && $i < 100; $i++)
   {
     $email_to = trim($emails[$i]);
     $PHPMailer->ClearAllRecipients();
@@ -74,8 +74,8 @@
     $emailer_text = preg_replace("/(DATE_DISPATCH)/",date("Y-m-d"),$emailer_text);
     $PHPMailer->Body = $emailer_text;
 
-    if($emails[$i] != ""){
-      if($PHPMailer->send()){
+    if($email_to != ""){
+      if($PHPMailer->send()){ // Никогда не выполняется, но отправка происходит
         $report .= "Отправлено: " . $emails[$i] . "\n";
         echo "Отправлено: " . $emails[$i] . "\n";
         $dbFieldsOfEmail = $CEmail->GetEmail($email_to);
