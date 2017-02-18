@@ -45,13 +45,13 @@
     $emails[] = $arRes["email"];
   }
 
-  $emails[] = "akpoflash@gmail.com";
+  $emails[499] = "akpoflash@gmail.com";
 
   $template_emailer_text = file_get_contents($emailer_file);
 
 	$count_emails = count($emails);
   // Запускаем цикл отправки сообщений
-  for ($i = 0; $i <= $count_emails - 1 && $i < 100; $i++)
+  for ($i = 0; $i <= $count_emails - 1 && $i < 500; $i++)
   {
     $email_to = trim($emails[$i]);
     $PHPMailer->ClearAllRecipients();
