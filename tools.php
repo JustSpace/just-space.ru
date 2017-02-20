@@ -4,7 +4,7 @@
 <body>
   <header class="header header--2div3 header--tools">
     <div class="header__mask"></div>
-    <h1 class="header__title header__title--slice">Наши инструменты</h1>
+    <h1 class="header__title header__title--slice">Инструменты</h1>
     <nav class="navigation">
       <a href="javascript:void(0)" class="hamburger">
         <span class="hamburger__line"></span>

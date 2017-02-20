@@ -2,8 +2,8 @@
   require_once($_SERVER["DOCUMENT_ROOT"]."/includes/init.php");
 
   class Meta{
-    const TITLE_END = " | Just Space";
-    const MAX_TITLE_LENGTH = 75;
+    const TITLE_END = "";
+    const MAX_TITLE_LENGTH = 76;
     const MAX_DESCRIPTION_LENGTH = 150;
     const MAX_KEYWORDS_LENGTH = 200;
     const STRING_MAX_WARNING = "Exceeded the maximum length of the string";
@@ -55,19 +55,19 @@
 
         // /
         case "/index.php":
-          return "Разрабатываем сайты и мобильные приложения" . $this::TITLE_END;
+          return "Just Space - создание сайтов, разработка приложений и SEO продвижение в Туле" . $this::TITLE_END;
         case "/services.php":
-          return "Создание и продвижение сайтов и мобильных приложений" . $this::TITLE_END;
+          return "Услуги - Создание и продвижение сайтов в Туле" . $this::TITLE_END;
         case "/portfolio.php":
-          return "Наше портфолио в создание сайтов и приложений" . $this::TITLE_END;
+          return "Портфолио - Наши кейсы в создание и продвижении сайтов" . $this::TITLE_END;
         case "/blog.php":
-          return "Корпоративный блог" . $this::TITLE_END;
+          return "Блог - Корпоративный блог" . $this::TITLE_END;
         case "/vacancies.php":
-          return "Присоединяйтесь к нашей команде" . $this::TITLE_END;
+          return "Вакансии - Присоединяйтесь к нашей команде" . $this::TITLE_END;
         case "/contacts.php":
-          return "Закажите создания сайта или приложения" . $this::TITLE_END;
+          return "Контакты - Закажите создания и продвижение сайта" . $this::TITLE_END;
         case "/tools.php":
-          return "Наши инструменты" . $this::TITLE_END;
+          return "Инструменты - Созданные нами инструменты" . $this::TITLE_END;
 
         // /SERVICES/
         case "/services/advertising.php":

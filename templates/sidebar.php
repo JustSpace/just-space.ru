@@ -5,7 +5,7 @@
     <nav class="sidebar__navigation">
       <a href="/index.php" class="sidebar__link">Главная</a>
       <br>
-      <a href="/services.php" class="sidebar__link">Наши услуги</a>
+      <a href="/services.php" class="sidebar__link">Услуги</a>
       <br>
       <a href="/portfolio.php" class="sidebar__link">Портфолио</a>
       <br>
