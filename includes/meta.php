@@ -3,7 +3,7 @@
 
   class Meta{
     const TITLE_END = "";
-    const MAX_TITLE_LENGTH = 76;
+    const MAX_TITLE_LENGTH = 75;
     const MAX_DESCRIPTION_LENGTH = 150;
     const MAX_KEYWORDS_LENGTH = 200;
     const STRING_MAX_WARNING = "Exceeded the maximum length of the string";
@@ -55,9 +55,9 @@
 
         // /
         case "/index.php":
-          return "Just Space - создание сайтов, разработка приложений и SEO продвижение в Туле" . $this::TITLE_END;
+          return "Just Space - Создание и продвижение сайтов в Туле" . $this::TITLE_END;
         case "/services.php":
-          return "Услуги - Создание и продвижение сайтов в Туле" . $this::TITLE_END;
+          return "Услуги - Создание сайтов, разработка приложений и SEO продвижение в Туле" . $this::TITLE_END;
         case "/portfolio.php":
           return "Портфолио - Наши кейсы в создание и продвижении сайтов" . $this::TITLE_END;
         case "/blog.php":
@@ -112,7 +112,7 @@
 
         // /
         case "/index.php":
-          return "Мы создаем, поддерживаем и дорабатываем высокотехнологичные проекты (от небольших сайтов до масштабных клиент-серверных приложений)";
+          return "Занимаемся созданием и продвижением сайтов в Туле и области, также разрабатываем мобильные приложения и создаем рекламные кампании";
         case "/services.php":
           return "Занимается созданием, оптимизацией и SEO продвижением сайтов и мобильных приложений, разрабатываем дизайн и создаем рекламные кампании";
         case "/portfolio.php":

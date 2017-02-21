@@ -36,7 +36,12 @@ document.addEventListener('DOMContentLoaded',function(){
   appMenu.style.height          = "100%";
   if(winWidth > 500){
     for(var i = 0; i < pageImage.length; i++){
-      pageImage[i].style.height = winHeight + 'px';
+      // if(hasClass(pageImage[i], "page-image--about")){
+      //   pageImage[i].style.height = winHeight/1.5 + 'px';
+      // }
+      // else{
+      //   pageImage[i].style.height = winHeight + 'px';
+      // }
     }
   }
 

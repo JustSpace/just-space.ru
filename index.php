@@ -74,16 +74,16 @@
 ?>
   <main class="main">
     <article class="about">
-      <h1>Digital-агентство Just Space</h1>
+      <h1>Создание и продвижение сайтов в Туле</h1>
       <div class="about__text">
-          Специализируемся на применении современных технологий в бизнес сфере и предоставляем следующие цифровые услуги: создание сайтов (лендинги, сайты-визитки, корпоративные порталы, интернет-магазины и др.); аудит, SEO оптимизация и продвижение сайтов; настройка и ведение контекстных рекламных кампаний; SMM продвижение в социальных сетях; разработка дизайнерских решений; создание мобильных приложений под IOS и Android.
+          Наше агентство специализируется на создание сайтов, дальнейшей технической поддержкой и SEO продвижением уже разработанных сайтов. Создаем сайты под ключ используя большинство современных CMS - 1С-Битрикс, ModX, WordPress. Являемся сертифицированными разработчиками продуктов на основе 1С-Битрикс. Настраиваем контекстную рекламу в Яндекс.Директ и Google AdWords. Обладаем сертификатами Яндекса подтверждающими нашу компетенцию в работе с Директом и Метрикой. Также разрабатываем связанные с сайтом нативные мобильные приложения под iOS и Android.
       </div>
       <div class="categories">
         <div class="categories__element categories__element--creative">
           <svg class="categories__icon" aria-hidden="true">
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/img/sprites/sprites-index.svg#fire"></use>
           </svg>
-          <h2>Креативность</h2>
+          <h3 class="big">Креативность</h3>
           <section class="list">
             <span class="list__element">Нестандартный подход</span>
             <span class="list__element">Большой кругозор</span>
@@ -94,10 +94,10 @@
           <svg aria-hidden="true">
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/img/sprites/sprites-index.svg#robot"></use>
           </svg>
-          <h2>Технологии</h2>
+          <h3 class="big">Технологии</h3>
           <section class="list">
             <span class="list__element">Адаптивная и доступная верстка</span>
-            <span class="list__element">Специализируемся на 1С Битрикс</span>
+            <span class="list__element">Специализируемся на 1С-Битрикс</span>
             <span class="list__element">Разрабатываем iOS приложения</span>
           </section>
         </div>
@@ -105,7 +105,7 @@
           <svg aria-hidden="true">
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/img/sprites/sprites-index.svg#professional"></use>
           </svg>
-          <h2>Профессионализм</h2>
+          <h3 class="big">Профессионализм</h3>
           <section class="list">
             <span class="list__element">Детальный анализ</span>
             <span class="list__element">Уникальный подход</span>
@@ -141,40 +141,26 @@
         <img src="/img/cmsmagazine.png" class="page-image__image" alt="cmsmagazine аналитический портал веб-разработок">
       </div>
     </div>
-    <div class="certificates carusel carusel--line">
-      <h2 class="carusel__title">Сертификаты</h2>
-      <div class="slider slider--line">
-        <a href="/img/cert/cert_bitrix-compoz.jpg" target="_blank" class="slider__slide slider__slide--line slider__slide--1">
-          <img src="/img/cert/cert_bitrix-compoz.min.jpg" class="slide__image" alt="Сертификат 1С Битрикс - Технология композитный сайт (Анисимов Кирилл)">
-        </a><!--
-        --><a href="/img/cert/cert_bitrix-content.jpg" target="_blank" class="slider__slide slider__slide--line slider__slide--2">
-          <img src="/img/cert/cert_bitrix-content.min.jpg" class="slide__image" alt="Сертификат 1С Битрикс - Контент-менеджер (Анисимов Кирилл)">
-        </a><!--
-        --><a href="/img/cert/cert_bitrix-dev.jpg" target="_blank" class="slider__slide slider__slide--line slider__slide--3">
-          <img src="/img/cert/cert_bitrix-dev.min.jpg" class="slide__image" alt="Сертификат 1С Битрикс - Разработчик Bitrix Framework (Анисимов Кирилл)">
-        </a><!--
-        --><a href="/img/cert/cert_bitrix-admin.base.jpg" target="_blank" class="slider__slide slider__slide--line slider__slide--5">
-          <img src="/img/cert/cert_bitrix-admin.base.min.jpg" class="slide__image" alt="Сертификат 1С Битрикс - Администратор Базовый (Анисимов Кирилл)">
-        </a><!--
-        --><a href="/img/cert/cert_yandex-metrika.jpg" target="_blank" class="slider__slide slider__slide--line slider__slide--4">
-          <img src="/img/cert/cert_yandex-metrika.min.jpg" class="slide__image" alt="Сертивикат Яндекс Метрика - Сертифицированный специалист (Анисимов Кирилл)">
-        </a>
+    <article class="certificates">
+      <div class="certificates__text">
+        <h2>Создание сайтов на 1С-Битрикс</h2>
+        Just Space - официальный партнер компании 1С-Битрикс, которая занимает первое место на российском рынке среди коммерческих CMS. Специализируемся на создание интернет-магазинов и технической поддержкой высоко нагруженных систем. Наши программисты являются сертифицированными специалистами по созданию сайтов на основе 1С-Битрикс и имеют соответствующие сертификаты.
       </div>
-      <div class="arrow__wrapper arrow__wrapper--left">
-        <svg class="slider__arrow slider__arrow--left" aria-hidden="true">
-          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/img/sprites/sprites.svg#down-arrow"></use>
-        </svg>
+      <div class="certificates__content">
+        <img src="/img/cert/BXS-CM.png" class="certificates__cert" alt="Сертификат 1С Битрикс - Контент-менеджер">
+        <img src="/img/cert/BXS-ADM-Base.png" class="certificates__cert" alt="Сертификат 1С Битрикс - Администратор Базовый">
+        <img src="/img/cert/BXS-ADM-Mod.png" class="certificates__cert" alt="Сертификат 1С Битрикс - Администратор Модули">
+        <img src="/img/cert/BXS-ADM-Bus.png" class="certificates__cert" alt="Сертификат 1С Битрикс - Администратор Бизнес">
+        <img src="/img/cert/BX24-US.png" class="certificates__cert" alt="Сертификат 1С Битрикс - Пользователь Битрикс24">
+        <img src="/img/cert/BXP-ADM.png" class="certificates__cert" alt="Сертификат 1С Битрикс - Администратор 1С-Битрикс Корпоративный портал">
+        <img src="/img/cert/BX-Host.png" class="certificates__cert" alt="Сертификат 1С Битрикс - Курс для хостеров">
+        <img src="/img/cert/BX-Dev.png" class="certificates__cert" alt="Сертификат 1С Битрикс - Разработчик Bitrix Framework">
       </div>
-      <div class="arrow__wrapper arrow__wrapper--right">
-        <svg class="slider__arrow slider__arrow--right" aria-hidden="true">
-          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/img/sprites/sprites.svg#down-arrow"></use>
-        </svg>
-      </div>
-    </div>
+    </article>
     <div class="page-image page-image--blog">
       <div class="page-image__wrapper">
         <article class="page-image__promo">
-          <h2>Блог <span class="fill-color--first">Just Space</span></h2>
+          <h3 class="big">Блог <span class="fill-color--first">Just Space</span></h3>
           <div class="page-image__text">
             На страницах нашего блога мы выкладываем интересные на наш взгляд кейсы, стараясь рассказать о том, как создать сайт и разработать мобильное приложение. Раскрываем методики и секреты применяемые в SEO продвижение сайтов.
           </div>
@@ -190,8 +176,19 @@
         </article>
       </div>
     </div>
+    <article class="page">
+      <div class="page__video">
+        <?php
+          require_once($_SERVER["DOCUMENT_ROOT"]."/templates/youtube.php");
+        ?>
+      </div>
+      <div class="page__text">
+        <h2>Для чего стоит заказать создание и продвижение сайтов в Туле</h2>
+        Создание сайта обеспечивает охват широкой аудитории интернет пользователей, это позволяет привлечь новых клиентов, которые раньше не могли узнать о ваших услугах в других источниках. При правильном проведении SEO продвижения сайта вы получите дополнительный источник постоянных клиентов. Также если вы хотите улучшить репутацию своей организации, то собственный сайт - удобная стартовая площадка для этого, а в совокупности с проведением SMM кампании в социальных сетях (Facebook, Instagram, Вконтакте) вы достигните значительных изменений в короткий срок.
+      </div>
+    </article>
     <div class="clients carusel carusel--line">
-      <h2 class="clients__title">Кейсы</h2>
+      <h3 class="clients__title big">Кейсы</h3>
       <div class="slider slider--line">
         <a href="/portfolio/domotoplenya.php" class="client client--1 slider__slide slider__slide--line">
         </a><!--
@@ -222,7 +219,7 @@
         <table class="order__table">
           <tr>
             <td colspan="2">
-              <h2 class="order__title">Заказать проект</h2>
+              <h3 class="order__title big">Заказать проект</h3>
             </td>
           </tr>
           <tr>

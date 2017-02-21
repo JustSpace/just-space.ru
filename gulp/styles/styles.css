@@ -203,6 +203,9 @@ h6 {
 .no-underline {
   text-decoration: none; }
 
+.big {
+  font-size: 1.4em; }
+
 .button {
   -webkit-transition: all 0.3s linear;
   transition: all 0.3s linear;
@@ -963,7 +966,7 @@ h6 {
 
 .page-image--blog {
   background: url("/img/main_blog-M.jpg");
-  background-position: 0 100%;
+  background-position: 0 50%;
   background-size: cover; }
   @media (min-width: 4000px) {
     .page-image--blog {
@@ -980,7 +983,7 @@ h6 {
 
 .page-image--about {
   background: url("/img/about_city-M.jpg");
-  background-position: 50% 50%;
+  background-position: 50% 65%;
   background-size: cover; }
   @media (max-width: 1010px) {
     .page-image--about .page-image__promo {
@@ -1130,26 +1133,61 @@ h6 {
 .page-image__icon--mask-3 {
   color: rgba(0, 151, 186, 0.5); }
 
-.test--1 {
-  background: #FF0000; }
+.page {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center; }
 
-.test--2 {
-  background: #FF7F00; }
+.certificates {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center; }
 
-.test--3 {
-  background: #FFFF00; }
+.certificates__content {
+  padding-top: 40px;
+  text-align: center;
+  max-width: 1100px; }
 
-.test--4 {
-  background: #00FF00; }
+.certificates__cert {
+  margin: 0 2px 0; }
+  @media (max-width: 500px) {
+    .certificates__cert {
+      width: 125px; } }
 
-.test--5 {
-  background: #0000FF; }
+.page__video {
+  width: 100%; }
+  @media (max-width: 1100px) {
+    .page__video {
+      display: none; } }
 
-.test--6 {
-  background: #4B0082; }
-
-.test--7 {
-  background: #8B00FF; }
+.page__text {
+  padding-left: 50px;
+  width: 100%;
+  text-align: justify; }
+  @media (max-width: 1100px) {
+    .page__text {
+      padding: 0; } }
 
 .app-menu {
   -webkit-transition: all 0.5s linear;
