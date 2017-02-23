@@ -10,19 +10,12 @@
   }
 
   $CEmail = new Email();
-  $CFile  = new File();
   $PHPMailer = new PHPMailer();
+
 
   $dbRes = $CEmail->GetList(
     array("id" => "ASC"),
     array("available.=" => 1, "AND", "(", "departure_date.>" => date("Y-m-d H:i:s", time()+60*60*24*7), "OR", "departure_date.IS" => "NULL", ")"),
-    array()
-  );
-
-  $arFile = $CFile->GetList(
-    $_SERVER['DOCUMENT_ROOT'] . DIR_EMAILS,
-    "ASC",
-    array("SHOW_DIR" => "N", "SHOW_HIDDEN" => "N"),
     array()
   );
 
@@ -51,20 +44,39 @@
 
   $PHPMailer->isHTML(true);
 
-  $emailer_file = $_SERVER["DOCUMENT_ROOT"] . "/emails/email_audit.html";
+  $emailer_file = $_SERVER["DOCUMENT_ROOT"] . "/emails/audit.html";
 
   // Определяем переменные
 	$PHPMailer->Subject = "Аудит сайта | Digital-агентство Just Space";
 
+  $count = 0;
   while($arRes = $dbRes->Fetch()){
-    $emails[] = $arRes["email"];
+    $count++;
+    if($count > 500){
+      break;
+    }
+    $tmp_emails[] = trim($arRes["email"]);
+  }
+
+  foreach($tmp_emails as $email){
+    if(empty($email)){
+      continue;
+    }
+    $ar_tmp_emails = explode(",",$email);
+    foreach($ar_tmp_emails as $email2){
+      if(!in_array($email2, $emails)){
+        $emails[] = $email2;
+      }
+    }
   }
 
   $template_emailer_text = file_get_contents($emailer_file);
 
 	$count_emails = count($emails);
+  $emails[$count_emails] = "akpoflash@gmail.com";
+
   // Запускаем цикл отправки сообщений
-  for ($i = 0; $i <= $count_emails - 1 && $i < 500; $i++)
+  for ($i = 0; $i <= $count_emails && $i < 500; $i++)
   {
     $email_to = trim($emails[$i]);
     $PHPMailer->ClearAllRecipients();

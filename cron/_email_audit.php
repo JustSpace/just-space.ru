@@ -5,6 +5,7 @@
   $CEmail = new Email();
   $PHPMailer = new PHPMailer();
 
+
   $dbRes = $CEmail->GetList(
     array("id" => "ASC"),
     array("available.=" => 1, "AND", "(", "departure_date.>" => date("Y-m-d H:i:s", time()+60*60*24*7), "OR", "departure_date.IS" => "NULL", ")"),
@@ -16,7 +17,7 @@
   //будем отравлять письмо через СМТП сервер
   $PHPMailer->isSMTP();
   //хост
-  $PHPMailer->Host = "smtp.yandex.ru";
+  $PHPMailer->Host = 'smtp.yandex.ru';
   //требует ли СМТП сервер авторизацию/идентификацию
   $PHPMailer->SMTPAuth = true;
   // логин от вашей почты
@@ -24,32 +25,51 @@
   // пароль от почтового ящика
   $PHPMailer->Password = "Just222271";
   //указываем способ шифромания сервера
-  $PHPMailer->SMTPSecure = "ssl";
+  $PHPMailer->SMTPSecure = 'ssl';
   //указываем порт СМТП сервера
-  $PHPMailer->Port = "465";
+  $PHPMailer->Port = '465';
 
   //указываем кодировку для письма
-  $PHPMailer->CharSet = "UTF-8";
+  $PHPMailer->CharSet = 'UTF-8';
   //информация от кого отправлено письмо
   $PHPMailer->From = "info@just-space.ru";
   $PHPMailer->FromName = "Just Space";
 
   $PHPMailer->isHTML(true);
 
-  $emailer_file = "/home/users/g/gazeltrafic/domains/just-space.ru/emails/email_seo.html";
+  $emailer_file = "/home/users/g/gazeltrafic/domains/just-space.ru/emails/audit.html";
 
   // Определяем переменные
 	$PHPMailer->Subject = "Аудит сайта | Digital-агентство Just Space";
 
+  $count = 0;
   while($arRes = $dbRes->Fetch()){
-    $emails[] = $arRes["email"];
+    $count++;
+    if($count > 500){
+      break;
+    }
+    $tmp_emails[] = trim($arRes["email"]);
+  }
+
+  foreach($tmp_emails as $email){
+    if(empty($email)){
+      continue;
+    }
+    $ar_tmp_emails = explode(",",$email);
+    foreach($ar_tmp_emails as $email2){
+      if(!in_array($email2, $emails)){
+        $emails[] = $email2;
+      }
+    }
   }
 
   $template_emailer_text = file_get_contents($emailer_file);
 
 	$count_emails = count($emails);
+  $emails[$count_emails] = "akpoflash@gmail.com";
+
   // Запускаем цикл отправки сообщений
-  for ($i = 0; $i <= $count_emails - 1 && $i < 500; $i++)
+  for ($i = 0; $i <= $count_emails && $i < 500; $i++)
   {
     $email_to = trim($emails[$i]);
     $PHPMailer->ClearAllRecipients();
@@ -58,7 +78,6 @@
     $emailer_text = preg_replace("/(FROM_NAME_EMAIL)/",$email_to,$emailer_text);
     $emailer_text = preg_replace("/(DATE_DISPATCH)/",date("Y-m-d"),$emailer_text);
     $PHPMailer->Body = $emailer_text;
-
 
     if($email_to != ""){
       if($PHPMailer->send()){
