@@ -1078,7 +1078,7 @@ h6 {
         -webkit-transform: rotate(25deg) scale(1.25);
             -ms-transform: rotate(25deg) scale(1.25);
                 transform: rotate(25deg) scale(1.25); } }
-  @media (max-width: 450px) {
+  @media (max-width: 500px) {
     .page-image__title--top {
       padding: 7px;
       font-size: 1em; } }

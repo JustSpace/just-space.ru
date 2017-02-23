@@ -19,9 +19,9 @@
   ?>
   <main class="main">
     <article class="article">
-      <h2 class="article__title">
+      <h1 class="article__title">
         Обзор решений в разработке игры на движке Sprite Kit
-      </h2>
+      </h1>
       <div class="article__paragraph">
         С появлением iOS 7 мир узрел новый игровой движок от Apple — SpriteKit. В свете того, что появился он недавно об этом движке мало что написано и по этому мы решили написать небольшой обзор наших решений.
         <br>

@@ -9,7 +9,7 @@
         <source srcset="/img/index-XL.jpg" media="(min-width: 4000px)">
         <source srcset="/img/index-L.jpg" media="(min-width: 2000px)">
         <source srcset="/img/index-S.jpg" media="(max-width: 1000px)">
-        <img class="header__image slider__slide slider__slide--1 slider__slide--active" src="/img/index-M.jpg" alt="Разработка сайта">
+        <img class="header__image slider__slide slider__slide--1 slider__slide--active" src="/img/index-M.jpg" alt="Создание сайта">
       </picture>
       <picture>
         <source srcset="/img/mobile-XL.jpg" media="(min-width: 4000px)">
@@ -21,7 +21,7 @@
         <source srcset="/img/seo-XL.jpg" media="(min-width: 4000px)">
         <source srcset="/img/seo-L.jpg" media="(min-width: 2000px)">
         <source srcset="/img/seo-S.jpg" media="(max-width: 1000px)">
-        <img class="header__image slider__slide slider__slide--3" src="/img/seo-M.jpg" alt="Профессиональное продвижение">
+        <img class="header__image slider__slide slider__slide--3" src="/img/seo-M.jpg" alt="Профессиональное SEO продвижение">
       </picture>
       <picture>
         <source srcset="/img/design-XL.jpg" media="(min-width: 4000px)">
@@ -50,7 +50,7 @@
       Разработать мобильное приложение
     </h2>
     <h2 class="header__title header__title--3">
-      Провести SEO продвижение
+      Провести SEO продвижение сайта
     </h2>
     <h2 class="header__title header__title--4 header__title--back">
       Разработать дизайн
@@ -74,7 +74,7 @@
 ?>
   <main class="main">
     <article class="about">
-      <h1>Создание и продвижение сайтов в Туле</h1>
+      <h1>Создание и SEO продвижение сайтов в Туле</h1>
       <div class="about__text">
           Наше агентство специализируется на создание сайтов, дальнейшей технической поддержкой и SEO продвижением уже разработанных сайтов. Создаем сайты под ключ используя большинство современных CMS - 1С-Битрикс, ModX, WordPress. Являемся сертифицированными разработчиками продуктов на основе 1С-Битрикс. Настраиваем контекстную рекламу в Яндекс.Директ и Google AdWords. Обладаем сертификатами Яндекса подтверждающими нашу компетенцию в работе с Директом и Метрикой. Также разрабатываем связанные с сайтом нативные мобильные приложения под iOS и Android.
       </div>
@@ -121,19 +121,19 @@
             <svg class="page-image__icon page-image__icon--top page-image__icon--mask-1" aria-hidden="true">
               <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/img/sprites/sprites-services.svg#mobile"></use>
             </svg>
-            Топ-3 по мобильной разработке
+            Топ-3 по разработке приложений
           </a>
           <a href="http://www.cmsmagazine.ru/creators/tula/" class="page-image__title page-image__title--top page-image__title--mask-2 no-underline" target="_blank">
             <svg class="page-image__icon page-image__icon--top page-image__icon--mask-2" aria-hidden="true">
               <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/img/sprites/sprites-services.svg#web"></use>
             </svg>
-            Топ-30 среди веб-студий
+            Топ-30 по созданию сайтов
           </a>
           <a href="http://www.cmsmagazine.ru/seo/tula/" class="page-image__title page-image__title--top page-image__title--mask-3 no-underline" target="_blank">
             <svg class="page-image__icon page-image__icon--top page-image__icon--mask-3" aria-hidden="true">
               <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/img/sprites/sprites-services.svg#seo"></use>
             </svg>
-            Топ-15 по SEO продвижению
+            Топ-15 по SEO продвижению сайтов
           </a>
         </div>
       </div>
@@ -183,7 +183,7 @@
         ?>
       </div>
       <div class="page__text">
-        <h2>Для чего стоит заказать создание и продвижение сайтов в Туле</h2>
+        <h2>Для чего стоит заказать создание и SEO продвижение сайтов в Туле</h2>
         Создание сайта обеспечивает охват широкой аудитории интернет пользователей, это позволяет привлечь новых клиентов, которые раньше не могли узнать о ваших услугах в других источниках. При правильном проведении SEO продвижения сайта вы получите дополнительный источник постоянных клиентов. Также если вы хотите улучшить репутацию своей организации, то собственный сайт - удобная стартовая площадка для этого, а в совокупности с проведением SMM кампании в социальных сетях (Facebook, Instagram, Вконтакте) вы достигните значительных изменений в короткий срок.
       </div>
     </article>

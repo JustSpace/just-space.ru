@@ -19,9 +19,9 @@
   ?>
   <main class="main">
     <article class="article">
-      <h2 class="article__title">
+      <h1 class="article__title">
         Стоит ли в 2017 году использовать jQuery?
-      </h2>
+      </h1>
       <div class="article__paragraph">
         Более двух лет назад я уже обращал внимание на эту проблему в <a href="https://habrahabr.ru/post/247029/">переводе статьи "Is jQuery Too Big For Mobile?"</a> за авторством VanToll'а.
         <br>
