@@ -5,12 +5,12 @@
   <header class="header header--1div3">
     <h1 class="header__title header__title--slice header__title--right">Разработка сайтов</h1>
     <nav class="navigation">
-      <a href="javascript:void(0)" class="hamburger" alt="Гамбургер меню">
+      <a href="javascript:void(0)" class="hamburger">
         <span class="hamburger__line"></span>
         <span class="hamburger__line"></span>
         <span class="hamburger__line"></span>
       </a>
-      <a href="/index.php" class="navigation__logo" alt="Digital-агентство Just Space">Just Space</a>
+      <a href="/index.php" class="navigation__logo">Just Space</a>
       <a href="/services.php" class="navigation__section navigation__section--link">Услуги</a>
     </nav>
   </header>
@@ -25,7 +25,8 @@
         </h2>
         <hr class="folder-services-content__line">
         <div class="folder-services-content__text">
-          Лендинги, сайты-визитки, корпоративные порталы, интернет-магазины и др.
+          Используем современные технологии и подходы при создании сайтов, наличие настроенных менеджеров задач и системы контроля версий - позволяет быстрей проводить модернизацию сайта.
+          Разрабатываем отзывчивые, адаптивные и доступные сайты. Работаем со множеством CMS: 1C Bitrix, WordPress, Joomla, Drupal, ModX, PrestaShop и другие. В зависимости от сложности проекта (лендинг, сайт-визитка, корпоративный портал, интернет-магазин) подбираем оптимальную CMS систему, а также при необходимости создаем собственные решения.
         </div>
       </section>
       <section class="folder-services-content__block folder-services-content__block--2">
@@ -34,7 +35,7 @@
         </h2>
         <hr class="folder-services-content__line">
         <div class="folder-services-content__text">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore dicta, numquam magnam odio atque fuga aliquam in natus! Similique voluptatum, facilis impedit soluta, blanditiis minus cumque deserunt dolorem nostrum quae veniam id earum saepe. Quisquam voluptates, repellendus voluptate perferendis ipsum consequatur, facilis magnam libero neque delectus? Earum odio, sequi amet perspiciatis quam facilis, recusandae excepturi hic suscipit debitis, nesciunt quaerat.
+          При возникновении потребности в расширение функционала встроенных возможностей CMS или подключенных модулей - пишем собственные модули, которые решают возникшие проблемы.
         </div>
       </section>
       <section class="folder-services-content__block folder-services-content__block--3">
@@ -43,7 +44,7 @@
         </h2>
         <hr class="folder-services-content__line">
         <div class="folder-services-content__text">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate porro, cumque adipisci nostrum libero possimus. Quasi aut, facilis aliquid quo impedit commodi. Sint incidunt dolorem, odit commodi quasi, alias cum quam deserunt ratione error nam non optio explicabo illum cumque.
+          Оказываем техническую поддержку, консультацию и внедрение новых технологий и модулей для модернизации сайта - на постоянной основе по выгодной часовой ставке.
         </div>
       </section>
     </article>

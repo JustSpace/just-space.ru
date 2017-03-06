@@ -1,1 +1,6 @@
 node_modules
+.htaccess
+cmsmagazine*.txt
+
+/vendor/
+/base/

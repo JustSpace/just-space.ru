@@ -5,12 +5,12 @@
   <header class="header header--1div3">
     <h1 class="header__title header__title--slice header__title--right">Продвижение</h1>
     <nav class="navigation">
-      <a href="javascript:void(0)" class="hamburger" alt="Гамбургер меню">
+      <a href="javascript:void(0)" class="hamburger">
         <span class="hamburger__line"></span>
         <span class="hamburger__line"></span>
         <span class="hamburger__line"></span>
       </a>
-      <a href="/index.php" class="navigation__logo" alt="Digital-агентство Just Space">Just Space</a>
+      <a href="/index.php" class="navigation__logo">Just Space</a>
       <a href="/services.php" class="navigation__section navigation__section--link">Услуги</a>
     </nav>
   </header>
@@ -25,7 +25,7 @@
         </h2>
         <hr class="folder-services-content__line">
         <div class="folder-services-content__text">
-          Создание семантического ядра (подбор ключевых фраз) и т.д.
+          Проводим первоначальный аудит сайта и выявляем слабые места которые необходимо доработать. Составляем семантическое ядро (подбираем релевантные ключевые фразы для каждой страницы). Проводим внутреннюю оптимизацию сайта - создание заголовков в соответствие с подобранными ключевыми словами, настройка meta-тегов, оптимизация скорости загрузки, оптимизация изображений и рерайтинг. Проводим внешнюю оптимизацию - закупаем ссылки, создаем рекламные статьи в блогах, добавляем сайт в основные интернет-каталоги.
         </div>
       </section>
       <section class="folder-services-content__block folder-services-content__block--2">
@@ -34,7 +34,7 @@
         </h2>
         <hr class="folder-services-content__line">
         <div class="folder-services-content__text">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore dicta, numquam magnam odio atque fuga aliquam in natus! Similique voluptatum, facilis impedit soluta, blanditiis minus cumque deserunt dolorem nostrum quae veniam id earum saepe. Quisquam voluptates, repellendus voluptate perferendis ipsum consequatur, facilis magnam libero neque delectus? Earum odio, sequi amet perspiciatis quam facilis, recusandae excepturi hic suscipit debitis, nesciunt quaerat.
+          Занимаемся глубоким рерайтингом уже написанных текстов, с учетом сео-оптимизации и подобранных ключевых слов. Пишем на 100% уникальные тексты и статьи для размещения на ваших сайтах или сайтах и блогах ваших партнеров.
         </div>
       </section>
       <section class="folder-services-content__block folder-services-content__block--3">
@@ -43,7 +43,7 @@
         </h2>
         <hr class="folder-services-content__line">
         <div class="folder-services-content__text">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate porro, cumque adipisci nostrum libero possimus. Quasi aut, facilis aliquid quo impedit commodi. Sint incidunt dolorem, odit commodi quasi, alias cum quam deserunt ratione error nam non optio explicabo illum cumque.
+          Настраиваем и ведем сервис Rookee для наращивание ссылочной массы. По своим каналам производим подбор площадок для размещения постоянных ссылок и рекламных статей.
         </div>
       </section>
     </article>

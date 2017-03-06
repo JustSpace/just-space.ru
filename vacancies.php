@@ -4,7 +4,7 @@
 <body>
   <header class="header header--2div3 header--vacancies">
     <div class="header__mask"></div>
-    <h1 class="header__title header__title--slice">Наши вакансии</h1>
+    <h1 class="header__title header__title--slice">Вакансии</h1>
     <nav class="navigation">
       <a href="javascript:void(0)" class="hamburger">
         <span class="hamburger__line"></span>
@@ -25,7 +25,7 @@
         Если вы уверенны в своих силах и желаете развивать ваши профессиональные навыки - присоединяйтесь к нам!
       </section>
       <section class="vacancies__line">
-        <a href="#" class="vacancy">
+        <div class="vacancy">
           <h2 class="vacancy__title">Front-End разработчик</h2>
           <div class="vacancy__description">
             <span>Мы предлагаем</span>
@@ -41,10 +41,11 @@
               <li class="vacancy__list-element">- HTML/CSS/JavaScript</li>
               <li class="vacancy__list-element">- Less/Sass</li>
               <li class="vacancy__list-element">- Grunt/Gulp</li>
+              <li class="vacancy__list-element">- Angular/React</li>
             </ul>
           </div>
-        </a>
-        <a href="#" class="vacancy">
+        </div>
+        <div class="vacancy">
           <h2 class="vacancy__title">Дизайнер</h2>
           <div class="vacancy__description">
             <span>Мы предлагаем</span>
@@ -60,8 +61,8 @@
               <li class="vacancy__list-element">- Разработка макетов сайтов и приложений</li>
             </ul>
           </div>
-        </a>
-        <a href="#" class="vacancy">
+        </div>
+        <div class="vacancy">
           <h2 class="vacancy__title">SEO специалист</h2>
           <div class="vacancy__description">
             <span>Мы предлагаем</span>
@@ -78,7 +79,7 @@
               <li class="vacancy__list-element">- Опыт работы с сервисами Google и Яндекс</li>
             </ul>
           </div>
-        </a>
+        </div>
       </section>
     </article>
   </main>

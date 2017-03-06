@@ -1,0 +1,10 @@
+User-agent: *
+Disallow: /admin/
+Disallow: /backups/
+Disallow: /classes/
+Disallow: /emails/
+Disallow: /includes/
+Disallow: /logs/
+Disallow: /templates/
+Host: www.just-space.ru
+Sitemap: http://www.just-space.ru/sitemap.xml

@@ -4,7 +4,7 @@
 <body>
   <header class="header header--2div3 header--blog">
     <div class="header__mask"></div>
-    <h1 class="header__title header__title--slice">Наш блог</h1>
+    <h1 class="header__title header__title--slice">Блог</h1>
     <nav class="navigation">
       <a href="javascript:void(0)" class="hamburger">
         <span class="hamburger__line"></span>
@@ -21,12 +21,12 @@
   <main class="main">
     <article class="article">
       <h2 class="article__title">
-        Lorem ipsum dolor sit amet.
+        <a href="/blog/vnutrennyaya-optimizaciya.php" class="no-underline">Советы по SEO продвижению сайта</a>
       </h2>
       <div class="article__cut">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla doloremque nemo itaque culpa voluptatum corporis rem beatae officiis sed? Qui libero modi dolor, eos vero non reiciendis officiis, aperiam ducimus laboriosam repellat tempora alias dolore voluptatibus nesciunt iste. Tempore, ex, ullam. Quis ea sequi nostrum itaque nihil, numquam quasi laudantium dolor provident voluptas voluptatem expedita eum consectetur dignissimos hic recusandae quaerat amet laborum unde consequatur quia repellat, autem voluptates natus. Voluptatum facere veritatis ullam, id minus dicta velit magni aperiam odit voluptates saepe ipsam consectetur quibusdam autem totam similique corporis commodi nostrum illum, necessitatibus, cumque accusamus molestias, molestiae eum! Iste quas officiis nobis, error mollitia voluptate fuga voluptatem hic maiores magnam! Molestias veniam iste in suscipit cupiditate obcaecati, provident temporibus eligendi, officiis ut corrupti, quod explicabo sint minus. Harum, eos, expedita. Veniam, accusantium! Reprehenderit ratione inventore ad nemo, praesentium animi deserunt fugiat voluptatibus consectetur quas iure doloremque maxime nulla tempora quibusdam labore recusandae dignissimos quidem dolorum eligendi iste vitae delectus! Nostrum cum laudantium praesentium rem a sit ipsa! Quae vel, nam, minus explicabo non fuga sed nulla nesciunt quo eveniet. Et dolores dolore eaque explicabo asperiores voluptatum cupiditate deleniti molestiae culpa illo, eveniet fuga ad autem ducimus sequi, optio ratione.
+        Давно ловил себя на мысли, что было бы здорово иметь определенный чек-лист в который можно заглянуть и понять что еще нужно сделать. Поэтому решил собственноручно перечислить основные моменты в одном месте, собственно этим чек-листом и является эта статья.
       </div>
-      <a href="#" class="button button--underline button--arrow">
+      <a href="/blog/vnutrennyaya-optimizaciya.php" class="button button--underline button--arrow">
         Читать далее
         <svg class="article__icon" aria-hidden="true">
           <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/img/sprites/sprites.svg#next-arrow"></use>
@@ -35,12 +35,30 @@
     </article>
     <article class="article">
       <h2 class="article__title">
-        Lorem ipsum dolor sit amet.
+        <a href="/blog/spritekit.php" class="no-underline">Обзор решений в разработке игры на движке Sprite Kit</a>
       </h2>
       <div class="article__cut">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla doloremque nemo itaque culpa voluptatum corporis rem beatae officiis sed? Qui libero modi dolor, eos vero non reiciendis officiis, aperiam ducimus laboriosam repellat tempora alias dolore voluptatibus nesciunt iste. Tempore, ex, ullam. Quis ea sequi nostrum itaque nihil, numquam quasi laudantium dolor provident voluptas voluptatem expedita eum consectetur dignissimos hic recusandae quaerat amet laborum unde consequatur quia repellat, autem voluptates natus. Voluptatum facere veritatis ullam, id minus dicta velit magni aperiam odit voluptates saepe ipsam consectetur quibusdam autem totam similique corporis commodi nostrum illum, necessitatibus, cumque accusamus molestias, molestiae eum! Iste quas officiis nobis, error mollitia voluptate fuga voluptatem hic maiores magnam! Molestias veniam iste in suscipit cupiditate obcaecati, provident temporibus eligendi, officiis ut corrupti, quod explicabo sint minus. Harum, eos, expedita. Veniam, accusantium! Reprehenderit ratione inventore ad nemo, praesentium animi deserunt fugiat voluptatibus consectetur quas iure doloremque maxime nulla tempora quibusdam labore recusandae dignissimos quidem dolorum eligendi iste vitae delectus! Nostrum cum laudantium praesentium rem a sit ipsa! Quae vel, nam, minus explicabo non fuga sed nulla nesciunt quo eveniet. Et dolores dolore eaque explicabo asperiores voluptatum cupiditate deleniti molestiae culpa illo, eveniet fuga ad autem ducimus sequi, optio ratione.
+        С появлением iOS 7 мир узрел новый игровой движок от Apple — SpriteKit. В свете того, что появился он недавно об этом движке мало что написано и по этому мы решили написать небольшой обзор наших решений.
+        <br>
+        Мы не будем описывать процесс создания и настройки игровой сцены или объектов, а постараемся остановиться на более интересных моментах.
       </div>
-      <a href="#" class="button button--underline button--arrow">
+      <a href="/blog/spritekit.php" class="button button--underline button--arrow">
+        Читать далее
+        <svg class="article__icon" aria-hidden="true">
+          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/img/sprites/sprites.svg#next-arrow"></use>
+        </svg>
+      </a>
+    </article>
+    <article class="article">
+      <h2 class="article__title">
+        <a href="/blog/jqueryin2017.php" class="no-underline">Стоит ли в 2017 году использовать jQuery?</a>
+      </h2>
+      <div class="article__cut">
+        Более двух лет назад я уже обращал внимание на эту проблему в <a href="https://habrahabr.ru/post/247029/">переводе статьи "Is jQuery Too Big For Mobile?"</a> за авторством VanToll'а.
+        <br>
+        Прошло два года, мобильный интернет стал гораздо доступней, даже в провинциальных российских городах почти везде можно включить 3G и не ждать загрузки сайта по 2-3 минуты (при условии конечно, что это не костыльное single page application с подключаемым скриптом на несколько мегабайт, но это уже тема для другой статьи). Значит ли все это, что можно использовать jQuery для любых проектов без оглядки?
+      </div>
+      <a href="/blog/jqueryin2017.php" class="button button--underline button--arrow">
         Читать далее
         <svg class="article__icon" aria-hidden="true">
           <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/img/sprites/sprites.svg#next-arrow"></use>

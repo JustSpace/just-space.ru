@@ -4,7 +4,7 @@
 <body>
   <header class="header header--2div3 header--contacts">
     <div class="header__mask"></div>
-    <h1 class="header__title header__title--slice">Наши контакты</h1>
+    <h1 class="header__title header__title--slice">Контакты</h1>
     <nav class="navigation">
       <a href="javascript:void(0)" class="hamburger">
         <span class="hamburger__line"></span>
@@ -19,44 +19,53 @@
     require_once($_SERVER["DOCUMENT_ROOT"]."/templates/sidebar.php");
   ?>
   <main class="main">
-    <article class="contacts">
+    <article class="contacts" itemscope itemtype="http://schema.org/Organization">
+      <h2 class="contacts__title">Digital-agency <span itemprop="name">Just Space</span></h2>
       <div class="contact">
         <h2>Телефон</h2>
-        <a class="contact__link" href="tel:+79202762950" alt="Телефон приема заявок: +7 (920) 276-29-50">+7 (920) 276-29-50</a>
+        <a class="contact__link" href="tel:+79202762950" itemprop="telephone">+7 (920) 276-29-50</a>
       </div>
       <div class="contact">
         <h2>Email</h2>
-        <a class="contact__link" href="email:info@just-space.ru" alt="Почта приема заявок: info@just-space.ru">info@just-space.ru</a>
+        <a class="contact__link" href="mailto:info@just-space.ru" itemprop="email">info@just-space.ru</a>
       </div>
-      <div class="contact">
+      <div class="contact" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
         <h2>Адрес</h2>
-        <span>Россия, г. Тула, пр. Ленина, д. 77, оф 404</span>
+        <span>
+          <span itemprop="addressLocality">Россия, г. Тула</span>,
+          <span itemprop="streetAddress">пр. Ленина, д. 77, оф 404</span>
+        </span>
       </div>
       <div class="contact center">
-        <a class="contact__social-link" href="https://vk.com/justspaceweb" alt="Наша группа в ВКонтакте">
+        <a class="contact__social-link" href="https://vk.com/justspaceweb">
           <svg class="contact__icon contact__icon--vk" aria-hidden="true">
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/img/sprites/sprites.svg#vk"></use>
           </svg>
         </a>
-        <a class="contact__social-link" href="https://www.instagram.com/justspaceweb" alt="Наш аккаунт в Instagram">
+        <a class="contact__social-link" href="https://www.instagram.com/justspaceweb">
           <svg class="contact__icon contact__icon--instagram" aria-hidden="true">
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/img/sprites/sprites.svg#instagram"></use>
           </svg>
         </a>
-        <a class="contact__social-link" href="https://www.facebook.com/justspaceweb" alt="Наша группа в FaceBook">
+        <a class="contact__social-link" href="https://www.facebook.com/justspaceweb">
           <svg class="contact__icon contact__icon--facebook" aria-hidden="true">
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/img/sprites/sprites.svg#facebook"></use>
           </svg>
         </a>
-        <a class="contact__social-link" href="https://www.twitter.com/justspaceweb" alt="Наш аккаунт в Twitter">
+        <a class="contact__social-link" href="https://www.twitter.com/justspaceweb">
           <svg class="contact__icon contact__icon--twitter" aria-hidden="true">
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/img/sprites/sprites.svg#twitter"></use>
+          </svg>
+        </a>
+        <a class="contact__social-link" href="https://telegram.me/justspaceweb">
+          <svg class="contact__icon contact__icon--telegram" aria-hidden="true">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/img/sprites/sprites.svg#telegram"></use>
           </svg>
         </a>
       </div>
     </article>
     <article class="order">
-      <form class="order__form" action="index.php" method="post">
+      <form class="order__form" method="post">
         <table class="order__table">
           <tr>
             <td colspan="2">
@@ -117,17 +126,18 @@
         </table>
       </form>
     </article>
-    <div class="map">
-      <div id="map"></div>
-      <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCFE_Bixd44cRvT7dS9qk8NN92t2Cgkd1I&signed_in=true&callback=initMap">
-      </script>
-    </div>
+    <?php
+      require_once($_SERVER["DOCUMENT_ROOT"]."/templates/google_map.php");
+    ?>
   </main>
   <footer class="footer">
     <div class="footer__copyright">
       Copyright &copy; 2013-2016 Just Space
     </div>
   </footer>
-  <script src="/js/scripts.min.js"></script>
+  <script src="/js/functions.min.js" defer></script>
+  <script src="/js/ajax.min.js" defer></script>
+  <script src="/js/scripts.min.js" defer></script>
+  <!-- Yandex.Metrika counter --> <script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter41958054 = new Ya.Metrika({ id:41958054, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/41958054" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
 </body>
 </html>

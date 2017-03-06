@@ -4,7 +4,7 @@
 <body>
   <header class="header header--2div3 header--services">
     <div class="header__mask"></div>
-    <h1 class="header__title header__title--slice">Наши услуги</h1>
+    <h1 class="header__title header__title--slice">Услуги</h1>
     <nav class="navigation">
       <a href="javascript:void(0)" class="hamburger">
         <span class="hamburger__line"></span>
@@ -21,30 +21,30 @@
   <main class="main">
     <article class="services">
       <div class="services__text">
-        Наше агентство специализируется на разработке уникальных решений в интернете, мы обеспечиваем полный цикл разработки от продумывания интерфейса и создания эскизов до подбора ключевых слов и SEO оптимизации, все это позволяет воплотить любые выши идеи. Таким образом Just Space охватывает широкий спектр услуг: создание дизайна, разработка сайтов и мобильных приложений, а также продвижение в поисковых системах, гарантируя при этом высокое качество итогового продукта. На этой странице вы можете ознакомиться отдельно со всеми нашими услугами.
+        Специализируемся на применении современных технологий в бизнес сфере и предоставляем следующие цифровые услуги: создание сайтов (лендинги, сайты-визитки, корпоративные порталы, интернет-магазины и др.); аудит, SEO оптимизация и продвижение сайтов; настройка и ведение контекстных рекламных кампаний; SMM продвижение в социальных сетях; разработка дизайнерских решений; создание мобильных приложений под IOS и Android.
       </div>
       <section class="service">
         <svg class="service__svg" aria-hidden="true">
           <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/img/sprites/sprites-services.svg#mobile"></use>
         </svg>
         <h3 class="service__title">Мобильная разработка</h3>
-        Разрабатываем нативные приложения под iOS и Android. Производим интеграцию с вашим сайтом.
+        Разрабатываем нативные приложения под iOS и Android. Интегрируем мобильные приложения с сайтом.
         <a href="/services/mobile_develop.php" class="service__button">Подробнее</a>
       </section>
       <section class="service">
         <svg class="service__svg" aria-hidden="true">
           <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/img/sprites/sprites-services.svg#web"></use>
         </svg>
-        <h3 class="service__title">Разработка сайтов</h3>
-        Создаем отзывчивые, адаптивные и доступные сайты используя современные технологии и CMS.
+        <h3 class="service__title">Создание сайтов</h3>
+        Специализируемся на создание сайтов на 1С Битрикс, также создаем сайты используя другие популярные CMS.
         <a href="/services/web_develop.php" class="service__button">Подробнее</a>
       </section>
       <section class="service">
         <svg class="service__svg" aria-hidden="true">
           <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/img/sprites/sprites-services.svg#seo"></use>
         </svg>
-        <h3 class="service__title">Продвижение</h3>
-        Занимаемся SEO оптимизацией, подбором ключевиков, рерайтингом, закупкой ссылок и многим другим.
+        <h3 class="service__title">Продвижение сайтов</h3>
+        Комплексный аудит сайта, SEO оптимизация, копирайт и рерайт текстов, увеличение ссылочной массы.
         <a href="/services/seo.php" class="service__button">Подробнее</a>
       </section>
     </article>
@@ -54,7 +54,7 @@
           <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/img/sprites/sprites-services.svg#design"></use>
         </svg>
         <h3 class="service__title">Дизайн</h3>
-        Придумываем уникальный дизайн или качественно подстраиваем под вас готовые шаблонные решения.
+          Разрабатываем дизайн сайтов и мобильных приложений, редизайн и переосмысление существующих решений.
         <a href="/services/design.php" class="service__button">Подробнее</a>
       </section>
       <section class="service">
@@ -62,7 +62,7 @@
           <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/img/sprites/sprites-services.svg#advering"></use>
         </svg>
         <h3 class="service__title">Реклама</h3>
-        Ведем рекламные кампании в Яндекс.Директ и Google AdWords, занимаемся Social media marketing продвижением.
+        Ведем рекламные кампании в Яндекс.Директ и Google AdWords, SMM в Instagram, Facebook и ВКонтакте.
         <a href="/services/advertising.php" class="service__button">Подробнее</a>
       </section>
     </article>
